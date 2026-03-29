@@ -1,0 +1,656 @@
+/* ============================================================
+   CRAFT TOKENS — Design System Style Guide
+   Proyecto: Semana 10 — Tipografía, Colores y CSS Variables
+   Objetivo: Crear una página que documente su propio sistema
+             de design tokens usando exclusivamente CSS Custom
+             Properties. Sin "magic numbers" en ningún valor.
+   ============================================================ */
+
+/* ============================================================
+   TODO 1: SISTEMA COMPLETO DE DESIGN TOKENS
+   ─────────────────────────────────────────
+   - Resetea html { font-size: 100% } para que 1rem = 16px
+   - Declara TODOS los tokens en :root:
+       · Primitivos de color: --hue-brand (225), --hue-success (142),
+         --hue-warning (38), --hue-danger (4)
+       · Paleta de marca: --blue-900 a --blue-100 (5 pasos)
+         usando hsl(var(--hue-brand) [sat]% [ltn]%)
+       · Semánticos: --color-primary, --color-success,
+         --color-warning, --color-danger
+       · Neutros claro (modo por defecto): --color-bg (hsl 220 14% 98%),
+         --color-surface (#fff), --color-border (hsl 220 13% 91%),
+         --color-text (hsl 220 22% 12%), --color-muted (hsl 220 10% 45%)
+       · Tipografías: --font-body (Inter + system-ui), --font-code (Fira Code + monospace)
+       · Pesos: --fw-regular (400), --fw-semibold (600), --fw-bold (700)
+       · Escala de texto (razón 1.25):
+         --text-xs (0.75rem), --text-sm (0.875rem), --text-base (1rem),
+         --text-md (1.25rem), --text-lg (1.563rem), --text-xl (1.953rem),
+         --text-2xl (2.441rem), --text-3xl (3.052rem)
+       · Escala de espaciado:
+         --space-1 (0.25rem), --space-2 (0.5rem), --space-4 (1rem),
+         --space-6 (1.5rem), --space-8 (2rem), --space-12 (3rem),
+         --space-16 (4rem)
+       · Radios: --radius-sm (4px), --radius-md (8px),
+         --radius-lg (16px), --radius-full (9999px)
+       · Sombras: --shadow-sm, --shadow-md, --shadow-lg
+         (usar rgba() con opacidades crecientes)
+       · Altura del header: --header-height (4rem)
+   ============================================================ */
+
+/* html { font-size: 100%; } */
+
+/* :root {
+  --hue-brand: 225;
+  --hue-success: 142;
+  --hue-warning: 38;
+  --hue-danger: 4;
+
+  --blue-900: hsl(var(--hue-brand) 60% 15%);
+  --blue-700: hsl(var(--hue-brand) 65% 30%);
+  --blue-500: hsl(var(--hue-brand) 73% 52%);
+  --blue-300: hsl(var(--hue-brand) 80% 72%);
+  --blue-100: hsl(var(--hue-brand) 80% 92%);
+
+  --color-primary: var(--blue-500);
+  --color-success: hsl(var(--hue-success) 61% 38%);
+  --color-warning: hsl(var(--hue-warning) 92% 50%);
+  --color-danger:  hsl(var(--hue-danger)  71% 55%);
+
+  --color-bg:      hsl(220 14% 98%);
+  --color-surface: #fff;
+  --color-border:  hsl(220 13% 91%);
+  --color-text:    hsl(220 22% 12%);
+  --color-muted:   hsl(220 10% 45%);
+
+  --font-body:  'Inter', system-ui, sans-serif;
+  --font-code:  'Fira Code', ui-monospace, monospace;
+  --fw-regular:  400;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.563rem;
+  --text-xl:   1.953rem;
+  --text-2xl:  2.441rem;
+  --text-3xl:  3.052rem;
+
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px  3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.18);
+
+  --header-height: 4rem;
+} */
+
+
+/* ============================================================
+   TODO 2: RESET Y CONTENEDOR
+   ──────────────────────────
+   - Aplica * { box-sizing: border-box; margin: 0; padding: 0; }
+   - body: font-family: var(--font-body), color: var(--color-text),
+           background: var(--color-bg)
+   - .container: width 90%, max-width 1100px, margin 0 auto
+   - Elimina los puntos de los <ul> de demostración:
+     .swatch-row, .swatch-grid { list-style: none; }
+   ============================================================ */
+
+/* *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } */
+
+/* body {
+  font-family: var(--font-body);
+  font-size:   var(--text-base);
+  color:       var(--color-text);
+  background:  var(--color-bg);
+  line-height: 1.6;
+} */
+
+/* .container {
+  width:     90%;
+  max-width: 1100px;
+  margin:    0 auto;
+} */
+
+/* .swatch-row,
+.swatch-grid { list-style: none; } */
+
+
+/* ============================================================
+   TODO 3: HEADER Y NAVEGACIÓN
+   ────────────────────────────
+   - .site-header: background var(--color-surface),
+     border-bottom 1px solid var(--color-border),
+     padding: var(--space-6) 0
+   - .header-brand: display flex, align-items baseline, gap var(--space-2)
+   - .brand-name: font-size var(--text-xl), font-weight var(--fw-bold),
+                  color var(--color-primary)
+   - .brand-version: font-size var(--text-xs), color var(--color-muted),
+                     font-family var(--font-code)
+   - .header-desc: margin-top var(--space-2), color var(--color-muted),
+                   font-size var(--text-sm)
+   ============================================================ */
+
+/* .site-header {
+  background:    var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding:       var(--space-6) 0;
+} */
+
+/* .header-brand {
+  display:     flex;
+  align-items: baseline;
+  gap:         var(--space-2);
+} */
+
+/* .brand-name {
+  font-size:   var(--text-xl);
+  font-weight: var(--fw-bold);
+  color:       var(--color-primary);
+} */
+
+/* .brand-version {
+  font-size:   var(--text-xs);
+  color:       var(--color-muted);
+  font-family: var(--font-code);
+} */
+
+/* .header-desc {
+  margin-top: var(--space-2);
+  color:      var(--color-muted);
+  font-size:  var(--text-sm);
+} */
+
+
+/* ============================================================
+   TODO 4: SECCIONES DE TOKENS (LAYOUT GENERAL)
+   ─────────────────────────────────────────────
+   - .main-content: padding var(--space-8) 0
+   - .token-section: margin-bottom var(--space-16),
+     padding-top var(--space-12)
+   - .section-header: margin-bottom var(--space-8)
+   - .section-tag: font-family var(--font-code), font-size var(--text-xs),
+     color var(--color-primary), display block, margin-bottom var(--space-2)
+   - .section-title: font-size var(--text-2xl), font-weight var(--fw-bold),
+     line-height 1.2
+   - .section-desc: color var(--color-muted), margin-top var(--space-2),
+     font-size var(--text-sm)
+   - .section-desc code: font-family var(--font-code), background var(--color-border),
+     padding 0.1em 0.4em, border-radius var(--radius-sm)
+   - .subsection: margin-bottom var(--space-8)
+   - .subsection-title: font-size var(--text-sm), font-weight var(--fw-semibold),
+     color var(--color-muted), text-transform uppercase, letter-spacing 0.08em,
+     margin-bottom var(--space-4)
+   ============================================================ */
+
+/* .main-content { padding: var(--space-8) 0; } */
+
+/* .token-section {
+  margin-bottom: var(--space-16);
+  padding-top:   var(--space-12);
+  border-top:    1px solid var(--color-border);
+} */
+
+/* .section-header { margin-bottom: var(--space-8); } */
+
+/* .section-tag {
+  font-family:   var(--font-code);
+  font-size:     var(--text-xs);
+  color:         var(--color-primary);
+  display:       block;
+  margin-bottom: var(--space-2);
+} */
+
+/* .section-title {
+  font-size:   var(--text-2xl);
+  font-weight: var(--fw-bold);
+  line-height: 1.2;
+} */
+
+/* .section-desc {
+  color:      var(--color-muted);
+  margin-top: var(--space-2);
+  font-size:  var(--text-sm);
+} */
+
+/* .section-desc code {
+  font-family:   var(--font-code);
+  background:    var(--color-border);
+  padding:       0.1em 0.4em;
+  border-radius: var(--radius-sm);
+} */
+
+/* .subsection { margin-bottom: var(--space-8); } */
+
+/* .subsection-title {
+  font-size:      var(--text-sm);
+  font-weight:    var(--fw-semibold);
+  color:          var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom:  var(--space-4);
+} */
+
+
+/* ============================================================
+   TODO 5: SECCIÓN COLORES — SWATCHES
+   ────────────────────────────────────
+   - .swatch-row: display flex, gap var(--space-2), flex-wrap wrap
+   - .swatch: height 2.5rem, flex 1 1 4rem, border-radius var(--radius-md),
+     display flex, align-items flex-end, padding var(--space-1) var(--space-2)
+   - .swatch span: font-size var(--text-xs), color #fff, font-weight var(--fw-semibold)
+   - Colores de cada .swatch--*:
+       .swatch--blue-900 { background: var(--blue-900); }
+       .swatch--blue-700 { background: var(--blue-700); }
+       .swatch--blue-500 { background: var(--blue-500); }
+       .swatch--blue-300 { background: var(--blue-300); }
+       .swatch--blue-100 { background: var(--blue-100); }
+   - .swatch--base: outline 2px solid var(--color-primary),
+     outline-offset 2px (marca el color base 500)
+   - .swatch-grid: display grid, gap var(--space-4),
+     grid-template-columns repeat(2, 1fr)
+   - .swatch-card: height 5rem, border-radius var(--radius-md),
+     display flex, align-items flex-end, padding var(--space-3)
+   - .sc-label: font-size var(--text-xs), font-family var(--font-code),
+     color #fff, font-weight var(--fw-semibold)
+   - .sc-label--dark: color var(--color-text) (para swatches claros)
+   - Colores de cada .swatch-card--*:
+       .swatch--primary  { background: var(--color-primary); }
+       .swatch--success  { background: var(--color-success); }
+       .swatch--warning  { background: var(--color-warning); }
+       .swatch--danger   { background: var(--color-danger); }
+       .swatch--bg       { background: var(--color-bg); border: 1px solid var(--color-border); }
+       .swatch--surface  { background: var(--color-surface); border: 1px solid var(--color-border); }
+       .swatch--border   { background: var(--color-border); }
+       .swatch--text     { background: var(--color-text); }
+   ============================================================ */
+
+/* .swatch-row {
+  display:   flex;
+  gap:       var(--space-2);
+  flex-wrap: wrap;
+} */
+
+/* .swatch {
+  height:        2.5rem;
+  flex:          1 1 4rem;
+  border-radius: var(--radius-md);
+  display:       flex;
+  align-items:   flex-end;
+  padding:       var(--space-1) var(--space-2);
+} */
+
+/* .swatch span {
+  font-size:   var(--text-xs);
+  color:       #fff;
+  font-weight: var(--fw-semibold);
+} */
+
+/* .swatch--blue-900 { background: var(--blue-900); }
+.swatch--blue-700 { background: var(--blue-700); }
+.swatch--blue-500 { background: var(--blue-500); }
+.swatch--blue-300 { background: var(--blue-300); }
+.swatch--blue-100 { background: var(--blue-100); } */
+
+/* .swatch--base { outline: 2px solid var(--color-primary); outline-offset: 2px; } */
+
+/* .swatch-grid {
+  display:               grid;
+  gap:                   var(--space-4);
+  grid-template-columns: repeat(2, 1fr);
+} */
+
+/* .swatch-card {
+  height:        5rem;
+  border-radius: var(--radius-md);
+  display:       flex;
+  align-items:   flex-end;
+  padding:       var(--space-3);
+} */
+
+/* .sc-label {
+  font-size:   var(--text-xs);
+  font-family: var(--font-code);
+  color:       #fff;
+  font-weight: var(--fw-semibold);
+} */
+
+/* .sc-label--dark { color: var(--color-text); } */
+
+/* .swatch--primary { background: var(--color-primary); }
+.swatch--success  { background: var(--color-success); }
+.swatch--warning  { background: var(--color-warning); }
+.swatch--danger   { background: var(--color-danger); }
+.swatch--bg       { background: var(--color-bg);      border: 1px solid var(--color-border); }
+.swatch--surface  { background: var(--color-surface);  border: 1px solid var(--color-border); }
+.swatch--border   { background: var(--color-border); }
+.swatch--text     { background: var(--color-text); } */
+
+
+/* ============================================================
+   TODO 6: SECCIÓN TIPOGRAFÍA — ESCALA
+   ─────────────────────────────────────
+   - .type-scale: display flex, flex-direction column, gap var(--space-2)
+   - .type-row: display grid,
+     grid-template-columns: 9rem 1fr 5rem,
+     align-items center, gap var(--space-4),
+     padding var(--space-3) var(--space-4),
+     background var(--color-surface),
+     border: 1px solid var(--color-border),
+     border-radius var(--radius-md)
+   - .type-row--base: border-color var(--color-primary),
+     background var(--blue-100) (marca la fila base)
+   - .token-name: font-family var(--font-code), font-size var(--text-xs),
+     color var(--color-muted)
+   - .token-value: font-family var(--font-code), font-size var(--text-xs),
+     color var(--color-muted), text-align right
+   - .sample: margin 0, line-height 1.2
+   - Tamaños de cada .sample--*:
+       .s-3xl  { font-size: var(--text-3xl); }
+       .s-2xl  { font-size: var(--text-2xl); }
+       .s-xl   { font-size: var(--text-xl);  }
+       .s-lg   { font-size: var(--text-lg);  }
+       .s-md   { font-size: var(--text-md);  }
+       .s-base { font-size: var(--text-base); }
+       .s-sm   { font-size: var(--text-sm);  }
+       .s-xs   { font-size: var(--text-xs);  }
+   ============================================================ */
+
+/* .type-scale { display: flex; flex-direction: column; gap: var(--space-2); } */
+
+/* .type-row {
+  display:               grid;
+  grid-template-columns: 9rem 1fr 5rem;
+  align-items:           center;
+  gap:                   var(--space-4);
+  padding:               var(--space-3) var(--space-4);
+  background:            var(--color-surface);
+  border:                1px solid var(--color-border);
+  border-radius:         var(--radius-md);
+} */
+
+/* .type-row--base {
+  border-color: var(--color-primary);
+  background:   var(--blue-100);
+} */
+
+/* .token-name {
+  font-family: var(--font-code);
+  font-size:   var(--text-xs);
+  color:       var(--color-muted);
+} */
+
+/* .token-value {
+  font-family: var(--font-code);
+  font-size:   var(--text-xs);
+  color:       var(--color-muted);
+  text-align:  right;
+} */
+
+/* .sample { margin: 0; line-height: 1.2; } */
+
+/* .s-3xl  { font-size: var(--text-3xl); }
+.s-2xl  { font-size: var(--text-2xl); }
+.s-xl   { font-size: var(--text-xl);  }
+.s-lg   { font-size: var(--text-lg);  }
+.s-md   { font-size: var(--text-md);  }
+.s-base { font-size: var(--text-base); }
+.s-sm   { font-size: var(--text-sm);  }
+.s-xs   { font-size: var(--text-xs);  } */
+
+
+/* ============================================================
+   TODO 7: SECCIÓN ESPACIADOS — BARRAS
+   ─────────────────────────────────────
+   - .space-list: display flex, flex-direction column, gap var(--space-3)
+   - .space-item: display grid,
+     grid-template-columns: 9rem 1fr 5rem,
+     align-items center, gap var(--space-4)
+   - .space-bar: height var(--space-4), background var(--color-primary),
+     border-radius var(--radius-sm)
+   - Anchos de cada .sp-*:
+       .sp-1  { width: var(--space-1);  }
+       .sp-2  { width: var(--space-2);  }
+       .sp-4  { width: var(--space-4);  }
+       .sp-6  { width: var(--space-6);  }
+       .sp-8  { width: var(--space-8);  }
+       .sp-12 { width: var(--space-12); }
+       .sp-16 { width: var(--space-16); }
+   ============================================================ */
+
+/* .space-list { display: flex; flex-direction: column; gap: var(--space-3); } */
+
+/* .space-item {
+  display:               grid;
+  grid-template-columns: 9rem 1fr 5rem;
+  align-items:           center;
+  gap:                   var(--space-4);
+} */
+
+/* .space-bar {
+  height:        var(--space-4);
+  background:    var(--color-primary);
+  border-radius: var(--radius-sm);
+} */
+
+/* .sp-1  { width: var(--space-1);  }
+.sp-2  { width: var(--space-2);  }
+.sp-4  { width: var(--space-4);  }
+.sp-6  { width: var(--space-6);  }
+.sp-8  { width: var(--space-8);  }
+.sp-12 { width: var(--space-12); }
+.sp-16 { width: var(--space-16); } */
+
+
+/* ============================================================
+   TODO 8: SECCIÓN FORMAS — RADIOS Y SOMBRAS
+   ──────────────────────────────────────────
+   - .shapes-row: display flex, gap var(--space-8),
+     flex-wrap wrap, margin-bottom var(--space-8)
+   - .shape-item: display flex, flex-direction column,
+     align-items center, gap var(--space-4)
+   - .shape-box: width 6rem, height 6rem, background var(--color-primary)
+   - Radios de cada .r-*:
+       .r-sm   { border-radius: var(--radius-sm);   }
+       .r-md   { border-radius: var(--radius-md);   }
+       .r-lg   { border-radius: var(--radius-lg);   }
+       .r-full { border-radius: var(--radius-full); }
+   - .shadows-row: display flex, gap var(--space-8), flex-wrap wrap
+   - .shadow-demo: width 8rem, height 5rem, background var(--color-surface),
+     border-radius var(--radius-md), display flex,
+     align-items center, justify-content center
+   - .shadow-demo span: font-family var(--font-code), font-size var(--text-xs),
+     color var(--color-muted)
+   - Sombras de cada .sd-*:
+       .sd-sm { box-shadow: var(--shadow-sm); }
+       .sd-md { box-shadow: var(--shadow-md); }
+       .sd-lg { box-shadow: var(--shadow-lg); }
+   ============================================================ */
+
+/* .shapes-row {
+  display:       flex;
+  gap:           var(--space-8);
+  flex-wrap:     wrap;
+  margin-bottom: var(--space-8);
+} */
+
+/* .shape-item { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); } */
+
+/* .shape-box { width: 6rem; height: 6rem; background: var(--color-primary); } */
+
+/* .r-sm   { border-radius: var(--radius-sm);   }
+.r-md   { border-radius: var(--radius-md);   }
+.r-lg   { border-radius: var(--radius-lg);   }
+.r-full { border-radius: var(--radius-full); } */
+
+/* .shadows-row { display: flex; gap: var(--space-8); flex-wrap: wrap; } */
+
+/* .shadow-demo {
+  width:           8rem;
+  height:          5rem;
+  background:      var(--color-surface);
+  border-radius:   var(--radius-md);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+} */
+
+/* .shadow-demo span {
+  font-family: var(--font-code);
+  font-size:   var(--text-xs);
+  color:       var(--color-muted);
+} */
+
+/* .sd-sm { box-shadow: var(--shadow-sm); }
+.sd-md { box-shadow: var(--shadow-md); }
+.sd-lg { box-shadow: var(--shadow-lg); } */
+
+
+/* ============================================================
+   TODO 9: SECCIÓN BOTONES — COMPONENTE COMPLETO
+   ───────────────────────────────────────────────
+   - .btn-row: display flex, gap var(--space-4), flex-wrap wrap,
+     align-items center
+   - .btn (base): font-family var(--font-body), font-size var(--text-base),
+     font-weight var(--fw-semibold), padding 0.625em 1.25em (usa em),
+     border-radius var(--radius-md), border 2px solid transparent,
+     cursor pointer, transition: 150ms ease
+   - Variantes:
+       .btn--primary  { background: var(--color-primary);  color: #fff; }
+       .btn--secondary{ background: var(--blue-100);       color: var(--blue-700); }
+       .btn--outline  { background: transparent; border-color: var(--color-primary); color: var(--color-primary); }
+       .btn--ghost    { background: transparent; color: var(--color-primary); }
+       .btn--danger   { background: var(--color-danger);   color: #fff; }
+   - Tamaños (usan calc() para derivar de la base):
+       .btn--sm { font-size: calc(var(--text-base) * 0.875); padding: 0.375em 0.875em; }
+       .btn--lg { font-size: calc(var(--text-base) * 1.125); padding: 0.75em 1.5em; }
+   ============================================================ */
+
+/* .btn-row { display: flex; gap: var(--space-4); flex-wrap: wrap; align-items: center; } */
+
+/* .btn {
+  font-family:   var(--font-body);
+  font-size:     var(--text-base);
+  font-weight:   var(--fw-semibold);
+  padding:       0.625em 1.25em;
+  border-radius: var(--radius-md);
+  border:        2px solid transparent;
+  cursor:        pointer;
+  transition:    opacity 150ms ease, background 150ms ease;
+} */
+
+/* .btn--primary   { background: var(--color-primary); color: #fff; }
+.btn--secondary { background: var(--blue-100);      color: var(--blue-700); }
+.btn--outline   { background: transparent; border-color: var(--color-primary); color: var(--color-primary); }
+.btn--ghost     { background: transparent; color: var(--color-primary); }
+.btn--danger    { background: var(--color-danger);  color: #fff; } */
+
+/* .btn--sm { font-size: calc(var(--text-base) * 0.875); padding: 0.375em 0.875em; }
+.btn--lg { font-size: calc(var(--text-base) * 1.125); padding: 0.75em 1.5em; } */
+
+
+/* ============================================================
+   TODO 10: calc() — VALORES DERIVADOS
+   ─────────────────────────────────────
+   - Usa calc() para calcular al menos dos valores derivados
+     de tus tokens en lugar de valores fijos:
+       1. Espaciado combinado: padding: calc(var(--space-4) + var(--space-2))
+          (aplica a algún elemento)
+       2. Sección hero mínima usando --header-height:
+          .token-section:first-of-type {
+            padding-top: calc(var(--space-12) + var(--space-4));
+          }
+   - Esto demuestra que calc() puede operar con Custom Properties
+   ============================================================ */
+
+/* .token-section:first-of-type {
+  padding-top: calc(var(--space-12) + var(--space-4));
+} */
+
+
+/* ============================================================
+   TODO 11: RESPONSIVE — 768px
+   ────────────────────────────
+   @media (min-width: 768px) {
+     .swatch-grid {
+       grid-template-columns: repeat(4, 1fr);
+     }
+     .type-row {
+       grid-template-columns: 10rem 1fr 6rem;
+     }
+   }
+   ============================================================ */
+
+/* @media (min-width: 768px) {
+  .swatch-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .type-row {
+    grid-template-columns: 10rem 1fr 6rem;
+  }
+} */
+
+
+/* ============================================================
+   TODO 12: RESPONSIVE — 1024px
+   ──────────────────────────────
+   @media (min-width: 1024px) {
+     .shapes-row, .shadows-row {
+       gap: var(--space-12);
+     }
+     .shape-box {
+       width:  8rem;
+       height: 8rem;
+     }
+   }
+   ============================================================ */
+
+/* @media (min-width: 1024px) {
+  .shapes-row, .shadows-row {
+    gap: var(--space-12);
+  }
+  .shape-box {
+    width:  8rem;
+    height: 8rem;
+  }
+} */
+
+
+/* ============================================================
+   TODO 13: MODO OSCURO — prefers-color-scheme: dark
+   ───────────────────────────────────────────────────
+   Redefine únicamente los tokens semánticos neutros en :root.
+   Los colores de marca no cambian — solo el fondo y superficies.
+   @media (prefers-color-scheme: dark) {
+     :root {
+       --color-bg:      hsl(220 16% 10%);
+       --color-surface: hsl(220 14% 14%);
+       --color-border:  hsl(220 12% 22%);
+       --color-text:    hsl(220 18% 92%);
+       --color-muted:   hsl(220 10% 55%);
+     }
+   }
+   ============================================================ */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:      hsl(220 16% 10%);
+    --color-surface: hsl(220 14% 14%);
+    --color-border:  hsl(220 12% 22%);
+    --color-text:    hsl(220 18% 92%);
+    --color-muted:   hsl(220 10% 55%);
+  }
+} */

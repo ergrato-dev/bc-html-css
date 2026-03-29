@@ -1,0 +1,114 @@
+/* ================================================
+   Ejercicio 02 — Escala Tipográfica Modular
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d1117;
+  color: #f0f6fc;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
+.page-header { border-bottom: 1px solid #30363d; padding-bottom: 1.5rem; }
+.section-title { color: #8b949e; margin-bottom: 1.5rem; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.scale-demo { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.scale-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.scale-row--highlight { background: #1f304d; }
+
+.size-label {
+  font-size: 0.7rem;
+  font-family: 'Courier New', monospace;
+  color: #79c0ff;
+  white-space: nowrap;
+  padding-top: 0.2rem;
+}
+
+.article-demo { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.article-demo h2 { color: #cdd9e5; }
+.article-demo h3 { color: #cdd9e5; }
+.article-demo h4 { color: #cdd9e5; }
+.article-demo code { background: #1f2937; padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.85em; font-family: 'Courier New', monospace; color: #79c0ff; }
+
+.lead-text { color: #8b949e; }
+.caption { color: #8b949e; font-style: italic; }
+
+
+/* ============================================ */
+/* PASO 1: Escala tipográfica en :root          */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* :root {                                      */
+/*   --ratio: 1.25;                             */
+/*   --text-xs:   0.75rem;   /* 12px */         */
+/*   --text-sm:   0.875rem;  /* 14px */         */
+/*   --text-base: 1rem;      /* 16px — base */  */
+/*   --text-md:   1.25rem;   /* 20px */         */
+/*   --text-lg:   1.563rem;  /* 25px */         */
+/*   --text-xl:   1.953rem;  /* 31px */         */
+/*   --text-2xl:  2.441rem;  /* 39px */         */
+/*   --text-3xl:  3.052rem;  /* 49px */         */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 2: Aplicar escala a headings            */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .type-3xl { font-size: var(--text-3xl); font-weight: 700; line-height: 1.1; } */
+/* .type-2xl { font-size: var(--text-2xl); font-weight: 700; line-height: 1.1; } */
+/* .type-xl  { font-size: var(--text-xl);  font-weight: 700; line-height: 1.2; } */
+/* .type-lg  { font-size: var(--text-lg);  font-weight: 600; line-height: 1.3; } */
+/* .type-md  { font-size: var(--text-md);  font-weight: 600; line-height: 1.4; } */
+/*                                              */
+/* .article-demo h2 { font-size: var(--text-xl); font-weight: 700; line-height: 1.2; }  */
+/* .article-demo h3 { font-size: var(--text-lg); font-weight: 600; line-height: 1.3; }  */
+/* .article-demo h4 { font-size: var(--text-md); font-weight: 600; line-height: 1.4; }  */
+
+
+/* ============================================ */
+/* PASO 3: Cuerpo y textos auxiliares           */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* body { font-size: var(--text-base); }        */
+/*                                              */
+/* .type-base { font-size: var(--text-base); }  */
+/* .type-sm   { font-size: var(--text-sm);   color: #8b949e; }  */
+/* .type-xs   { font-size: var(--text-xs);   color: #8b949e; }  */
+/*                                              */
+/* .lead-text { font-size: var(--text-md);   }  */
+/* .caption   { font-size: var(--text-sm);   }  */
+
+
+/* ============================================ */
+/* PASO 4: calc() para escala dinámica          */
+/* Compara los valores calculados vs declarados */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .calc-demo-label::after {                    */
+/*   content: " [calc: " counter(none) "]";     */
+/* }                                            */
+/*                                              */
+/* Ejemplo de nivel calculado con calc():       */
+/* .type-xl-calc {                              */
+/*   font-size: calc(                           */
+/*     var(--text-base) *                       */
+/*     var(--ratio) *                           */
+/*     var(--ratio) *                           */
+/*     var(--ratio)                             */
+/*   ); /* = 1rem * 1.25³ = 1.953rem */         */
+/* }                                            */

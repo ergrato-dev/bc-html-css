@@ -1,0 +1,80 @@
+/* ================================================
+   Ejercicio 01 — Fuentes Web con Google Fonts
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d1117;
+  color: #f0f6fc;
+  /* font-family se aplicará en el PASO 3 */
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.demo-page { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
+.demo-section { border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; }
+.section-title { font-size: 1.1rem; margin-bottom: 1rem; color: #cdd9e5; }
+.demo-note { font-size: 0.9rem; color: #8b949e; }
+.code-sample { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1rem; white-space: pre; overflow-x: auto; font-size: 0.9rem; color: #79c0ff; }
+.code-inline { background: #1f2937; padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.85em; }
+.text-regular, .text-semibold, .text-bold { padding: 0.3rem 0; }
+
+
+/* ============================================ */
+/* PASO 2: Custom Properties de fuentes         */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* :root {                                      */
+/*   --font-body: 'Inter', system-ui,           */
+/*     -apple-system, sans-serif;               */
+/*   --font-mono: 'Fira Code', 'Courier New',   */
+/*     monospace;                               */
+/*   --font-regular:  400;                      */
+/*   --font-semibold: 600;                      */
+/*   --font-bold:     700;                      */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 3: Aplicar fuente a body y código       */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* body {                                       */
+/*   font-family: var(--font-body);             */
+/* }                                            */
+/*                                              */
+/* .code-sample {                               */
+/*   font-family: var(--font-mono);             */
+/* }                                            */
+/*                                              */
+/* .code-inline {                               */
+/*   font-family: var(--font-mono);             */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 4: font-weight con variables            */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .demo-heading {                              */
+/*   font-weight: var(--font-bold);             */
+/*   font-size: 1.75rem;                        */
+/*   line-height: 1.2;                          */
+/*   margin-bottom: 0.5rem;                     */
+/* }                                            */
+/*                                              */
+/* .section-title {                             */
+/*   font-weight: var(--font-semibold);         */
+/* }                                            */
+/*                                              */
+/* .text-regular  { font-weight: var(--font-regular); }  */
+/* .text-semibold { font-weight: var(--font-semibold); } */
+/* .text-bold     { font-weight: var(--font-bold); }     */
+/*                                              */
+/* .demo-label {                                */
+/*   font-size: 0.9rem;                         */
+/*   font-weight: var(--font-regular);          */
+/*   color: #8b949e;                            */
+/* }                                            */

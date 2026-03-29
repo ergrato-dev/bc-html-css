@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Fuentes Web</title>
+
+  <!-- Google Fonts con preconnect y display=swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <main class="demo-page">
+
+    <section class="demo-section">
+      <h1 class="demo-heading">Tipografía Web con Google Fonts</h1>
+      <p class="demo-label">Fuente cargada: <strong>Inter</strong> + <strong>Fira Code</strong></p>
+    </section>
+
+    <section class="demo-section">
+      <h2 class="section-title">Pesos de fuente</h2>
+      <p class="text-regular">Regular (400) — Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fuentes web dan coherencia visual.</p>
+      <p class="text-semibold">Semibold (600) — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="text-bold">Bold (700) — Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
+
+    <section class="demo-section">
+      <h2 class="section-title">Fuente monospace para código</h2>
+      <pre class="code-sample">:root {
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}</pre>
+    </section>
+
+    <section class="demo-section">
+      <h2 class="section-title">Fallback stack</h2>
+      <p class="demo-note">Si Google Fonts no carga (sin internet), el navegador usa <code class="code-inline">system-ui</code> como fallback inmediato.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

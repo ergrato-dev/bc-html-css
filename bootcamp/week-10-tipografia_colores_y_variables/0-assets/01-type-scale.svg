@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420">
+  <rect width="820" height="420" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#f0f6fc">Escala Tipográfica Modular — Razón 1.25 (Major Third)</text>
+
+  <!-- Column headers -->
+  <text x="30" y="66" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8b949e">Nivel</text>
+  <text x="110" y="66" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8b949e">Variable CSS</text>
+  <text x="295" y="66" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8b949e">Valor</text>
+  <text x="380" y="66" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8b949e">Muestra</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="74" x2="800" y2="74" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Row: 3xl -->
+  <rect x="20" y="80" width="780" height="42" rx="4" fill="#161b22"/>
+  <text x="30" y="107" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#3fb950" font-weight="600">3xl</text>
+  <text x="110" y="107" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-3xl</text>
+  <text x="295" y="107" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">3.052rem</text>
+  <text x="380" y="110" font-family="Inter, system-ui, sans-serif" font-size="34" font-weight="700" fill="#f0f6fc">Display</text>
+
+  <!-- Row: 2xl -->
+  <rect x="20" y="126" width="780" height="36" rx="4" fill="#0d1117"/>
+  <text x="30" y="149" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#3fb950" font-weight="600">2xl</text>
+  <text x="110" y="149" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-2xl</text>
+  <text x="295" y="149" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">2.441rem</text>
+  <text x="380" y="152" font-family="Inter, system-ui, sans-serif" font-size="27" font-weight="700" fill="#f0f6fc">Heading 1</text>
+
+  <!-- Row: xl -->
+  <rect x="20" y="166" width="780" height="32" rx="4" fill="#161b22"/>
+  <text x="30" y="187" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#3fb950" font-weight="600">xl</text>
+  <text x="110" y="187" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-xl</text>
+  <text x="295" y="187" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">1.953rem</text>
+  <text x="380" y="190" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc">Heading 2</text>
+
+  <!-- Row: lg -->
+  <rect x="20" y="202" width="780" height="28" rx="4" fill="#0d1117"/>
+  <text x="30" y="221" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#3fb950" font-weight="600">lg</text>
+  <text x="110" y="221" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-lg</text>
+  <text x="295" y="221" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">1.563rem</text>
+  <text x="380" y="222" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#f0f6fc">Heading 3</text>
+
+  <!-- Row: md -->
+  <rect x="20" y="234" width="780" height="26" rx="4" fill="#161b22"/>
+  <text x="30" y="251" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#3fb950" font-weight="600">md</text>
+  <text x="110" y="251" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-md</text>
+  <text x="295" y="251" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">1.25rem</text>
+  <text x="380" y="252" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#f0f6fc">Subheading</text>
+
+  <!-- Row: base (highlighted) -->
+  <rect x="20" y="264" width="780" height="24" rx="4" fill="#1f304d"/>
+  <text x="30" y="280" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#79c0ff" font-weight="700">base ★</text>
+  <text x="110" y="280" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-base</text>
+  <text x="295" y="280" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#79c0ff" font-weight="700">1rem = 16px</text>
+  <text x="380" y="280" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#cdd9e5">Cuerpo de texto</text>
+
+  <!-- Row: sm -->
+  <rect x="20" y="292" width="780" height="22" rx="4" fill="#0d1117"/>
+  <text x="30" y="307" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e" font-weight="600">sm</text>
+  <text x="110" y="307" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-sm</text>
+  <text x="295" y="307" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">0.875rem</text>
+  <text x="380" y="307" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#8b949e">Texto secundario</text>
+
+  <!-- Row: xs -->
+  <rect x="20" y="318" width="780" height="20" rx="4" fill="#161b22"/>
+  <text x="30" y="332" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e" font-weight="600">xs</text>
+  <text x="110" y="332" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-xs</text>
+  <text x="295" y="332" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">0.75rem</text>
+  <text x="380" y="332" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">Labels, captions</text>
+
+  <!-- Ratio indicator -->
+  <text x="410" y="375" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e">Cada nivel = nivel anterior × </text>
+  <text x="554" y="375" font-family="'Fira Code', monospace" font-size="13" font-weight="700" fill="#3fb950">1.25</text>
+  <text x="574" y="375" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8b949e"> (Major Third)</text>
+
+  <!-- CSS code snippet -->
+  <rect x="20" y="388" width="780" height="22" rx="4" fill="#1f304d"/>
+  <text x="30" y="403" font-family="'Fira Code', monospace" font-size="11" fill="#8b949e">:root { </text>
+  <text x="88" y="403" font-family="'Fira Code', monospace" font-size="11" fill="#79c0ff">--text-lg: calc(var(--text-base) * 1.25 * 1.25)</text>
+  <text x="460" y="403" font-family="'Fira Code', monospace" font-size="11" fill="#8b949e">; /* = 1.5625rem */ }</text>
+</svg>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Craft Tokens — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-brand">
+        <span class="brand-name">Craft Tokens</span>
+        <span class="brand-version">v1.0</span>
+      </div>
+      <p class="header-desc">Sistema de design tokens para Craft Studio. Todos los valores de la UI en un solo lugar.</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Colores -->
+      <section class="token-section" id="colors">
+        <header class="section-header">
+          <span class="section-tag">01</span>
+          <h2 class="section-title">Colores</h2>
+          <p class="section-desc">Paleta basada en HSL. Los primitivos alimentan los tokens semánticos.</p>
+        </header>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Primitivos — Marca (Hue: 225°)</h3>
+          <ul class="swatch-row">
+            <li class="swatch swatch--blue-900"><span>900</span></li>
+            <li class="swatch swatch--blue-700"><span>700</span></li>
+            <li class="swatch swatch--blue-500 swatch--base"><span>500★</span></li>
+            <li class="swatch swatch--blue-300"><span>300</span></li>
+            <li class="swatch swatch--blue-100"><span>100</span></li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Semánticos</h3>
+          <ul class="swatch-grid">
+            <li class="swatch-card swatch--primary"><span class="sc-label">--color-primary</span></li>
+            <li class="swatch-card swatch--success"><span class="sc-label">--color-success</span></li>
+            <li class="swatch-card swatch--warning"><span class="sc-label">--color-warning</span></li>
+            <li class="swatch-card swatch--danger"><span class="sc-label">--color-danger</span></li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3 class="subsection-title">Neutros</h3>
+          <ul class="swatch-grid">
+            <li class="swatch-card swatch--bg"><span class="sc-label sc-label--dark">--color-bg</span></li>
+            <li class="swatch-card swatch--surface"><span class="sc-label sc-label--dark">--color-surface</span></li>
+            <li class="swatch-card swatch--border"><span class="sc-label sc-label--dark">--color-border</span></li>
+            <li class="swatch-card swatch--text"><span class="sc-label">--color-text</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Tipografía -->
+      <section class="token-section" id="typography">
+        <header class="section-header">
+          <span class="section-tag">02</span>
+          <h2 class="section-title">Tipografía</h2>
+          <p class="section-desc">Escala modular razón 1.25 (Major Third). <code>1rem = 16px</code></p>
+        </header>
+
+        <div class="type-scale">
+          <div class="type-row"><span class="token-name">--text-3xl</span><p class="sample s-3xl">Display Heading</p><span class="token-value">3.052rem</span></div>
+          <div class="type-row"><span class="token-name">--text-2xl</span><p class="sample s-2xl">Heading One</p><span class="token-value">2.441rem</span></div>
+          <div class="type-row"><span class="token-name">--text-xl</span><p class="sample s-xl">Heading Two</p><span class="token-value">1.953rem</span></div>
+          <div class="type-row"><span class="token-name">--text-lg</span><p class="sample s-lg">Heading Three</p><span class="token-value">1.563rem</span></div>
+          <div class="type-row"><span class="token-name">--text-md</span><p class="sample s-md">Subheading</p><span class="token-value">1.25rem</span></div>
+          <div class="type-row type-row--base"><span class="token-name">--text-base ★</span><p class="sample s-base">Body text — base size</p><span class="token-value">1rem</span></div>
+          <div class="type-row"><span class="token-name">--text-sm</span><p class="sample s-sm">Secondary / metadata</p><span class="token-value">0.875rem</span></div>
+          <div class="type-row"><span class="token-name">--text-xs</span><p class="sample s-xs">Labels, captions, badges</p><span class="token-value">0.75rem</span></div>
+        </div>
+      </section>
+
+      <!-- Espaciados -->
+      <section class="token-section" id="spacing">
+        <header class="section-header">
+          <span class="section-tag">03</span>
+          <h2 class="section-title">Espaciados</h2>
+          <p class="section-desc">Escala base 4px (0.25rem), múltiplos de <code>var(--space-*)</code>.</p>
+        </header>
+
+        <div class="space-list">
+          <div class="space-item"><span class="token-name">--space-1</span><div class="space-bar sp-1"></div><span class="token-value">0.25rem</span></div>
+          <div class="space-item"><span class="token-name">--space-2</span><div class="space-bar sp-2"></div><span class="token-value">0.5rem</span></div>
+          <div class="space-item"><span class="token-name">--space-4</span><div class="space-bar sp-4"></div><span class="token-value">1rem</span></div>
+          <div class="space-item"><span class="token-name">--space-6</span><div class="space-bar sp-6"></div><span class="token-value">1.5rem</span></div>
+          <div class="space-item"><span class="token-name">--space-8</span><div class="space-bar sp-8"></div><span class="token-value">2rem</span></div>
+          <div class="space-item"><span class="token-name">--space-12</span><div class="space-bar sp-12"></div><span class="token-value">3rem</span></div>
+          <div class="space-item"><span class="token-name">--space-16</span><div class="space-bar sp-16"></div><span class="token-value">4rem</span></div>
+        </div>
+      </section>
+
+      <!-- Formas -->
+      <section class="token-section" id="shapes">
+        <header class="section-header">
+          <span class="section-tag">04</span>
+          <h2 class="section-title">Formas y Sombras</h2>
+        </header>
+
+        <div class="shapes-row">
+          <div class="shape-item">
+            <div class="shape-box r-sm"></div>
+            <span class="token-name">--radius-sm (4px)</span>
+          </div>
+          <div class="shape-item">
+            <div class="shape-box r-md"></div>
+            <span class="token-name">--radius-md (8px)</span>
+          </div>
+          <div class="shape-item">
+            <div class="shape-box r-lg"></div>
+            <span class="token-name">--radius-lg (16px)</span>
+          </div>
+          <div class="shape-item">
+            <div class="shape-box r-full"></div>
+            <span class="token-name">--radius-full (9999px)</span>
+          </div>
+        </div>
+
+        <div class="shadows-row">
+          <div class="shadow-demo sd-sm"><span>--shadow-sm</span></div>
+          <div class="shadow-demo sd-md"><span>--shadow-md</span></div>
+          <div class="shadow-demo sd-lg"><span>--shadow-lg</span></div>
+        </div>
+      </section>
+
+      <!-- Botones -->
+      <section class="token-section" id="buttons">
+        <header class="section-header">
+          <span class="section-tag">05</span>
+          <h2 class="section-title">Componente — Botones</h2>
+          <p class="section-desc">Todos los estilos usan exclusivamente los tokens definidos.</p>
+        </header>
+        <div class="btn-row">
+          <button class="btn btn--primary">Primary</button>
+          <button class="btn btn--secondary">Secondary</button>
+          <button class="btn btn--outline">Outline</button>
+          <button class="btn btn--ghost">Ghost</button>
+          <button class="btn btn--danger">Danger</button>
+          <button class="btn btn--sm btn--primary">Small</button>
+          <button class="btn btn--lg btn--primary">Large</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>

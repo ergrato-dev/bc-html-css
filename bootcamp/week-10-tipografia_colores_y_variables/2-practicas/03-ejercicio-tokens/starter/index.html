@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Design Tokens</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Sistema de Design Tokens</h1>
+      <p class="lead">Cada valor visual está controlado por una Custom Property en <code>:root</code>.</p>
+    </header>
+
+    <!-- Color tokens -->
+    <section class="token-section">
+      <h2 class="section-label">Colores</h2>
+      <div class="swatch-grid">
+        <div class="swatch-card swatch--primary">
+          <span class="swatch-name">--color-primary</span>
+        </div>
+        <div class="swatch-card swatch--success">
+          <span class="swatch-name">--color-success</span>
+        </div>
+        <div class="swatch-card swatch--warning">
+          <span class="swatch-name">--color-warning</span>
+        </div>
+        <div class="swatch-card swatch--danger">
+          <span class="swatch-name">--color-danger</span>
+        </div>
+        <div class="swatch-card swatch--surface">
+          <span class="swatch-name swatch-name--dark">--color-surface</span>
+        </div>
+        <div class="swatch-card swatch--border">
+          <span class="swatch-name swatch-name--dark">--color-border</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing tokens -->
+    <section class="token-section">
+      <h2 class="section-label">Espaciados</h2>
+      <div class="spacing-demo">
+        <div class="space-bar space-bar--2">
+          <span class="space-label">--space-2 (0.5rem)</span>
+        </div>
+        <div class="space-bar space-bar--4">
+          <span class="space-label">--space-4 (1rem)</span>
+        </div>
+        <div class="space-bar space-bar--8">
+          <span class="space-label">--space-8 (2rem)</span>
+        </div>
+        <div class="space-bar space-bar--12">
+          <span class="space-label">--space-12 (3rem)</span>
+        </div>
+        <div class="space-bar space-bar--16">
+          <span class="space-label">--space-16 (4rem)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Radius tokens -->
+    <section class="token-section">
+      <h2 class="section-label">Border Radius</h2>
+      <div class="radius-demo">
+        <div class="radius-box radius-sm"><span>sm</span></div>
+        <div class="radius-box radius-md"><span>md</span></div>
+        <div class="radius-box radius-lg"><span>lg</span></div>
+        <div class="radius-box radius-full"><span>full</span></div>
+      </div>
+    </section>
+
+    <!-- Shadow tokens -->
+    <section class="token-section">
+      <h2 class="section-label">Sombras</h2>
+      <div class="shadow-demo">
+        <div class="shadow-card shadow-sm"><span>--shadow-sm</span></div>
+        <div class="shadow-card shadow-md"><span>--shadow-md</span></div>
+        <div class="shadow-card shadow-lg"><span>--shadow-lg</span></div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

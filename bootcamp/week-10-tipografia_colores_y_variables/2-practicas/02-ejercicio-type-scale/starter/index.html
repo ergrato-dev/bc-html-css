@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Escala Tipográfica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <main class="container">
+
+    <header class="page-header">
+      <h1>Escala Tipográfica Modular 1.25</h1>
+      <p class="lead-text">Una escala basada en la razón <em>Major Third</em> produce una progresión visual armoniosa entre niveles de texto.</p>
+    </header>
+
+    <section class="scale-demo">
+      <h2 class="section-title">La Escala en Acción</h2>
+
+      <div class="scale-row">
+        <span class="size-label">--text-3xl</span>
+        <p class="type-3xl">Display Heading</p>
+      </div>
+      <div class="scale-row">
+        <span class="size-label">--text-2xl</span>
+        <p class="type-2xl">Heading 1</p>
+      </div>
+      <div class="scale-row">
+        <span class="size-label">--text-xl</span>
+        <p class="type-xl">Heading 2</p>
+      </div>
+      <div class="scale-row">
+        <span class="size-label">--text-lg</span>
+        <p class="type-lg">Heading 3</p>
+      </div>
+      <div class="scale-row">
+        <span class="size-label">--text-md</span>
+        <p class="type-md">Subheading / Lead</p>
+      </div>
+      <div class="scale-row scale-row--highlight">
+        <span class="size-label">--text-base ★</span>
+        <p class="type-base">Cuerpo de texto — Lorem ipsum dolor sit amet. <strong>1rem = 16px</strong></p>
+      </div>
+      <div class="scale-row">
+        <span class="size-label">--text-sm</span>
+        <p class="type-sm">Texto secundario, metadatos, timestamps.</p>
+      </div>
+      <div class="scale-row">
+        <span class="size-label">--text-xs</span>
+        <p class="type-xs">Labels, badges, captions y notas al pie.</p>
+      </div>
+    </section>
+
+    <section class="article-demo">
+      <h2>Ejemplo de Artículo</h2>
+      <p>Este es el párrafo de cuerpo. Cada título usa un nivel diferente de la escala tipográfica, creando una jerarquía visual consistente.</p>
+      <h3>Subtítulo de sección</h3>
+      <p>Las variables CSS permiten que un único cambio en <code>:root</code> actualice toda la escala del documento.</p>
+      <h4>Detalle técnico</h4>
+      <p class="caption">Nota: Los valores calculados se pueden verificar en DevTools → Computed → font-size.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* ================================================
+   Ejercicio 03 — Sistema de Design Tokens
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #0d1117;
+  color: #f0f6fc;
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+.container { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 2.5rem; }
+.page-header { display: flex; flex-direction: column; gap: 0.5rem; border-bottom: 1px solid #30363d; padding-bottom: 1.5rem; }
+.page-header h1 { font-size: 1.75rem; }
+.lead { color: #8b949e; }
+.lead code { background: #1f2937; padding: 0.1em 0.4em; border-radius: 4px; font-family: 'Fira Code', monospace; font-size: 0.85em; color: #79c0ff; }
+
+.token-section { display: flex; flex-direction: column; gap: 1rem; }
+.section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #8b949e; font-weight: 600; }
+
+
+/* ============================================ */
+/* PASO 1: Tokens de color HSL                  */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* :root {                                      */
+/*   /* Primitivos — Hue base */                */
+/*   --hue-brand:   225;                        */
+/*   --hue-success: 142;                        */
+/*   --hue-warning:  38;                        */
+/*   --hue-danger:    4;                        */
+/*                                              */
+/*   /* Paleta de marca */                      */
+/*   --blue-900: hsl(var(--hue-brand) 73% 15%); */
+/*   --blue-700: hsl(var(--hue-brand) 73% 32%); */
+/*   --blue-500: hsl(var(--hue-brand) 73% 52%); */
+/*   --blue-300: hsl(var(--hue-brand) 73% 72%); */
+/*   --blue-100: hsl(var(--hue-brand) 73% 92%); */
+/*                                              */
+/*   /* Semánticos */                           */
+/*   --color-primary: var(--blue-500);          */
+/*   --color-success: hsl(var(--hue-success) 65% 42%); */
+/*   --color-warning: hsl(var(--hue-warning) 92% 50%); */
+/*   --color-danger:  hsl(var(--hue-danger)  80% 52%); */
+/*                                              */
+/*   /* Neutros — modo light */                 */
+/*   --color-bg:      hsl(0 0% 100%);           */
+/*   --color-surface: hsl(220 14% 97%);         */
+/*   --color-border:  hsl(215 20% 88%);         */
+/*   --color-text:    hsl(215 25% 10%);         */
+/*   --color-text-muted: hsl(215 15% 45%);      */
+/* }                                            */
+/*                                              */
+/* body {                                       */
+/*   background: var(--color-bg);               */
+/*   color: var(--color-text);                  */
+/* }                                            */
+/*                                              */
+/* .swatch-card {                               */
+/*   height: 72px;                              */
+/*   border-radius: 8px;                        */
+/*   display: flex;                             */
+/*   align-items: flex-end;                     */
+/*   padding: 0.5rem 0.75rem;                   */
+/* }                                            */
+/*                                              */
+/* .swatch-grid {                               */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); */
+/*   gap: 0.75rem;                              */
+/* }                                            */
+/*                                              */
+/* .swatch--primary { background: var(--color-primary); }  */
+/* .swatch--success { background: var(--color-success); }  */
+/* .swatch--warning { background: var(--color-warning); }  */
+/* .swatch--danger  { background: var(--color-danger);  }  */
+/* .swatch--surface { background: var(--color-surface); border: 1px solid var(--color-border); } */
+/* .swatch--border  { background: var(--color-border);  border: 1px solid var(--color-border); } */
+/* .swatch-name { font-size: 0.7rem; font-family: 'Fira Code', monospace; color: rgba(255,255,255,0.85); } */
+/* .swatch-name--dark { color: var(--color-text-muted) !important; } */
+
+
+/* ============================================ */
+/* PASO 2: Tokens de espaciado y tipografía     */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* :root {                                      */
+/*   --text-xs:   0.75rem;                      */
+/*   --text-sm:   0.875rem;                     */
+/*   --text-base: 1rem;                         */
+/*   --text-md:   1.25rem;                      */
+/*   --text-lg:   1.563rem;                     */
+/*   --text-xl:   1.953rem;                     */
+/*   --text-2xl:  2.441rem;                     */
+/*                                              */
+/*   --font-regular:  400;                      */
+/*   --font-semibold: 600;                      */
+/*   --font-bold:     700;                      */
+/*                                              */
+/*   --space-1:  0.25rem;                       */
+/*   --space-2:  0.5rem;                        */
+/*   --space-3:  0.75rem;                       */
+/*   --space-4:  1rem;                          */
+/*   --space-6:  1.5rem;                        */
+/*   --space-8:  2rem;                          */
+/*   --space-12: 3rem;                          */
+/*   --space-16: 4rem;                          */
+/* }                                            */
+/*                                              */
+/* .spacing-demo {                              */
+/*   display: flex;                             */
+/*   flex-direction: column;                    */
+/*   gap: var(--space-2);                       */
+/* }                                            */
+/*                                              */
+/* .space-bar {                                 */
+/*   background: var(--color-primary, hsl(225,73%,52%)); */
+/*   height: 20px;                              */
+/*   border-radius: 4px;                        */
+/*   display: flex;                             */
+/*   align-items: center;                       */
+/*   padding: 0 0.5rem;                         */
+/* }                                            */
+/*                                              */
+/* .space-bar--2  { width: var(--space-2);  }   */
+/* .space-bar--4  { width: var(--space-4);  }   */
+/* .space-bar--8  { width: var(--space-8);  }   */
+/* .space-bar--12 { width: var(--space-12); }   */
+/* .space-bar--16 { width: var(--space-16); }   */
+/*                                              */
+/* .space-label {                               */
+/*   font-size: var(--text-xs);                 */
+/*   white-space: nowrap;                       */
+/*   color: rgba(255,255,255,0.8);              */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 3: Tokens de forma (radius + shadows)   */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* :root {                                      */
+/*   --radius-sm:   4px;                        */
+/*   --radius-md:   8px;                        */
+/*   --radius-lg:   16px;                       */
+/*   --radius-full: 9999px;                     */
+/*                                              */
+/*   --shadow-sm: 0 1px 3px hsl(0 0% 0% / 0.08); */
+/*   --shadow-md: 0 4px 12px hsl(0 0% 0% / 0.12); */
+/*   --shadow-lg: 0 8px 24px hsl(0 0% 0% / 0.18); */
+/* }                                            */
+/*                                              */
+/* .radius-demo {                               */
+/*   display: flex;                             */
+/*   flex-wrap: wrap;                           */
+/*   gap: 1rem;                                 */
+/*   align-items: center;                       */
+/* }                                            */
+/*                                              */
+/* .radius-box {                                */
+/*   width: 80px;                               */
+/*   height: 80px;                              */
+/*   background: var(--color-primary, hsl(225,73%,52%)); */
+/*   display: flex;                             */
+/*   align-items: center;                       */
+/*   justify-content: center;                   */
+/*   font-size: 0.8rem;                         */
+/*   color: #fff;                               */
+/*   font-weight: 600;                          */
+/* }                                            */
+/*                                              */
+/* .radius-sm   { border-radius: var(--radius-sm); }   */
+/* .radius-md   { border-radius: var(--radius-md); }   */
+/* .radius-lg   { border-radius: var(--radius-lg); }   */
+/* .radius-full { border-radius: var(--radius-full); } */
+/*                                              */
+/* .shadow-demo {                               */
+/*   display: flex;                             */
+/*   flex-wrap: wrap;                           */
+/*   gap: 1.5rem;                               */
+/*   padding: 1rem;                             */
+/* }                                            */
+/*                                              */
+/* .shadow-card {                               */
+/*   background: var(--color-surface, #f8fafc); */
+/*   color: var(--color-text, #0f172a);         */
+/*   padding: 1.5rem 2rem;                      */
+/*   border-radius: var(--radius-md);           */
+/*   font-size: 0.85rem;                        */
+/*   font-weight: 600;                          */
+/* }                                            */
+/*                                              */
+/* .shadow-sm { box-shadow: var(--shadow-sm); } */
+/* .shadow-md { box-shadow: var(--shadow-md); } */
+/* .shadow-lg { box-shadow: var(--shadow-lg); } */
+
+
+/* ============================================ */
+/* PASO 4: Tema oscuro con prefers-color-scheme */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* @media (prefers-color-scheme: dark) {        */
+/*   :root {                                    */
+/*     --color-bg:         hsl(215 28% 8%);     */
+/*     --color-surface:    hsl(215 25% 12%);    */
+/*     --color-border:     hsl(215 20% 22%);    */
+/*     --color-text:       hsl(215 20% 95%);    */
+/*     --color-text-muted: hsl(215 15% 55%);    */
+/*   }                                          */
+/* }                                            */
