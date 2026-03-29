@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="400" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="700">Flexbox — Ejes y propiedades del contenedor</text>
+
+  <!-- ============================================================
+       TOP: flex-direction: row (main = horizontal)
+  ============================================================ -->
+  <text x="20" y="60" fill="#8b949e" font-size="11" font-weight="600">flex-direction: row (por defecto)</text>
+
+  <!-- Container row -->
+  <rect x="20" y="68" width="780" height="110" rx="6" fill="#161b22" stroke="#264de4" stroke-width="2"/>
+
+  <!-- Main axis arrow -->
+  <line x1="30" y1="178" x2="790" y2="178" stroke="#264de4" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="790" y="194" fill="#264de4" font-size="10" text-anchor="end">main axis →</text>
+
+  <!-- Cross axis arrow -->
+  <line x1="20" y1="70" x2="20" y2="178" stroke="#3fb950" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="6" y="130" fill="#3fb950" font-size="10" transform="rotate(-90, 6, 130)">cross axis</text>
+
+  <!-- Items inside row container -->
+  <rect x="36" y="82" width="110" height="80" rx="4" fill="#264de4" opacity="0.85"/>
+  <text x="91" y="126" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Item 1</text>
+
+  <rect x="162" y="82" width="110" height="80" rx="4" fill="#264de4" opacity="0.7"/>
+  <text x="217" y="126" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Item 2</text>
+
+  <rect x="288" y="82" width="110" height="80" rx="4" fill="#264de4" opacity="0.55"/>
+  <text x="343" y="126" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Item 3</text>
+
+  <!-- Gap label -->
+  <line x1="146" y1="122" x2="162" y2="122" stroke="#f0e68c" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="154" y="116" text-anchor="middle" fill="#f0e68c" font-size="9">gap</text>
+
+  <!-- justify-content label -->
+  <text x="600" y="96" fill="#8b949e" font-size="10" font-weight="600">justify-content:</text>
+  <text x="600" y="110" fill="#c9d1d9" font-size="9.5">space-between   space-around</text>
+  <text x="600" y="124" fill="#c9d1d9" font-size="9.5">space-evenly    center</text>
+  <text x="600" y="138" fill="#c9d1d9" font-size="9.5">flex-start      flex-end</text>
+
+  <!-- align-items label -->
+  <text x="480" y="96" fill="#3fb950" font-size="10" font-weight="600">align-items:</text>
+  <text x="480" y="110" fill="#c9d1d9" font-size="9.5">stretch</text>
+  <text x="480" y="124" fill="#c9d1d9" font-size="9.5">flex-start</text>
+  <text x="480" y="138" fill="#c9d1d9" font-size="9.5">flex-end · center</text>
+
+  <!-- ============================================================
+       BOTTOM LEFT: flex-direction: column
+  ============================================================ -->
+  <text x="20" y="220" fill="#8b949e" font-size="11" font-weight="600">flex-direction: column</text>
+
+  <rect x="20" y="228" width="180" height="158" rx="6" fill="#161b22" stroke="#e34f26" stroke-width="2"/>
+
+  <!-- Main axis arrow for column (vertical) -->
+  <line x1="200" y1="236" x2="200" y2="386" stroke="#e34f26" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="202" y="395" fill="#e34f26" font-size="9">main axis ↓</text>
+
+  <!-- Cross axis arrow for column (horizontal) -->
+  <line x1="22" y1="228" x2="200" y2="228" stroke="#3fb950" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <text x="100" y="220" text-anchor="middle" fill="#3fb950" font-size="9">cross axis →</text>
+
+  <!-- Items column -->
+  <rect x="36" y="240" width="148" height="34" rx="4" fill="#e34f26" opacity="0.85"/>
+  <text x="110" y="262" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Item 1</text>
+
+  <rect x="36" y="284" width="148" height="34" rx="4" fill="#e34f26" opacity="0.7"/>
+  <text x="110" y="306" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Item 2</text>
+
+  <rect x="36" y="328" width="148" height="34" rx="4" fill="#e34f26" opacity="0.55"/>
+  <text x="110" y="350" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">Item 3</text>
+
+  <!-- ============================================================
+       BOTTOM RIGHT: flex-wrap + gap visual
+  ============================================================ -->
+  <text x="240" y="220" fill="#8b949e" font-size="11" font-weight="600">flex-wrap: wrap + gap</text>
+
+  <rect x="240" y="228" width="555" height="158" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="2"/>
+
+  <!-- Row 1 of wrapped items -->
+  <rect x="254" y="242" width="120" height="48" rx="4" fill="#3fb950" opacity="0.85"/>
+  <text x="314" y="271" text-anchor="middle" fill="#0d1117" font-size="10" font-weight="700">Item 1</text>
+
+  <rect x="386" y="242" width="120" height="48" rx="4" fill="#3fb950" opacity="0.7"/>
+  <text x="446" y="271" text-anchor="middle" fill="#0d1117" font-size="10" font-weight="700">Item 2</text>
+
+  <rect x="518" y="242" width="120" height="48" rx="4" fill="#3fb950" opacity="0.55"/>
+  <text x="578" y="271" text-anchor="middle" fill="#0d1117" font-size="10" font-weight="700">Item 3</text>
+
+  <!-- Row 2 of wrapped items -->
+  <rect x="254" y="302" width="120" height="48" rx="4" fill="#3fb950" opacity="0.4"/>
+  <text x="314" y="331" text-anchor="middle" fill="#0d1117" font-size="10" font-weight="700">Item 4</text>
+
+  <rect x="386" y="302" width="120" height="48" rx="4" fill="#3fb950" opacity="0.3"/>
+  <text x="446" y="331" text-anchor="middle" fill="#0d1117" font-size="10" font-weight="700">Item 5</text>
+
+  <!-- gap arrows -->
+  <line x1="374" y1="266" x2="386" y2="266" stroke="#f0e68c" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="506" y1="266" x2="518" y2="266" stroke="#f0e68c" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="314" y1="290" x2="314" y2="302" stroke="#f0e68c" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="670" y="290" fill="#f0e68c" font-size="10" font-weight="600">gap: 1rem</text>
+  <text x="670" y="304" fill="#8b949e" font-size="9">entre filas y</text>
+  <text x="670" y="316" fill="#8b949e" font-size="9">columnas</text>
+
+  <!-- Arrowhead markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#264de4"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3fb950"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="3" refY="6" orient="auto">
+      <path d="M0,0 L6,0 L3,8 z" fill="#e34f26"/>
+    </marker>
+  </defs>
+</svg>

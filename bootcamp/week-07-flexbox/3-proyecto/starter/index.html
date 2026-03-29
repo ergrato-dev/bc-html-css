@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlexDash — Dashboard Flexbox</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HEADER: Navbar sticky                        -->
+  <!-- ============================================ -->
+  <header class="site-header" id="site-header">
+    <div class="header-brand">
+      <span class="brand-logo">FD</span>
+      <span class="brand-name">FlexDash</span>
+    </div>
+    <div class="header-actions">
+      <button class="btn-icon" aria-label="Notificaciones">🔔</button>
+      <div class="user-avatar" aria-label="Perfil">AV</div>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- LAYOUT: Sidebar + Main                       -->
+  <!-- ============================================ -->
+  <div class="layout-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Navegación principal">
+      <nav class="sidebar-nav">
+        <a href="#stats" class="nav-item active">
+          <span class="nav-icon">📊</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="#projects" class="nav-item">
+          <span class="nav-icon">📁</span>
+          <span>Proyectos</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">👥</span>
+          <span>Equipo</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span>Analíticas</span>
+        </a>
+        <a href="#" class="nav-item">
+          <span class="nav-icon">⚙️</span>
+          <span>Ajustes</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-avatar-sm">AV</div>
+        <div class="user-info">
+          <span class="user-name">Ana Valle</span>
+          <span class="user-role">Developer</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <div class="content-header">
+        <h1>Dashboard</h1>
+        <p>Bienvenida de nuevo, Ana. Aquí está el resumen del día.</p>
+      </div>
+
+      <!-- ============================================ -->
+      <!-- STATS ROW: Tarjetas de estadísticas          -->
+      <!-- ============================================ -->
+      <section id="stats" aria-label="Estadísticas">
+        <h2 class="section-title">Resumen</h2>
+        <div class="stats-row">
+          <article class="stat-card">
+            <span class="stat-icon">🚀</span>
+            <div class="stat-data">
+              <span class="stat-value">24</span>
+              <span class="stat-label">Proyectos activos</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon">✅</span>
+            <div class="stat-data">
+              <span class="stat-value">138</span>
+              <span class="stat-label">Tareas completadas</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon">⏳</span>
+            <div class="stat-data">
+              <span class="stat-value">7</span>
+              <span class="stat-label">Pendientes hoy</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <span class="stat-icon">👥</span>
+            <div class="stat-data">
+              <span class="stat-value">12</span>
+              <span class="stat-label">Miembros del equipo</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- PROJECTS GRID: Cards de proyectos recientes  -->
+      <!-- ============================================ -->
+      <section id="projects" aria-label="Proyectos recientes">
+        <h2 class="section-title">Proyectos Recientes</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Portfolio v2</h3>
+              <span class="badge badge--active">Activo</span>
+            </div>
+            <p>Rediseño del portfolio personal con HTML5 semántico y CSS Grid.</p>
+            <div class="project-footer">
+              <span class="project-date">Actualizado: hace 2h</span>
+              <span class="project-progress">72%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Landing SaaS</h3>
+              <span class="badge badge--review">Revisión</span>
+            </div>
+            <p>Página de aterrizaje para producto SaaS con animaciones CSS.</p>
+            <div class="project-footer">
+              <span class="project-date">Actualizado: hace 5h</span>
+              <span class="project-progress">90%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Sistema de Design</h3>
+              <span class="badge badge--active">Activo</span>
+            </div>
+            <p>Tokens de diseño con CSS Custom Properties y guía de estilos.</p>
+            <div class="project-footer">
+              <span class="project-date">Actualizado: ayer</span>
+              <span class="project-progress">45%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Dashboard Admin</h3>
+              <span class="badge badge--done">Entregado</span>
+            </div>
+            <p>Panel de administración con Flexbox y responsive design.</p>
+            <div class="project-footer">
+              <span class="project-date">Actualizado: hace 3d</span>
+              <span class="project-progress">100%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Componentes UI</h3>
+              <span class="badge badge--active">Activo</span>
+            </div>
+            <p>Biblioteca de componentes reutilizables con pseudo-elementos CSS.</p>
+            <div class="project-footer">
+              <span class="project-date">Actualizado: hace 1d</span>
+              <span class="project-progress">30%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3>Blog Personal</h3>
+              <span class="badge badge--review">Revisión</span>
+            </div>
+            <p>Blog con tipografía optimizada, dark mode y SEO básico.</p>
+            <div class="project-footer">
+              <span class="project-date">Actualizado: hace 4d</span>
+              <span class="project-progress">80%</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- FOOTER: Sticky al fondo                      -->
+  <!-- ============================================ -->
+  <footer class="site-footer">
+    <p>© 2026 FlexDash — Semana 07: Flexbox</p>
+  </footer>
+
+</body>
+</html>

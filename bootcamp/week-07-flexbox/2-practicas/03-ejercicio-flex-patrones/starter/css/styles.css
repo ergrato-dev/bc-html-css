@@ -1,0 +1,230 @@
+/* ================================================
+   Ejercicio 03 — Flex Patrones
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --sidebar-width: 220px;
+}
+
+/* ============================================ */
+/* PASO 4: Sticky footer — body como columna    */
+/* (Actívalo primero para que el footer funcione) */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* body {                                       */
+/*   display: flex;                             */
+/*   flex-direction: column;                   */
+/*   min-height: 100vh;                         */
+/*   background: var(--color-bg);               */
+/*   color: var(--color-text);                  */
+/*   font-family: Inter, system-ui, sans-serif; */
+/*   font-size: 1rem;                           */
+/*   line-height: 1.6;                          */
+/* }                                            */
+
+/* Mientras tanto, estilos base: */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+code {
+  background: #21262d;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--color-orange);
+}
+
+/* ============================================ */
+/* PASO 1: Navbar con space-between             */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .navbar {                                    */
+/*   display: flex;                             */
+/*   justify-content: space-between;           */
+/*   align-items: center;                       */
+/*   padding: 0 var(--spacing-lg);              */
+/*   height: 60px;                              */
+/*   background: var(--color-surface);          */
+/*   border-bottom: 1px solid var(--color-border); */
+/*   position: sticky;                          */
+/*   top: 0;                                    */
+/*   z-index: 100;                              */
+/* }                                            */
+/*                                              */
+/* .nav-logo {                                  */
+/*   font-size: 1rem;                           */
+/*   font-weight: 700;                          */
+/*   color: var(--color-blue);                  */
+/* }                                            */
+/*                                              */
+/* .nav-links {                                 */
+/*   display: flex;                             */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+/*                                              */
+/* .nav-links a {                               */
+/*   color: var(--color-text-muted);            */
+/*   text-decoration: none;                     */
+/*   font-size: 0.9rem;                         */
+/*   transition: color 0.2s;                    */
+/* }                                            */
+/*                                              */
+/* .nav-links a:hover { color: var(--color-text); } */
+
+
+/* ============================================ */
+/* PASO 2: Centrado perfecto (hero)             */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .hero-section {                              */
+/*   display: flex;                             */
+/*   justify-content: center;                  */
+/*   align-items: center;                       */
+/*   min-height: 45vh;                          */
+/*   text-align: center;                        */
+/*   background: linear-gradient(180deg, #0d1117 0%, #161b22 100%); */
+/*   padding: var(--spacing-lg);                */
+/* }                                            */
+/*                                              */
+/* .hero-content h1 {                           */
+/*   font-size: 2rem;                           */
+/*   margin-bottom: 0.5rem;                     */
+/* }                                            */
+/*                                              */
+/* .hero-content p {                            */
+/*   color: var(--color-text-muted);            */
+/*   margin-bottom: var(--spacing-lg);          */
+/* }                                            */
+/*                                              */
+/* .btn {                                       */
+/*   display: inline-block;                     */
+/*   padding: 0.6rem 1.5rem;                    */
+/*   background: var(--color-blue);             */
+/*   color: #fff;                               */
+/*   text-decoration: none;                     */
+/*   border-radius: 6px;                        */
+/*   font-weight: 600;                          */
+/*   font-size: 0.9rem;                         */
+/*   transition: opacity 0.2s;                  */
+/* }                                            */
+/*                                              */
+/* .btn:hover { opacity: 0.85; }               */
+
+
+/* ============================================ */
+/* PASO 3: Sidebar + Main                       */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .layout-wrapper {                            */
+/*   display: flex;                             */
+/*   gap: 0;                                    */
+/*   flex: 1;            /* ocupa el espacio disponible (con body flex) */ */
+/* }                                            */
+/*                                              */
+/* .sidebar {                                   */
+/*   flex: 0 0 var(--sidebar-width);          */
+/*   padding: var(--spacing-lg) var(--spacing-md); */
+/*   background: var(--color-surface);          */
+/*   border-right: 1px solid var(--color-border); */
+/* }                                            */
+/*                                              */
+/* .sidebar h2 {                                */
+/*   font-size: 0.85rem;                        */
+/*   color: var(--color-text-muted);            */
+/*   text-transform: uppercase;                 */
+/*   letter-spacing: 0.06em;                    */
+/*   margin-bottom: var(--spacing-md);          */
+/* }                                            */
+/*                                              */
+/* .sidebar-nav {                               */
+/*   list-style: none;                          */
+/*   display: flex;                             */
+/*   flex-direction: column;                   */
+/*   gap: 0.5rem;                               */
+/* }                                            */
+/*                                              */
+/* .sidebar-nav a {                             */
+/*   color: var(--color-text-muted);            */
+/*   text-decoration: none;                     */
+/*   font-size: 0.9rem;                         */
+/*   transition: color 0.2s;                    */
+/* }                                            */
+/*                                              */
+/* .sidebar-nav a:hover { color: var(--color-text); } */
+/*                                              */
+/* .main-content {                              */
+/*   flex: 1;                                   */
+/*   padding: var(--spacing-lg);                */
+/*   overflow-y: auto;                          */
+/* }                                            */
+/*                                              */
+/* .main-content h2 {                           */
+/*   font-size: 1.1rem;                         */
+/*   margin-bottom: 0.4rem;                     */
+/* }                                            */
+/*                                              */
+/* .main-content > p {                          */
+/*   color: var(--color-text-muted);            */
+/*   font-size: 0.85rem;                        */
+/*   margin-bottom: var(--spacing-lg);          */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 4 continuación: Cards responsivas       */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .card-grid {                                 */
+/*   display: flex;                             */
+/*   flex-wrap: wrap;                           */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+/*                                              */
+/* .card {                                      */
+/*   flex: 1 1 200px;    /* crece a partir de 200px */ */
+/*   background: var(--color-surface);          */
+/*   border: 1px solid var(--color-border);     */
+/*   border-radius: 8px;                        */
+/*   padding: var(--spacing-md);                */
+/*   transition: border-color 0.2s;             */
+/* }                                            */
+/*                                              */
+/* .card:hover { border-color: var(--color-blue); } */
+/*                                              */
+/* .card h3 {                                   */
+/*   font-size: 0.95rem;                        */
+/*   margin-bottom: 0.4rem;                     */
+/* }                                            */
+/*                                              */
+/* .card p {                                    */
+/*   font-size: 0.82rem;                        */
+/*   color: var(--color-text-muted);            */
+/* }                                            */
+/*                                              */
+/* .site-footer {                               */
+/*   padding: var(--spacing-md) var(--spacing-lg); */
+/*   text-align: center;                        */
+/*   font-size: 0.8rem;                         */
+/*   color: var(--color-text-muted);            */
+/*   background: var(--color-surface);          */
+/*   border-top: 1px solid var(--color-border); */
+/* }                                            */

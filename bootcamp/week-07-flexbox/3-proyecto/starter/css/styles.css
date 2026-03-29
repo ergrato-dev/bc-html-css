@@ -1,0 +1,435 @@
+/* ================================================
+   FlexDash — Dashboard Flexbox
+   Semana 07: Flexbox
+   Completa los TODOs para construir el dashboard
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ================================================
+   CSS Custom Properties
+   ================================================ */
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-2: #21262d;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-blue-light: #79b8ff;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --color-yellow: #e3b341;
+  --color-purple: #bc8cff;
+
+  --sidebar-width: 240px;
+  --header-height: 60px;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --z-header: 100;
+}
+
+/* ================================================
+   TODO 1: Body como columna Flexbox
+   El body debe ser un flex container en columna
+   con min-height: 100vh para que el footer quede
+   siempre al fondo de la pantalla.
+
+   Propiedades a añadir:
+   - display: flex
+   - flex-direction: column
+   - min-height: 100vh
+   - background: var(--color-bg)
+   - color: var(--color-text)
+   - font-family: Inter, system-ui, sans-serif
+   ================================================ */
+body {
+  /* TODO 1: Convierte body en columna flex */
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ================================================
+   TODO 2: Header sticky con Flexbox
+   - display: flex
+   - justify-content: space-between (logo izq, acciones der)
+   - align-items: center
+   - height: var(--header-height)
+   - position: sticky; top: 0; z-index: var(--z-header)
+   ================================================ */
+.site-header {
+  /* TODO 2: Navbar sticky con space-between */
+  padding: 0 var(--spacing-lg);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ================================================
+   TODO 3: Header brand (logo + nombre)
+   - display: flex
+   - align-items: center
+   - gap: var(--spacing-sm)
+   ================================================ */
+.header-brand {
+  /* TODO 3: Flex row para logo + nombre */
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  background: var(--color-blue);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* ================================================
+   TODO 4: Header actions (botones derecha)
+   - display: flex
+   - align-items: center
+   - gap: var(--spacing-sm)
+   ================================================ */
+.header-actions {
+  /* TODO 4: Agrupar acciones en fila */
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.btn-icon:hover { background: var(--color-surface-2); }
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background: var(--color-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ================================================
+   TODO 5: Layout wrapper (sidebar + main)
+   - display: flex
+   - flex: 1  ← ocupa el espacio disponible entre header y footer
+   ================================================ */
+.layout-wrapper {
+  /* TODO 5: Flex container para sidebar + main */
+}
+
+/* ================================================
+   TODO 6: Sidebar de ancho fijo
+   - flex: 0 0 var(--sidebar-width)  ← no crece ni encoge
+   - display: flex
+   - flex-direction: column
+   - justify-content: space-between
+   ================================================ */
+.sidebar {
+  /* TODO 6: Sidebar con flex fijo */
+  padding: var(--spacing-lg) var(--spacing-md);
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+}
+
+/* ================================================
+   TODO 7: Sidebar nav (links en columna)
+   - display: flex
+   - flex-direction: column
+   - gap: var(--spacing-xs)
+   ================================================ */
+.sidebar-nav {
+  /* TODO 7: Links del sidebar en columna */
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.nav-icon { font-size: 1rem; }
+
+/* ================================================
+   TODO 8: Sidebar user card (avatar + info)
+   - display: flex
+   - align-items: center
+   - gap: var(--spacing-sm)
+   ================================================ */
+.sidebar-user {
+  /* TODO 8: User card al fondo del sidebar */
+  padding: var(--spacing-md);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-lg);
+}
+
+.user-avatar-sm {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* ================================================
+   TODO 9: Main content (ocupa el resto del espacio)
+   - flex: 1
+   - overflow-y: auto
+   - padding: var(--spacing-lg)
+   ================================================ */
+.main-content {
+  /* TODO 9: Main ocupa todo el espacio restante */
+}
+
+.content-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.content-header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.content-header p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-md);
+}
+
+/* ================================================
+   TODO 10: Stats row (tarjetas de estadísticas)
+   - display: flex
+   - flex-wrap: wrap
+   - gap: var(--spacing-md)
+   - margin-bottom: var(--spacing-xl)
+   ================================================ */
+.stats-row {
+  /* TODO 10: Fila de stat cards */
+}
+
+/* ================================================
+   TODO 11: Stat card individual
+   - flex: 1 1 180px  ← mínimo 180px, crece proporcionalmente
+   - display: flex
+   - align-items: center
+   - gap: var(--spacing-md)
+   ================================================ */
+.stat-card {
+  /* TODO 11: Cada stat card es flex con ícono + datos */
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s;
+}
+
+.stat-card:hover { border-color: var(--color-blue); }
+
+.stat-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.stat-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ================================================
+   TODO 12: Projects grid
+   - display: flex
+   - flex-wrap: wrap
+   - gap: var(--spacing-md)
+   ================================================ */
+.projects-grid {
+  /* TODO 12: Grid de proyectos con flex-wrap */
+}
+
+/* ================================================
+   TODO 13: Project card
+   - flex: 1 1 220px  ← mínimo 220px
+   - display: flex
+   - flex-direction: column
+   ================================================ */
+.project-card {
+  /* TODO 13: Cada project card es columna flex */
+  padding: var(--spacing-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.project-card:hover {
+  border-color: var(--color-blue);
+  transform: translateY(-2px);
+}
+
+/* ================================================
+   TODO 14: Project header (título + badge)
+   - display: flex
+   - justify-content: space-between
+   - align-items: flex-start
+   - margin-bottom: var(--spacing-sm)
+   ================================================ */
+.project-header {
+  /* TODO 14: Título izquierda, badge derecha */
+}
+
+.project-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.project-card > p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  flex: 1; /* empuja el footer al fondo del card */
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.project-date {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.project-progress {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-green);
+}
+
+/* Badges */
+.badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge--active { background: rgba(63,185,80,0.15); color: var(--color-green); }
+.badge--review { background: rgba(227,179,65,0.15); color: var(--color-yellow); }
+.badge--done   { background: rgba(38,77,228,0.15);  color: var(--color-blue-light); }
+
+/* Footer */
+.site-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* ================================================
+   Responsive — Mobile-first
+   En pantallas < 768px: ocultar sidebar,
+   main ocupa el 100% del ancho
+   ================================================ */
+@media (max-width: 767px) {
+  .sidebar {
+    display: none; /* ocultar sidebar en móvil */
+  }
+
+  .main-content {
+    padding: var(--spacing-md);
+  }
+}

@@ -1,0 +1,153 @@
+/* ================================================
+   Ejercicio 01 — Flex Container
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: var(--spacing-lg) var(--spacing-lg);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header h1 {
+  font-size: 1.5rem;
+  color: var(--color-blue);
+  margin-bottom: 0.25rem;
+}
+
+.site-header p { color: var(--color-text-muted); font-size: 0.9rem; }
+
+.page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.demo-section {
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.demo-section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  color: var(--color-text);
+}
+
+.demo-section > p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+code {
+  background: #21262d;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--color-orange);
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--spacing-md);
+  margin-bottom: 0.4rem;
+}
+
+/* Box base */
+.box {
+  background: var(--color-blue);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ============================================ */
+/* PASO 1: Activa display:flex en .container-row */
+/* Descomenta las siguientes líneas:             */
+/* ============================================ */
+/* .container-row {                             */
+/*   display: flex;                             */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 2: flex-direction:column                */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .container-column {                          */
+/*   display: flex;                             */
+/*   flex-direction: column;                   */
+/*   gap: var(--spacing-md);                   */
+/*   max-width: 200px;                          */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 3: justify-content                      */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .jc-start,                                  */
+/* .jc-center,                                 */
+/* .jc-between,                                */
+/* .jc-around,                                 */
+/* .jc-evenly {                                */
+/*   display: flex;                             */
+/*   margin-bottom: var(--spacing-sm);         */
+/* }                                            */
+
+/* .jc-start   { justify-content: flex-start; } */
+/* .jc-center  { justify-content: center; }     */
+/* .jc-between { justify-content: space-between; } */
+/* .jc-around  { justify-content: space-around; } */
+/* .jc-evenly  { justify-content: space-evenly; } */
+
+
+/* ============================================ */
+/* PASO 4: flex-wrap + gap + align-items        */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .container-wrap {                            */
+/*   display: flex;                             */
+/*   flex-wrap: wrap;    /* saltar de línea */  */
+/*   gap: var(--spacing-md);                   */
+/*   align-items: center;                       */
+/* }                                            */
+/*                                              */
+/* .container-wrap .box {                       */
+/*   flex: 1 1 120px;   /* ancho mínimo 120px */ */
+/* }                                            */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 03 — Flex Patrones</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- PASO 1: Navbar con space-between             -->
+  <!-- ============================================ -->
+  <header class="navbar">
+    <div class="nav-logo">FlexBootcamp</div>
+    <nav class="nav-links">
+      <a href="#hero">Inicio</a>
+      <a href="#layout">Layout</a>
+      <a href="#cards">Cards</a>
+    </nav>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- PASO 2: Centrado perfecto (hero)             -->
+  <!-- ============================================ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <h1>Flexbox Patterns</h1>
+      <p>Layouts del mundo real con Flexbox</p>
+      <a href="#layout" class="btn">Explorar →</a>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- PASO 3: Sidebar + Main                       -->
+  <!-- ============================================ -->
+  <div class="layout-wrapper" id="layout">
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <ul class="sidebar-nav">
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content" id="cards">
+      <h2>Proyectos Recientes</h2>
+      <p>Cada card tiene <code>flex: 1 1 200px</code> — se adapta automáticamente.</p>
+
+      <!-- ============================================ -->
+      <!-- PASO 4: Cards responsivas                    -->
+      <!-- ============================================ -->
+      <div class="card-grid">
+        <article class="card">
+          <h3>Proyecto 1</h3>
+          <p>Descripción breve del proyecto.</p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 2</h3>
+          <p>Descripción breve del proyecto.</p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 3</h3>
+          <p>Descripción breve del proyecto.</p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 4</h3>
+          <p>Descripción breve del proyecto.</p>
+        </article>
+        <article class="card">
+          <h3>Proyecto 5</h3>
+          <p>Descripción breve del proyecto.</p>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- PASO 4: Footer sticky -->
+  <footer class="site-footer">
+    <p>© 2026 FlexBootcamp — Semana 07 Flexbox</p>
+  </footer>
+
+</body>
+</html>

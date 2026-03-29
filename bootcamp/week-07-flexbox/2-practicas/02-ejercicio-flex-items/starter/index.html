@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 02 — Flex Items</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Flex Items</h1>
+    <p>Controla el comportamiento individual de cada item</p>
+  </header>
+
+  <main class="page-content">
+
+    <!-- ============================================ -->
+    <!-- PASO 1: flex-grow                            -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 1 — <code>flex-grow</code></h2>
+      <p>El item con mayor grow absorbe más espacio libre.</p>
+
+      <div class="grow-container">
+        <div class="box grow-0">grow: 0<br><small>fijo</small></div>
+        <div class="box grow-1">grow: 1<br><small>flexible</small></div>
+        <div class="box grow-2">grow: 2<br><small>doble espacio</small></div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 2: flex-shrink                          -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 2 — <code>flex-shrink</code></h2>
+      <p>El logo no se encoge; el texto se adapta. Reduce la ventana para verlo.</p>
+
+      <div class="header-bar">
+        <div class="logo-box">Logo</div>
+        <nav class="nav-links">
+          <span class="box-sm">Inicio</span>
+          <span class="box-sm">Servicios</span>
+          <span class="box-sm">Portafolio</span>
+          <span class="box-sm">Contacto</span>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 3: flex shorthand (grow shrink basis)   -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 3 — Shorthand <code>flex</code></h2>
+      <p>Combinando grow, shrink y basis para layouts reales.</p>
+
+      <div class="layout-sidebar">
+        <aside class="sidebar-panel">Sidebar<br><small>0 0 200px</small></aside>
+        <main class="main-panel">Main Content<br><small>flex: 1</small></main>
+      </div>
+
+      <p class="label" style="margin-top:1rem">Cards con flex: 1 1 180px:</p>
+      <div class="cards-flex">
+        <div class="card-item">Card 1</div>
+        <div class="card-item">Card 2</div>
+        <div class="card-item">Card 3</div>
+        <div class="card-item">Card 4</div>
+        <div class="card-item">Card 5</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 4: align-self + order                   -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 4 — <code>align-self</code> y <code>order</code></h2>
+      <p>Controla un solo item independientemente del contenedor.</p>
+
+      <div class="align-container">
+        <div class="box">Normal</div>
+        <div class="box align-end">align-self:<br>flex-end</div>
+        <div class="box align-center">align-self:<br>center</div>
+        <div class="box">Normal</div>
+        <div class="box order-first">order: -1<br><small>(último en HTML)</small></div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

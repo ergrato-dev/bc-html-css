@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 440" width="820" height="440" font-family="Inter, system-ui, sans-serif">
+  <rect width="820" height="440" fill="#0d1117"/>
+  <text x="410" y="30" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="700">Flexbox — justify-content y align-items</text>
+
+  <!-- SECTION HEADER: justify-content -->
+  <text x="20" y="54" fill="#264de4" font-size="12" font-weight="700">justify-content (eje principal)</text>
+  <!-- line -->
+  <line x1="20" y1="58" x2="800" y2="58" stroke="#264de4" stroke-width="1" opacity="0.4"/>
+
+  <!-- flex-start -->
+  <text x="20" y="90" fill="#8b949e" font-size="10">flex-start</text>
+  <rect x="20" y="95" width="116" height="36" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.2"/>
+  <rect x="24" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.9"/>
+  <rect x="55" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.7"/>
+  <rect x="86" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.5"/>
+
+  <!-- center -->
+  <text x="154" y="90" fill="#8b949e" font-size="10">center</text>
+  <rect x="154" y="95" width="116" height="36" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.2"/>
+  <rect x="196" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.9"/>
+  <rect x="227" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.7"/>
+  <rect x="165" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.5"/>
+
+  <!-- flex-end -->
+  <text x="288" y="90" fill="#8b949e" font-size="10">flex-end</text>
+  <rect x="288" y="95" width="116" height="36" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.2"/>
+  <rect x="372" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.9"/>
+  <rect x="341" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.7"/>
+  <rect x="310" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.5"/>
+
+  <!-- space-between -->
+  <text x="422" y="90" fill="#8b949e" font-size="10">space-between</text>
+  <rect x="422" y="95" width="116" height="36" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.2"/>
+  <rect x="426" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.9"/>
+  <rect x="466" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.7"/>
+  <rect x="506" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.5"/>
+
+  <!-- space-around -->
+  <text x="556" y="90" fill="#8b949e" font-size="10">space-around</text>
+  <rect x="556" y="95" width="116" height="36" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.2"/>
+  <rect x="568" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.9"/>
+  <rect x="608" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.7"/>
+  <rect x="636" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.5"/>
+
+  <!-- space-evenly -->
+  <text x="690" y="90" fill="#8b949e" font-size="10">space-evenly</text>
+  <rect x="690" y="95" width="116" height="36" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.2"/>
+  <rect x="694" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.9"/>
+  <rect x="730" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.7"/>
+  <rect x="766" y="99" width="28" height="28" rx="3" fill="#264de4" opacity="0.5"/>
+
+  <!-- SECTION HEADER: align-items -->
+  <text x="20" y="170" fill="#3fb950" font-size="12" font-weight="700">align-items (eje cruzado)</text>
+  <line x1="20" y1="174" x2="800" y2="174" stroke="#3fb950" stroke-width="1" opacity="0.4"/>
+
+  <!-- stretch (default) -->
+  <text x="20" y="198" fill="#8b949e" font-size="10">stretch (default)</text>
+  <rect x="20" y="204" width="116" height="60" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <rect x="24" y="208" width="28" height="52" rx="3" fill="#3fb950" opacity="0.85"/>
+  <rect x="55" y="208" width="28" height="52" rx="3" fill="#3fb950" opacity="0.65"/>
+  <rect x="86" y="208" width="28" height="52" rx="3" fill="#3fb950" opacity="0.45"/>
+
+  <!-- flex-start -->
+  <text x="154" y="198" fill="#8b949e" font-size="10">flex-start</text>
+  <rect x="154" y="204" width="116" height="60" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <rect x="158" y="208" width="28" height="22" rx="3" fill="#3fb950" opacity="0.85"/>
+  <rect x="189" y="208" width="28" height="32" rx="3" fill="#3fb950" opacity="0.65"/>
+  <rect x="220" y="208" width="28" height="18" rx="3" fill="#3fb950" opacity="0.45"/>
+
+  <!-- flex-end -->
+  <text x="288" y="198" fill="#8b949e" font-size="10">flex-end</text>
+  <rect x="288" y="204" width="116" height="60" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <rect x="292" y="242" width="28" height="22" rx="3" fill="#3fb950" opacity="0.85"/>
+  <rect x="323" y="232" width="28" height="32" rx="3" fill="#3fb950" opacity="0.65"/>
+  <rect x="354" y="246" width="28" height="18" rx="3" fill="#3fb950" opacity="0.45"/>
+
+  <!-- center -->
+  <text x="422" y="198" fill="#8b949e" font-size="10">center</text>
+  <rect x="422" y="204" width="116" height="60" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <rect x="426" y="225" width="28" height="22" rx="3" fill="#3fb950" opacity="0.85"/>
+  <rect x="457" y="218" width="28" height="32" rx="3" fill="#3fb950" opacity="0.65"/>
+  <rect x="488" y="227" width="28" height="18" rx="3" fill="#3fb950" opacity="0.45"/>
+
+  <!-- baseline -->
+  <text x="556" y="198" fill="#8b949e" font-size="10">baseline</text>
+  <rect x="556" y="204" width="116" height="60" rx="4" fill="#161b22" stroke="#3fb950" stroke-width="1.2"/>
+  <rect x="560" y="214" width="28" height="28" rx="3" fill="#3fb950" opacity="0.85"/>
+  <text x="574" y="233" text-anchor="middle" fill="#0d1117" font-size="9" font-weight="700">A</text>
+  <rect x="591" y="212" width="28" height="32" rx="3" fill="#3fb950" opacity="0.65"/>
+  <text x="605" y="233" text-anchor="middle" fill="#0d1117" font-size="13" font-weight="700">A</text>
+  <rect x="622" y="216" width="28" height="26" rx="3" fill="#3fb950" opacity="0.45"/>
+  <text x="636" y="233" text-anchor="middle" fill="#0d1117" font-size="11" font-weight="700">A</text>
+  <!-- baseline guide -->
+  <line x1="559" y1="242" x2="651" y2="242" stroke="#f0e68c" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="672" y="244" fill="#f0e68c" font-size="9">baseline</text>
+
+  <!-- SECTION: flex-grow / flex-shrink / flex-basis diagram -->
+  <line x1="20" y1="290" x2="800" y2="290" stroke="#30363d" stroke-width="1"/>
+  <text x="20" y="312" fill="#e34f26" font-size="12" font-weight="700">flex-grow · flex-shrink · flex-basis</text>
+
+  <!-- Container -->
+  <rect x="20" y="322" width="780" height="60" rx="5" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- flex: 0 0 auto item (fixed) -->
+  <rect x="24" y="328" width="80" height="48" rx="4" fill="#264de4" opacity="0.9"/>
+  <text x="64" y="353" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">flex: none</text>
+  <text x="64" y="365" text-anchor="middle" fill="#adf" font-size="8">0 0 auto</text>
+
+  <!-- flex: 1 1 0 item -->
+  <rect x="108" y="328" width="180" height="48" rx="4" fill="#e34f26" opacity="0.85"/>
+  <text x="198" y="353" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">flex: 1</text>
+  <text x="198" y="365" text-anchor="middle" fill="#ffd" font-size="8">1 1 0%  →  crece</text>
+
+  <!-- flex: 2 item -->
+  <rect x="292" y="328" width="360" height="48" rx="4" fill="#e34f26" opacity="0.6"/>
+  <text x="472" y="353" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">flex: 2</text>
+  <text x="472" y="365" text-anchor="middle" fill="#ffd" font-size="8">1 1 0%  →  crece el doble</text>
+
+  <!-- flex: 0 0 60px item -->
+  <rect x="656" y="328" width="140" height="48" rx="4" fill="#3fb950" opacity="0.8"/>
+  <text x="726" y="353" text-anchor="middle" fill="#0d1117" font-size="9" font-weight="700">flex-basis</text>
+  <text x="726" y="365" text-anchor="middle" fill="#0d1117" font-size="8">0 0 140px  →  fijo</text>
+
+  <!-- arrow grow label -->
+  <text x="390" y="398" text-anchor="middle" fill="#8b949e" font-size="10">
+    flex-grow distribuye el espacio libre proporcionalmente · flex-shrink controla cuánto puede encogerse
+  </text>
+
+  <!-- Code snippet -->
+  <rect x="20" y="408" width="330" height="28" rx="4" fill="#161b22"/>
+  <text x="30" y="427" fill="#3fb950" font-size="10" font-family="monospace">.main { flex: 1; }    /* crece para llenar */</text>
+  <rect x="360" y="408" width="440" height="28" rx="4" fill="#161b22"/>
+  <text x="370" y="427" fill="#f0e68c" font-size="10" font-family="monospace">.sidebar { flex: 0 0 240px; }  /* tamaño fijo */</text>
+</svg>

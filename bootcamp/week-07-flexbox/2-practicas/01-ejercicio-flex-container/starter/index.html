@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 01 — Flex Container</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Flex Container</h1>
+    <p>Explora los fundamentos del contenedor Flexbox</p>
+  </header>
+
+  <main class="page-content">
+
+    <!-- ============================================ -->
+    <!-- PASO 1: display flex (row por defecto)       -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 1 — <code>display: flex</code></h2>
+      <p>Activa Flexbox: los hijos se colocan en fila.</p>
+
+      <div class="container-row">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 2: flex-direction: column              -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 2 — <code>flex-direction: column</code></h2>
+      <p>Los items se apilan en columna.</p>
+
+      <div class="container-column">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 3: justify-content                      -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 3 — <code>justify-content</code></h2>
+      <p>Controla la distribución en el eje principal.</p>
+
+      <p class="label">flex-start (por defecto):</p>
+      <div class="jc-start">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+
+      <p class="label">center:</p>
+      <div class="jc-center">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+
+      <p class="label">space-between:</p>
+      <div class="jc-between">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+
+      <p class="label">space-around:</p>
+      <div class="jc-around">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+
+      <p class="label">space-evenly:</p>
+      <div class="jc-evenly">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 4: flex-wrap + gap + align-items        -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 4 — <code>flex-wrap</code> + <code>gap</code></h2>
+      <p>Permite saltar de línea y añade espacio consistente.</p>
+
+      <div class="container-wrap">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+        <div class="box">Item 4</div>
+        <div class="box">Item 5</div>
+        <div class="box">Item 6</div>
+        <div class="box">Item 7</div>
+        <div class="box">Item 8</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
