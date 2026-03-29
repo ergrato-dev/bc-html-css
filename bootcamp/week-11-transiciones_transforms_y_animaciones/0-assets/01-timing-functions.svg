@@ -13,7 +13,7 @@
   <!-- Curve area for each function — 6 columns -->
   <!-- Column positions: 80, 195, 310, 425, 540, 655 (each 115px wide) -->
 
-  <!-- --- ease --- -->
+  <!-- EASE -->
   <rect x="80" y="80" width="100" height="110" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
   <text x="130" y="100" font-size="10" fill="#7d8590" text-anchor="middle">ease</text>
   <!-- Curve path: slow start, fast middle, slow end -->
@@ -21,35 +21,35 @@
   <text x="130" y="200" font-size="9" fill="#58a6ff" text-anchor="middle">Rápido al inicio</text>
   <text x="130" y="212" font-size="9" fill="#58a6ff" text-anchor="middle">Lento al final</text>
 
-  <!-- --- ease-in --- -->
+  <!-- EASE-IN -->
   <rect x="195" y="80" width="100" height="110" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
   <text x="245" y="100" font-size="10" fill="#7d8590" text-anchor="middle">ease-in</text>
   <path d="M205 178 C210 178 225 175 245 140 S275 100 285 97" stroke="#3fb950" stroke-width="2.5" fill="none" stroke-linecap="round"/>
   <text x="245" y="200" font-size="9" fill="#3fb950" text-anchor="middle">Lento → Rápido</text>
   <text x="245" y="212" font-size="9" fill="#3fb950" text-anchor="middle">Salida de pantalla</text>
 
-  <!-- --- ease-out --- -->
+  <!-- EASE-OUT -->
   <rect x="310" y="80" width="100" height="110" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
   <text x="360" y="100" font-size="10" fill="#7d8590" text-anchor="middle">ease-out</text>
   <path d="M320 100 C325 98 340 130 355 155 S385 178 400 178" stroke="#f78166" stroke-width="2.5" fill="none" stroke-linecap="round"/>
   <text x="360" y="200" font-size="9" fill="#f78166" text-anchor="middle">Rápido → Lento</text>
   <text x="360" y="212" font-size="9" fill="#f78166" text-anchor="middle">Entrada natural ★</text>
 
-  <!-- --- ease-in-out --- -->
+  <!-- EASE-IN-OUT -->
   <rect x="425" y="80" width="100" height="110" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
   <text x="475" y="100" font-size="10" fill="#7d8590" text-anchor="middle">ease-in-out</text>
   <path d="M435 178 C440 178 450 160 465 138 S490 100 505 100 S520 137 525 155 S530 178 535 178" stroke="#d2a8ff" stroke-width="2.5" fill="none" stroke-linecap="round"/>
   <text x="475" y="200" font-size="9" fill="#d2a8ff" text-anchor="middle">Lento→Rápido→Lento</text>
   <text x="475" y="212" font-size="9" fill="#d2a8ff" text-anchor="middle">Movimientos suaves</text>
 
-  <!-- --- linear --- -->
+  <!-- LINEAR -->
   <rect x="540" y="80" width="100" height="110" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
   <text x="590" y="100" font-size="10" fill="#7d8590" text-anchor="middle">linear</text>
   <line x1="550" y1="178" x2="630" y2="100" stroke="#e3b341" stroke-width="2.5" stroke-linecap="round"/>
   <text x="590" y="200" font-size="9" fill="#e3b341" text-anchor="middle">Velocidad constante</text>
   <text x="590" y="212" font-size="9" fill="#e3b341" text-anchor="middle">Spinners, progreso</text>
 
-  <!-- --- cubic-bezier (spring) --- -->
+  <!-- CUBIC-BEZIER -->
   <rect x="655" y="80" width="110" height="110" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
   <text x="710" y="100" font-size="10" fill="#7d8590" text-anchor="middle">cubic-bezier</text>
   <!-- Spring effect: overshoots then settles -->
