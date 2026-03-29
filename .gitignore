@@ -1,0 +1,92 @@
+# ============================================================
+# BOOTCAMP HTML + CSS — .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# ⚠️  SOLUCIONES — Solo para instructores (NUNCA subir)
+# ------------------------------------------------------------
+**/3-proyecto/solution/
+**/_apprentices-only/
+
+# ------------------------------------------------------------
+# Sistema Operativo
+# ------------------------------------------------------------
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverrides
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# ------------------------------------------------------------
+# Editores e IDEs
+# ------------------------------------------------------------
+
+# VS Code — mantener .vscode/ para extensiones recomendadas del repo,
+# ignorar solo configuraciones personales
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/*.code-snippets
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+
+# ------------------------------------------------------------
+# Node.js (por si algún script auxiliar lo requiere)
+# ------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ------------------------------------------------------------
+# Archivos temporales y de caché
+# ------------------------------------------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+*.orig
+.cache/
+dist/
+build/
+
+# ------------------------------------------------------------
+# PDF generados (export-pdf.sh)
+# ------------------------------------------------------------
+**/*.pdf
+
+# ------------------------------------------------------------
+# Variables de entorno
+# ------------------------------------------------------------
+.env
+.env.local
+.env.*.local
