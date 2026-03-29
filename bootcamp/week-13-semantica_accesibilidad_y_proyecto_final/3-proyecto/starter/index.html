@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO básico -->
+  <title>Tu Nombre — Frontend Developer</title>
+  <meta name="description" content="Portfolio de [Tu Nombre], Frontend Developer especializado en HTML5 semántico, CSS moderno y experiencias accesibles." />
+  <link rel="canonical" href="https://tu-dominio.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tu Nombre — Frontend Developer" />
+  <meta property="og:description" content="Portfolio de [Tu Nombre], Frontend Developer especializado en HTML5 semántico y CSS moderno." />
+  <meta property="og:image" content="https://tu-dominio.com/assets/images/og-image.jpg" />
+  <meta property="og:url" content="https://tu-dominio.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Hojas de estilo -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- JSON-LD — Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tu Nombre",
+    "jobTitle": "Frontend Developer",
+    "url": "https://tu-dominio.com/",
+    "sameAs": [
+      "https://github.com/tu-usuario",
+      "https://linkedin.com/in/tu-usuario"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       SKIP LINK — Accesibilidad para teclado
+       Oculto fuera de pantalla; visible al recibir el foco con Tab.
+       Ver TODO 1 en styles.css
+  ============================================================ -->
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       HEADER — Navegación principal
+  ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a href="#hero" class="site-logo" aria-label="Ir al inicio — Tu Nombre">
+        <span aria-hidden="true" class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Tu Nombre</span>
+      </a>
+
+      <!-- Hamburguesa CSS-only: ver TODO 2 en styles.css -->
+      <input
+        type="checkbox"
+        id="nav-toggle"
+        class="nav-toggle-input"
+        aria-label="Abrir menú de navegación"
+      />
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MAIN — Contenido principal
+  ============================================================ -->
+  <main id="main-content">
+
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-name">
+      <div class="hero-content">
+        <p class="hero-greeting">Hola, soy</p>
+        <h1 id="hero-name" class="hero-name">Tu Nombre</h1>
+        <p class="hero-title">Frontend Developer</p>
+        <p class="hero-description">
+          Construyo interfaces accesibles, semánticas y hermosas con
+          HTML5 moderno y CSS avanzado.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+          <a href="#contact" class="btn btn-outline">Contactar</a>
+        </div>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <div class="code-block">
+          <span class="code-line"><span class="code-tag">&lt;html</span> <span class="code-attr">lang</span>=<span class="code-string">"es"</span><span class="code-tag">&gt;</span></span>
+          <span class="code-line code-indent"><span class="code-tag">&lt;body&gt;</span></span>
+          <span class="code-line code-indent-2"><span class="code-tag">&lt;main&gt;</span></span>
+          <span class="code-line code-indent-3"><span class="code-comment">&lt;!-- Tu portfolio --&gt;</span></span>
+          <span class="code-line code-indent-2"><span class="code-tag">&lt;/main&gt;</span></span>
+          <span class="code-line code-indent"><span class="code-tag">&lt;/body&gt;</span></span>
+          <span class="code-line"><span class="code-tag">&lt;/html&gt;</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SOBRE MÍ ─────────────────────────────────────────── -->
+    <section id="about" class="about-section" aria-labelledby="about-title">
+      <div class="section-container">
+        <h2 id="about-title" class="section-title">Sobre mí</h2>
+
+        <div class="about-grid">
+          <figure class="about-figure">
+            <!-- Reemplaza el src con tu foto real -->
+            <img
+              src="assets/images/profile.jpg"
+              alt="Foto de perfil de Tu Nombre, Frontend Developer"
+              width="400"
+              height="400"
+              class="about-photo"
+              loading="lazy"
+            />
+            <figcaption class="about-caption">
+              Tu Nombre — Frontend Developer
+            </figcaption>
+          </figure>
+
+          <div class="about-content">
+            <p>
+              Soy un desarrollador frontend apasionado por la web semántica y
+              la accesibilidad. Me especializo en HTML5, CSS3 moderno y en
+              construir interfaces que funcionen para todos los usuarios,
+              independientemente de cómo accedan a ellas.
+            </p>
+            <p>
+              Completé el Bootcamp HTML+CSS Zero to Hero y aplico en cada
+              proyecto las mejores prácticas de semántica, performance y
+              experiencia de usuario.
+            </p>
+
+            <ul class="skill-chips" aria-label="Tecnologías">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Flexbox</li>
+              <li>CSS Grid</li>
+              <li>Responsive</li>
+              <li>Accesibilidad</li>
+              <li>SEO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROYECTOS ─────────────────────────────────────────── -->
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
+      <div class="section-container">
+        <h2 id="projects-title" class="section-title">Proyectos</h2>
+        <p class="section-subtitle">
+          Una selección de proyectos construidos durante el bootcamp y en
+          práctica personal.
+        </p>
+
+        <div class="projects-grid">
+
+          <!-- Tarjeta 1 — estándar -->
+          <article class="card">
+            <figure class="card-figure">
+              <img
+                src="assets/images/project-1.jpg"
+                alt="Captura del proyecto Landing Page — diseño de tarjetas de producto con Flexbox"
+                width="400"
+                height="225"
+                loading="lazy"
+              />
+              <figcaption class="card-fig-caption">Landing Page — Semana 7</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Landing Page con Flexbox</h3>
+              <p class="card-desc">
+                Página de producto responsive construida con Flexbox,
+                Custom Properties y mobile-first.
+              </p>
+              <div class="card-tags" aria-label="Tecnologías usadas">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS Flexbox</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <a
+                href="https://github.com/tu-usuario/landing-flexbox"
+                class="card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de Landing Page con Flexbox en GitHub (abre en nueva pestaña)"
+              >
+                Ver en GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 — estándar -->
+          <article class="card">
+            <figure class="card-figure">
+              <img
+                src="assets/images/project-2.jpg"
+                alt="Captura del proyecto Dashboard — grid de estadísticas con CSS Grid"
+                width="400"
+                height="225"
+                loading="lazy"
+              />
+              <figcaption class="card-fig-caption">Dashboard — Semana 8</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Dashboard con CSS Grid</h3>
+              <p class="card-desc">
+                Interfaz de administración con grid de áreas nombradas,
+                sidebar y widgets de estadísticas.
+              </p>
+              <div class="card-tags" aria-label="Tecnologías usadas">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Dark Theme</span>
+              </div>
+              <a
+                href="https://github.com/tu-usuario/dashboard-grid"
+                class="card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código de Dashboard con CSS Grid en GitHub (abre en nueva pestaña)"
+              >
+                Ver en GitHub →
+              </a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 — destacada (.is-featured) -->
+          <article class="card is-featured">
+            <figure class="card-figure">
+              <img
+                src="assets/images/project-3.jpg"
+                alt="Captura del portfolio personal — diseño completo accesible y responsive"
+                width="400"
+                height="225"
+                loading="lazy"
+              />
+              <figcaption class="card-fig-caption">Portfolio — Semana 13</figcaption>
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Este Portfolio</h3>
+              <p class="card-desc">
+                Portfolio personal accesible (WCAG AA), semántico, responsive
+                y optimizado para SEO. Capstone del bootcamp.
+              </p>
+              <div class="card-tags" aria-label="Tecnologías usadas">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS Avanzado</span>
+                <span class="tag">A11y</span>
+                <span class="tag">SEO</span>
+              </div>
+              <a
+                href="https://github.com/tu-usuario/portfolio"
+                class="card-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver código fuente del portfolio en GitHub (abre en nueva pestaña)"
+              >
+                Ver en GitHub →
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── HABILIDADES ─────────────────────────────────────────── -->
+    <section id="skills" class="skills-section" aria-labelledby="skills-title">
+      <div class="section-container">
+        <h2 id="skills-title" class="section-title">Habilidades</h2>
+
+        <div class="skills-grid">
+
+          <article class="skill-group">
+            <h3 class="skill-group-title">HTML</h3>
+            <ul class="skill-list" aria-label="Habilidades de HTML">
+              <li>HTML5 semántico</li>
+              <li>Formularios accesibles</li>
+              <li>Multimedia (video, audio)</li>
+              <li>Tablas de datos</li>
+              <li>ARIA + accesibilidad</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3 class="skill-group-title">CSS</h3>
+            <ul class="skill-list" aria-label="Habilidades de CSS">
+              <li>Custom Properties</li>
+              <li>Flexbox + CSS Grid</li>
+              <li>Diseño responsive</li>
+              <li>Animaciones CSS</li>
+              <li>Pseudo-elementos</li>
+            </ul>
+          </article>
+
+          <article class="skill-group">
+            <h3 class="skill-group-title">Herramientas</h3>
+            <ul class="skill-list" aria-label="Herramientas de desarrollo">
+              <li>VS Code + Live Server</li>
+              <li>Chrome DevTools</li>
+              <li>W3C Validator</li>
+              <li>Git básico</li>
+              <li>Lighthouse / axe</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACTO ─────────────────────────────────────────── -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="section-container">
+        <h2 id="contact-title" class="section-title">Contacto</h2>
+        <p class="section-subtitle">
+          ¿Tienes un proyecto en mente? Escríbeme y hablamos.
+        </p>
+
+        <form
+          class="contact-form"
+          aria-labelledby="contact-title"
+          novalidate
+        >
+          <div class="field">
+            <label for="contact-name">
+              Nombre completo
+              <span class="field-required" aria-label="campo requerido">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              autocomplete="name"
+              placeholder="Tu nombre"
+              aria-describedby="name-hint"
+              required
+            />
+            <p id="name-hint" class="field-hint">
+              Introduce tu nombre y apellido.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="contact-email">
+              Correo electrónico
+              <span class="field-required" aria-label="campo requerido">*</span>
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              autocomplete="email"
+              placeholder="tu@email.com"
+              aria-describedby="email-hint email-error"
+              required
+            />
+            <p id="email-hint" class="field-hint">
+              Ej: nombre@dominio.com — no lo compartiremos con nadie.
+            </p>
+            <p id="email-error" class="field-error" role="alert" hidden>
+              Por favor ingresa un correo electrónico válido.
+            </p>
+          </div>
+
+          <div class="field">
+            <label for="contact-subject">Asunto</label>
+            <input
+              type="text"
+              id="contact-subject"
+              name="subject"
+              placeholder="¿En qué puedo ayudarte?"
+            />
+          </div>
+
+          <div class="field">
+            <label for="contact-message">
+              Mensaje
+              <span class="field-required" aria-label="campo requerido">*</span>
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              rows="5"
+              placeholder="Cuéntame sobre tu proyecto o consulta..."
+              aria-describedby="message-hint"
+              required
+            ></textarea>
+            <p id="message-hint" class="field-hint">
+              Mínimo 20 caracteres.
+            </p>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            Enviar mensaje
+          </button>
+
+          <p class="form-success" role="alert" aria-live="polite" hidden>
+            ✔ ¡Mensaje enviado correctamente! Te responderé en menos de 48 horas.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <address class="footer-contact">
+        <a href="mailto:tu@email.com" aria-label="Enviar email a tu@email.com">
+          tu@email.com
+        </a>
+      </address>
+
+      <nav class="footer-social" aria-label="Redes sociales">
+        <ul>
+          <li>
+            <a
+              href="https://github.com/tu-usuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver perfil de GitHub de Tu Nombre (abre en nueva pestaña)"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/tu-usuario"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver perfil de LinkedIn de Tu Nombre (abre en nueva pestaña)"
+            >
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="footer-copy">
+        <small>
+          &copy; <time datetime="2025">2025</time> Tu Nombre — Construido con
+          HTML5 y CSS3 puro.
+        </small>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

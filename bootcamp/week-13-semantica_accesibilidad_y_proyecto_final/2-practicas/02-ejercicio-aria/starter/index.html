@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio ARIA — Semana 13</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PASO 4: Navegación con aria-current
+       Descomenta el <nav> de abajo para añadir aria-current="page"
+       al enlace de la página actual.
+  ============================================================ -->
+
+  <header>
+    <!-- Nav sin aria-current — el lector no sabe qué página está activa -->
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="/inicio">Inicio</a></li>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--
+  PASO 4 SEMÁNTICO — Descomenta y reemplaza el <header> de arriba:
+
+  <header>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="/inicio">Inicio</a></li>
+        <li><a href="/sobre-mi">Sobre mí</a></li>
+        <li><a href="/contacto" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  -->
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         PASO 1: Toolbar — botones con solo iconos
+         Descomenta la sección "PASO 1 ARIA" más abajo.
+    ============================================================ -->
+
+    <section class="demo-section" aria-labelledby="toolbar-demo-title">
+      <h2 id="toolbar-demo-title">Toolbar — Botones con iconos</h2>
+
+      <!-- Sin aria-label — el lector de pantalla no sabe qué hace cada botón -->
+      <div class="toolbar" role="toolbar" aria-label="Acciones del editor">
+        <button type="button" class="icon-btn">📄</button>
+        <button type="button" class="icon-btn">📂</button>
+        <button type="button" class="icon-btn">💾</button>
+        <button type="button" class="icon-btn">↩</button>
+        <button type="button" class="icon-btn">↪</button>
+        <button type="button" class="icon-btn danger">🗑</button>
+      </div>
+
+      <!--
+      PASO 1 ARIA — Descomenta y reemplaza el .toolbar de arriba:
+
+      <div class="toolbar" role="toolbar" aria-label="Acciones del editor">
+        <button type="button" class="icon-btn" aria-label="Nuevo documento">
+          <span aria-hidden="true">📄</span>
+        </button>
+        <button type="button" class="icon-btn" aria-label="Abrir archivo">
+          <span aria-hidden="true">📂</span>
+        </button>
+        <button type="button" class="icon-btn" aria-label="Guardar cambios">
+          <span aria-hidden="true">💾</span>
+        </button>
+        <button type="button" class="icon-btn" aria-label="Deshacer">
+          <span aria-hidden="true">↩</span>
+        </button>
+        <button type="button" class="icon-btn" aria-label="Rehacer">
+          <span aria-hidden="true">↪</span>
+        </button>
+        <button type="button" class="icon-btn danger" aria-label="Eliminar documento">
+          <span aria-hidden="true">🗑</span>
+        </button>
+      </div>
+      -->
+
+    </section>
+
+    <!-- ============================================================
+         PASO 2 + 3: Formulario de contacto
+         Descomenta la sección "PASO 2+3 ARIA" más abajo.
+    ============================================================ -->
+
+    <section class="demo-section" aria-labelledby="form-section-title">
+      <h2 id="form-section-title">Formulario de contacto</h2>
+
+      <!-- Sin ARIA — el lector no sabe que el form es de "contacto" -->
+      <form class="contact-form" novalidate>
+        <h3>Escríbenos</h3>
+
+        <div class="field">
+          <!-- Icono decorativo sin aria-hidden — el lector lo lee -->
+          <label for="name1">✏ Nombre completo</label>
+          <input type="text" id="name1" name="name" placeholder="Tu nombre" required />
+        </div>
+
+        <div class="field">
+          <label for="email1">📧 Correo electrónico</label>
+          <!-- Sin aria-describedby ni aria-invalid -->
+          <input type="email" id="email1" name="email" placeholder="tu@email.com" required />
+          <p class="error-msg">Por favor ingresa un correo válido.</p>
+        </div>
+
+        <div class="field">
+          <label for="message1">💬 Mensaje</label>
+          <textarea id="message1" name="message" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+        <p class="success-msg">¡Mensaje enviado correctamente!</p>
+      </form>
+
+      <!--
+      PASO 2 + 3 ARIA — Descomenta y reemplaza el <form> de arriba:
+
+      <form class="contact-form" aria-labelledby="form-heading" novalidate>
+        <h3 id="form-heading">Escríbenos</h3>
+
+        <div class="field">
+          <label for="name">
+            <span aria-hidden="true">✏</span>
+            Nombre completo
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Tu nombre"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="email">
+            <span aria-hidden="true">📧</span>
+            Correo electrónico
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+            autocomplete="email"
+            aria-describedby="email-error email-hint"
+            aria-invalid="true"
+            required
+          />
+          <p id="email-hint" class="field-hint">Ej: nombre@dominio.com</p>
+          <p id="email-error" class="error-msg" role="alert">
+            Por favor ingresa un correo válido.
+          </p>
+        </div>
+
+        <div class="field">
+          <label for="message">
+            <span aria-hidden="true">💬</span>
+            Mensaje
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Escribe tu mensaje..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+
+        <p class="success-msg" role="alert" aria-live="polite">
+          ¡Mensaje enviado correctamente!
+        </p>
+      </form>
+      -->
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Bootcamp HTML+CSS — Semana 13</p>
+  </footer>
+
+</body>
+
+</html>

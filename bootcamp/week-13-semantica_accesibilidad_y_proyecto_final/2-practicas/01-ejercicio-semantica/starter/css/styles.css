@@ -1,0 +1,206 @@
+/* Ejercicio 01 — Semántica HTML5
+   Estilos base para visualizar la estructura del documento */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+/* Header / .header */
+header, .header {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+/* Navegación */
+nav, .nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul, .nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a, .nav a {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 150ms;
+}
+
+nav a:hover, .nav a:hover {
+  color: #e6edf3;
+}
+
+/* Main layout */
+main, .main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+}
+
+.content, .content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section */
+section, .section-recent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e6edf3;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #30363d;
+}
+
+section h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #30363d;
+}
+
+/* Articles */
+article, .article-card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+article h3, .article-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e6edf3;
+}
+
+article img, .article-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #21262d; /* Placeholder color (no carga la imagen) */
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+article address, article p, .article-card p {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+article a, .article-card a {
+  color: #3b82f6;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Figure */
+figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Aside / sidebar */
+aside, .sidebar {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: fit-content;
+}
+
+.sidebar-title, aside h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 1rem;
+}
+
+aside ul, .sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+aside a, .sidebar a {
+  color: #8b949e;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+aside a:hover, .sidebar a:hover {
+  color: #3b82f6;
+}
+
+/* Footer */
+footer, .footer {
+  background: #161b22;
+  border-top: 1px solid #30363d;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  color: #8b949e;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer address, .footer .author-info, .copyright {
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-style: normal;
+}
+
+footer a, .footer a {
+  color: #3b82f6;
+}

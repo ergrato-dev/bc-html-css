@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="Inter, Roboto, system-ui, sans-serif">
+
+  <!-- Fondo -->
+  <rect width="820" height="500" fill="#0d1117" rx="12"/>
+
+  <!-- Título -->
+  <text x="410" y="34" text-anchor="middle" fill="#e6edf3" font-size="15" font-weight="700" letter-spacing=".4">Estructura HTML5 Semántica — Árbol de Elementos</text>
+  <line x1="40" y1="44" x2="780" y2="44" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ============ COLUMNA IZQUIERDA: Árbol de estructura ============ -->
+  <text x="56" y="64" fill="#8b949e" font-size="11">Árbol semántico de una página</text>
+
+  <!-- &lt;html lang="es"&gt; -->
+  <rect x="40" y="72" width="340" height="26" fill="#21262d" stroke="#3b82f6" stroke-width="1.5" rx="4"/>
+  <text x="210" y="89" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="700">&lt;html lang="es"&gt;</text>
+
+  <!-- &lt;head&gt; -->
+  <line x1="210" y1="98" x2="210" y2="108" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="80" y="108" width="150" height="22" fill="#21262d" stroke="#6b7280" stroke-width="1" rx="3"/>
+  <text x="155" y="123" text-anchor="middle" fill="#9ca3af" font-size="10" font-weight="600">&lt;head&gt;</text>
+
+  <!-- head items -->
+  <line x1="155" y1="130" x2="155" y2="140" stroke="#30363d" stroke-width="1"/>
+  <rect x="90" y="140" width="260" height="56" fill="#161b22" stroke="#374151" stroke-width="1" rx="3"/>
+  <text x="220" y="157" text-anchor="middle" fill="#6b7280" font-size="10">&lt;meta charset="UTF-8"&gt;</text>
+  <text x="220" y="171" text-anchor="middle" fill="#6b7280" font-size="10">&lt;meta name="viewport" …&gt;</text>
+  <text x="220" y="185" text-anchor="middle" fill="#6b7280" font-size="10">&lt;title&gt; · &lt;meta description&gt; · &lt;link rel="stylesheet"&gt;</text>
+
+  <!-- &lt;body&gt; -->
+  <line x1="210" y1="98" x2="210" y2="108" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="260" y="108" width="120" height="22" fill="#21262d" stroke="#7c3aed" stroke-width="1.5" rx="3"/>
+  <text x="320" y="123" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="700">&lt;body&gt;</text>
+
+  <!-- Líneas desde body -->
+  <line x1="320" y1="130" x2="320" y2="206" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- header -->
+  <line x1="320" y1="206" x2="102" y2="206" stroke="#30363d" stroke-width="1.5"/>
+  <rect x="56" y="196" width="92" height="22" fill="#1a2332" stroke="#3b82f6" stroke-width="1.5" rx="3"/>
+  <text x="102" y="211" text-anchor="middle" fill="#3b82f6" font-size="10" font-weight="700">&lt;header&gt;</text>
+
+  <!-- nav -->
+  <line x1="102" y1="218" x2="102" y2="228" stroke="#3b82f6" stroke-width="1"/>
+  <rect x="60" y="228" width="84" height="20" fill="#1a2e1a" stroke="#238636" stroke-width="1" rx="3"/>
+  <text x="102" y="241" text-anchor="middle" fill="#238636" font-size="9" font-weight="600">&lt;nav&gt;</text>
+
+  <!-- main -->
+  <line x1="320" y1="206" x2="320" y2="206" stroke="#30363d" stroke-width="1"/>
+  <rect x="270" y="196" width="100" height="22" fill="#1a1a2e" stroke="#7c3aed" stroke-width="1.5" rx="3"/>
+  <text x="320" y="211" text-anchor="middle" fill="#7c3aed" font-size="10" font-weight="700">&lt;main&gt;</text>
+
+  <!-- Hijos de main -->
+  <line x1="320" y1="218" x2="320" y2="260" stroke="#7c3aed" stroke-width="1"/>
+
+  <!-- section -->
+  <line x1="320" y1="260" x2="236" y2="260" stroke="#30363d" stroke-width="1"/>
+  <rect x="185" y="252" width="102" height="20" fill="#21262d" stroke="#f59e0b" stroke-width="1" rx="3"/>
+  <text x="236" y="265" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="600">&lt;section&gt; + h2</text>
+
+  <!-- article -->
+  <line x1="320" y1="260" x2="390" y2="260" stroke="#30363d" stroke-width="1"/>
+  <rect x="340" y="252" width="100" height="20" fill="#21262d" stroke="#10b981" stroke-width="1" rx="3"/>
+  <text x="390" y="265" text-anchor="middle" fill="#10b981" font-size="9" font-weight="600">&lt;article&gt; + h3</text>
+
+  <!-- aside -->
+  <line x1="320" y1="260" x2="320" y2="284" stroke="#30363d" stroke-width="1"/>
+  <rect x="268" y="276" width="104" height="20" fill="#21262d" stroke="#6366f1" stroke-width="1" rx="3"/>
+  <text x="320" y="289" text-anchor="middle" fill="#6366f1" font-size="9" font-weight="600">&lt;aside&gt;</text>
+
+  <!-- footer -->
+  <line x1="320" y1="206" x2="370" y2="206" stroke="#30363d" stroke-width="1"/>
+  <rect x="348" y="196" width="92" height="22" fill="#2e1a1a" stroke="#dc2626" stroke-width="1.5" rx="3"/>
+  <text x="394" y="211" text-anchor="middle" fill="#dc2626" font-size="10" font-weight="700">&lt;footer&gt;</text>
+
+  <!-- address dentro de footer -->
+  <line x1="394" y1="218" x2="394" y2="228" stroke="#dc2626" stroke-width="1"/>
+  <rect x="350" y="228" width="88" height="20" fill="#21262d" stroke="#6b7280" stroke-width="1" rx="3"/>
+  <text x="394" y="241" text-anchor="middle" fill="#9ca3af" font-size="9">&lt;address&gt;</text>
+
+  <!-- ============ COLUMNA DERECHA: Elementos semánticos de contenido ============ -->
+  <line x1="470" y1="50" x2="470" y2="490" stroke="#21262d" stroke-width="1"/>
+  <text x="640" y="64" text-anchor="middle" fill="#8b949e" font-size="11">Elementos de contenido semántico</text>
+
+  <!-- figure + figcaption -->
+  <rect x="480" y="72" width="316" height="72" fill="#21262d" stroke="#f59e0b" stroke-width="1.5" rx="5"/>
+  <text x="500" y="92" fill="#f59e0b" font-size="11" font-weight="700">&lt;figure&gt; + &lt;figcaption&gt;</text>
+  <text x="500" y="108" fill="#8b949e" font-size="10">Imagen/gráfico con descripción visible</text>
+  <text x="500" y="124" fill="#6b7280" font-size="9" font-style="italic">&lt;figure&gt;&lt;img alt="…"/&gt;&lt;figcaption&gt;Descripción&lt;/figcaption&gt;&lt;/figure&gt;</text>
+
+  <!-- time -->
+  <rect x="480" y="154" width="316" height="56" fill="#21262d" stroke="#60a5fa" stroke-width="1.5" rx="5"/>
+  <text x="500" y="173" fill="#60a5fa" font-size="11" font-weight="700">&lt;time datetime=""&gt;</text>
+  <text x="500" y="188" fill="#8b949e" font-size="10">Fecha/hora legible por máquina</text>
+  <text x="500" y="202" fill="#6b7280" font-size="9" font-style="italic">&lt;time datetime="2025-06-15"&gt;15 de junio&lt;/time&gt;</text>
+
+  <!-- address -->
+  <rect x="480" y="220" width="316" height="56" fill="#21262d" stroke="#f87171" stroke-width="1.5" rx="5"/>
+  <text x="500" y="239" fill="#f87171" font-size="11" font-weight="700">&lt;address&gt;</text>
+  <text x="500" y="254" fill="#8b949e" font-size="10">Información de contacto del autor</text>
+  <text x="500" y="268" fill="#6b7280" font-size="9" font-style="italic">&lt;address&gt;&lt;a href="mailto:…"&gt;email&lt;/a&gt;&lt;/address&gt;</text>
+
+  <!-- mark -->
+  <rect x="480" y="286" width="152" height="56" fill="#21262d" stroke="#a78bfa" stroke-width="1.5" rx="5"/>
+  <text x="500" y="305" fill="#a78bfa" font-size="11" font-weight="700">&lt;mark&gt;</text>
+  <text x="500" y="320" fill="#8b949e" font-size="10">Resalta texto relevante</text>
+  <text x="500" y="334" fill="#6b7280" font-size="9" font-style="italic">&lt;mark&gt;término clave&lt;/mark&gt;</text>
+
+  <!-- details + summary -->
+  <rect x="640" y="286" width="156" height="56" fill="#21262d" stroke="#34d399" stroke-width="1.5" rx="5"/>
+  <text x="660" y="305" fill="#34d399" font-size="11" font-weight="700">&lt;details&gt;</text>
+  <text x="660" y="320" fill="#8b949e" font-size="10">Contenido expandible</text>
+  <text x="660" y="334" fill="#6b7280" font-size="9" font-style="italic">sin JavaScript</text>
+
+  <!-- Sección jerarquía heading -->
+  <rect x="480" y="352" width="316" height="108" fill="#161b22" stroke="#30363d" stroke-width="1.5" rx="5"/>
+  <text x="638" y="372" text-anchor="middle" fill="#e6edf3" font-size="11" font-weight="700">Jerarquía de Headings</text>
+  <line x1="490" y1="380" x2="788" y2="380" stroke="#30363d" stroke-width="1"/>
+  <rect x="494" y="387" width="60" height="16" fill="#3b82f6" rx="2"/>
+  <text x="524" y="399" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">h1 · x1</text>
+  <text x="570" y="399" fill="#8b949e" font-size="9">Solo uno · palabra clave principal</text>
+  <rect x="494" y="410" width="60" height="16" fill="#238636" rx="2"/>
+  <text x="524" y="422" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">h2 · sección</text>
+  <text x="570" y="422" fill="#8b949e" font-size="9">Subsecciones principales</text>
+  <rect x="494" y="433" width="60" height="16" fill="#9e6a03" rx="2"/>
+  <text x="524" y="445" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">h3 · artículo</text>
+  <text x="570" y="445" fill="#8b949e" font-size="9">Contenido dentro de sección</text>
+  <text x="638" y="462" text-anchor="middle" fill="#6b7280" font-size="9" font-style="italic">⚠ Nunca saltar niveles (h1 → h3)</text>
+
+  <!-- Alt vs figcaption -->
+  <rect x="40" y="316" width="418" height="72" fill="#161b22" stroke="#30363d" stroke-width="1.5" rx="5"/>
+  <text x="249" y="335" text-anchor="middle" fill="#e6edf3" font-size="11" font-weight="700">alt="" vs &lt;figcaption&gt;</text>
+  <line x1="50" y1="342" x2="450" y2="342" stroke="#30363d" stroke-width="1"/>
+  <text x="56" y="358" fill="#f59e0b" font-size="10" font-weight="600">alt=""</text>
+  <text x="90" y="358" fill="#8b949e" font-size="9"> — Para lectores de pantalla. Describir qué muestra la imagen.</text>
+  <text x="56" y="374" fill="#10b981" font-size="10" font-weight="600">figcaption</text>
+  <text x="114" y="374" fill="#8b949e" font-size="9"> — Visible para todos. Complementa con contexto adicional.</text>
+  <text x="56" y="380" fill="#6b7280" font-size="9" font-style="italic">    Si la imagen es decorativa: alt="" (vacío) — el lector la omite.</text>
+
+</svg>

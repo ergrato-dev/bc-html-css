@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="Inter, Roboto, system-ui, sans-serif">
+
+  <!-- Fondo -->
+  <rect width="820" height="480" fill="#0d1117" rx="12"/>
+
+  <!-- Título principal -->
+  <text x="410" y="36" text-anchor="middle" fill="#e6edf3" font-size="15" font-weight="700" letter-spacing=".5">Roles ARIA Landmark — HTML5 Semántico</text>
+
+  <!-- ============ FILA 1: Página completa con landmarks ============ -->
+
+  <!-- Contenedor página -->
+  <rect x="30" y="58" width="360" height="400" fill="#161b22" stroke="#30363d" stroke-width="1.5" rx="8"/>
+  <text x="210" y="52" text-anchor="middle" fill="#8b949e" font-size="11">Estructura de página completa</text>
+
+  <!-- header -->
+  <rect x="44" y="68" width="332" height="56" fill="#1a2332" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="210" y="88" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="700">&lt;header&gt;</text>
+  <text x="210" y="103" text-anchor="middle" fill="#8b949e" font-size="10">role="banner" — Encabezado global del sitio</text>
+  <text x="64" y="116" fill="#8b949e" font-size="10" font-style="italic">logo · nav principal · skip link</text>
+
+  <!-- nav -->
+  <rect x="44" y="132" width="332" height="36" fill="#1a2e1a" stroke="#238636" stroke-width="1.5" rx="5"/>
+  <text x="210" y="148" text-anchor="middle" fill="#238636" font-size="11" font-weight="700">&lt;nav aria-label="…"&gt;</text>
+  <text x="210" y="162" text-anchor="middle" fill="#8b949e" font-size="10">role="navigation" — Bloque de navegación</text>
+
+  <!-- main -->
+  <rect x="44" y="176" width="332" height="168" fill="#1a1a2e" stroke="#7c3aed" stroke-width="1.5" rx="5"/>
+  <text x="64" y="196" fill="#7c3aed" font-size="11" font-weight="700">&lt;main id="main-content"&gt;</text>
+  <text x="64" y="210" fill="#8b949e" font-size="10">role="main" — Contenido principal único</text>
+
+    <!-- section dentro de main -->
+    <rect x="58" y="218" width="152" height="52" fill="#21262d" stroke="#6b7280" stroke-width="1" rx="4"/>
+    <text x="134" y="235" text-anchor="middle" fill="#9ca3af" font-size="10" font-weight="600">&lt;section&gt;</text>
+    <text x="134" y="249" text-anchor="middle" fill="#6b7280" font-size="9">Sección temática</text>
+    <text x="134" y="262" text-anchor="middle" fill="#6b7280" font-size="9">requiere heading h2+</text>
+
+    <!-- article dentro de main -->
+    <rect x="218" y="218" width="152" height="52" fill="#21262d" stroke="#6b7280" stroke-width="1" rx="4"/>
+    <text x="294" y="235" text-anchor="middle" fill="#9ca3af" font-size="10" font-weight="600">&lt;article&gt;</text>
+    <text x="294" y="249" text-anchor="middle" fill="#6b7280" font-size="9">Contenido autocontenido</text>
+    <text x="294" y="262" text-anchor="middle" fill="#6b7280" font-size="9">redistribuible</text>
+
+    <!-- aside dentro de main -->
+    <rect x="58" y="278" width="312" height="54" fill="#21262d" stroke="#6b7280" stroke-width="1" rx="4"/>
+    <text x="214" y="296" text-anchor="middle" fill="#9ca3af" font-size="10" font-weight="600">&lt;aside&gt;</text>
+    <text x="214" y="310" text-anchor="middle" fill="#6b7280" font-size="9">role="complementary" — Contenido complementario</text>
+    <text x="214" y="323" text-anchor="middle" fill="#6b7280" font-size="9">sidebar · notas relacionadas · bio</text>
+
+  <!-- footer -->
+  <rect x="44" y="352" width="332" height="48" fill="#2e1a1a" stroke="#dc2626" stroke-width="1.5" rx="5"/>
+  <text x="210" y="371" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="700">&lt;footer&gt;</text>
+  <text x="210" y="385" text-anchor="middle" fill="#8b949e" font-size="10">role="contentinfo" — Pie de página global</text>
+  <text x="210" y="398" text-anchor="middle" fill="#8b949e" font-size="9">copyright · enlaces legales · &lt;address&gt;</text>
+
+  <!-- ============ FILA 2: Tabla de roles y atributos ============ -->
+  <rect x="412" y="58" width="378" height="400" fill="#161b22" stroke="#30363d" stroke-width="1.5" rx="8"/>
+  <text x="601" y="80" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="700">Atributos ARIA Esenciales</text>
+
+  <!-- Separador -->
+  <line x1="420" y1="88" x2="782" y2="88" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Filas de atributos -->
+  <!-- aria-label -->
+  <rect x="420" y="96" width="362" height="52" fill="#21262d" rx="4"/>
+  <text x="436" y="114" fill="#60a5fa" font-size="11" font-weight="700">aria-label</text>
+  <text x="436" y="128" fill="#e6edf3" font-size="10">Etiqueta accesible cuando no hay texto visible</text>
+  <text x="436" y="142" fill="#6b7280" font-size="9" font-style="italic">&lt;button aria-label="Cerrar menú"&gt;&lt;span&gt;✕&lt;/span&gt;&lt;/button&gt;</text>
+
+  <!-- aria-labelledby -->
+  <rect x="420" y="156" width="362" height="52" fill="#21262d" rx="4"/>
+  <text x="436" y="174" fill="#34d399" font-size="11" font-weight="700">aria-labelledby</text>
+  <text x="436" y="188" fill="#e6edf3" font-size="10">Referencia al ID de un elemento como etiqueta</text>
+  <text x="436" y="202" fill="#6b7280" font-size="9" font-style="italic">&lt;section aria-labelledby="sec-title"&gt;</text>
+
+  <!-- aria-describedby -->
+  <rect x="420" y="216" width="362" height="52" fill="#21262d" rx="4"/>
+  <text x="436" y="234" fill="#f59e0b" font-size="11" font-weight="700">aria-describedby</text>
+  <text x="436" y="248" fill="#e6edf3" font-size="10">Asocia descripción o mensaje de error adicional</text>
+  <text x="436" y="262" fill="#6b7280" font-size="9" font-style="italic">&lt;input aria-describedby="email-error"&gt;</text>
+
+  <!-- aria-hidden -->
+  <rect x="420" y="276" width="362" height="52" fill="#21262d" rx="4"/>
+  <text x="436" y="294" fill="#f87171" font-size="11" font-weight="700">aria-hidden="true"</text>
+  <text x="436" y="308" fill="#e6edf3" font-size="10">Excluye elemento del árbol de accesibilidad</text>
+  <text x="436" y="322" fill="#6b7280" font-size="9" font-style="italic">&lt;span aria-hidden="true"&gt;🏠&lt;/span&gt; (icono decorativo)</text>
+
+  <!-- aria-current -->
+  <rect x="420" y="336" width="362" height="52" fill="#21262d" rx="4"/>
+  <text x="436" y="354" fill="#a78bfa" font-size="11" font-weight="700">aria-current="page"</text>
+  <text x="436" y="368" fill="#e6edf3" font-size="10">Indica el elemento activo en una navegación</text>
+  <text x="436" y="382" fill="#6b7280" font-size="9" font-style="italic">&lt;a href="/" aria-current="page"&gt;Inicio&lt;/a&gt;</text>
+
+  <!-- role alert -->
+  <rect x="420" y="396" width="362" height="48" fill="#21262d" rx="4"/>
+  <text x="436" y="414" fill="#fb923c" font-size="11" font-weight="700">role="alert"</text>
+  <text x="436" y="428" fill="#e6edf3" font-size="10">Anuncia mensaje urgente al lector de pantalla</text>
+  <text x="436" y="442" fill="#6b7280" font-size="9" font-style="italic">&lt;p role="alert"&gt;Formulario enviado correctamente&lt;/p&gt;</text>
+
+  <!-- Nota regla de oro -->
+  <rect x="30" y="462" width="760" height="12" fill="none"/>
+  <text x="410" y="472" text-anchor="middle" fill="#6b7280" font-size="10">⚠ Regla de oro: usa ARIA solo si el HTML semántico no puede resolver el problema por sí solo</text>
+
+</svg>

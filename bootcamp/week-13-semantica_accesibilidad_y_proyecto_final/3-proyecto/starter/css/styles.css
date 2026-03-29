@@ -1,0 +1,552 @@
+/* ============================================================
+   styles.css — Semana 13 Proyecto Final (STARTER)
+   Completa los bloques marcados con TODO para implementar
+   el portfolio completo.
+   ============================================================ */
+
+/* --- Base -------------------------------------------------- */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+}
+
+/* ============================================================
+   TODO 1: Skip link
+   Implementa el skip link para usuarios de teclado.
+   
+   Requisitos:
+   - Oculto fuera de pantalla por defecto (position:absolute, top:-100%)
+   - Visible al recibir :focus (top: 0)
+   - Estilos: fondo color primario, texto blanco, padding cómodo
+   - z-index alto para que quede por encima de todo
+============================================================ */
+
+/* Escribe aquí los estilos del .skip-link */
+
+
+/* ============================================================
+   TODO 2: `:focus-visible` — estilos de foco para teclado
+   
+   Requisitos:
+   - Elimina outline en :focus para todos los elementos
+   - En :focus-visible aplica outline 3px sólido con color primario
+   - outline-offset: 3px
+   - Aplica border-radius var(--radius) en el outline
+============================================================ */
+
+/* Escribe aquí los estilos de :focus y :focus-visible */
+
+
+/* ============================================================
+   Header
+   Ya definido — no es un TODO pero adáptalo si lo necesitas.
+============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: color-mix(in srgb, var(--color-bg) 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--header-height);
+}
+
+.header-inner {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.logo-symbol {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+}
+
+/* ============================================================
+   TODO 3: Navegación responsive — hamburguesa CSS-only
+   
+   El HTML ya contiene:
+     <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+     <label for="nav-toggle" class="nav-toggle-label">
+       <span></span><span></span><span></span>
+     </label>
+     <nav class="site-nav">...</nav>
+   
+   Requisitos mobile (< 768px):
+   - Ocultar el input con position:absolute / opacity:0 / width:0
+   - .nav-toggle-label visible como icono hamburguesa (3 <span>)
+   - .site-nav oculto por defecto (display:none o translateX)
+   - input:checked ~ .site-nav muestra el menú (display:flex o translateX:0)
+   
+   Requisitos desktop (>= 768px):
+   - Ocultar .nav-toggle-label (display:none)
+   - .site-nav siempre visible con flex-direction:row
+============================================================ */
+
+/* Ocultar el input de toggle */
+.nav-toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Escribe aquí los estilos del menú hamburguesa y la navegación */
+
+.site-nav ul {
+  display: flex;
+  gap: var(--spacing-6);
+}
+
+.site-nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius);
+  transition: color var(--transition-base), background-color var(--transition-base);
+}
+
+.site-nav a:hover {
+  color: var(--color-text);
+  background-color: var(--color-surface-2);
+}
+
+/* ============================================================
+   TODO 4: Sección Hero — layout + animación de entrada
+   
+   Requisitos:
+   - Layout: 2 columnas en desktop (contenido + decoración código)
+     grid-template-columns: 1fr 1fr o similar
+   - Mobile: 1 columna, decoración oculta
+   - Animación @keyframes "fade-slide-up":
+     from: opacity:0, transform:translateY(30px)
+     to:   opacity:1, transform:translateY(0)
+   - Solo aplicar la animación si prefers-reduced-motion: no-preference
+   - Hero: min-height calc(100vh - var(--header-height)), centrado
+============================================================ */
+
+.hero-section {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+}
+
+/* Escribe aquí los estilos del hero, incluyendo @keyframes */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.hero-greeting {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+}
+
+.hero-title {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.hero-description {
+  max-width: 50ch;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+.hero-actions {
+  display: flex;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-4);
+}
+
+/* Decoración código */
+.hero-decoration {
+  display: none;
+}
+
+.code-block {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.code-line { display: block; }
+.code-indent { padding-left: 1.5rem; }
+.code-indent-2 { padding-left: 3rem; }
+.code-indent-3 { padding-left: 4.5rem; }
+.code-tag { color: #79c0ff; }
+.code-attr { color: #d2a8ff; }
+.code-string { color: #a5d6ff; }
+.code-comment { color: #8b949e; font-style: italic; }
+
+/* ============================================================
+   Botones — ya implementados
+============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: 0.75rem var(--spacing-6);
+  border-radius: var(--radius);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text-on-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+/* ============================================================
+   Secciones — container reutilizable
+============================================================ */
+.section-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: var(--spacing-24) var(--spacing-8);
+}
+
+.section-title {
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-3xl));
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-4);
+  position: relative;
+}
+
+/* Línea decorativa debajo del título de sección */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin-top: var(--spacing-3);
+  border-radius: var(--radius-full);
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-bottom: var(--spacing-12);
+  font-size: var(--font-size-lg);
+}
+
+/* ============================================================
+   TODO 5: Sección About — grid de 2 columnas
+   
+   Requisitos:
+   - Mobile: 1 columna
+   - Desktop (≥ 768px): grid 2 columnas (foto | texto)
+   - La foto tiene border-radius grande o círculo, sombra
+   - .skill-chips: flex wrap, chips con border, colores primarios
+   - Cada <li> del .skill-chips con ::before bullet (no usar list-style)
+============================================================ */
+
+.about-section {
+  background-color: var(--color-surface);
+}
+
+/* Escribe aquí los estilos del about grid y skill-chips */
+
+.about-figure {
+  position: relative;
+}
+
+.about-photo {
+  width: 100%;
+  max-width: 350px;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.about-caption {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  text-align: center;
+  margin-top: var(--spacing-3);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.about-content p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-lg);
+}
+
+/* ============================================================
+   TODO 6: Proyectos — cards grid + .is-featured ribbon
+   
+   Requisitos:
+   - Grid con auto-fit, minmax(280px, 1fr)
+   - .card: background surface, border, border-radius, overflow:hidden
+   - .card-figure img: aspect-ratio 16/9, object-fit:cover, width:100%
+   - .card.is-featured: posición relativa, ribbon ::before con
+     content:"DESTACADO", posición abs, rotado 45deg, color primario
+   - hover suave: translateY(-4px), box-shadow
+============================================================ */
+
+/* Escribe aquí los estilos de la grid de proyectos y las cards */
+
+.card-body {
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  flex: 1;
+}
+
+.card-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.card-desc {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  flex: 1;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+}
+
+.tag {
+  background-color: color-mix(in srgb, var(--color-primary) 15%, var(--color-surface-2));
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  padding: 0.2rem 0.75rem;
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-top: var(--spacing-3);
+  transition: gap var(--transition-fast);
+}
+
+.card-link:hover {
+  gap: var(--spacing-3);
+}
+
+/* ============================================================
+   TODO 7: Habilidades — skill groups
+   
+   Requisitos:
+   - .skills-grid: grid auto-fit minmax(200px, 1fr)
+   - .skill-group: tarjeta con surface, border, padding
+   - .skill-list li: con ::before bullet "▸" en color primario
+     (usar content + padding-left en li, ::before absolute o inline)
+============================================================ */
+
+/* Escribe aquí los estilos de habilidades */
+
+.skill-group-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   TODO 8: Formulario de contacto — estilos + estados
+   
+   Requisitos:
+   - .contact-form: max-width 600px, centrado, flex-column
+   - .field: flex-column, gap entre label/input/hint
+   - inputs y textarea: estilos base + transición en border-color
+   - input:focus, textarea:focus: border-color primario
+   - input:valid: border-color success
+   - input:invalid:not(:placeholder-shown): border-color error
+   - .field-error, .field-hint: tamaño pequeño, colores apropiados
+   - .form-success: fondo verde oscuro, borde verde, border-radius
+============================================================ */
+
+/* Escribe aquí los estilos del formulario */
+
+.field-required {
+  color: var(--color-error);
+  margin-left: 0.25rem;
+}
+
+/* ============================================================
+   Skills chips (en about)
+============================================================ */
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.skill-chips li {
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-1) var(--spacing-4);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.skill-chips li:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   Footer — ya implementado
+============================================================ */
+.site-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-12) 0;
+}
+
+.footer-inner {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--spacing-8);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-4);
+}
+
+.footer-contact a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-style: normal;
+  transition: color var(--transition-base);
+}
+
+.footer-contact a:hover {
+  color: var(--color-primary);
+}
+
+.footer-social ul {
+  display: flex;
+  gap: var(--spacing-6);
+}
+
+.footer-social a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-base);
+}
+
+.footer-social a:hover {
+  color: var(--color-text);
+}
+
+.footer-copy {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+/* ============================================================
+   TODO 9 (bonus): prefers-color-scheme — modo claro opcional
+   
+   Si quieres ir más allá, implementa una paleta clara
+   dentro de @media (prefers-color-scheme: light) { :root { ... } }
+============================================================ */
+
+/* ============================================================
+   Media Queries — Responsive mobile-first
+   Agrega aquí todos los breakpoints necesarios.
+   Los TODOs anteriores deben quedar responsive.
+============================================================ */
+
+@media (min-width: 768px) {
+  /* Tablet y landscape mobile */
+
+  .hero-decoration {
+    display: block;
+  }
+
+  /* Agrega aquí el layout de 2 columnas del hero,
+     el grid del about, navegación desktop, etc. */
+}
+
+@media (min-width: 1024px) {
+  /* Desktop */
+
+  /* Agrega aquí ajustes de layout para pantallas grandes */
+}

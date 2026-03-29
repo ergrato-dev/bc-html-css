@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog de Frontend — Ejercicio Semántica</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ESTADO INICIAL — Div soup (lo que el estudiante ve al abrir)
+       El estudiante lee los pasos y va descomentando el código
+       semántico equivalente que aparece debajo de cada sección.
+  ============================================================ -->
+
+  <!-- ============================================================
+       PASO 1: Reemplaza los landmarks principales
+       Busca la sección "PASO 1 SEMÁNTICO" abajo y descoméntala.
+       Luego borra (o comenta) esta sección de div soup.
+  ============================================================ -->
+
+  <div class="header">
+    <a href="/" class="site-logo">FrontendBlog</a>
+    <div class="nav">
+      <ul>
+        <li><a href="#articles">Artículos</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="content">
+
+      <!-- ============================================================
+           PASO 2 + 3 + 4: Estructura interna del blog
+           Descomenta las secciones correspondientes abajo.
+      ============================================================ -->
+
+      <div class="section-recent">
+        <div class="section-title">Artículos Recientes</div>
+
+        <div class="article-card">
+          <!-- PASO 2 — Jerarquía incorrecta actual -->
+          <h3>CSS Grid en 2025: lo que necesitas saber</h3>
+
+          <!-- PASO 3 — Sin figure, sin time, sin address -->
+          <img src="css/img/grid-article.jpg" alt="Imagen artículo Grid" />
+          <div class="meta">
+            <span class="author">Ana García</span> ·
+            <span class="date">20 de mayo de 2025</span>
+          </div>
+          <p>CSS Grid sigue siendo la herramienta más poderosa para layouting bidimensional...</p>
+          <a href="/articulos/css-grid-2025">Leer más</a>
+        </div>
+
+        <div class="article-card">
+          <h3>10 tips de Flexbox que quizás no conocías</h3>
+          <img src="css/img/flexbox-article.jpg" alt="Imagen artículo Flexbox" />
+          <div class="meta">
+            <span class="author">Ana García</span> ·
+            <span class="date">5 de abril de 2025</span>
+          </div>
+          <p>Flexbox tiene propiedades menos conocidas que pueden simplificar mucho tu código...</p>
+          <a href="/articulos/flexbox-tips">Leer más</a>
+        </div>
+
+      </div><!-- /.section-recent -->
+
+    </div><!-- /.content -->
+
+    <div class="sidebar">
+      <div class="sidebar-title">Categorías</div>
+      <ul>
+        <li><a href="/css">CSS (12)</a></li>
+        <li><a href="/html">HTML (8)</a></li>
+        <li><a href="/accesibilidad">Accesibilidad (5)</a></li>
+      </ul>
+    </div>
+
+  </div><!-- /.main -->
+
+  <div class="footer">
+    <div class="author-info">
+      Blog mantenido por Ana García ·
+      <a href="mailto:hola@anagarcia.dev">hola@anagarcia.dev</a> ·
+      <a href="https://github.com/ana">GitHub</a>
+    </div>
+    <p class="copyright">© 2025 Ana García</p>
+  </div>
+
+
+  <!-- ============================================================
+       ↓ ↓ ↓  CÓDIGO SEMÁNTICO — Descomenta paso a paso  ↓ ↓ ↓
+  ============================================================ -->
+
+
+  <!-- ============================================================
+       PASO 1 SEMÁNTICO — Landmarks correctos
+       INSTRUCCIÓN: Descomenta TODO este bloque (de <!-- header al
+       footer -->), luego comenta o elimina el bloque "div soup"
+  de arriba.
+  ============================================================ -->
+
+  <!-- <header>
+    <a href="/" class="site-logo" aria-label="FrontendBlog — Inicio">FrontendBlog</a>
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#articles">Artículos</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <div class="content-area">
+
+      <section id="articles" aria-labelledby="recent-articles-title">
+
+        <h2 id="recent-articles-title">Artículos Recientes</h2>
+
+        <article>
+          <h3>CSS Grid en 2025: lo que necesitas saber</h3>
+          <figure>
+            <img
+              src="css/img/grid-article.jpg"
+              alt="Captura del inspector de CSS Grid mostrando líneas de cuadrícula numeradas"
+              width="720" height="400" loading="lazy"
+            />
+            <figcaption>DevTools muestra las líneas de CSS Grid sobre el layout.</figcaption>
+          </figure>
+          <p>
+            Escrito por
+            <address><a rel="author" href="/sobre-mi">Ana García</a></address>
+            el <time datetime="2025-05-20">20 de mayo de 2025</time>.
+          </p>
+          <p>CSS Grid sigue siendo la herramienta más poderosa para layouting bidimensional...</p>
+          <a href="/articulos/css-grid-2025">Leer artículo completo sobre CSS Grid →</a>
+        </article>
+
+        <article>
+          <h3>10 tips de Flexbox que quizás no conocías</h3>
+          <figure>
+            <img
+              src="css/img/flexbox-article.jpg"
+              alt="Diagrama de ejes Flexbox con justify-content y align-items etiquetados"
+              width="720" height="400" loading="lazy"
+            />
+            <figcaption>Los ejes principal y cruzado de un contenedor Flex.</figcaption>
+          </figure>
+          <p>
+            Escrito por
+            <address><a rel="author" href="/sobre-mi">Ana García</a></address>
+            el <time datetime="2025-04-05">5 de abril de 2025</time>.
+          </p>
+          <p>Flexbox tiene propiedades menos conocidas que pueden simplificar mucho tu código...</p>
+          <a href="/articulos/flexbox-tips">Leer artículo completo sobre Flexbox →</a>
+        </article>
+
+      </section>
+
+    </div>
+
+    <aside aria-label="Contenido relacionado">
+      <h2>Categorías</h2>
+      <ul>
+        <li><a href="/css">CSS (12)</a></li>
+        <li><a href="/html">HTML (8)</a></li>
+        <li><a href="/accesibilidad">Accesibilidad (5)</a></li>
+      </ul>
+    </aside>
+
+  </main>
+
+  <footer>
+    <address>
+      Blog mantenido por <a rel="author" href="/sobre-mi">Ana García</a> ·
+      <a href="mailto:hola@anagarcia.dev">hola@anagarcia.dev</a> ·
+      <a href="https://github.com/ana">GitHub</a>
+    </address>
+    <p><small>© 2025 Ana García</small></p>
+  </footer> -->
+
+</body>
+
+</html>

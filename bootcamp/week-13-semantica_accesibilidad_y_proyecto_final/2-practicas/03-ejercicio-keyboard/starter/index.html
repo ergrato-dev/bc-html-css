@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio Navegación por Teclado — Semana 13</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       PASO 1: Skip link
+       El skip link está en la posición fija visible (ver CSS).
+       Descomenta en styles.css el bloque PASO 1 para que quede
+       fuera de pantalla hasta recibir el foco con Tab.
+  ============================================================ -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       PASO 4: tabindex en div[role="button"]
+       La tarjeta de abajo tiene role="button" pero NO tiene
+       tabindex, por lo que no recibe el foco con Tab.
+       Descomenta el bloque PASO 4 del <main> para añadir tabindex.
+  ============================================================ -->
+
+  <header>
+    <div class="site-logo">
+      <!-- PASO 2: el span con el nombre de la marca usa display:none
+           (ver styles.css). Descomenta el bloque PASO 2 en styles.css
+           para usar .visually-hidden en su lugar.               -->
+      <span class="brand-name">Bootcamp HTML+CSS</span>
+      <span aria-hidden="true" class="logo-icon">🎓</span>
+    </div>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#cards">Tarjetas</a></li>
+        <li><a href="#form-section">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ──────────────────────────────────────────────────────── -->
+    <!-- SECCIÓN HERO                                              -->
+    <!-- ──────────────────────────────────────────────────────── -->
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Semana 13 — Accesibilidad</h1>
+      <p class="hero-subtitle">
+        Aprende a construir interfaces navegables con el teclado.
+      </p>
+      <div class="hero-actions">
+        <a href="#cards" class="btn btn-primary">Ver tarjetas</a>
+        <a href="#form-section" class="btn btn-outline">Contactar</a>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────── -->
+    <!-- SECCIÓN TARJETAS con div[role="button"]                   -->
+    <!-- ──────────────────────────────────────────────────────── -->
+    <section id="cards" class="cards-section" aria-labelledby="cards-title">
+      <h2 id="cards-title">Tarjetas interactivas</h2>
+      <p class="section-desc">
+        La tercera tarjeta es un <code>&lt;div&gt;</code> con
+        <code>role="button"</code>. Sin <code>tabindex</code> no
+        entra en el flujo de foco del teclado.
+      </p>
+
+      <div class="cards-grid">
+        <!-- Tarjeta 1 — enlace nativo (enfocable nativamente) -->
+        <article class="card">
+          <h3 class="card-title">HTML Semántico</h3>
+          <p class="card-body">
+            Usar etiquetas que describan el significado del contenido.
+          </p>
+          <a href="#hero" class="card-link">Leer más</a>
+        </article>
+
+        <!-- Tarjeta 2 — botón nativo (enfocable nativamente) -->
+        <article class="card">
+          <h3 class="card-title">Atributos ARIA</h3>
+          <p class="card-body">
+            Enriquecer el árbol de accesibilidad cuando el HTML no es suficiente.
+          </p>
+          <button type="button" class="card-btn">Ver ejercicio</button>
+        </article>
+
+        <!-- Tarjeta 3 — div con role="button" SIN tabindex -->
+        <!-- NO descomentes aún — el PASO 4 está abajo       -->
+        <article class="card card-interactive">
+          <h3 class="card-title">Teclado &amp; Foco</h3>
+          <p class="card-body">
+            Esta tarjeta usa <code>div[role="button"]</code>.
+            Actualmente no recibe el foco con Tab.
+          </p>
+          <div role="button" class="card-custom-btn">
+            Activar tarjeta
+          </div>
+        </article>
+        <!--
+        PASO 4 — Descomenta y reemplaza la tarjeta 3 de arriba:
+
+        <article class="card card-interactive">
+          <h3 class="card-title">Teclado &amp; Foco</h3>
+          <p class="card-body">
+            Esta tarjeta usa <code>div[role="button"]</code> con
+            <code>tabindex="0"</code>. Ahora sí recibe el foco con Tab.
+          </p>
+          <div
+            role="button"
+            tabindex="0"
+            class="card-custom-btn"
+          >
+            Activar tarjeta
+          </div>
+        </article>
+        -->
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────── -->
+    <!-- SECCIÓN FORMULARIO                                        -->
+    <!-- ──────────────────────────────────────────────────────── -->
+    <section id="form-section" class="form-section" aria-labelledby="form-title">
+      <h2 id="form-title">Formulario de contacto</h2>
+
+      <form class="contact-form" novalidate aria-labelledby="form-title">
+        <div class="field">
+          <label for="fullname">Nombre completo</label>
+          <input type="text" id="fullname" name="fullname" autocomplete="name" required />
+        </div>
+
+        <div class="field">
+          <label for="contact-email">Correo electrónico</label>
+          <input type="email" id="contact-email" name="email" autocomplete="email" required />
+        </div>
+
+        <div class="field">
+          <label for="contact-msg">Mensaje</label>
+          <textarea id="contact-msg" name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <address>
+      Bootcamp HTML+CSS — Semana 13
+    </address>
+  </footer>
+
+</body>
+
+</html>
