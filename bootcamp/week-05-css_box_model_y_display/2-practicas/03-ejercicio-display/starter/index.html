@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Display y Overflow</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Display y Overflow</h1>
+  </header>
+
+  <main>
+
+    <section class="demo">
+      <h2>Paso 1 — block vs inline vs inline-block</h2>
+      <p>Tres elementos con el mismo contenido, distinto display:</p>
+
+      <div class="display-demo">
+        <span class="tag tag-block">display: block</span>
+        <span class="tag tag-inline">display: inline</span>
+        <span class="tag tag-inline-block">inline-block</span>
+        <span class="tag tag-inline">Texto normal fluye aquí</span>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>Paso 2 — none vs visibility: hidden</h2>
+      <p>Tres cajas: la del medio tiene el estilo que la oculta. Cambia entre <code>display: none</code> y <code>visibility: hidden</code> en el CSS para ver la diferencia.</p>
+
+      <div class="boxes-row">
+        <div class="box-item box-visible">Caja 1</div>
+        <div class="box-item box-hidden">Caja 2 — oculta</div>
+        <div class="box-item box-visible">Caja 3</div>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>Paso 3 — overflow: hidden, auto y ellipsis</h2>
+
+      <p>Texto truncado con ellipsis:</p>
+      <div class="truncated">Este es un texto muy largo que no debe verse completo sin puntos suspensivos</div>
+
+      <p style="margin-top: 1rem;">Caja con scroll interno:</p>
+      <div class="scrollable">
+        <p>Línea 1 de contenido</p>
+        <p>Línea 2 de contenido</p>
+        <p>Línea 3 de contenido</p>
+        <p>Línea 4 de contenido</p>
+        <p>Línea 5 de contenido</p>
+        <p>Línea 6 de contenido</p>
+      </div>
+    </section>
+
+    <section class="demo">
+      <h2>Paso 4 — overflow: hidden activa BFC</h2>
+      <p>El contenedor abajo tiene <code>overflow: hidden</code>, lo que lo hace contener su contenido correctamente.</p>
+
+      <div class="bfc-container">
+        <p>Contenido dentro del BFC. Con <code>overflow: hidden</code> el contenedor siempre rodea su contenido interno, incluyendo elementos con margen.</p>
+        <p>Sin overflow: hidden, los márgenes de los hijos pueden escapar al padre.</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

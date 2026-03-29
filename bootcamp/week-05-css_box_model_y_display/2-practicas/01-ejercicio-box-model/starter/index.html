@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Box Model</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>El Box Model CSS</h1>
+    <p>Abre DevTools → Computed para ver el diagrama del Box Model en vivo.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Paso 2 — content-box vs border-box</h2>
+      <p>Ambas cajas tienen <code>width: 200px</code> y <code>padding: 20px</code>. ¿Cuál mide 200px en pantalla?</p>
+
+      <div class="comparison">
+        <div class="box-demo box-content">
+          <strong>content-box</strong>
+          <p>width: 200px + padding: 20px<br/>Mide más de 200px</p>
+        </div>
+
+        <div class="box-demo box-border">
+          <strong>border-box</strong>
+          <p>width: 200px incluye padding<br/>Mide exactamente 200px</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Paso 3 — Shorthand de margin y padding</h2>
+      <p>Las tarjetas de abajo tienen distintos valores de shorthand.</p>
+
+      <div class="cards-row">
+        <div class="card card-1">
+          <h3>1 valor</h3>
+          <code>padding: 1rem</code>
+        </div>
+        <div class="card card-2">
+          <h3>2 valores</h3>
+          <code>padding: 1rem 2rem</code>
+        </div>
+        <div class="card card-3">
+          <h3>4 valores</h3>
+          <code>padding: 1rem 2rem 1.5rem 0.5rem</code>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Paso 4 — Centra con margin auto</h2>
+      <div class="centered">
+        <p>Este contenedor tiene <code>max-width: 400px</code> y <code>margin: 0 auto</code>. Está centrado horizontalmente.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

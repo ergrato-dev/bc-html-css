@@ -1,0 +1,94 @@
+/* ================================================
+   PROYECTO SEMANA 05 — Tarjetas de Producto
+   
+   Solo trabaja en este archivo. No modificar el HTML.
+   ================================================ */
+
+/* ============================
+   TODO 1: Reset con box-sizing
+   ============================ */
+
+
+/* ============================
+   TODO 2: Variables en :root
+   Define colores, espaciados, radios, sombras
+   --color-bg: fondo principal oscuro
+   --color-card: fondo de tarjeta
+   --color-primary: color de acento (ej #264de4)
+   --color-text, --color-muted, --border-color
+   --shadow-card, --radius-card
+   ============================ */
+
+
+/* ============================
+   TODO 3: body — tipografía base y fondo
+   ============================ */
+
+
+/* ============================
+   TODO 4: header (#site-header)
+   sticky, fondo oscuro, nav links en línea
+   ============================ */
+
+
+/* ============================
+   TODO 5: sección hero (#hero)
+   texto centrado, separador visual
+   ============================ */
+
+
+/* ============================
+   TODO 6: grid de productos (.products-grid)
+   Usa display: flex + flex-wrap: wrap
+   o las propiedades que ya conoces.
+   Gap entre tarjetas, alineación.
+   ============================ */
+
+
+/* ============================
+   TODO 7: tarjeta (.product-card)
+   - box-sizing: border-box
+   - overflow: hidden (para el border-radius de imagen)
+   - padding en el body, no en la card entera
+   - border + border-radius
+   - hover: cambio de borde o sombra
+   ============================ */
+
+
+/* ============================
+   TODO 8: imagen (.product-image)
+   - width: 100%, height: 200px
+   - object-fit: cover
+   - display: block para eliminar espacio inferior
+   ============================ */
+
+
+/* ============================
+   TODO 9: nombre truncado (.product-name)
+   Usa white-space, overflow, text-overflow: ellipsis
+   ============================ */
+
+
+/* ============================
+   TODO 10: precio (.product-price)
+   Destacado visualmente, color diferente
+   ============================ */
+
+
+/* ============================
+   TODO 11: badge (.badge)
+   Posición absoluta en la imagen (necesita position: relative en el wrapper)
+   Pequeño, redondeado, colores distintos por variante
+   ============================ */
+
+
+/* ============================
+   TODO 12: botón (.btn.btn-primary)
+   Padding, border-radius, hover effect
+   ============================ */
+
+
+/* ============================
+   TODO 13: footer (#site-footer)
+   Centrado, separador arriba, color muted
+   ============================ */

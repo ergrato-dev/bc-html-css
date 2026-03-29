@@ -1,0 +1,150 @@
+/* ================================================
+   EJERCICIO 01 — Box Model
+   ================================================ */
+
+
+/* ================================================
+   PASO 1: Reset base
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+/* body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+  line-height: 1.6;
+} */
+
+/* header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #58a6ff;
+}
+
+main {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+section h2 {
+  font-size: 1.1rem;
+  color: #e6edf3;
+  margin-bottom: 0.75rem;
+} */
+
+
+/* ================================================
+   PASO 2: content-box vs border-box
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .comparison {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+} */
+
+/* .box-demo {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 6px;
+} */
+
+/* .box-content {
+  box-sizing: content-box;
+  border-color: #264de4;
+  background-color: #1c2128;
+} */
+
+/* .box-border {
+  box-sizing: border-box;
+  border-color: #3fb950;
+  background-color: #1c2128;
+} */
+
+/* .box-demo strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #e6edf3;
+}
+
+.box-demo p {
+  font-size: 0.8rem;
+  color: #8b949e;
+} */
+
+
+/* ================================================
+   PASO 3: Shorthand de margin y padding
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .cards-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+} */
+
+/* .card {
+  background-color: #1c2128;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 140px;
+} */
+
+/* .card h3 {
+  font-size: 0.95rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.card code {
+  font-size: 0.8rem;
+  color: #8b949e;
+} */
+
+/* .card-1 { padding: 1rem; } */
+/* .card-2 { padding: 1rem 2rem; } */
+/* .card-3 { padding: 1rem 2rem 1.5rem 0.5rem; } */
+
+
+/* ================================================
+   PASO 4: Centra con margin auto
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .centered {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #1c2128;
+  border: 1px solid #264de4;
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-top: 0.75rem;
+} */
