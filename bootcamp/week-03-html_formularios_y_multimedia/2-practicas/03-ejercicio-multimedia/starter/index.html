@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 03 — Galería Multimedia</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; padding: 2rem; max-width: 800px; margin: 0 auto; }
+      h2 { color: #e34f26; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; margin-top: 2.5rem; }
+      figure { margin: 1.5rem 0; background: #161b22; padding: 1rem; border-radius: 8px; border: 1px solid #30363d; }
+      figure img, figure video, figure iframe { display: block; border-radius: 4px; max-width: 100%; height: auto; }
+      figcaption { font-size: 0.88rem; color: #8b949e; margin-top: 0.5rem; font-style: italic; }
+      .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Galería Multimedia</h1>
+    <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
+
+    <!-- ============================================================ -->
+    <!-- PASO 1: Galería de imágenes con figure + figcaption          -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>Galería de Fotografías</h2>
+      <div class="gallery-grid">
+        <figure>
+          <img
+            src="https://picsum.photos/400/250?random=10"
+            alt="Fotografía de paisaje natural generada aleatoriamente"
+            width="400"
+            height="250"
+            loading="lazy"
+          />
+          <figcaption>Paisaje natural — lorem picsum</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="https://picsum.photos/400/250?random=20"
+            alt="Fotografía arquitectónica generada aleatoriamente"
+            width="400"
+            height="250"
+            loading="lazy"
+          />
+          <figcaption>Arquitectura — lorem picsum</figcaption>
+        </figure>
+
+        <figure>
+          <img
+            src="https://picsum.photos/400/250?random=30"
+            alt="Fotografía abstracta de colores generada aleatoriamente"
+            width="400"
+            height="250"
+            loading="lazy"
+          />
+          <figcaption>Abstracto — lorem picsum</figcaption>
+        </figure>
+      </div>
+    </section> -->
+
+
+    <!-- ============================================================ -->
+    <!-- PASO 2: Video nativo                                        -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>Video</h2>
+      <figure>
+        <video
+          width="560"
+          height="315"
+          controls
+          preload="metadata"
+          poster="https://picsum.photos/560/315?random=5"
+          aria-describedby="desc-video"
+        >
+          <source
+            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            type="video/mp4"
+          />
+          <p>
+            Tu navegador no soporta video HTML5.
+            <a href="https://www.w3schools.com/html/mov_bbb.mp4">Descarga el video aquí</a>.
+          </p>
+        </video>
+        <figcaption id="desc-video">
+          Video de muestra — Big Buck Bunny (fuente: w3schools.com)
+        </figcaption>
+      </figure>
+    </section> -->
+
+
+    <!-- ============================================================ -->
+    <!-- PASO 3: Audio nativo                                        -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>Audio</h2>
+      <figure>
+        <audio controls preload="metadata" aria-describedby="desc-audio">
+          <source
+            src="https://www.w3schools.com/html/horse.mp3"
+            type="audio/mpeg"
+          />
+          <p>Tu navegador no soporta audio HTML5.</p>
+        </audio>
+        <figcaption id="desc-audio">
+          Sonido de ejemplo — audio corto de muestra (fuente: w3schools.com)
+        </figcaption>
+      </figure>
+    </section> -->
+
+
+    <!-- ============================================================ -->
+    <!-- PASO 4: iframe de YouTube                                   -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>Video Embebido (iframe)</h2>
+      <figure>
+        <iframe
+          src="https://www.youtube.com/embed/kUMe1FH4CHE"
+          title="Aprende HTML en 15 minutos — tutorial para principiantes"
+          width="560"
+          height="315"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+        <figcaption>
+          Aprende HTML en 15 minutos — Canal de FaztCode en YouTube
+        </figcaption>
+      </figure>
+    </section> -->
+
+    <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
+      ↑ Descomenta cada PASO para ver los elementos multimedia
+    </p>
+  </body>
+</html>
