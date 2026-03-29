@@ -158,6 +158,24 @@ Pie de página o de sección. Típicamente contiene: copyright, enlaces legales,
 </footer>
 ```
 
+> 💡 **Buena práctica — año de copyright dinámico:** hardcodear el año en el footer
+> obliga a actualizarlo manualmente cada 1 de enero. Con una línea de JavaScript
+> se actualiza solo:
+>
+> ```html
+> <!-- 1. En el HTML: span con valor estático como fallback -->
+> <p>© <span id="copyright-year">2026</span> Ana García</p>
+>
+> <!-- 2. Al final del <body>: script que lo actualiza dinámicamente -->
+> <script>
+>   document.getElementById('copyright-year').textContent = new Date().getFullYear();
+> </script>
+> ```
+>
+> El `<span>` con el año estático es el **fallback**: si JavaScript está deshabilitado,
+> el año sigue visible. El `new Date().getFullYear()` devuelve el año actual del
+> sistema — sin tocar el código cada año.
+
 ---
 
 ## 3. Elementos de Contenido Semántico

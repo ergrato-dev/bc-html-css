@@ -76,7 +76,23 @@ Los headings del `<h1>` al `<h6>` crean la estructura de contenido de la página
 
 <!-- <small> = texto secundario, aclaraciones legales -->
 <small>© 2026 ergrato-dev. Todos los derechos reservados.</small>
+```
 
+> 💡 **Buena práctica — año dinámico:** el año hardcodeado en el copyright necesita
+> actualizarse a mano cada nuevo año. JavaScript lo resuelve con una línea:
+>
+> ```html
+> <small>© <span id="copyright-year">2026</span> ergrato-dev</small>
+>
+> <script>
+>   document.getElementById('copyright-year').textContent = new Date().getFullYear();
+> </script>
+> ```
+>
+> El `<span>` tiene el año estático como **fallback** y `new Date().getFullYear()`
+> lo sobreescribe automáticamente al cargar la página.
+
+```html
 <!-- <mark> = texto resaltado (relevante en contexto) -->
 <p>Busca la palabra <mark>semántica</mark> en el documento.</p>
 

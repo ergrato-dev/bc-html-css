@@ -402,12 +402,19 @@
 
       <p class="footer-copy">
         <small>
-          &copy; <time datetime="2025">2025</time> Tu Nombre — Construido con
+          <!-- 💡 Usa un <span> con id en lugar de hardcodear el año;
+               el script al final del <body> lo actualiza automáticamente -->
+          &copy; <span id="copyright-year">2026</span> Tu Nombre — Construido con
           HTML5 y CSS3 puro.
         </small>
       </p>
     </div>
   </footer>
+
+  <!-- Año de copyright dinámico: new Date().getFullYear() devuelve el año actual del sistema -->
+  <script>
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 
