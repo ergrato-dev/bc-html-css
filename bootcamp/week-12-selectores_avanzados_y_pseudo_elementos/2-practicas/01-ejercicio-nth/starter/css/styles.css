@@ -1,0 +1,187 @@
+/* ============================================================
+   Ejercicio 01 — nth-child y Patrones de Posición
+   Semana 12: Selectores Avanzados y Pseudo-elementos
+   ============================================================ */
+
+/* ── Tokens base ── */
+:root {
+  --color-bg:       hsl(220 18% 8%);
+  --color-surface:  hsl(220 14% 12%);
+  --color-border:   hsl(220 12% 20%);
+  --color-primary:  hsl(225 73% 52%);
+  --color-text:     hsl(220 18% 88%);
+  --color-muted:    hsl(220 10% 55%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Reset base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.site-header {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.site-header h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.site-header p { color: var(--color-muted); }
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.demo-section {}
+
+.section-title {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Tabla de pedidos ── */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.orders-table th,
+.orders-table td {
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.orders-table thead tr {
+  background: hsl(220 14% 16%);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.orders-table tbody tr {
+  transition: background 120ms ease;
+}
+
+.orders-table tbody tr:hover {
+  background: hsl(220 14% 14%);
+}
+
+.status {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2em 0.6em;
+  border-radius: 9999px;
+}
+
+.status--shipped   { background: hsl(225 73% 20%); color: hsl(225 73% 75%); }
+.status--pending   { background: hsl(45 70% 18%);  color: hsl(45 70% 70%);  }
+.status--delivered { background: hsl(142 50% 16%); color: hsl(142 60% 60%);  }
+
+/* ── Lista de equipo ── */
+.team-list {
+  list-style: none;
+}
+
+.team-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.role {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* ── Cuadrícula de fotos ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.photo {
+  height: 100px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================================
+   PASO 1: Zebra stripes en la tabla
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* tbody tr:nth-child(even) {
+  background: hsl(220 14% 10%);
+}
+
+tbody tr:first-child {
+  border-left: 3px solid var(--color-primary);
+} */
+
+
+/* ============================================================
+   PASO 2: Primer y último elemento de la lista
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .team-list li:first-child {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.team-list li:first-child .role {
+  color: hsl(225 73% 65%);
+}
+
+.team-list li:last-child {
+  border-bottom: none;
+} */
+
+
+/* ============================================================
+   PASO 3: Patrón 3n+1 en la cuadrícula
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .photo-grid .photo:nth-child(3n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: auto;
+  min-height: 200px;
+} */
+
+
+/* ============================================================
+   PASO 4: Últimos 3 elementos del equipo con menos opacidad
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .team-list li:nth-last-child(-n+3) {
+  opacity: 0.55;
+} */

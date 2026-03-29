@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Tooltips CSS Puro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Tooltips CSS Puro</h1>
+    <p>Pasa el cursor sobre los botones o navega con Tab para ver los tooltips.</p>
+  </header>
+
+  <main class="main-content">
+
+    <!-- =========================================================
+         SECCIÓN 1 — Toolbar de acciones
+         data-tooltip contiene el texto que leerá CSS con attr()
+    ========================================================== -->
+    <section class="demo-section">
+      <h2 class="section-label">Toolbar de Acciones</h2>
+
+      <div class="toolbar" role="toolbar" aria-label="Herramientas de edición">
+
+        <button
+          class="tool-btn"
+          data-tooltip="Nuevo archivo"
+          aria-label="Nuevo archivo"
+          type="button"
+        >📄</button>
+
+        <button
+          class="tool-btn"
+          data-tooltip="Abrir archivo"
+          aria-label="Abrir archivo"
+          type="button"
+        >📂</button>
+
+        <button
+          class="tool-btn"
+          data-tooltip="Guardar (Ctrl+S)"
+          aria-label="Guardar"
+          type="button"
+        >💾</button>
+
+        <div class="toolbar-divider" role="separator"></div>
+
+        <button
+          class="tool-btn"
+          data-tooltip="Deshacer (Ctrl+Z)"
+          aria-label="Deshacer"
+          type="button"
+        >↩</button>
+
+        <button
+          class="tool-btn"
+          data-tooltip="Rehacer (Ctrl+Y)"
+          aria-label="Rehacer"
+          type="button"
+        >↪</button>
+
+        <div class="toolbar-divider" role="separator"></div>
+
+        <button
+          class="tool-btn tool-btn--danger"
+          data-tooltip="Eliminar elemento"
+          aria-label="Eliminar elemento"
+          type="button"
+        >🗑</button>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECCIÓN 2 — Botones de acción en una tabla
+    ========================================================== -->
+    <section class="demo-section">
+      <h2 class="section-label">Acciones en Tabla</h2>
+
+      <table class="actions-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>diseño-final.fig</td>
+            <td><span class="badge badge--active">Activo</span></td>
+            <td class="actions-cell">
+              <button class="action-btn" data-tooltip="Ver detalles" aria-label="Ver detalles de diseño-final.fig" type="button">👁</button>
+              <button class="action-btn" data-tooltip="Editar" aria-label="Editar diseño-final.fig" type="button">✏️</button>
+              <button class="action-btn action-btn--danger" data-tooltip="Eliminar permanentemente" aria-label="Eliminar diseño-final.fig" type="button">🗑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>prototipo-v2.fig</td>
+            <td><span class="badge badge--draft">Borrador</span></td>
+            <td class="actions-cell">
+              <button class="action-btn" data-tooltip="Ver detalles" aria-label="Ver detalles de prototipo-v2.fig" type="button">👁</button>
+              <button class="action-btn" data-tooltip="Editar" aria-label="Editar prototipo-v2.fig" type="button">✏️</button>
+              <button class="action-btn action-btn--danger" data-tooltip="Eliminar permanentemente" aria-label="Eliminar prototipo-v2.fig" type="button">🗑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>wireframes.fig</td>
+            <td><span class="badge badge--archived">Archivado</span></td>
+            <td class="actions-cell">
+              <button class="action-btn" data-tooltip="Ver detalles" aria-label="Ver detalles de wireframes.fig" type="button">👁</button>
+              <button class="action-btn" data-tooltip="Restaurar archivo" aria-label="Restaurar wireframes.fig" type="button">♻️</button>
+              <button class="action-btn action-btn--danger" data-tooltip="Eliminar permanentemente" aria-label="Eliminar wireframes.fig" type="button">🗑</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- =========================================================
+         SECCIÓN 3 — Iconos de redes sociales
+    ========================================================== -->
+    <section class="demo-section">
+      <h2 class="section-label">Iconos de Contacto</h2>
+
+      <div class="social-row">
+        <a href="#" class="social-link" data-tooltip="Ver perfil en GitHub" aria-label="GitHub">GH</a>
+        <a href="#" class="social-link" data-tooltip="Conectar en LinkedIn" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-link" data-tooltip="Seguir en Twitter/X" aria-label="Twitter">𝕏</a>
+        <a href="#" class="social-link" data-tooltip="Enviar email" aria-label="Email">@</a>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

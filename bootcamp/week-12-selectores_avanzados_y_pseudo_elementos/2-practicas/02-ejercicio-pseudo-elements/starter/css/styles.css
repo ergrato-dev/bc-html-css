@@ -1,0 +1,209 @@
+/* ============================================================
+   Ejercicio 02 — Pseudo-elementos Decorativos
+   Semana 12: Selectores Avanzados y Pseudo-elementos
+   ============================================================ */
+
+/* ── Tokens base ── */
+:root {
+  --color-bg:       hsl(220 18% 8%);
+  --color-surface:  hsl(220 14% 12%);
+  --color-border:   hsl(220 12% 20%);
+  --color-primary:  hsl(225 73% 52%);
+  --color-text:     hsl(220 18% 88%);
+  --color-muted:    hsl(220 10% 55%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+}
+
+/* ── Reset y base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.site-header {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+}
+
+.site-header h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+.site-header p  { color: var(--color-muted); }
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── features-list — base (sin bullets aún) ── */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.features-list li {
+  padding: 0.4rem 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* ── Cards base ── */
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card-price {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-price span {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.card-desc {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* ── Content block ── */
+.content-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content-block p {
+  color: var(--color-muted);
+  line-height: 1.7;
+  font-size: 0.9rem;
+}
+
+/* ── decorated-title — base (sin línea aún) ── */
+.decorated-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   PASO 1: Bullets personalizados con ::before
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .features-list li::before {
+  content: "▸";
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-right: 0.6rem;
+} */
+
+
+/* ============================================================
+   PASO 2: Badge "NUEVO" con ::before en .card.is-new
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .card.is-new {
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+.card.is-new::before {
+  content: "NUEVO";
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  background: hsl(142 61% 38%);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.2em 0.6em;
+  border-radius: 9999px;
+} */
+
+
+/* ============================================================
+   PASO 3: Ribbon diagonal con ::before en .card.is-featured
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .card.is-featured {
+  position: relative;
+  overflow: hidden;
+  border-color: hsl(45 80% 45%);
+}
+
+.card.is-featured::before {
+  content: "DESTACADO";
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  width: 130px;
+  background: hsl(45 96% 55%);
+  color: hsl(45 96% 15%);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 4px 0;
+  transform: rotate(45deg);
+} */
+
+
+/* ============================================================
+   PASO 4: Línea decorativa en .decorated-title con ::before
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* .decorated-title {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.decorated-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+} */

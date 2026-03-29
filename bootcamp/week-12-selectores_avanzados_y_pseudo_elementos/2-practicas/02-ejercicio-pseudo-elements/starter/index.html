@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Pseudo-elementos Decorativos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Pseudo-elementos Decorativos</h1>
+    <p>Descomenta los pasos en el CSS para aplicar cada técnica.</p>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ==========================================
+         PASO 1: Bullets personalizados
+    =========================================== -->
+    <section class="demo-section">
+      <h2 class="section-label">PASO 1 — Bullets con ::before</h2>
+      <h3 class="decorated-title">Características del Plan Pro</h3>
+
+      <ul class="features-list">
+        <li>Acceso ilimitado a todos los proyectos</li>
+        <li>Colaboración en tiempo real con tu equipo</li>
+        <li>Exportación en formatos SVG, PNG y PDF</li>
+        <li>Soporte prioritario 24/7 por chat</li>
+        <li>Integración con GitHub y Figma</li>
+      </ul>
+    </section>
+
+    <!-- ==========================================
+         PASO 2 y 3: Tarjetas con badges y ribbon
+    =========================================== -->
+    <section class="demo-section">
+      <h2 class="section-label">PASO 2 y 3 — Badge y Ribbon en tarjetas</h2>
+
+      <div class="cards-row">
+
+        <!-- Tarjeta normal — sin pseudo-elementos extra -->
+        <article class="card">
+          <h3 class="card-title">Plan Básico</h3>
+          <p class="card-price">€0 <span>/mes</span></p>
+          <p class="card-desc">Para proyectos personales y aprendizaje.</p>
+        </article>
+
+        <!-- Tarjeta nueva — badge "NUEVO" (PASO 2) -->
+        <article class="card is-new">
+          <h3 class="card-title">Plan Equipo</h3>
+          <p class="card-price">€12 <span>/mes</span></p>
+          <p class="card-desc">Colaboración hasta 10 miembros.</p>
+        </article>
+
+        <!-- Tarjeta destacada — ribbon diagonal (PASO 3) -->
+        <article class="card is-featured">
+          <h3 class="card-title">Plan Enterprise</h3>
+          <p class="card-price">€49 <span>/mes</span></p>
+          <p class="card-desc">Sin límites, soporte dedicado, SLA garantizado.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PASO 4: Headings con línea decorativa
+    =========================================== -->
+    <section class="demo-section">
+      <h2 class="section-label">PASO 4 — Línea decorativa en headings</h2>
+
+      <article class="content-block">
+        <h3 class="decorated-title">Diseño centrado en el usuario</h3>
+        <p>Cada decisión de diseño debe partir de las necesidades reales de quienes usan el producto. La investigación y los datos guían el proceso.</p>
+
+        <h3 class="decorated-title">Iteración continua</h3>
+        <p>El diseño nunca está terminado. La retroalimentación del usuario y los datos de uso orientan mejoras constantes.</p>
+
+        <h3 class="decorated-title">Accesibilidad desde el inicio</h3>
+        <p>Construir interfaces inclusivas no es una característica opcional — es un requisito de calidad desde la primera línea de código.</p>
+      </article>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — nth-child y posición</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>nth-child &amp; Patrones de Posición</h1>
+    <p>Descomenta los pasos en el CSS para ver los cambios.</p>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ========================================
+         SECCIÓN 1 — Tabla de pedidos
+    ========================================= -->
+    <section class="demo-section">
+      <h2 class="section-title">Tabla de Pedidos</h2>
+
+      <table class="orders-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Estado</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>#1047</td><td>Ana García</td><td>Teclado mecánico</td>
+            <td><span class="status status--shipped">Enviado</span></td><td>€89.00</td>
+          </tr>
+          <tr>
+            <td>#1046</td><td>Carlos Ruiz</td><td>Mouse inalámbrico</td>
+            <td><span class="status status--pending">Pendiente</span></td><td>€34.50</td>
+          </tr>
+          <tr>
+            <td>#1045</td><td>María López</td><td>Monitor 27"</td>
+            <td><span class="status status--delivered">Entregado</span></td><td>€329.00</td>
+          </tr>
+          <tr>
+            <td>#1044</td><td>Pedro Sanz</td><td>Webcam HD</td>
+            <td><span class="status status--shipped">Enviado</span></td><td>€75.00</td>
+          </tr>
+          <tr>
+            <td>#1043</td><td>Laura Vega</td><td>Hub USB-C</td>
+            <td><span class="status status--delivered">Entregado</span></td><td>€28.00</td>
+          </tr>
+          <tr>
+            <td>#1042</td><td>David Mora</td><td>Auriculares BT</td>
+            <td><span class="status status--pending">Pendiente</span></td><td>€129.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ========================================
+         SECCIÓN 2 — Lista de equipo
+    ========================================= -->
+    <section class="demo-section">
+      <h2 class="section-title">Equipo de Desarrollo</h2>
+
+      <ul class="team-list">
+        <li>
+          <strong>Ana García</strong>
+          <span class="role">Tech Lead</span>
+        </li>
+        <li>
+          <strong>Carlos Ruiz</strong>
+          <span class="role">Frontend Developer</span>
+        </li>
+        <li>
+          <strong>María López</strong>
+          <span class="role">Backend Developer</span>
+        </li>
+        <li>
+          <strong>Pedro Sanz</strong>
+          <span class="role">UX Designer</span>
+        </li>
+        <li>
+          <strong>Laura Vega</strong>
+          <span class="role">DevOps Engineer</span>
+        </li>
+        <li>
+          <strong>David Mora</strong>
+          <span class="role">QA Engineer</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ========================================
+         SECCIÓN 3 — Cuadrícula de fotos
+    ========================================= -->
+    <section class="demo-section">
+      <h2 class="section-title">Galería — Patrón 3n+1</h2>
+
+      <div class="photo-grid">
+        <div class="photo" style="background: hsl(225 50% 35%)">1</div>
+        <div class="photo" style="background: hsl(142 50% 30%)">2</div>
+        <div class="photo" style="background: hsl(0 50% 35%)">3</div>
+        <div class="photo" style="background: hsl(45 65% 30%)">4</div>
+        <div class="photo" style="background: hsl(270 40% 35%)">5</div>
+        <div class="photo" style="background: hsl(180 40% 28%)">6</div>
+        <div class="photo" style="background: hsl(30 60% 32%)">7</div>
+        <div class="photo" style="background: hsl(200 55% 32%)">8</div>
+        <div class="photo" style="background: hsl(320 45% 30%)">9</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

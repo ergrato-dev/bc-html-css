@@ -1,0 +1,515 @@
+/* ============================================================
+   Component Showcase — Semana 12
+   Selectores Avanzados & Pseudo-elementos
+   
+   INSTRUCCIONES:
+   - Lee cada TODO antes de escribir código
+   - Implementa el estilo sin modificar el HTML
+   - Usa las variables CSS definidas en :root
+   - Valida en Chrome DevTools conforme avanzas
+   ============================================================ */
+
+
+/* ============================================================
+   BASE (PROVISTA — no modificar)
+   Tokens, reset, layout y componentes base ya funcionales.
+   ============================================================ */
+
+:root {
+  /* Paleta */
+  --color-bg:        #0d1117;
+  --color-surface:   #161b22;
+  --color-surface-2: #21262d;
+  --color-border:    #30363d;
+  --color-text:      #e6edf3;
+  --color-text-muted:#8b949e;
+  --color-primary:   #238636;
+  --color-primary-fg:#ffffff;
+  --color-new:       #1f6feb;
+  --color-featured:  #9e6a03;
+  --color-danger:    #b91c1c;
+  --color-stock-ok:  #166534;
+  --color-stock-low: #78350f;
+  --color-stock-out: #7f1d1d;
+
+  /* Tipografía */
+  --font-sans:       'Inter', system-ui, sans-serif;
+  --text-sm:         0.8125rem;
+  --text-base:       1rem;
+  --text-lg:         1.125rem;
+  --text-xl:         1.5rem;
+  --text-2xl:        2rem;
+
+  /* Espaciado */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* Radio */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Transición */
+  --transition-base: 150ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header ------------------------------------------ */
+.site-header {
+  background-color: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) var(--space-8);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.brand-name {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.header-badge {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  background-color: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+/* --- Main layout ------------------------------------- */
+.main-content {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-10) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  flex: 1;
+}
+
+/* --- Showcase section -------------------------------- */
+.showcase-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.section-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* --- Tabla ------------------------------------------- */
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.inventory-table th,
+.inventory-table td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inventory-table thead th {
+  background-color: var(--color-surface-2);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stock-badge {
+  display: inline-block;
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.stock--ok  { background-color: var(--color-stock-ok);  color: #86efac; }
+.stock--low { background-color: var(--color-stock-low); color: #fcd34d; }
+.stock--out { background-color: var(--color-stock-out); color: #fca5a5; }
+
+/* --- Form controls ----------------------------------- */
+.form-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-8);
+}
+
+.form-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-legend {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  padding: 0 var(--space-2);
+}
+
+.custom-checkbox,
+.custom-radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label,
+.radio-label {
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+/* --- Cards ------------------------------------------- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-6);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.card-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.card-price {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.card-price span {
+  font-size: var(--text-base);
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.card-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.card-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+.card-features li {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  padding-left: var(--space-4);
+}
+
+.card-cta {
+  display: inline-block;
+  padding: var(--space-3) var(--space-5);
+  background-color: var(--color-primary);
+  color: var(--color-primary-fg);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  text-align: center;
+  transition: opacity var(--transition-base);
+}
+
+.card-cta:hover {
+  opacity: 0.85;
+}
+
+/* --- Toolbar ------------------------------------------ */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-3);
+  width: fit-content;
+}
+
+.tool-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+.tool-btn:hover,
+.tool-btn:focus-visible {
+  background-color: var(--color-surface-2);
+  color: var(--color-text);
+  outline: none;
+}
+
+.tool-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.tool-btn--danger:hover,
+.tool-btn--danger:focus-visible {
+  background-color: var(--color-stock-out);
+  color: #fca5a5;
+}
+
+.toolbar-sep {
+  width: 1px;
+  height: 1.5rem;
+  background-color: var(--color-border);
+  margin: 0 var(--space-1);
+}
+
+/* --- Footer ------------------------------------------ */
+.site-footer {
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-4) var(--space-8);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+
+/* ============================================================
+   TODO 1 — TABLA: Selectores :nth-child
+   Aplica:
+   a) Zebra stripes: filas pares en tbody con fondo ligeramente
+      diferente usando tbody tr:nth-child(even).
+   b) Primera fila del tbody: borde izquierdo de 3px con
+      var(--color-primary) usando tbody tr:first-child.
+   c) Última fila sin borde inferior usando :last-child.
+   ============================================================ */
+
+
+
+/* ============================================================
+   TODO 2 — CHECKBOXES CUSTOM: input + label::before
+   El input[type="checkbox"] debe estar visualmente oculto pero
+   accesible. El label::before actúa como la caja visual.
+   
+   a) Oculta visualmente el input (NO uses display:none ni
+      visibility:hidden — usa position:absolute + opacity:0
+      con width y height del mismo tamaño que la caja visual).
+   b) .custom-checkbox label::before → caja cuadrada 1.2em,
+      borde 2px solid var(--color-border), border-radius 4px.
+   c) input[type="checkbox"]:checked + .checkbox-label::before
+      → fondo var(--color-primary), border-color primary,
+      content "✓" centrado en color blanco.
+   d) input[type="checkbox"]:focus-visible + .checkbox-label::before
+      → outline 2px solid var(--color-primary), outline-offset 2px.
+   ============================================================ */
+
+
+
+/* ============================================================
+   TODO 3 — RADIOS CUSTOM: input + label::before
+   Igual que los checkboxes pero con forma redonda y el estado
+   "checked" se indica con un círculo interior.
+   
+   a) Oculta el input igual que en los checkboxes.
+   b) .custom-radio label::before → círculo 1.2em,
+      borde 2px solid var(--color-border), border-radius 50%.
+   c) input[type="radio"]:checked + .radio-label::before
+      → box-shadow: inset 0 0 0 4px var(--color-primary)
+      para el punto interior, border-color primary.
+   d) input[type="radio"]:focus-visible + .radio-label::before
+      → outline 2px solid var(--color-primary), outline-offset 2px.
+   ============================================================ */
+
+
+
+/* ============================================================
+   TODO 4 — CARD .is-new: badge con ::before
+   Añade una etiqueta "NUEVO" en la esquina superior de la card.
+   
+   a) .card.is-new → position: relative (necesario para ::before).
+   b) .card.is-new::before →
+        content: "NUEVO";
+        position: absolute;
+        top: var(--space-3); right: var(--space-3);
+        background: var(--color-new);
+        color: white;
+        font-size: var(--text-sm);
+        font-weight: 700;
+        padding: 2px var(--space-2);
+        border-radius: var(--radius-full);
+   ============================================================ */
+
+
+
+/* ============================================================
+   TODO 5 — CARD .is-featured: ribbon diagonal con ::before
+   Crea un ribbon (cinta) diagonal en la esquina superior derecha.
+   
+   a) .card.is-featured → overflow: hidden (para cortar el ribbon).
+   b) .card.is-featured::before →
+        content: "DESTACADO";
+        position: absolute;
+        top: 22px; right: -28px;
+        width: 110px;
+        padding: 4px 0;
+        background: var(--color-featured);
+        color: white;
+        font-size: 0.625rem;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.08em;
+        transform: rotate(45deg);
+   Nota: también necesita position: relative si no lo aplica .is-new.
+   ============================================================ */
+
+
+
+/* ============================================================
+   TODO 6 — TOOLTIPS: [data-tooltip]::after y ::before
+   Sistema de tooltip 100% CSS usando el atributo data-tooltip.
+   
+   a) [data-tooltip] → position: relative.
+   b) [data-tooltip]::after →
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: calc(100% + 8px); left: 50%;
+        transform: translateX(-50%);
+        background: var(--color-surface-2);
+        color: var(--color-text);
+        border: 1px solid var(--color-border);
+        padding: var(--space-1) var(--space-3);
+        border-radius: var(--radius-sm);
+        font-size: var(--text-sm);
+        white-space: nowrap;
+        opacity: 0; visibility: hidden;
+        pointer-events: none;
+        transition: opacity var(--transition-base),
+                    visibility var(--transition-base);
+   c) [data-tooltip]:hover::after,
+      [data-tooltip]:focus-visible::after →
+        opacity: 1; visibility: visible;
+   d) (Opcional) [data-tooltip]::before → triángulo flecha:
+        content: "";
+        border: 5px solid transparent;
+        border-top-color: var(--color-border);
+        position: absolute;
+        bottom: calc(100% + 3px); left: 50%;
+        transform: translateX(-50%);
+        opacity: 0; visibility: hidden;
+        transition: opacity var(--transition-base),
+                    visibility var(--transition-base);
+      [data-tooltip]:hover::before,
+      [data-tooltip]:focus-visible::before →
+        opacity: 1; visibility: visible;
+   ============================================================ */
+
+
+
+/* ============================================================
+   TODO 7 — :has() — Resaltado de fieldset activo
+   La pseudo-clase :has() permite detectar si un elemento contiene
+   ciertos descendientes o hermanos.
+   
+   a) .form-group:has(input:checked) →
+        border-color: var(--color-primary);
+        background-color: la misma pero con un toque de opacidad:
+        background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface));
+   b) .form-group:has(input:checked) .form-legend →
+        color: var(--color-primary);
+   
+   Nota: color-mix() necesita Chrome 111+, Firefox 113+.
+   Si prefieres compatibilidad máxima, usa simplemente
+   border-color + un fondo sólido ligeramente más claro.
+   ============================================================ */

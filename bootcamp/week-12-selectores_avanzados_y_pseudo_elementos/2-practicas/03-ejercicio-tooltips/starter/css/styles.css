@@ -1,0 +1,266 @@
+/* ============================================================
+   Ejercicio 03 — Tooltips CSS Puro
+   Semana 12: Selectores Avanzados y Pseudo-elementos
+   ============================================================ */
+
+/* ── Tokens base ── */
+:root {
+  --color-bg:         hsl(220 18% 8%);
+  --color-surface:    hsl(220 14% 12%);
+  --color-border:     hsl(220 12% 20%);
+  --color-primary:    hsl(225 73% 52%);
+  --color-danger:     hsl(0 72% 51%);
+  --color-text:       hsl(220 18% 88%);
+  --color-muted:      hsl(220 10% 55%);
+  --tooltip-bg:       hsl(220 14% 14%);
+  --tooltip-border:   hsl(220 12% 24%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.site-header {
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+}
+
+.site-header h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+.site-header p  { color: var(--color-muted); }
+
+.main-content {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-label {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 0.625rem 0.875rem;
+  width: fit-content;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border);
+  margin: 0 0.125rem;
+}
+
+.tool-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  transition: background 120ms ease;
+}
+
+.tool-btn:hover { background: hsl(220 14% 18%); }
+.tool-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.tool-btn--danger:hover { background: hsl(0 50% 18%); }
+
+/* ── Tabla de acciones ── */
+.actions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.actions-table th,
+.actions-table td {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.actions-table thead tr {
+  background: hsl(220 14% 14%);
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 0.9rem;
+  border: none;
+  background: hsl(220 14% 16%);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+
+.action-btn:hover { background: hsl(220 14% 22%); }
+.action-btn--danger:hover { background: hsl(0 50% 18%); }
+.action-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2em 0.6em;
+  border-radius: var(--radius-full);
+}
+
+.badge--active   { background: hsl(142 50% 16%); color: hsl(142 60% 60%); }
+.badge--draft    { background: hsl(45 70% 16%);  color: hsl(45 70% 65%);  }
+.badge--archived { background: hsl(220 14% 18%); color: var(--color-muted); }
+
+/* ── Social row ── */
+.social-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 120ms ease;
+}
+
+.social-link:hover { border-color: var(--color-primary); }
+.social-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   PASO 1: Contexto de posicionamiento y tooltip invisible
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* [data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--tooltip-bg);
+  color: var(--color-text);
+  font-size: 0.72rem;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 0.35em 0.75em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--tooltip-border);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+} */
+
+
+/* ============================================================
+   PASO 2: Mostrar el tooltip en :hover y :focus
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* [data-tooltip]:hover::after,
+[data-tooltip]:focus::after {
+  opacity: 1;
+  visibility: visible;
+} */
+
+
+/* ============================================================
+   PASO 3: Transición suave al aparecer/desaparecer
+   Añade esto al bloque ::after del PASO 1 (descomenta aquí):
+   ============================================================ */
+/* [data-tooltip]::after {
+  transition:
+    opacity    150ms ease-out,
+    visibility 150ms ease-out;
+} */
+
+
+/* ============================================================
+   PASO 4: Flecha triangular con ::before
+   Descomenta las siguientes líneas:
+   ============================================================ */
+/* [data-tooltip]::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--tooltip-border);
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity    150ms ease-out,
+    visibility 150ms ease-out;
+}
+
+[data-tooltip]:hover::before,
+[data-tooltip]:focus::before {
+  opacity: 1;
+  visibility: visible;
+} */

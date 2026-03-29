@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Component Showcase — Semana 12</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="brand-dot"></span>
+        <h1 class="brand-name">Component Showcase</h1>
+      </div>
+      <span class="header-badge">Semana 12 — CSS Avanzado</span>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ====================================================
+         SECCIÓN 1 — Tabla de Inventario
+         Aplicar:
+         - :nth-child(even) para zebra stripes
+         - tbody tr:first-child con borde de color
+         - :nth-last-child(-n+2) para opacidad reducida
+    ===================================================== -->
+    <section class="showcase-section" aria-labelledby="table-heading">
+      <h2 id="table-heading" class="section-title">Tabla de Inventario</h2>
+
+      <table class="inventory-table">
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th>Stock</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SKU-001</td>
+            <td>Monitor UltraWide 34"</td>
+            <td>Monitores</td>
+            <td>12</td>
+            <td><span class="stock-badge stock--ok">Disponible</span></td>
+          </tr>
+          <tr>
+            <td>SKU-002</td>
+            <td>Teclado Mecánico TKL</td>
+            <td>Periféricos</td>
+            <td>3</td>
+            <td><span class="stock-badge stock--low">Bajo stock</span></td>
+          </tr>
+          <tr>
+            <td>SKU-003</td>
+            <td>Mouse Ergonómico Pro</td>
+            <td>Periféricos</td>
+            <td>28</td>
+            <td><span class="stock-badge stock--ok">Disponible</span></td>
+          </tr>
+          <tr>
+            <td>SKU-004</td>
+            <td>Webcam 4K</td>
+            <td>Video</td>
+            <td>0</td>
+            <td><span class="stock-badge stock--out">Sin stock</span></td>
+          </tr>
+          <tr>
+            <td>SKU-005</td>
+            <td>Hub USB-C 10 puertos</td>
+            <td>Accesorios</td>
+            <td>7</td>
+            <td><span class="stock-badge stock--ok">Disponible</span></td>
+          </tr>
+          <tr>
+            <td>SKU-006</td>
+            <td>Soporte Laptop Aluminio</td>
+            <td>Accesorios</td>
+            <td>1</td>
+            <td><span class="stock-badge stock--low">Bajo stock</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ====================================================
+         SECCIÓN 2 — Controles de Formulario Custom
+         Implementar checkboxes y radios custom con CSS puro.
+         - input visualmente oculto (accesible)
+         - label::before actúa como la caja visual
+         - input:checked + label::before cambia el estilo
+         - Use :focus-visible en el input para outline
+    ===================================================== -->
+    <section class="showcase-section" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="section-title">Preferencias — Controles Custom</h2>
+
+      <div class="form-columns">
+
+        <!-- Checkboxes -->
+        <fieldset class="form-group">
+          <legend class="form-legend">Notificaciones</legend>
+
+          <label class="custom-checkbox">
+            <!--
+              TODO: input tipo checkbox.
+              - Debe quedar VISIBLE para lectores de pantalla pero
+                OCULTO visualmente (usa .visually-hidden o position absolute + opacity 0).
+              - El label::before actuará como la caja visual.
+            -->
+            <input type="checkbox" name="notif-email" id="notif-email" checked />
+            <span class="checkbox-label">Correo electrónico</span>
+          </label>
+
+          <label class="custom-checkbox">
+            <input type="checkbox" name="notif-push" id="notif-push" />
+            <span class="checkbox-label">Notificaciones push</span>
+          </label>
+
+          <label class="custom-checkbox">
+            <input type="checkbox" name="notif-sms" id="notif-sms" />
+            <span class="checkbox-label">SMS</span>
+          </label>
+
+        </fieldset>
+
+        <!-- Radios -->
+        <fieldset class="form-group">
+          <legend class="form-legend">Tema visual</legend>
+
+          <label class="custom-radio">
+            <input type="radio" name="theme" id="theme-dark" value="dark" checked />
+            <span class="radio-label">Oscuro</span>
+          </label>
+
+          <label class="custom-radio">
+            <input type="radio" name="theme" id="theme-light" value="light" />
+            <span class="radio-label">Claro</span>
+          </label>
+
+          <label class="custom-radio">
+            <input type="radio" name="theme" id="theme-system" value="system" />
+            <span class="radio-label">Sistema</span>
+          </label>
+
+        </fieldset>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         SECCIÓN 3 — Cards con decoraciones
+         Aplicar:
+         - .card.is-new::before → badge "NUEVO"
+         - .card.is-featured::before → ribbon diagonal
+         - .card:has(.card-alert)::after → indicador de alerta
+    ===================================================== -->
+    <section class="showcase-section" aria-labelledby="cards-heading">
+      <h2 id="cards-heading" class="section-title">Cards con Pseudo-elementos</h2>
+
+      <div class="cards-grid">
+
+        <!-- Tarjeta normal -->
+        <article class="card">
+          <h3 class="card-title">Plan Básico</h3>
+          <p class="card-price">Gratis</p>
+          <p class="card-desc">Para proyectos personales y aprendizaje.</p>
+          <ul class="card-features">
+            <li>3 proyectos</li>
+            <li>1 GB de almacenamiento</li>
+            <li>Soporte por email</li>
+          </ul>
+          <a href="#" class="card-cta" data-tooltip="Empieza sin tarjeta de crédito">Comenzar gratis</a>
+        </article>
+
+        <!-- Tarjeta nueva -->
+        <article class="card is-new">
+          <h3 class="card-title">Plan Equipo</h3>
+          <p class="card-price">€12<span>/mes</span></p>
+          <p class="card-desc">Ideal para equipos de hasta 10 personas.</p>
+          <ul class="card-features">
+            <li>Proyectos ilimitados</li>
+            <li>50 GB de almacenamiento</li>
+            <li>Soporte prioritario</li>
+          </ul>
+          <a href="#" class="card-cta" data-tooltip="Prueba gratuita de 14 días">Empezar prueba</a>
+        </article>
+
+        <!-- Tarjeta destacada -->
+        <article class="card is-featured">
+          <h3 class="card-title">Plan Enterprise</h3>
+          <p class="card-price">€49<span>/mes</span></p>
+          <p class="card-desc">Sin límites, soporte dedicado, SLA 99.9%.</p>
+          <ul class="card-features">
+            <li>Todo lo del plan equipo</li>
+            <li>500 GB de almacenamiento</li>
+            <li>Account manager dedicado</li>
+          </ul>
+          <a href="#" class="card-cta" data-tooltip="Contacta con ventas para un demo">Solicitar demo</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ====================================================
+         SECCIÓN 4 — Iconos con Tooltips
+         Aplicar:
+         - [data-tooltip]::after con content: attr(data-tooltip)
+         - :hover y :focus muestran el tooltip
+    ===================================================== -->
+    <section class="showcase-section" aria-labelledby="tooltips-heading">
+      <h2 id="tooltips-heading" class="section-title">Toolbar con Tooltips</h2>
+
+      <div class="toolbar" role="toolbar" aria-label="Acciones del documento">
+        <button class="tool-btn" type="button" data-tooltip="Nuevo documento" aria-label="Nuevo documento">📄</button>
+        <button class="tool-btn" type="button" data-tooltip="Abrir" aria-label="Abrir">📂</button>
+        <button class="tool-btn" type="button" data-tooltip="Guardar (Ctrl+S)" aria-label="Guardar">💾</button>
+        <div class="toolbar-sep" role="separator"></div>
+        <button class="tool-btn" type="button" data-tooltip="Deshacer (Ctrl+Z)" aria-label="Deshacer">↩</button>
+        <button class="tool-btn" type="button" data-tooltip="Rehacer (Ctrl+Y)" aria-label="Rehacer">↪</button>
+        <div class="toolbar-sep" role="separator"></div>
+        <button class="tool-btn" type="button" data-tooltip="Configuración" aria-label="Configuración">⚙️</button>
+        <button class="tool-btn tool-btn--danger" type="button" data-tooltip="Eliminar documento" aria-label="Eliminar documento">🗑</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Semana 12 — CSS Avanzado · Bootcamp HTML+CSS</p>
+  </footer>
+
+</body>
+</html>
