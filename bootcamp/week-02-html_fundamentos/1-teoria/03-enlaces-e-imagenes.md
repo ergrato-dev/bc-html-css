@@ -33,6 +33,11 @@ El elemento `<a>` (anchor) crea hipervínculos. El atributo `href` define el des
 <a href="tel:+34600000000">Llamar</a>
 ```
 
+> ⚠️ **Buena práctica — `mailto:` en producción:** el atributo `mailto:` es útil para aprender
+> el protocolo de enlace, pero exponer una dirección de correo en el HTML la hace
+> vulnerable al rastreo por **bots de spam**. En proyectos reales, **prefiere
+> un formulario de contacto** (`<form>`) en su lugar.
+
 ### Atributos importantes de `<a>`:
 
 | Atributo | Valor | Para qué |

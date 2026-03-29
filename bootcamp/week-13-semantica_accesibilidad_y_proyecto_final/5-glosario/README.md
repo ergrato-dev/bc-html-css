@@ -12,7 +12,9 @@ Elemento HTML semántico que marca información de contacto del autor o el propi
 ```html
 <footer>
   <address>
-    Contacto: <a href="mailto:hola@ejemplo.com">hola@ejemplo.com</a>
+    <!-- ✅ Buena práctica: enlazar al formulario de contacto en lugar de
+         exponer el correo directamente (evita el rastreo de bots de spam) -->
+    Contacto: <a href="#contacto">Formulario de contacto</a>
   </address>
 </footer>
 ```

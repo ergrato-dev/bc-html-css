@@ -150,7 +150,10 @@ Pie de página o de sección. Típicamente contiene: copyright, enlaces legales,
 <footer>
   <p>© 2025 Ana García · <a href="/privacidad">Privacidad</a></p>
   <address>
-    <a href="mailto:ana@ejemplo.com">ana@ejemplo.com</a>
+    <!-- ✅ Buena práctica: usa un enlace al formulario de contacto en lugar de
+         exponer el correo electrónico directamente. Los bots de spam rastrean
+         automáticamente los mailto: publicados en el HTML. -->
+    <a href="#contacto">Formulario de contacto</a>
   </address>
 </footer>
 ```
@@ -208,7 +211,8 @@ Información de **contacto del autor** del contenido más cercano (`<article>`, 
 <footer>
   <address>
     Escrito por <a rel="author" href="/about">Ana García</a>
-    · <a href="mailto:hola@anagarcia.dev">hola@anagarcia.dev</a>
+    <!-- ✅ Buena práctica: enlaza al formulario de contacto en vez del correo -->
+    · <a href="#contacto">Formulario de contacto</a>
     · <a href="https://github.com/ana">GitHub</a>
   </address>
 </footer>
@@ -316,7 +320,9 @@ Regla fundamental: **nunca saltar niveles** de heading, y solo un `<h1>` por pá
   <!-- Landmark: contentinfo -->
   <footer>
     <address>
-      <a href="mailto:hola@anagarcia.dev">hola@anagarcia.dev</a>
+      <!-- ✅ Buena práctica: enlazar al formulario de contacto en lugar de
+           exponer el correo directamente en el HTML -->
+      <a href="#contacto">Formulario de contacto</a>
     </address>
     <p><small>© 2025 Ana García</small></p>
   </footer>

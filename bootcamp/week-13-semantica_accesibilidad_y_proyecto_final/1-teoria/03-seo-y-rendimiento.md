@@ -136,7 +136,6 @@ Markup semántico que Google usa para rich snippets. No requiere modificar el HT
   "name": "Ana García",
   "jobTitle": "Frontend Developer",
   "url": "https://anagarcia.dev",
-  "email": "hola@anagarcia.dev",
   "sameAs": [
     "https://github.com/ana",
     "https://linkedin.com/in/ana-garcia"
