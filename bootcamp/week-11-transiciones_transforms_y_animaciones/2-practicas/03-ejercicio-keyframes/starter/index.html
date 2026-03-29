@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Keyframe Animations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">Keyframe Animations</h1>
+      <p class="page-desc">Recarga la página para ver las animaciones de entrada.</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+
+      <!-- PASO 1: fade-in -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 1 — @keyframes fade-in</h2>
+        <div class="anim-demo">
+          <div class="demo-card fade-card">
+            <h3>Fade In</h3>
+            <p>Opacidad 0 → 1</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASO 2: slide-up -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 2 — @keyframes slide-up</h2>
+        <div class="anim-demo">
+          <div class="demo-card slide-card">
+            <h3>Slide Up</h3>
+            <p>Sube 20px + Fade</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASO 3: spinner -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 3 — Spinner infinito</h2>
+        <div class="anim-demo">
+          <div class="spinner-wrapper">
+            <div class="spinner" aria-label="Cargando" role="status"></div>
+            <p class="spinner-label">Cargando...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASO 4: escalonado -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 4 — Entrada escalonada (stagger)</h2>
+        <div class="stagger-grid">
+          <div class="demo-card stagger-card">
+            <h3>Tarjeta 1</h3>
+            <p>Delay: 0ms</p>
+          </div>
+          <div class="demo-card stagger-card">
+            <h3>Tarjeta 2</h3>
+            <p>Delay: 150ms</p>
+          </div>
+          <div class="demo-card stagger-card">
+            <h3>Tarjeta 3</h3>
+            <p>Delay: 300ms</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

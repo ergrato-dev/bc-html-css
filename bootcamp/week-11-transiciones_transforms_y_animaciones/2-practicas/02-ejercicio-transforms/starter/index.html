@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Transform Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="container">
+      <h1 class="page-title">Transform Playground</h1>
+      <p class="page-desc">Descomenta cada PASO para ver el efecto en tiempo real.</p>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+
+      <!-- PASO 1: translate -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 1 — translate(x, y)</h2>
+        <p class="demo-hint">El espacio original queda "reservado" — el elemento se mueve visualmente.</p>
+        <div class="demo-row">
+          <div class="demo-ghost"></div>
+          <div class="box box-blue box-translate">translate(20px, -10px)</div>
+        </div>
+      </section>
+
+      <!-- PASO 2: rotate -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 2 — rotate(deg)</h2>
+        <p class="demo-hint">Positivo = horario, negativo = antihorario.</p>
+        <div class="demo-row">
+          <div class="box box-green box-rotate">rotate(15deg)</div>
+          <div class="box box-green box-rotate-neg">rotate(-15deg)</div>
+        </div>
+      </section>
+
+      <!-- PASO 3: scale -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 3 — scale(n)</h2>
+        <p class="demo-hint">El espacio del layout NO cambia. Solo crece/encoge visualmente.</p>
+        <div class="demo-row">
+          <div class="box box-orange box-scale-up">scale(1.3)</div>
+          <div class="box box-orange box-scale-down">scale(0.7)</div>
+        </div>
+      </section>
+
+      <!-- PASO 4: transform-origin -->
+      <section class="demo-section">
+        <h2 class="section-label">PASO 4 — transform-origin (misma rotación, distinto pivote)</h2>
+        <p class="demo-hint">Mismos 20deg, pero el punto de giro cambia todo.</p>
+        <div class="demo-row origins-row">
+          <div>
+            <div class="box box-purple box-origin-tl">top left</div>
+            <p class="origin-label">transform-origin: top left</p>
+          </div>
+          <div>
+            <div class="box box-purple box-origin-center">center ★</div>
+            <p class="origin-label">transform-origin: center</p>
+          </div>
+          <div>
+            <div class="box box-purple box-origin-br">bottom right</div>
+            <p class="origin-label">transform-origin: bottom right</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>

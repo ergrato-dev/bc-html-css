@@ -1,0 +1,141 @@
+/* ============================================================
+   Animated Portfolio Card — Starter
+   Semana 11: Transiciones, Transforms y Animaciones CSS
+   ============================================================ */
+
+/* ============================================================
+   TODO 1: Tokens de animación en :root
+   ─────────────────────────────────────
+   Declara TODOS los valores de tiempo y easing como tokens.
+   Ningún valor de ms o s debe aparecer fuera de :root.
+   Incluye:
+     --duration-fast:    150ms
+     --duration-base:    300ms
+     --duration-slow:    600ms
+     --duration-xslow:  1500ms
+     --ease-out:         ease-out
+     --ease-in-out:      ease-in-out
+     --transition-base:  var(--duration-base) var(--ease-out)
+     --transition-elevation:
+       transform  var(--duration-base) var(--ease-out),
+       box-shadow var(--duration-base) var(--ease-out)
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 2: Reset y estilos base
+   ─────────────────────────────
+   - *, *::before, *::after: box-sizing border-box, margin y padding 0
+   - body: font Inter, background oscuro hsl(220 18% 8%),
+     display flex, min-height 100vh,
+     align-items y justify-content center
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 3: @keyframes — definir las animaciones
+   ──────────────────────────────────────────────
+   Define TRES @keyframes:
+   1. "slide-up": opacity 0 + translateY(30px) → opacity 1 + translateY(0)
+   2. "pulse-dot": scale(1) opacity 1 → scale(1.4) opacity 0.6 → scale(1) opacity 1
+      (usa porcentajes: 0%, 50%, 100%)
+   3. "fade-out": opacity 1 → opacity 0, seguido de visibility hidden
+      (usa: 0% {opacity:1} 80% {opacity:0} 100% {opacity:0; visibility:hidden; pointer-events:none})
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 4: Loading screen
+   ───────────────────────
+   - .loading-screen: position fixed, inset 0, background igual
+     al body, display flex, align-items/justify-content center,
+     z-index 100
+     animation: fade-out var(--duration-slow) var(--ease-out)
+                var(--duration-xslow) forwards
+     (aparece 1.5s y luego desaparece)
+   - .spinner: width 3rem, height 3rem, border 3px solid
+     hsl(220 13% 25%), border-top-color hsl(225 73% 65%),
+     border-radius 50%, animation: spin var(--duration-base)
+     linear infinite
+   - Agrega @keyframes spin: rotate(0deg) → rotate(360deg)
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 5: Escena 3D y tarjeta principal
+   ──────────────────────────────────────
+   - .main-layout: perspective 800px
+   - .profile-card:
+       background hsl(220 14% 14%)
+       border 1px solid hsl(220 12% 22%)
+       border-radius 16px
+       padding var(--space-8) (usa la Custom Property del week-10)
+       width min(360px, 90vw)
+       box-shadow 0 20px 60px rgba(0,0,0,0.4)
+       opacity 0
+       animation: slide-up var(--duration-slow) var(--ease-out)
+                  var(--duration-xslow) forwards
+       transition: var(--transition-elevation)
+   - .profile-card:hover:
+       transform: translateY(-6px) rotateY(-4deg)
+       box-shadow: 0 30px 80px rgba(0,0,0,0.5)
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 6: Avatar y status badge
+   ──────────────────────────────
+   - .card-header: text-align center, margin-bottom var(--space-6)
+   - .avatar-wrapper: display inline-block, position relative
+   - .avatar: width 120px, height 120px, border-radius 50%,
+     object-fit cover, border 3px solid hsl(225 73% 52%)
+   - .status-badge: position absolute, bottom -4px, left 50%,
+     transform translateX(-50%), background hsl(142 61% 38%),
+     color #fff, font-size 0.7rem, font-weight 600,
+     padding 0.2em 0.6em, border-radius 9999px,
+     display flex, align-items center, gap 4px, white-space nowrap
+   - .status-dot: width 8px, height 8px, background #fff,
+     border-radius 50%,
+     animation: pulse-dot 1.5s ease-in-out infinite
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 7: Contenido de la tarjeta
+   ─────────────────────────────────
+   - .card-body: text-align center, margin-bottom var(--space-6)
+   - .profile-name: color #fff (o hsl(220 18% 92%)),
+     font-size 1.5rem, font-weight 700, margin-bottom 0.25rem
+   - .profile-role: color hsl(220 10% 60%), font-size 0.9rem
+   - .skills-list: list-style none, display flex, flex-wrap wrap,
+     justify-content center, gap 0.5rem, margin-top 1rem
+   - .skill-badge: background hsl(220 14% 20%), color hsl(225 73% 75%),
+     font-size 0.75rem, font-weight 600, padding 0.3em 0.8em,
+     border-radius 9999px
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 8: Footer y botón de contacto
+   ────────────────────────────────────
+   - .card-footer: text-align center
+   - .btn-contact: display inline-block, background hsl(225 73% 52%),
+     color #fff, font-weight 600, padding 0.7em 1.5em,
+     border-radius 9999px, text-decoration none,
+     transition: var(--transition-base) — solo background y transform
+   - .btn-contact:hover: background hsl(225 65% 40%),
+     transform scale(1.05)
+   - .btn-contact:active: transform scale(0.97)
+   ============================================================ */
+
+
+/* ============================================================
+   TODO 9: prefers-reduced-motion
+   ─────────────────────────────────
+   @media (prefers-reduced-motion: reduce) {
+     Elimina toda animación y transición.
+     La tarjeta debe mostrarse visible (opacity: 1) sin movimiento.
+     El spinner deja de girar.
+     El status dot deja de pulsar.
+   }
+   ============================================================ */

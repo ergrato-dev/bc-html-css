@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" width="820" height="420" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="420" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="18" font-weight="700" fill="#f0f6fc">Transform 2D — Funciones de Transformación</text>
+  <text x="30" y="58" font-size="12" fill="#8b949e">El elemento no sale del flujo — solo cambia su apariencia visual</text>
+
+  <!-- ══════════════ Row 1: translate / rotate ══════════════ -->
+
+  <!-- translate box -->
+  <rect x="30" y="75" width="180" height="130" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="95" font-size="11" fill="#7d8590" font-weight="600" text-anchor="middle">translate(x, y)</text>
+  <!-- original ghost -->
+  <rect x="55" y="105" width="50" height="50" rx="4" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- moved element -->
+  <rect x="80" y="120" width="50" height="50" rx="4" fill="#58a6ff" opacity="0.85"/>
+  <text x="105" y="149" font-size="10" fill="#0d1117" font-weight="600" text-anchor="middle">+X +Y</text>
+  <!-- arrow -->
+  <line x1="75" y1="125" x2="88" y2="128" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <text x="120" y="192" font-size="10" fill="#58a6ff" text-anchor="middle">translateX(20px)</text>
+  <text x="120" y="204" font-size="10" fill="#58a6ff" text-anchor="middle">translateY(-10px)</text>
+
+  <!-- rotate box -->
+  <rect x="225" y="75" width="180" height="130" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="315" y="95" font-size="11" fill="#7d8590" font-weight="600" text-anchor="middle">rotate(deg)</text>
+  <!-- original ghost -->
+  <rect x="270" y="105" width="50" height="50" rx="4" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- rotated element -->
+  <rect x="270" y="105" width="50" height="50" rx="4" fill="#3fb950" opacity="0.85" transform="rotate(20, 295, 130)"/>
+  <!-- rotation arc indicator -->
+  <text x="315" y="192" font-size="10" fill="#3fb950" text-anchor="middle">rotate(20deg)</text>
+  <text x="315" y="204" font-size="10" fill="#3fb950" text-anchor="middle">rotate(-45deg)  ↺</text>
+
+  <!-- ══════════════ Row 1: scale / skew ══════════════ -->
+
+  <!-- scale box -->
+  <rect x="420" y="75" width="180" height="130" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="510" y="95" font-size="11" fill="#7d8590" font-weight="600" text-anchor="middle">scale(n)</text>
+  <!-- original ghost -->
+  <rect x="477" y="110" width="40" height="40" rx="4" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- scaled 1.3x -->
+  <rect x="469" y="104" width="54" height="54" rx="5" fill="#f78166" opacity="0.7"/>
+  <text x="496" y="134" font-size="10" fill="#0d1117" font-weight="700" text-anchor="middle">1.3x</text>
+  <text x="510" y="192" font-size="10" fill="#f78166" text-anchor="middle">scale(1.1) → hover</text>
+  <text x="510" y="204" font-size="10" fill="#f78166" text-anchor="middle">scale(0.95) → press</text>
+
+  <!-- skew box -->
+  <rect x="615" y="75" width="175" height="130" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="703" y="95" font-size="11" fill="#7d8590" font-weight="600" text-anchor="middle">skew(deg)</text>
+  <!-- original ghost -->
+  <rect x="657" y="108" width="50" height="42" rx="3" fill="none" stroke="#30363d" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- skewed element (parallelogram) -->
+  <polygon points="675,108 722,108 715,150 668,150" fill="#d2a8ff" opacity="0.85" rx="3"/>
+  <text x="703" y="133" font-size="10" fill="#0d1117" font-weight="600" text-anchor="middle">skewed</text>
+  <text x="703" y="192" font-size="10" fill="#d2a8ff" text-anchor="middle">skewX(12deg)</text>
+  <text x="703" y="204" font-size="10" fill="#d2a8ff" text-anchor="middle">skewY(5deg)</text>
+
+  <!-- ══════════════ Row 2: transform-origin ══════════════ -->
+  <rect x="30" y="225" width="370" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="215" y="245" font-size="11" fill="#7d8590" font-weight="600" text-anchor="middle">transform-origin — punto de pivote</text>
+
+  <!-- 3x3 origin grid -->
+  <text x="70" y="265" font-size="10" fill="#8b949e" text-anchor="middle">top left</text>
+  <text x="180" y="265" font-size="10" fill="#8b949e" text-anchor="middle">top center</text>
+  <text x="290" y="265" font-size="10" fill="#8b949e" text-anchor="middle">top right</text>
+
+  <text x="70" y="288" font-size="10" fill="#8b949e" text-anchor="middle">center left</text>
+  <text x="180" y="288" font-size="10" fill="#e3b341" font-weight="600" text-anchor="middle">center ★ default</text>
+  <text x="290" y="288" font-size="10" fill="#8b949e" text-anchor="middle">center right</text>
+
+  <text x="70" y="312" font-size="10" fill="#8b949e" text-anchor="middle">bottom left</text>
+  <text x="180" y="312" font-size="10" fill="#8b949e" text-anchor="middle">bottom center</text>
+  <text x="290" y="312" font-size="10" fill="#8b949e" text-anchor="middle">bottom right</text>
+
+  <!-- ══════════════ Row 2: combo + order ══════════════ -->
+  <rect x="415" y="225" width="375" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="602" y="245" font-size="11" fill="#7d8590" font-weight="600" text-anchor="middle">Combinar transforms — el orden importa</text>
+
+  <text x="435" y="265" font-size="11" font-family="'Fira Code', monospace" fill="#79c0ff">transform:</text>
+  <text x="435" y="282" font-size="11" font-family="'Fira Code', monospace" fill="#e3b341">  translate(-50%, -50%)</text>
+  <text x="435" y="299" font-size="11" font-family="'Fira Code', monospace" fill="#f78166">  scale(1.1);</text>
+  <text x="435" y="316" font-size="11" fill="#8b949e">Aplica de derecha a izquierda → escala primero</text>
+
+  <!-- Arrow defs -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <!-- Code footer -->
+  <rect x="30" y="342" width="760" height="58" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="50" y="362" font-size="11" font-family="'Fira Code', monospace" fill="#7d8590">/* hover lift — patrón más común */</text>
+  <text x="50" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#f0f6fc">.card:hover  {  </text>
+  <text x="190" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#79c0ff">transform</text>
+  <text x="260" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#f0f6fc">: </text>
+  <text x="272" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#e3b341">translateY(-4px)  </text>
+  <text x="428" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#f0f6fc">;  </text>
+  <text x="450" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#79c0ff">box-shadow</text>
+  <text x="530" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#f0f6fc">: </text>
+  <text x="542" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#e3b341">var(--shadow-lg)</text>
+  <text x="668" y="380" font-size="11" font-family="'Fira Code', monospace" fill="#f0f6fc">; }</text>
+
+  <!-- Footer -->
+  <text x="30" y="415" font-size="11" fill="#484f58">Semana 11 — Bootcamp HTML+CSS · Transiciones, Transforms y Animaciones</text>
+  <text x="790" y="415" font-size="11" fill="#484f58" text-anchor="end">02-transform-2d.svg</text>
+</svg>

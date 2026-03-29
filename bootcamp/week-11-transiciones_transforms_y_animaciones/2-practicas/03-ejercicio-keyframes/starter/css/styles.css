@@ -1,0 +1,200 @@
+/* ============================================================
+   Ejercicio 03 — Keyframe Animations
+   Semana 11: Transiciones, Transforms y Animaciones
+   ============================================================ */
+
+/* Estilos base (ya provistos — no modificar) */
+
+:root {
+  --color-primary: hsl(225 73% 52%);
+  --color-bg:      hsl(220 14% 98%);
+  --color-surface: #fff;
+  --color-border:  hsl(220 13% 91%);
+  --color-text:    hsl(220 22% 12%);
+  --color-muted:   hsl(220 10% 45%);
+  --font-body:  'Inter', system-ui, sans-serif;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+  --text-sm:     0.875rem;
+  --text-base:   1rem;
+  --text-xl:     1.953rem;
+  --space-2:  0.5rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-12: 3rem;
+  --radius-md: 8px;
+  --shadow-sm: 0 1px  3px rgba(0, 0, 0, 0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  font-size:   var(--text-base);
+  color:       var(--color-text);
+  background:  var(--color-bg);
+  line-height: 1.6;
+}
+
+.container      { width: 90%; max-width: 900px; margin: 0 auto; }
+.main-content   { padding: var(--space-8) 0; }
+.demo-section   { margin-bottom: var(--space-12); }
+
+.page-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-8) 0;
+}
+.page-title { font-size: var(--text-xl); font-weight: var(--fw-bold); }
+.page-desc  { color: var(--color-muted); margin-top: var(--space-2); }
+
+.section-label {
+  font-size:      var(--text-sm);
+  font-weight:    var(--fw-semibold);
+  color:          var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom:  var(--space-6);
+}
+
+.anim-demo {
+  padding:       var(--space-8);
+  background:    var(--color-surface);
+  border:        1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display:       flex;
+  justify-content: center;
+}
+
+.demo-card {
+  background:    var(--color-primary);
+  color:         #fff;
+  padding:       var(--space-6) var(--space-8);
+  border-radius: var(--radius-md);
+  min-width:     200px;
+  text-align:    center;
+  box-shadow:    var(--shadow-sm);
+}
+
+.demo-card h3 { font-weight: var(--fw-bold); margin-bottom: var(--space-2); }
+.demo-card p  { font-size: var(--text-sm); opacity: 0.85; }
+
+.spinner-wrapper {
+  display:         flex;
+  flex-direction:  column;
+  align-items:     center;
+  gap:             var(--space-4);
+}
+
+.spinner {
+  width:  3rem;
+  height: 3rem;
+  border: 4px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.spinner-label {
+  color:     var(--color-muted);
+  font-size: var(--text-sm);
+}
+
+.stagger-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap:                   var(--space-6);
+}
+
+.stagger-card {
+  /* opacity: 0 inicial se activa con las animaciones del PASO 4 */
+}
+
+
+/* ============================================================
+   PASO 1: @keyframes fade-in
+   ────────────────────────────
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* @keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+} */
+
+/* .fade-card {
+  opacity: 0;
+  animation: fade-in 500ms ease-out forwards;
+} */
+
+
+/* ============================================================
+   PASO 2: @keyframes slide-up
+   ────────────────────────────
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* @keyframes slide-up {
+  from {
+    opacity:   0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+} */
+
+/* .slide-card {
+  opacity: 0;
+  animation: slide-up 500ms ease-out forwards;
+} */
+
+
+/* ============================================================
+   PASO 3: @keyframes spin — spinner infinito
+   ───────────────────────────────────────────
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* @keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+} */
+
+/* .spinner {
+  animation: spin 800ms linear infinite;
+} */
+
+
+/* ============================================================
+   PASO 4: Entrada escalonada con animation-delay
+   ─────────────────────────────────────────────────
+   Las stagger-card usan la animación slide-up del PASO 2.
+   Cada una tiene un retraso distinto.
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .stagger-card {
+  opacity: 0;
+  animation: slide-up 400ms ease-out forwards;
+} */
+
+/* .stagger-card:nth-child(1) { animation-delay: 0ms; } */
+/* .stagger-card:nth-child(2) { animation-delay: 150ms; } */
+/* .stagger-card:nth-child(3) { animation-delay: 300ms; } */
+
+
+/* ============================================================
+   Reducir movimiento — accesibilidad
+   (Siempre debe estar activo)
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+  }
+}
