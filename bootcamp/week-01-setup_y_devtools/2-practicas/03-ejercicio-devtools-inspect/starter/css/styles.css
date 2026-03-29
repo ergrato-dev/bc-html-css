@@ -1,0 +1,122 @@
+/* ============================================================
+   Estilos — Ejercicio 03: Inspeccionar con DevTools
+   Nota: estas reglas están diseñadas para ser inspeccionadas.
+   Hay propiedades intencionalmente sobreescritas (tachadas)
+   para que practiques leyendo el panel Styles de DevTools.
+   ============================================================ */
+
+:root {
+  --color-bg: #0d1117;
+  --color-text: #e6edf3;
+  --color-accent: #e34f26;
+  --color-secondary: #264de4;
+  --color-muted: #8b949e;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.7;
+  padding: var(--spacing-lg);
+}
+
+/* Regla base para h1 (del user agent overrideada abajo) */
+h1 {
+  font-size: 1rem; /* Será sobreescrita por .page-title — verás esta tachada en DevTools */
+}
+
+/* Regla específica que sobreescribe la de arriba */
+.page-title {
+  font-size: 2.5rem; /* Esta "gana" por mayor especificidad (.page-title vs h1) */
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.page-header {
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.page-subtitle {
+  color: var(--color-muted);
+}
+
+/* Secciones */
+section {
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+ul,
+ol {
+  padding-left: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  background-color: #161b22;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #79c0ff;
+}
+
+kbd {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* Caja de demostración — tiene múltiples reglas para inspeccionar */
+.demo-box {
+  border: 1px solid #30363d;
+  padding: var(--spacing-md);
+  border-radius: 6px;
+  background-color: #161b22;
+}
+
+/* Inspecciona .demo-box en DevTools y verás estas reglas listadas */
+.demo-box p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.hint {
+  color: var(--color-secondary);
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.note {
+  padding: var(--spacing-md);
+  border-left: 3px solid var(--color-accent);
+  background-color: #161b22;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,93 @@
+/* ============================================================
+   Estilos — Ejercicio 02: Mi Primera Página
+   ============================================================ */
+
+/* Variables globales */
+:root {
+  --color-bg: #0d1117;
+  --color-text: #e6edf3;
+  --color-accent: #e34f26;
+  --color-secondary: #264de4;
+  --font-size-base: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+}
+
+/* Reset mínimo */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  padding: var(--spacing-lg);
+}
+
+/* Header */
+header {
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+/* Main */
+h2 {
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+section {
+  margin-bottom: var(--spacing-lg);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  background-color: #161b22;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #79c0ff;
+}
+
+kbd {
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* Footer */
+footer {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid #30363d;
+  color: #8b949e;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Fondo principal -->
+  <rect width="900" height="540" fill="#0d1117"/>
+
+  <!-- ===================== PÁGINA WEB (arriba) ===================== -->
+  <text x="450" y="22" text-anchor="middle" fill="#8b949e" font-size="11" font-weight="600" letter-spacing="1">PÁGINA WEB (navegador)</text>
+
+  <!-- Ventana del navegador -->
+  <rect x="60" y="30" width="380" height="160" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <!-- Barra de URL -->
+  <rect x="60" y="30" width="380" height="28" rx="4 4 0 0" fill="#1c2128"/>
+  <rect x="100" y="38" width="280" height="14" rx="3" fill="#0d1117"/>
+  <text x="240" y="49" text-anchor="middle" fill="#8b949e" font-size="10">localhost:5500/index.html</text>
+  <circle cx="72" cy="44" r="5" fill="#ff5f57"/>
+  <circle cx="86" cy="44" r="5" fill="#febc2e"/>
+  <!-- Contenido de la página -->
+  <text x="80" y="80" fill="#e6edf3" font-size="15" font-weight="bold">Mi Portfolio</text>
+  <rect x="80" y="88" width="320" height="4" rx="2" fill="#264de4" opacity="0.8"/>
+  <text x="80" y="112" fill="#8b949e" font-size="11">Soy desarrollador frontend</text>
+  <rect x="80" y="122" width="200" height="30" rx="4" fill="#e34f26" opacity="0.9"/>
+  <text x="180" y="142" text-anchor="middle" fill="#ffffff" font-size="12">Ver proyectos</text>
+  <!-- Highlight del elemento seleccionado -->
+  <rect x="80" y="70" width="160" height="24" rx="2" fill="#1f6feb" opacity="0.35" stroke="#1f6feb" stroke-width="1"/>
+  <text x="160" y="100" fill="#1f6feb" font-size="9">← elemento seleccionado</text>
+
+  <!-- ===================== PANEL DEVTOOLS (abajo) ===================== -->
+  <rect x="60" y="215" width="780" height="295" rx="4" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+
+  <!-- Barra de tabs DevTools -->
+  <rect x="60" y="215" width="780" height="30" rx="4 4 0 0" fill="#161b22"/>
+  <!-- Tabs -->
+  <rect x="60" y="215" width="90" height="30" fill="#1c2128"/>
+  <text x="105" y="234" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="600">Elements</text>
+  <rect x="60" y="243" width="90" height="2" fill="#e34f26"/>
+  <text x="185" y="234" fill="#8b949e" font-size="12">Console</text>
+  <text x="255" y="234" fill="#8b949e" font-size="12">Sources</text>
+  <text x="325" y="234" fill="#8b949e" font-size="12">Network</text>
+  <!-- Botón de inspección -->
+  <rect x="700" y="220" width="28" height="20" rx="3" fill="#1f6feb" opacity="0.7"/>
+  <text x="714" y="233" text-anchor="middle" fill="#ffffff" font-size="14">⛶</text>
+  <text x="735" y="234" fill="#8b949e" font-size="10">Inspeccionar</text>
+
+  <!-- ===================== PANEL ELEMENTS (izquierda 55%) ===================== -->
+  <rect x="60" y="245" width="430" height="265" fill="#1c2128"/>
+  <rect x="60" y="245" width="430" height="20" fill="#161b22"/>
+  <text x="70" y="259" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">DOM TREE — Panel Elements</text>
+
+  <!-- DOM tree -->
+  <text x="72" y="284" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">▼ &lt;<tspan fill="#e34f26">html</tspan> <tspan fill="#79c0ff">lang</tspan>=<tspan fill="#a5d6ff">"es"</tspan>&gt;</text>
+  <text x="84" y="302" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">  ▶ &lt;<tspan fill="#e34f26">head</tspan>&gt;</text>
+  <text x="84" y="320" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">  ▼ &lt;<tspan fill="#e34f26">body</tspan>&gt;</text>
+  <!-- Row seleccionado -->
+  <rect x="62" y="326" width="426" height="18" rx="2" fill="#1f6feb" opacity="0.3"/>
+  <text x="96" y="339" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">    &lt;<tspan fill="#e34f26">h1</tspan>&gt;<tspan fill="#c9d1d9">Mi Portfolio</tspan>&lt;/<tspan fill="#e34f26">h1</tspan>&gt;</text>
+  <!-- Icono de selección -->
+  <text x="462" y="339" fill="#1f6feb" font-size="10">◄</text>
+  <text x="96" y="357" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">    &lt;<tspan fill="#e34f26">p</tspan>&gt;Soy desarrollador...&lt;/<tspan fill="#e34f26">p</tspan>&gt;</text>
+  <text x="96" y="375" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">    &lt;<tspan fill="#e34f26">a</tspan> <tspan fill="#79c0ff">class</tspan>=<tspan fill="#a5d6ff">"btn-primary"</tspan>&gt;...&lt;/<tspan fill="#e34f26">a</tspan>&gt;</text>
+  <text x="84" y="393" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">  &lt;/<tspan fill="#e34f26">body</tspan>&gt;</text>
+  <text x="72" y="411" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">&lt;/<tspan fill="#e34f26">html</tspan>&gt;</text>
+  <!-- Botones debajo del DOM -->
+  <text x="70" y="440" fill="#8b949e" font-size="10">Doble clic para editar texto · Supr para eliminar · Arrastrar para mover</text>
+  <text x="70" y="457" fill="#8b949e" font-size="10">Ctrl+Z para deshacer cambios en DevTools</text>
+  <text x="70" y="474" fill="#4d5566" font-size="10">⚠ Los cambios NO se guardan en el archivo — solo en memoria</text>
+  <text x="70" y="490" fill="#4d5566" font-size="10" font-weight="600">Panel Elements</text>
+  <rect x="60" y="245" width="430" height="265" fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ===================== PANEL STYLES (derecha 45%) ===================== -->
+  <rect x="490" y="245" width="350" height="265" fill="#1c2128"/>
+  <rect x="490" y="245" width="350" height="20" fill="#161b22"/>
+  <text x="500" y="259" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">STYLES — Reglas CSS aplicadas</text>
+
+  <!-- Tabs Styles/Computed -->
+  <text x="500" y="280" fill="#e6edf3" font-size="12" font-weight="600">Styles</text>
+  <rect x="498" y="282" width="33" height="2" fill="#264de4"/>
+  <text x="545" y="280" fill="#8b949e" font-size="12">Computed</text>
+  <text x="620" y="280" fill="#8b949e" font-size="12">Layout</text>
+
+  <!-- Estilo 1: seleccionado en devtools.css -->
+  <text x="500" y="302" fill="#4d5566" font-size="10">styles.css:12</text>
+  <text x="500" y="318" fill="#e34f26" font-size="12" font-family="'Fira Code', monospace">h1 <tspan fill="#c9d1d9">{</tspan></text>
+  <text x="512" y="334" font-size="12" font-family="'Fira Code', monospace"><tspan fill="#79c0ff">  font-size</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">2rem</tspan><tspan fill="#c9d1d9">;</tspan></text>
+  <text x="512" y="350" font-size="12" font-family="'Fira Code', monospace"><tspan fill="#79c0ff">  color</tspan><tspan fill="#c9d1d9">: </tspan><tspan fill="#a5d6ff">#1a1a1a</tspan><tspan fill="#c9d1d9">;</tspan></text>
+  <!-- Swatche / color swatch -->
+  <rect x="574" y="341" width="10" height="10" rx="1" fill="#1a1a1a" stroke="#8b949e" stroke-width="0.5"/>
+  <text x="500" y="366" fill="#c9d1d9" font-size="12" font-family="'Fira Code', monospace">}</text>
+
+  <!-- Estilo 2: sobreescrito (tachado) -->
+  <text x="500" y="385" fill="#4d5566" font-size="10">browser default styles</text>
+  <text x="500" y="401" fill="#8b949e" font-size="12" font-family="'Fira Code', monospace">h1 {</text>
+  <text x="512" y="417" font-size="12" font-family="'Fira Code', monospace">
+    <tspan fill="#4d5566" text-decoration="line-through">font-size: 2em;</tspan>
+  </text>
+  <line x1="511" y1="413" x2="620" y2="413" stroke="#4d5566" stroke-width="1"/>
+  <text x="500" y="433" fill="#8b949e" font-size="12" font-family="'Fira Code', monospace">}</text>
+
+  <!-- Leyenda tachado -->
+  <text x="640" y="417" fill="#ff7b6b" font-size="10">← sobreescrito</text>
+
+  <!-- Nueva regla -->
+  <text x="500" y="460" fill="#1f6feb" font-size="11">+ Agregar nueva regla</text>
+  <text x="500" y="478" fill="#4d5566" font-size="10">Haz clic aquí o en el recuadro para editar</text>
+  <text x="500" y="494" fill="#4d5566" font-size="10" font-weight="600">Panel Styles</text>
+  <rect x="490" y="245" width="350" height="265" fill="none" stroke="#30363d" stroke-width="1"/>
+
+  <!-- ===================== FLECHAS DE RELACIÓN ===================== -->
+  <!-- Flecha desde h1 en la página hacia el nodo en Elements -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f6feb"/>
+    </marker>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#264de4"/>
+    </marker>
+  </defs>
+  <!-- Flecha h1 → Elements -->
+  <path d="M 240 92 Q 240 200 200 332" stroke="#1f6feb" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <!-- Flecha a partir del nodo seleccionado → Styles -->
+  <path d="M 490 335 Q 492 335 492 335" stroke="#264de4" stroke-width="1.5" fill="none" marker-end="url(#arrow2)"/>
+  <text x="478" y="330" fill="#264de4" font-size="9">→</text>
+
+  <!-- Título del diagrama -->
+  <text x="450" y="527" text-anchor="middle" fill="#4d5566" font-size="11">DevTools — Panel Elements y Panel Styles: relación DOM ↔ página ↔ CSS</text>
+</svg>

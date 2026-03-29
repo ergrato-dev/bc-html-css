@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 04 — Debug de Layout</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!--
+    ================================================================
+    INSTRUCCIONES GENERALES
+    ================================================================
+    Abre esta página con Live Server.
+    Abre DevTools con F12 y sigue el README.md paso a paso.
+    Descomenta cada sección según el paso indicado.
+    ================================================================
+    -->
+
+
+  <!-- ============================================================ -->
+  <!-- PASO 1: Panel Computed                                       -->
+  <!-- Descomenta el bloque siguiente y estudia su panel Computed:  -->
+  <!-- ============================================================ -->
+
+  <!-- <section class="computed-demo">
+      <h1>Debug de Layout con DevTools</h1>
+      <h2>Panel Computed</h2>
+      <p>
+        Selecciona el <code>&lt;h1&gt;</code> de arriba y abre la pestaña
+        <strong>Computed</strong> (junto a Styles).
+      </p>
+      <p>
+        Observa los valores reales de <code>font-size</code> y <code>color</code>:
+        el Computed muestra el valor calculado en píxeles y RGB,
+        aunque el CSS use <code>rem</code> o Custom Properties.
+      </p>
+      <div class="box-demo">
+        <p>Inspecciona esta caja en Computed.</p>
+        <p>Verás el box model visual con los valores de margin, border, padding y content.</p>
+      </div>
+    </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- PASO 2: Error en la Console (intencional)                    -->
+  <!-- Descomenta el bloque siguiente. Notarás que el icono de la   -->
+  <!-- card carga con error 404 (ruta incorrecta a propósito).      -->
+  <!-- Localiza el error en Console y corrige la ruta.              -->
+  <!-- ============================================================ -->
+
+  <!-- <section>
+      <h2>Console — Detectar errores 404</h2>
+      <p>
+        La imagen de abajo tiene una ruta incorrecta a propósito.
+        Abre la pestaña <strong>Console</strong> en DevTools y verás un error rojo (404).
+      </p>
+      <figure>
+        <img
+          src="assets/imagenes/foto-perfil.jpg"
+          alt="Foto de perfil de ejemplo"
+          width="120"
+          height="120"
+        />
+        <figcaption>
+          ⚠ Esta imagen genera un error 404 — la ruta correcta sería
+          <code>assets/images/placeholder.png</code>
+        </figcaption>
+      </figure>
+      <p>
+        Para corregirlo: cambia <code>src="assets/imagenes/..."</code>
+        por la ruta correcta del archivo existente.
+      </p>
+    </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- PASO 3: Modo responsive                                      -->
+  <!-- Descomenta el bloque siguiente:                              -->
+  <!-- ============================================================ -->
+
+  <!-- <section>
+      <h2>Modo Responsive</h2>
+      <p>
+        Activa el emulador de dispositivos con <kbd>Ctrl+Shift+M</kbd>.
+        Selecciona "iPhone SE" (375px) en el menú desplegable.
+      </p>
+      <p>
+        Observa cómo esta lista se ve en pantalla pequeña:
+      </p>
+      <ul>
+        <li>Selecciona un dispositivo predefinido (iPhone, Pixel, iPad)</li>
+        <li>Ajusta el ancho manualmente (ej: 320px)</li>
+        <li>Prueba con Device Pixel Ratio (DPR) en 2x</li>
+        <li>Rota el dispositivo con el ícono de rotación</li>
+      </ul>
+    </section> -->
+
+
+  <!-- ============================================================ -->
+  <!-- PASO 4: Forzar pseudo-clases                                 -->
+  <!-- Descomenta el bloque siguiente:                              -->
+  <!-- ============================================================ -->
+
+  <!-- <section>
+      <h2>Forzar :hover desde DevTools</h2>
+      <p>
+        El botón de abajo tiene estilos para su estado <code>:hover</code>.
+        En DevTools: selecciona el <code>&lt;button&gt;</code> → en el panel Styles
+        busca el botón <strong>":hov"</strong> → marca <strong>:hover</strong>.
+      </p>
+      <p>Los estilos del estado :hover se aplicarán sin necesidad de pasar el ratón.</p>
+      <button class="btn-demo">Pasa el ratón por encima</button>
+    </section> -->
+
+</body>
+
+</html>

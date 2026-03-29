@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Inter, Roboto, system-ui, sans-serif">
+  <!-- Fondo principal -->
+  <rect width="900" height="520" fill="#0d1117"/>
+
+  <!-- Barra de título de VS Code -->
+  <rect x="0" y="0" width="900" height="32" fill="#1f2428"/>
+  <circle cx="20" cy="16" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="16" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="16" r="6" fill="#28c840"/>
+  <text x="450" y="21" text-anchor="middle" fill="#8b949e" font-size="12">index.html — mi-proyecto — Visual Studio Code</text>
+
+  <!-- Activity Bar (izquierda) -->
+  <rect x="0" y="32" width="48" height="488" fill="#161b22"/>
+  <!-- Iconos activity bar -->
+  <!-- Files icon -->
+  <rect x="14" y="56" width="20" height="18" rx="2" fill="none" stroke="#e34f26" stroke-width="1.5"/>
+  <line x1="18" y1="60" x2="30" y2="60" stroke="#e34f26" stroke-width="1.5"/>
+  <line x1="18" y1="64" x2="30" y2="64" stroke="#e34f26" stroke-width="1.5"/>
+  <line x1="18" y1="68" x2="26" y2="68" stroke="#e34f26" stroke-width="1.5"/>
+  <!-- Search icon -->
+  <circle cx="24" cy="108" r="8" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <line x1="30" y1="114" x2="36" y2="120" stroke="#8b949e" stroke-width="2" stroke-linecap="round"/>
+  <!-- Extensions icon -->
+  <rect x="14" y="148" width="8" height="8" rx="1" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <rect x="26" y="148" width="8" height="8" rx="1" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <rect x="14" y="160" width="8" height="8" rx="1" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <rect x="26" y="160" width="8" height="8" rx="1" fill="none" stroke="#8b949e" stroke-width="1.5"/>
+  <!-- Etiqueta activity bar -->
+  <text x="24" y="500" text-anchor="middle" fill="#8b949e" font-size="9" transform="rotate(-90,24,480)">Activity Bar</text>
+
+  <!-- Sidebar / Explorer -->
+  <rect x="48" y="32" width="180" height="488" fill="#161b22"/>
+  <rect x="48" y="32" width="180" height="28" fill="#1c2128"/>
+  <text x="58" y="50" fill="#e6edf3" font-size="11" font-weight="600" letter-spacing="1">EXPLORER</text>
+  <!-- Árbol de archivos -->
+  <text x="60" y="84" fill="#e34f26" font-size="12">▼ mi-proyecto</text>
+  <text x="70" y="102" fill="#8b949e" font-size="11">▶ css</text>
+  <text x="70" y="118" fill="#8b949e" font-size="11">▶ assets</text>
+  <text x="70" y="136" fill="#e34f26" font-size="12" font-weight="500">⬡ index.html</text>
+  <!-- indicador archivo activo -->
+  <rect x="48" y="126" width="180" height="18" fill="#1f6feb" opacity="0.3"/>
+  <text x="70" y="154" fill="#8b949e" font-size="11">📄 about.html</text>
+  <text x="70" y="170" fill="#264de4" font-size="11">🎨 styles.css</text>
+  <!-- Etiqueta sidebar -->
+  <text x="138" y="500" text-anchor="middle" fill="#4d5566" font-size="10">Sidebar / Explorer</text>
+
+  <!-- Editor principal -->
+  <rect x="228" y="32" width="490" height="420" fill="#0d1117"/>
+  <!-- Tabs de archivo -->
+  <rect x="228" y="32" width="490" height="32" fill="#161b22"/>
+  <rect x="228" y="32" width="110" height="32" fill="#0d1117"/>
+  <text x="248" y="52" fill="#e34f26" font-size="12">⬡ index.html</text>
+  <text x="358" y="52" fill="#8b949e" font-size="12">🎨 styles.css</text>
+  <!-- Línea activa tab -->
+  <rect x="228" y="60" width="110" height="2" fill="#e34f26"/>
+
+  <!-- Números de línea -->
+  <rect x="228" y="64" width="36" height="388" fill="#161b22"/>
+  <text x="255" y="88" text-anchor="end" fill="#4d5566" font-size="11">1</text>
+  <text x="255" y="106" text-anchor="end" fill="#4d5566" font-size="11">2</text>
+  <text x="255" y="124" text-anchor="end" fill="#4d5566" font-size="11">3</text>
+  <text x="255" y="142" text-anchor="end" fill="#4d5566" font-size="11">4</text>
+  <text x="255" y="160" text-anchor="end" fill="#4d5566" font-size="11">5</text>
+  <text x="255" y="178" text-anchor="end" fill="#4d5566" font-size="11">6</text>
+  <text x="255" y="196" text-anchor="end" fill="#4d5566" font-size="11">7</text>
+  <text x="255" y="214" text-anchor="end" fill="#4d5566" font-size="11">8</text>
+  <text x="255" y="232" text-anchor="end" fill="#4d5566" font-size="11">9</text>
+  <text x="255" y="250" text-anchor="end" fill="#4d5566" font-size="11">10</text>
+  <text x="255" y="268" text-anchor="end" fill="#4d5566" font-size="11">11</text>
+  <text x="255" y="286" text-anchor="end" fill="#4d5566" font-size="11">12</text>
+
+  <!-- Código HTML con colores de sintaxis -->
+  <text x="270" y="88" fill="#8b949e" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">&lt;!DOCTYPE html&gt;</text>
+  <text x="270" y="106" fill="#7ee787" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">&lt;<tspan fill="#e34f26">html</tspan> <tspan fill="#79c0ff">lang</tspan>=<tspan fill="#a5d6ff">"es"</tspan>&gt;</text>
+  <text x="270" y="124" fill="#7ee787" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">  &lt;<tspan fill="#e34f26">head</tspan>&gt;</text>
+  <text x="270" y="142" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">    &lt;<tspan fill="#e34f26">meta</tspan> <tspan fill="#79c0ff">charset</tspan>=<tspan fill="#a5d6ff">"UTF-8"</tspan>/&gt;</text>
+  <text x="270" y="160" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">    &lt;<tspan fill="#e34f26">title</tspan>&gt;<tspan fill="#c9d1d9">Mi Proyecto</tspan>&lt;/<tspan fill="#e34f26">title</tspan>&gt;</text>
+  <text x="270" y="178" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">    &lt;<tspan fill="#e34f26">link</tspan> <tspan fill="#79c0ff">rel</tspan>=<tspan fill="#a5d6ff">"stylesheet"</tspan></text>
+  <text x="270" y="196" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">         <tspan fill="#79c0ff">href</tspan>=<tspan fill="#a5d6ff">"css/styles.css"</tspan>/&gt;</text>
+  <text x="270" y="214" fill="#7ee787" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">  &lt;/<tspan fill="#e34f26">head</tspan>&gt;</text>
+  <text x="270" y="232" fill="#7ee787" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">  &lt;<tspan fill="#e34f26">body</tspan>&gt;</text>
+  <text x="270" y="250" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">    &lt;<tspan fill="#e34f26">h1</tspan>&gt;<tspan fill="#c9d1d9">Hola Mundo</tspan>&lt;/<tspan fill="#e34f26">h1</tspan>&gt;</text>
+  <text x="270" y="268" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">    &lt;<tspan fill="#e34f26">p</tspan>&gt;<tspan fill="#c9d1d9">Mi primera página</tspan>&lt;/<tspan fill="#e34f26">p</tspan>&gt;</text>
+  <text x="270" y="286" fill="#7ee787" font-size="12" font-family="'Fira Code', 'Cascadia Code', monospace">  &lt;/<tspan fill="#e34f26">body</tspan>&gt;</text>
+
+  <!-- Cursor de edición -->
+  <rect x="270" y="291" width="1.5" height="14" fill="#e34f26"/>
+
+  <!-- Panel de terminal integrada -->
+  <rect x="228" y="380" width="490" height="72" fill="#161b22"/>
+  <rect x="228" y="380" width="490" height="22" fill="#1c2128"/>
+  <text x="240" y="394" fill="#8b949e" font-size="11">TERMINAL</text>
+  <text x="310" y="394" fill="#4d5566" font-size="11">PROBLEMS</text>
+  <text x="378" y="394" fill="#4d5566" font-size="11">OUTPUT</text>
+  <text x="240" y="415" fill="#7ee787" font-size="11" font-family="'Fira Code', monospace">$ </text>
+  <text x="255" y="415" fill="#c9d1d9" font-size="11" font-family="'Fira Code', monospace">git commit -m "feat: add index.html"</text>
+  <text x="240" y="435" fill="#8b949e" font-size="11" font-family="'Fira Code', monospace">[main a1b2c3] feat: add index.html</text>
+  <!-- Etiqueta terminal -->
+  <text x="473" y="467" text-anchor="middle" fill="#4d5566" font-size="10">Terminal integrada</text>
+
+  <!-- Panel derecho: IntelliSense / autocompletado -->
+  <rect x="718" y="32" width="182" height="420" fill="#161b22"/>
+  <rect x="718" y="32" width="182" height="28" fill="#1c2128"/>
+  <text x="728" y="50" fill="#e6edf3" font-size="11" font-weight="600" letter-spacing="1">OUTLINE</text>
+  <text x="728" y="80" fill="#e34f26" font-size="11">⬡ html</text>
+  <text x="738" y="96" fill="#8b949e" font-size="11">  head</text>
+  <text x="748" y="112" fill="#8b949e" font-size="11">    meta</text>
+  <text x="748" y="128" fill="#8b949e" font-size="11">    title</text>
+  <text x="748" y="144" fill="#264de4" font-size="11">    link</text>
+  <text x="738" y="160" fill="#8b949e" font-size="11">  body</text>
+  <text x="748" y="176" fill="#e34f26" font-size="11">    h1</text>
+  <text x="748" y="192" fill="#8b949e" font-size="11">    p</text>
+
+  <!-- Caja de autocompletado -->
+  <rect x="370" y="295" width="240" height="80" rx="4" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+  <rect x="370" y="295" width="240" height="22" rx="4 4 0 0" fill="#1f6feb" opacity="0.4"/>
+  <text x="382" y="310" fill="#79c0ff" font-size="11" font-weight="600">link</text>
+  <text x="450" y="310" fill="#8b949e" font-size="10">→ &lt;link rel="stylesheet" href=""/&gt;</text>
+  <text x="382" y="328" fill="#c9d1d9" font-size="11">li</text>
+  <text x="382" y="344" fill="#c9d1d9" font-size="11">label</text>
+  <text x="382" y="360" fill="#c9d1d9" font-size="11">legend</text>
+  <text x="500" y="380" fill="#4d5566" font-size="9">IntelliSense (Emmet)</text>
+
+  <!-- Barra de estado inferior -->
+  <rect x="0" y="452" width="900" height="28" fill="#1f2428"/>
+  <!-- Indicadores izquierda -->
+  <rect x="0" y="452" width="80" height="28" fill="#e34f26"/>
+  <text x="8" y="470" fill="#ffffff" font-size="11" font-weight="600">⎇ main</text>
+  <text x="90" y="470" fill="#8b949e" font-size="11">⚠ 0  ⊗ 0</text>
+  <!-- Indicadores derecha -->
+  <text x="580" y="470" fill="#8b949e" font-size="11">Ln 12, Col 1</text>
+  <text x="660" y="470" fill="#8b949e" font-size="11">UTF-8</text>
+  <text x="720" y="470" fill="#8b949e" font-size="11">HTML</text>
+  <rect x="800" y="452" width="100" height="28" fill="#264de4"/>
+  <text x="805" y="470" fill="#ffffff" font-size="11" font-weight="600">⚡ Go Live</text>
+
+  <!-- Flechas + leyenda -->
+  <!-- Flecha Activity Bar -->
+  <line x1="24" y1="200" x2="24" y2="230" stroke="#e34f26" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <!-- Flecha Sidebar -->
+  <line x1="138" y1="480" x2="138" y2="496" stroke="#4d5566" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Título del diagrama -->
+  <text x="450" y="512" text-anchor="middle" fill="#4d5566" font-size="11">Interfaz de VS Code — Zonas principales</text>
+</svg>

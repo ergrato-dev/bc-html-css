@@ -1,0 +1,132 @@
+/* ============================================================
+   Estilos — Ejercicio 04: Debug de Layout con DevTools
+   Diseñado para ser inspeccionado con el panel Computed.
+   ============================================================ */
+
+:root {
+  --color-bg: #0d1117;
+  --color-text: #e6edf3;
+  --color-accent: #e34f26;
+  --color-secondary: #264de4;
+  --color-muted: #8b949e;
+  --color-border: #30363d;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: var(--spacing-lg);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-md);
+}
+
+section {
+  margin-bottom: var(--spacing-lg);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+code {
+  background-color: #161b22;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #79c0ff;
+}
+
+kbd {
+  background-color: #21262d;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* Caja de demostración para el panel Computed */
+.box-demo {
+  /* Valores claros para estudiar en Computed */
+  margin: 1.5rem;
+  padding: 1rem;
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+  background-color: #161b22;
+  /* Computed mostrará estos valores calculados en px */
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Figure para el error 404 */
+figure {
+  margin: 1rem 0;
+}
+
+figure img {
+  display: block;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  background-color: #161b22;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+/* Botón con estado :hover para el Paso 4 */
+.btn-demo {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Esta regla es la que verás forzada en DevTools con ":hover" */
+.btn-demo:hover {
+  background-color: #c03d1a;
+  transform: translateY(-2px);
+}
+
+.btn-demo:focus {
+  outline: 3px solid #1f6feb;
+  outline-offset: 3px;
+}

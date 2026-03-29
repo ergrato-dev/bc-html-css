@@ -1,0 +1,96 @@
+/* ============================================================
+   Estilos — Proyecto Semana 01: Mi Página de Presentación
+   ============================================================ */
+
+/* ============================================================
+   TODO: Define tus variables CSS en :root
+   Incluye al menos:
+   - 2 colores (fondo y texto)
+   - 1 color de acento
+   - 1 tamaño base de fuente
+   - 1 valor de espaciado
+   ============================================================ */
+
+/* :root {
+  --color-bg: ;
+  --color-text: ;
+  --color-accent: ;
+  --font-size-base: 1rem;
+  --spacing-md: 1.5rem;
+} */
+
+
+/* ============================================================
+   TODO: Reset mínimo
+   Añade box-sizing: border-box para todos los elementos
+   y elimina margin/padding por defecto del body
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para body
+   - background-color usando tu variable
+   - color de texto usando tu variable
+   - font-family (puedes usar: system-ui, sans-serif)
+   - font-size base
+   - line-height para legibilidad (recomendado: 1.6 - 1.8)
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para header
+   - padding adecuado
+   - un color de fondo diferente al body (o un borde inferior)
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para h1 y párrafo de título profesional
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para nav y los enlaces de navegación
+   - display: flex (para ponerlos en fila)
+   - gap entre los links
+   - eliminar el subrayado con text-decoration: none
+   - estado :hover en los links
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para main
+   - max-width para limitar el ancho de lectura (ej: 800px)
+   - margin: 0 auto para centrar
+   - padding
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para las secciones dentro de main
+   - margin-bottom entre secciones
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para h2
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para la lista de habilidades
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para los enlaces de contacto
+   - :hover state
+   ============================================================ */
+
+
+/* ============================================================
+   TODO: Estilos para footer
+   - padding
+   - color de texto más tenue
+   - border-top o separación visual
+   ============================================================ */
