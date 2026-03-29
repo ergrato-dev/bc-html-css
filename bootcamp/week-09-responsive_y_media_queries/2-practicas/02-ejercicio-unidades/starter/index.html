@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 02 — Unidades Relativas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Hero: min-height: 100vh (paso 3) -->
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Unidades relativas en CSS</span>
+      <h1 class="hero-title">Diseña con medidas que escalan</h1>
+      <p class="hero-subtitle">rem, em, vw, vh, % y clamp() son tus herramientas para tipografía y espaciados responsivos.</p>
+      <div class="btn-group">
+        <a href="#demo" class="btn btn--primary btn--lg">Ver demos</a>
+        <a href="#" class="btn btn--ghost">Documentación</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="demo">
+
+    <!-- Demo rem typography -->
+    <section class="demo-section">
+      <div class="container">
+        <h2 class="section-heading">Tipografía con <code>rem</code></h2>
+        <p class="section-desc">Todos los tamaños se calculan a partir del font-size del elemento <code>&lt;html&gt;</code> (16px por defecto).</p>
+        <div class="type-scale">
+          <div class="type-row">
+            <span class="type-sample type-4xl">Heading 1 — 2.5rem</span>
+          </div>
+          <div class="type-row">
+            <span class="type-sample type-3xl">Heading 2 — 2rem</span>
+          </div>
+          <div class="type-row">
+            <span class="type-sample type-2xl">Heading 3 — 1.5rem</span>
+          </div>
+          <div class="type-row">
+            <span class="type-sample type-base">Cuerpo de texto — 1rem</span>
+          </div>
+          <div class="type-row">
+            <span class="type-sample type-sm">Texto pequeño — 0.875rem</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo em buttons -->
+    <section class="demo-section demo-section--alt">
+      <div class="container">
+        <h2 class="section-heading">Botones con <code>em</code></h2>
+        <p class="section-desc">El padding usa <code>em</code> y escala con el <code>font-size</code> de cada variante del botón.</p>
+        <div class="btn-showcase">
+          <button class="btn btn--primary btn--sm" type="button">Botón small</button>
+          <button class="btn btn--primary" type="button">Botón normal</button>
+          <button class="btn btn--primary btn--lg" type="button">Botón large</button>
+          <button class="btn btn--outline btn--lg" type="button">Botón outline</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo vw/vh + clamp -->
+    <section class="demo-section">
+      <div class="container">
+        <h2 class="section-heading">Fluido con <code>clamp()</code></h2>
+        <p class="section-desc">El título de abajo tiene <code>font-size: clamp(1.5rem, 4vw, 3rem)</code>. Redimensiona la ventana para verlo cambiar.</p>
+        <div class="clamp-demo">
+          <h3 class="clamp-title">Este título es fluido</h3>
+          <p class="clamp-body">Y este párrafo también: <code>font-size: clamp(0.9rem, 2vw, 1.15rem)</code></p>
+          <div class="viewport-info">
+            <span>Ancho del viewport: </span>
+            <strong id="vw-value">—</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Ejercicio 02 — Semana 09 · Bootcamp HTML + CSS</p>
+    </div>
+  </footer>
+
+  <script>
+    // Muestra el ancho del viewport en tiempo real
+    const vwEl = document.getElementById('vw-value');
+    const update = () => { if(vwEl) vwEl.textContent = window.innerWidth + 'px'; };
+    update();
+    window.addEventListener('resize', update);
+  </script>
+
+</body>
+</html>

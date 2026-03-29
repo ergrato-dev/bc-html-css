@@ -1,0 +1,163 @@
+/* ================================================
+   Ejercicio 02 — Unidades Relativas
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── General layout (siempre activo) ──────────── */
+.hero {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-orange);
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  color: var(--color-text-muted);
+  margin-bottom: 1.75rem;
+  max-width: 520px;
+}
+
+.btn-group { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.demo-section { padding: 3rem 0; }
+.demo-section--alt { background: var(--color-surface); }
+
+.section-heading { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; }
+.section-desc { color: var(--color-text-muted); margin-bottom: 1.5rem; }
+code { background: #21262d; padding: 0.1em 0.4em; border-radius: 4px; font-size: 0.9em; color: var(--color-orange); }
+
+.type-scale { display: flex; flex-direction: column; gap: 0.5rem; }
+.type-row { display: flex; align-items: baseline; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem; }
+.type-sample { font-weight: 600; }
+
+.btn-showcase { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+
+.clamp-demo {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.clamp-body { color: var(--color-text-muted); margin: 0.75rem 0 1rem; }
+.viewport-info { font-size: 0.85rem; color: var(--color-text-muted); }
+.viewport-info strong { color: var(--color-blue); }
+
+.site-footer {
+  padding: 1.5rem 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+
+/* ============================================ */
+/* PASO 1: tipografía con rem                   */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .type-4xl { font-size: 2.5rem; }             */
+/* .type-3xl { font-size: 2rem; }               */
+/* .type-2xl { font-size: 1.5rem; }             */
+/* .type-base { font-size: 1rem; }              */
+/* .type-sm   { font-size: 0.875rem; color: var(--color-text-muted); } */
+
+
+/* ============================================ */
+/* PASO 2: spacing con rem y em en botones      */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .btn {                                       */
+/*   display: inline-flex;                      */
+/*   align-items: center;                       */
+/*   justify-content: center;                   */
+/*   padding: 0.65em 1.3em; /* em: escala con font-size del botón */ */
+/*   border-radius: 0.35em; /* em: siempre proporcional */           */
+/*   font-weight: 600;                          */
+/*   text-decoration: none;                     */
+/*   cursor: pointer;                           */
+/*   border: 2px solid transparent;             */
+/*   font-size: 0.9rem; /* rem: tamaño base del botón */             */
+/* }                                            */
+/*                                              */
+/* .btn--primary { background: var(--color-blue); color: #fff; border-color: var(--color-blue); } */
+/* .btn--outline  { background: transparent; color: var(--color-blue); border-color: var(--color-blue); } */
+/* .btn--ghost    { background: transparent; color: var(--color-text-muted); border-color: var(--color-border); } */
+/*                                              */
+/* .btn--sm  { font-size: 0.75rem; }            */
+/* .btn--lg  { font-size: 1.1rem; }             */
+/*                                              */
+/* .demo-section { padding: 3rem 0; }/* rem */ */
+
+
+/* ============================================ */
+/* PASO 3: hero con min-height: 100vh           */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .hero {                                      */
+/*   min-height: 100vh; /* ocupa toda la pantalla verticalmente */ */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 4: tipografía fluida con clamp()        */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .hero-title {                                */
+/*   font-size: clamp(1.75rem, 5vw, 3rem);     */
+/* }                                            */
+/*                                              */
+/* .hero-subtitle {                             */
+/*   font-size: clamp(1rem, 2.5vw, 1.25rem);  */
+/* }                                            */
+/*                                              */
+/* .clamp-title {                               */
+/*   font-size: clamp(1.5rem, 4vw, 3rem);      */
+/*   font-weight: 700;                          */
+/* }                                            */
+/*                                              */
+/* .clamp-body {                                */
+/*   font-size: clamp(0.9rem, 2vw, 1.15rem);  */
+/* }                                            */

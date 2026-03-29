@@ -1,0 +1,205 @@
+/* ================================================
+   Ejercicio 03 — Breakpoints con Grid y Flex
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --header-height: 60px;
+  --sidebar-width: 240px;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Contenedor */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ─── Header ─────────────────────────────────── */
+.site-header {
+  height: var(--header-height);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
+.main-nav { list-style: none; }
+
+.nav-link {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+.nav-link:hover, .nav-link--active { background: rgba(38,77,228,0.15); color: var(--color-text); }
+
+/* ─── Sidebar ─────────────────────────────────── */
+.app-sidebar {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+}
+
+.sidebar-title { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+
+.filter-list { list-style: none; }
+.filter-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0; font-size: 0.9rem; color: var(--color-text-muted); cursor: pointer; }
+.filter-item input[type="checkbox"] { accent-color: var(--color-blue); }
+
+/* ─── Content ─────────────────────────────────── */
+.app-content { padding: var(--spacing-lg); }
+
+.content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg); }
+.page-title { font-size: 1.3rem; font-weight: 700; }
+.results-count { font-size: 0.85rem; color: var(--color-text-muted); }
+
+/* ─── Cards ───────────────────────────────────── */
+.resource-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.card-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.15em 0.55em;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.badge--css  { background: rgba(38,77,228,0.15); color: #6e9dff; }
+.badge--html { background: rgba(227,79,38,0.15); color: #ff8c60; }
+
+.card-title { font-size: 0.95rem; font-weight: 600; }
+.card-desc  { font-size: 0.85rem; color: var(--color-text-muted); flex-grow: 1; }
+.card-cta   { font-size: 0.85rem; font-weight: 600; color: var(--color-blue); text-decoration: none; margin-top: auto; }
+
+/* ─── Footer ──────────────────────────────────── */
+.site-footer {
+  padding: var(--spacing-lg) 0;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+
+/* ============================================ */
+/* PASO 1: estilos base mobile                  */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .main-nav {                                  */
+/*   display: flex;                             */
+/*   flex-direction: column; /* vertical */ */
+/*   gap: 0.25rem;                              */
+/* }                                            */
+/*                                              */
+/* .page-grid {                                 */
+/*   display: grid;                             */
+/*   grid-template-columns: 1fr;               */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+/*                                              */
+/* .app-sidebar {                               */
+/*   display: none; /* oculto en mobile */ */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 2: tablet min-width: 768px              */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* @media (min-width: 768px) {                  */
+/*   .main-nav {                                */
+/*     flex-direction: row;                    */
+/*     gap: 0.25rem;                            */
+/*   }                                          */
+/*                                              */
+/*   .page-grid {                               */
+/*     grid-template-columns: repeat(2, 1fr);  */
+/*   }                                          */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 3: desktop min-width: 1024px            */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* @media (min-width: 1024px) {                 */
+/*   .app-layout {                              */
+/*     display: grid;                           */
+/*     grid-template-columns: var(--sidebar-width) 1fr; */
+/*     grid-template-areas: "sidebar content"; */
+/*     min-height: calc(100vh - var(--header-height)); */
+/*   }                                          */
+/*                                              */
+/*   .app-sidebar {                             */
+/*     grid-area: sidebar;                      */
+/*     display: block;                          */
+/*   }                                          */
+/*                                              */
+/*   .app-content {                             */
+/*     grid-area: content;                      */
+/*   }                                          */
+/*                                              */
+/*   .page-grid {                               */
+/*     grid-template-columns: repeat(3, 1fr);  */
+/*   }                                          */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 4: evitar overflow horizontal           */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* img, video, iframe {                         */
+/*   max-width: 100%;                           */
+/*   height: auto;                              */
+/* }                                            */

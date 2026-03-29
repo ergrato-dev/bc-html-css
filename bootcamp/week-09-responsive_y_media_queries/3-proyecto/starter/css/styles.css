@@ -1,0 +1,578 @@
+/* ================================================
+   Craft Studio — Responsive Landing Page
+   Implementa los TODOs para completar el proyecto
+   ================================================ */
+
+
+/* ============================================ */
+/* TODO 1: Base — font-size + CSS Variables     */
+/* Define el font-size base del documento y     */
+/* declara todas las Custom Properties en :root */
+/* ============================================ */
+
+/* html {
+  font-size: 100%; /* 1rem = 16px por defecto */
+/* }
+
+/* :root {
+  /* Colores — modo light */
+  /* --color-bg: #ffffff;                    */
+  /* --color-surface: #f8fafc;               */
+  /* --color-surface-alt: #f1f5f9;           */
+  /* --color-border: #e2e8f0;                */
+  /* --color-text: #0f172a;                  */
+  /* --color-text-muted: #64748b;            */
+  /* --color-primary: #264de4;               */
+  /* --color-primary-hover: #1a3bc0;         */
+  /* --color-accent: #e34f26;                */
+
+  /* Tipografía */
+  /* --font-body: Inter, system-ui, sans-serif; */
+
+  /* Espaciados */
+  /* --spacing-xs: 0.5rem;                   */
+  /* --spacing-sm: 0.75rem;                  */
+  /* --spacing-md: 1rem;                     */
+  /* --spacing-lg: 1.5rem;                   */
+  /* --spacing-xl: 2rem;                     */
+  /* --spacing-2xl: 3rem;                    */
+  /* --spacing-3xl: 4rem;                    */
+
+  /* Layout */
+  /* --header-height: 64px;                  */
+  /* --container-max: 1200px;                */
+  /* --radius-sm: 4px;                       */
+  /* --radius-md: 8px;                       */
+  /* --radius-lg: 12px;                      */
+/* } */
+
+
+/* ============================================ */
+/* TODO 2: Container                            */
+/* Contenedor centrado con max-width fluido     */
+/* Usa %, max-width y rem para padding          */
+/* ============================================ */
+
+/* .container {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+} */
+
+
+/* ============================================ */
+/* TODO 3: Header y nav — Mobile base           */
+/* - Display flex en .header-inner              */
+/* - .site-nav oculta en mobile                 */
+/* - .nav-list flex-direction: column           */
+/* ============================================ */
+
+/* body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+} */
+
+/* *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } */
+
+/* .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+} */
+
+/* .header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+/* .brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+} */
+
+/* .nav-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--color-text);
+} */
+
+/* .site-nav { display: none; } /* oculto hasta 768px */
+
+/* .nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) 0;
+} */
+
+/* .nav-link {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s, background 0.2s;
+} */
+
+/* .nav-link:hover { color: var(--color-primary); } */
+
+/* .btn-nav {
+  background: var(--color-primary);
+  color: #fff !important;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-md);
+} */
+
+
+/* ============================================ */
+/* TODO 4: Hero — min-height: 100vh             */
+/* Usa min-height: 100vh para ocupar la         */
+/* pantalla completa y centrar el contenido     */
+/* con Flexbox                                  */
+/* ============================================ */
+
+/* .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--color-surface);
+  padding: var(--spacing-3xl) 0;
+} */
+
+/* .hero-eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+} */
+
+/* .hero-content {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+} */
+
+
+/* ============================================ */
+/* TODO 5: Hero title — clamp()                 */
+/* Usa clamp(min, preferred, max) para que el   */
+/* título sea fluido entre 320px y 1200px       */
+/* Pista: clamp(1.75rem, 5vw, 3.5rem)           */
+/* ============================================ */
+
+/* .hero-title {
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-text);
+} */
+
+/* .hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-text-muted);
+  max-width: 560px;
+} */
+
+/* .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+} */
+
+/* .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+} */
+
+/* .btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+} */
+
+/* .btn--primary:hover { background: var(--color-primary-hover); } */
+
+/* .btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+} */
+
+/* .btn--outline:hover {
+  background: var(--color-primary);
+  color: #fff;
+} */
+
+
+/* ============================================ */
+/* TODO 6: Features grid — mobile base          */
+/* 1 columna por defecto, con gap en rem        */
+/* ============================================ */
+
+/* .features {
+  padding: var(--spacing-3xl) 0;
+} */
+
+/* .section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+} */
+
+/* .section-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+} */
+
+/* .section-title {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-text);
+} */
+
+/* .section-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+} */
+
+/* .features-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+} */
+
+/* .feature-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+} */
+
+/* .feature-icon { font-size: 2rem; } */
+
+/* .feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+} */
+
+/* .feature-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+} */
+
+
+/* ============================================ */
+/* TODO 7: Testimonials grid — mobile base      */
+/* 1 columna por defecto                        */
+/* ============================================ */
+
+/* .testimonials {
+  background: var(--color-surface-alt);
+  padding: var(--spacing-3xl) 0;
+} */
+
+/* .testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+} */
+
+/* .testimonial-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+} */
+
+/* .testimonial-text {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.7;
+} */
+
+/* .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+} */
+
+/* .author-avatar {
+  border-radius: 50%;
+  max-width: 100%;
+} */
+
+/* .author-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text);
+} */
+
+/* .author-role {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+} */
+
+
+/* ============================================ */
+/* TODO 8: CTA Section y form                   */
+/* Centrar contenido con max-width y flex       */
+/* ============================================ */
+
+/* .cta-section {
+  background: var(--color-primary);
+  padding: var(--spacing-3xl) 0;
+} */
+
+/* .cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+} */
+
+/* .cta-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #fff;
+} */
+
+/* .cta-subtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+} */
+
+/* .cta-form { display: flex; flex-direction: column; gap: var(--spacing-md); } */
+
+/* .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+} */
+
+/* .form-input {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: var(--radius-md);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+} */
+
+/* .form-input::placeholder { color: rgba(255,255,255,0.6); } */
+/* .form-input:focus { border-color: #fff; } */
+
+/* .form-note {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+} */
+
+/* .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+} */
+
+
+/* ============================================ */
+/* TODO 9: Footer                               */
+/* Grid 1-col mobile → 3-col en tablet+         */
+/* ============================================ */
+
+/* .site-footer {
+  background: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--spacing-2xl) 0 var(--spacing-lg);
+} */
+
+/* .footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
+} */
+
+/* .footer-tagline {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  margin-top: var(--spacing-xs);
+} */
+
+/* .footer-nav-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: var(--spacing-sm);
+} */
+
+/* .footer-nav ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; } */
+
+/* .footer-link {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+} */
+
+/* .footer-link:hover { color: #fff; } */
+
+/* .footer-copy {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: var(--spacing-lg);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+} */
+
+
+/* ============================================ */
+/* TODO 10: @media (min-width: 768px) — tablet  */
+/* - Nav: mostrar + flex-direction: row         */
+/* - features-grid: auto-fit minmax(280px, 1fr) */
+/* - testimonials-grid: 2 columnas             */
+/* - .form-row: flex-direction: row             */
+/* - footer-grid: 3 columnas                   */
+/* ============================================ */
+
+/* @media (min-width: 768px) {
+  .nav-toggle { display: none; }
+
+  .site-nav { display: block; }
+
+  .nav-list {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 0.25rem;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-row { flex-direction: row; }
+
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+} */
+
+
+/* ============================================ */
+/* TODO 11: @media (min-width: 1024px) — desktop */
+/* - Ajustar padding de secciones               */
+/* - Limitar hero-content width                 */
+/* ============================================ */
+
+/* @media (min-width: 1024px) {
+  .hero {
+    padding: calc(var(--spacing-3xl) * 1.5) 0;
+  }
+
+  .hero-content {
+    max-width: 760px;
+  }
+
+  .features {
+    padding: calc(var(--spacing-3xl) * 1.25) 0;
+  }
+} */
+
+
+/* ============================================ */
+/* TODO 12: prefers-color-scheme: dark          */
+/* Redefine las Custom Properties del :root     */
+/* para modo oscuro                             */
+/* ============================================ */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0d1117;
+    --color-surface: #161b22;
+    --color-surface-alt: #0d1117;
+    --color-border: #30363d;
+    --color-text: #f0f6fc;
+    --color-text-muted: #8b949e;
+  }
+} */
+
+
+/* ============================================ */
+/* TODO 13: prefers-reduced-motion              */
+/* Deshabilita todas las transiciones para      */
+/* usuarios que prefieren menos movimiento      */
+/* ============================================ */
+
+/* @media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+} */
+
+
+/* ============================================ */
+/* TODO 14: Prevenir overflow                   */
+/* Evitar que imágenes y media rompan el layout */
+/* ============================================ */
+
+/* img, video, svg, iframe {
+  max-width: 100%;
+  height: auto;
+} */

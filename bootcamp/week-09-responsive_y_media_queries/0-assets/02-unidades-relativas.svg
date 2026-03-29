@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" font-family="Inter, system-ui, sans-serif">
+  <rect width="820" height="400" fill="#0d1117"/>
+  <text x="410" y="30" fill="#f0f6fc" font-size="15" font-weight="700" text-anchor="middle">Unidades Relativas en CSS</text>
+
+  <!-- ── rem ── -->
+  <rect x="20" y="48" width="185" height="155" rx="8" fill="#161b22" stroke="#264de4" stroke-width="1.5"/>
+  <text x="112" y="70" fill="#264de4" font-size="13" font-weight="700" text-anchor="middle">rem</text>
+  <text x="112" y="86" fill="#8b949e" font-size="9" text-anchor="middle">Relativo al font-size de html</text>
+  <!-- ruler -->
+  <rect x="35" y="96" width="155" height="20" rx="3" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="35" y="96" width="77" height="20" rx="3" fill="#264de4"/>
+  <text x="112" y="110" fill="#f0f6fc" font-size="9" font-weight="600" text-anchor="middle">1rem = 16px (base)</text>
+  <!-- scale examples -->
+  <text x="35" y="135" fill="#8b949e" font-size="9">html font-size: 16px</text>
+  <text x="35" y="150" fill="#f0f6fc" font-size="20">2rem</text>
+  <text x="105" y="150" fill="#8b949e" font-size="9">= 32px</text>
+  <text x="35" y="168" fill="#f0f6fc" font-size="15">1.5rem</text>
+  <text x="105" y="168" fill="#8b949e" font-size="9">= 24px</text>
+  <text x="35" y="183" fill="#f0f6fc" font-size="11">0.875rem</text>
+  <text x="105" y="183" fill="#8b949e" font-size="9">= 14px</text>
+  <text x="35" y="196" fill="#8b949e" font-size="9">Uso: tipografía, spacing global</text>
+
+  <!-- ── em ── -->
+  <rect x="215" y="48" width="185" height="155" rx="8" fill="#161b22" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="307" y="70" fill="#3fb950" font-size="13" font-weight="700" text-anchor="middle">em</text>
+  <text x="307" y="86" fill="#8b949e" font-size="9" text-anchor="middle">Relativo al font-size del padre</text>
+  <!-- nested boxes -->
+  <rect x="230" y="95" width="155" height="90" rx="3" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="238" y="110" fill="#8b949e" font-size="9">parent: font-size: 1rem (16px)</text>
+  <rect x="238" y="115" width="130" height="60" rx="3" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="248" y="131" fill="#3fb950" font-size="9">.button</text>
+  <text x="248" y="144" fill="#f0f6fc" font-size="9">font-size: 0.9rem</text>
+  <text x="248" y="157" fill="#f0f6fc" font-size="9">padding: 0.6em 1.2em</text>
+  <text x="248" y="170" fill="#8b949e" font-size="8">↑ 0.6 × 14.4px = 8.6px</text>
+  <text x="230" y="200" fill="#8b949e" font-size="9">Uso: padding/radius de componentes</text>
+
+  <!-- ── vw / vh ── -->
+  <rect x="410" y="48" width="185" height="155" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1.5"/>
+  <text x="502" y="70" fill="#d29922" font-size="13" font-weight="700" text-anchor="middle">vw / vh</text>
+  <text x="502" y="86" fill="#8b949e" font-size="9" text-anchor="middle">1% del ancho / alto del viewport</text>
+  <!-- viewport diagram -->
+  <rect x="425" y="96" width="155" height="90" rx="3" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <!-- vw arrow horizontal -->
+  <line x1="430" y1="108" x2="575" y2="108" stroke="#d29922" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <text x="502" y="120" fill="#d29922" font-size="9" text-anchor="middle">100vw</text>
+  <!-- vh arrow vertical -->
+  <line x1="440" y1="100" x2="440" y2="183" stroke="#d29922" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <text x="452" y="160" fill="#d29922" font-size="9">100vh</text>
+  <!-- hero example -->
+  <rect x="455" y="128" width="110" height="50" rx="2" fill="#1e2d3d"/>
+  <text x="510" y="148" fill="#d29922" font-size="9" text-anchor="middle">min-height: 100vh</text>
+  <text x="510" y="162" fill="#8b949e" font-size="8" text-anchor="middle">Hero section</text>
+  <text x="425" y="200" fill="#8b949e" font-size="9">Uso: hero, sidebar full-height</text>
+
+  <!-- ── %  + clamp ── -->
+  <rect x="605" y="48" width="195" height="155" rx="8" fill="#161b22" stroke="#e34f26" stroke-width="1.5"/>
+  <text x="702" y="70" fill="#e34f26" font-size="13" font-weight="700" text-anchor="middle">% · clamp()</text>
+  <text x="702" y="86" fill="#8b949e" font-size="9" text-anchor="middle">Relativo al padre / valor fluido</text>
+  <!-- % bar -->
+  <rect x="620" y="96" width="165" height="14" rx="3" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="620" y="96" width="148" height="14" rx="3" fill="#21262d"/>
+  <rect x="620" y="96" width="90" height="14" rx="3" fill="#e34f26"/>
+  <text x="702" y="108" fill="#f0f6fc" font-size="8" font-weight="600" text-anchor="middle">width: 90%</text>
+  <!-- clamp diagram -->
+  <rect x="620" y="118" width="165" height="70" rx="3" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <text x="628" y="132" fill="#8b949e" font-size="9">clamp(min, val, max)</text>
+  <!-- bar with clamp zones -->
+  <rect x="628" y="138" width="149" height="12" rx="2" fill="#21262d"/>
+  <rect x="628" y="138" width="30" height="12" rx="2" fill="#264de4"/>
+  <rect x="658" y="138" width="89" height="12" fill="#e34f26"/>
+  <rect x="747" y="138" width="30" height="12" rx="2" fill="#3fb950"/>
+  <text x="643" y="148" fill="#fff" font-size="7" text-anchor="middle">min</text>
+  <text x="702" y="148" fill="#fff" font-size="7" text-anchor="middle">fluid</text>
+  <text x="762" y="148" fill="#fff" font-size="7" text-anchor="middle">max</text>
+  <text x="628" y="166" fill="#f0f6fc" font-size="8">h1 { font-size: clamp(</text>
+  <text x="628" y="176" fill="#f0f6fc" font-size="8">  1.75rem, 5vw, 3.5rem); }</text>
+  <text x="620" y="200" fill="#8b949e" font-size="9">Uso: containers, tipografía fluida</text>
+
+  <defs>
+    <marker id="arr2" markerWidth="5" markerHeight="5" refX="4" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L5,2.5 z" fill="#d29922"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom comparison table -->
+  <rect x="20" y="218" width="780" height="168" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="410" y="238" fill="#f0f6fc" font-size="12" font-weight="700" text-anchor="middle">Cuándo usar cada unidad</text>
+  <!-- header row -->
+  <rect x="28" y="245" width="760" height="22" rx="4" fill="#21262d"/>
+  <text x="120" y="260" fill="#8b949e" font-size="10" font-weight="600" text-anchor="middle">Unidad</text>
+  <text x="370" y="260" fill="#8b949e" font-size="10" font-weight="600" text-anchor="middle">Úsala cuando…</text>
+  <text x="672" y="260" fill="#8b949e" font-size="10" font-weight="600" text-anchor="middle">Ejemplos</text>
+  <!-- rows -->
+  <line x1="28" y1="267" x2="788" y2="267" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="279" fill="#264de4" font-size="10" font-weight="700" text-anchor="middle">rem</text>
+  <text x="370" y="279" fill="#f0f6fc" font-size="10" text-anchor="middle">El valor es global y debe escalar con el navegador</text>
+  <text x="672" y="279" fill="#8b949e" font-size="10" text-anchor="middle">font-size, padding, margin, gap</text>
+  <line x1="28" y1="284" x2="788" y2="284" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="296" fill="#3fb950" font-size="10" font-weight="700" text-anchor="middle">em</text>
+  <text x="370" y="296" fill="#f0f6fc" font-size="10" text-anchor="middle">El valor debe escalar con el texto del propio componente</text>
+  <text x="672" y="296" fill="#8b949e" font-size="10" text-anchor="middle">padding de botones, border-radius</text>
+  <line x1="28" y1="301" x2="788" y2="301" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="313" fill="#d29922" font-size="10" font-weight="700" text-anchor="middle">vw / vh</text>
+  <text x="370" y="313" fill="#f0f6fc" font-size="10" text-anchor="middle">El elemento debe ocupar una fracción del viewport</text>
+  <text x="672" y="313" fill="#8b949e" font-size="10" text-anchor="middle">hero min-height, font-size fluido</text>
+  <line x1="28" y1="318" x2="788" y2="318" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="330" fill="#8b949e" font-size="10" font-weight="700" text-anchor="middle">%</text>
+  <text x="370" y="330" fill="#f0f6fc" font-size="10" text-anchor="middle">El tamaño depende del contenedor padre</text>
+  <text x="672" y="330" fill="#8b949e" font-size="10" text-anchor="middle">width: 90%, columnas fluidas</text>
+  <line x1="28" y1="335" x2="788" y2="335" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="347" fill="#e34f26" font-size="10" font-weight="700" text-anchor="middle">clamp()</text>
+  <text x="370" y="347" fill="#f0f6fc" font-size="10" text-anchor="middle">El valor debe ser fluido con un mínimo y máximo fijos</text>
+  <text x="672" y="347" fill="#8b949e" font-size="10" text-anchor="middle">headings, spacing de secciones</text>
+  <line x1="28" y1="352" x2="788" y2="352" stroke="#30363d" stroke-width="1"/>
+  <text x="120" y="364" fill="#8b949e" font-size="10" font-weight="700" text-anchor="middle">px</text>
+  <text x="370" y="364" fill="#f0f6fc" font-size="10" text-anchor="middle">El valor NO debe escalar (detalles finos)</text>
+  <text x="672" y="364" fill="#8b949e" font-size="10" text-anchor="middle">border: 1px, box-shadow, outline</text>
+  <!-- vertical dividers -->
+  <line x1="220" y1="245" x2="220" y2="370" stroke="#30363d" stroke-width="1"/>
+  <line x1="540" y1="245" x2="540" y2="370" stroke="#30363d" stroke-width="1"/>
+</svg>

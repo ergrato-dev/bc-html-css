@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 01 — Mobile-first</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">DevBlog</a>
+      <nav aria-label="Navegación principal">
+        <ul class="site-nav">
+          <li><a href="#" class="nav-link nav-link--active" aria-current="page">Inicio</a></li>
+          <li><a href="#" class="nav-link">Artículos</a></li>
+          <li><a href="#" class="nav-link">Proyectos</a></li>
+          <li><a href="#" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero-title">Desarrollo web moderno</h1>
+        <p class="hero-subtitle">Artículos, tutoriales y recursos para desarrolladores frontend</p>
+        <a href="#articles" class="btn btn--primary">Ver artículos</a>
+      </div>
+    </section>
+
+    <section id="articles" class="articles-section">
+      <div class="container">
+        <h2 class="section-title">Últimos artículos</h2>
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-tag">CSS</div>
+            <h3 class="card-title">Guía completa de CSS Grid</h3>
+            <p class="card-body">Aprende a construir layouts bidimensionales con CSS Grid usando grid-template-areas, auto-fit y minmax.</p>
+            <a href="#" class="card-link">Leer más →</a>
+          </article>
+          <article class="card">
+            <div class="card-tag">JavaScript</div>
+            <h3 class="card-title">Async/Await explicado</h3>
+            <p class="card-body">Simplifica el código asíncrono usando async/await en lugar de cadenas de promesas complejas.</p>
+            <a href="#" class="card-link">Leer más →</a>
+          </article>
+          <article class="card">
+            <div class="card-tag">HTML</div>
+            <h3 class="card-title">HTML5 semántico</h3>
+            <p class="card-body">Por qué las etiquetas semánticas mejoran la accesibilidad, el SEO y la mantenibilidad del código.</p>
+            <a href="#" class="card-link">Leer más →</a>
+          </article>
+          <article class="card">
+            <div class="card-tag">CSS</div>
+            <h3 class="card-title">Variables CSS sin framework</h3>
+            <p class="card-body">Crea un sistema de design tokens con CSS Custom Properties sin necesidad de Sass ni PostCSS.</p>
+            <a href="#" class="card-link">Leer más →</a>
+          </article>
+          <article class="card">
+            <div class="card-tag">a11y</div>
+            <h3 class="card-title">Accesibilidad desde cero</h3>
+            <p class="card-body">Los fundamentos WCAG que todo frontend debe conocer: contraste, navegación por teclado y ARIA.</p>
+            <a href="#" class="card-link">Leer más →</a>
+          </article>
+          <article class="card">
+            <div class="card-tag">Rendimiento</div>
+            <h3 class="card-title">Web Vitals en la práctica</h3>
+            <p class="card-body">Cómo medir y mejorar LCP, CLS y INP usando Chrome DevTools y PageSpeed Insights.</p>
+            <a href="#" class="card-link">Leer más →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 DevBlog · Hecho con HTML + CSS puro</p>
+    </div>
+  </footer>
+
+</body>
+</html>

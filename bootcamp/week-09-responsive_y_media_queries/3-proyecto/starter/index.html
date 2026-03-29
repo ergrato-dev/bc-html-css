@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Craft Studio — Diseño Web Moderno</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HEADER — navegación sticky                  -->
+  <!-- ============================================ -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#" class="brand">Craft Studio</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a href="#features" class="nav-link">Servicios</a></li>
+            <li><a href="#testimonials" class="nav-link">Clientes</a></li>
+            <li><a href="#cta" class="nav-link">Contacto</a></li>
+            <li><a href="#cta" class="nav-link btn-nav">Empezar</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- HERO — título clamp + 100vh                 -->
+  <!-- ============================================ -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">Diseño web moderno</span>
+        <h1 class="hero-title">Creamos experiencias digitales que convierten</h1>
+        <p class="hero-subtitle">Diseño responsive, rendimiento optimizado y código limpio para que tu negocio brille en todos los dispositivos.</p>
+        <div class="btn-group">
+          <a href="#cta" class="btn btn--primary">Ver proyectos</a>
+          <a href="#features" class="btn btn--outline">Nuestros servicios</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FEATURES — grid auto-fit                    -->
+  <!-- ============================================ -->
+  <section class="features" id="features">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-eyebrow">Lo que hacemos</span>
+        <h2 class="section-title">Servicios diseñados para crecer</h2>
+        <p class="section-subtitle">Soluciones completas para proyectos web de cualquier escala.</p>
+      </header>
+
+      <ul class="features-grid">
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🎨</span>
+          <h3 class="feature-title">UI Design</h3>
+          <p class="feature-desc">Interfaces limpias y modernas basadas en sistemas de diseño coherentes y escalables.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">📱</span>
+          <h3 class="feature-title">Responsive Development</h3>
+          <p class="feature-desc">Código HTML5 + CSS3 mobile-first que funciona en cualquier pantalla desde 320px.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">⚡</span>
+          <h3 class="feature-title">Performance</h3>
+          <p class="feature-desc">Optimización de carga, Core Web Vitals y mejores prácticas para un sitio rápido.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">♿</span>
+          <h3 class="feature-title">Accesibilidad</h3>
+          <p class="feature-desc">Cumplimiento WCAG AA, semántica correcta y navegación por teclado incluida.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🔎</span>
+          <h3 class="feature-title">SEO Técnico</h3>
+          <p class="feature-desc">Estructura semántica, meta tags, Open Graph y datos estructurados para buscadores.</p>
+        </li>
+        <li class="feature-card">
+          <span class="feature-icon" aria-hidden="true">🛠️</span>
+          <h3 class="feature-title">Mantenimiento</h3>
+          <p class="feature-desc">Soporte continuo, actualizaciones de seguridad y mejoras iterativas del producto.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- TESTIMONIALS — 2 col en tablet+             -->
+  <!-- ============================================ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <header class="section-header">
+        <span class="section-eyebrow">Clientes felices</span>
+        <h2 class="section-title">Lo que dicen de nosotros</h2>
+      </header>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <blockquote class="testimonial-text">"Rediseñaron nuestro sitio con Mobile-first y las conversiones aumentaron un 40% en el primer mes."</blockquote>
+          <footer class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=1" alt="Foto de María López" class="author-avatar" width="48" height="48" loading="lazy" />
+            <div>
+              <p class="author-name">María López</p>
+              <p class="author-role">CEO, TechStartup</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="testimonial-card">
+          <blockquote class="testimonial-text">"El resultado final superó todas las expectativas: rápido, accesible y visualmente impresionante."</blockquote>
+          <footer class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=3" alt="Foto de Carlos Ruiz" class="author-avatar" width="48" height="48" loading="lazy" />
+            <div>
+              <p class="author-name">Carlos Ruiz</p>
+              <p class="author-role">CTO, DigitalAgency</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="testimonial-card">
+          <blockquote class="testimonial-text">"Implementaron CSS Grid y el layout es perfectamente fluido en cualquier dispositivo. Excelente trabajo."</blockquote>
+          <footer class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=5" alt="Foto de Ana García" class="author-avatar" width="48" height="48" loading="lazy" />
+            <div>
+              <p class="author-name">Ana García</p>
+              <p class="author-role">Product Manager, E-commerce</p>
+            </div>
+          </footer>
+        </article>
+
+        <article class="testimonial-card">
+          <blockquote class="testimonial-text">"Muy profesionales. El código CSS que entregaron está documentado con Custom Properties y es fácil de mantener."</blockquote>
+          <footer class="testimonial-author">
+            <img src="https://i.pravatar.cc/48?img=8" alt="Foto de Pedro Sanz" class="author-avatar" width="48" height="48" loading="lazy" />
+            <div>
+              <p class="author-name">Pedro Sanz</p>
+              <p class="author-role">Director IT, MedTech</p>
+            </div>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- CTA — sección centrada con form             -->
+  <!-- ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">¿Listo para lanzar tu proyecto?</h2>
+        <p class="cta-subtitle">Cuéntanos tu idea y te hacemos una propuesta sin compromiso.</p>
+        <form class="cta-form" action="#" novalidate>
+          <div class="form-row">
+            <label for="email-cta" class="sr-only">Tu correo electrónico</label>
+            <input
+              type="email"
+              id="email-cta"
+              name="email"
+              class="form-input"
+              placeholder="tu@correo.com"
+              required
+              autocomplete="email"
+            />
+            <button type="submit" class="btn btn--primary">Empezar ahora</button>
+          </div>
+          <p class="form-note">Sin spam. Respuesta en menos de 24h.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER — columnas responsive                -->
+  <!-- ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="brand">Craft Studio</p>
+          <p class="footer-tagline">Diseño web moderno y accesible.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Navegación del pie de página">
+          <h3 class="footer-nav-title">Servicios</h3>
+          <ul>
+            <li><a href="#" class="footer-link">UI Design</a></li>
+            <li><a href="#" class="footer-link">Responsive Dev</a></li>
+            <li><a href="#" class="footer-link">Performance</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-nav" aria-label="Empresa">
+          <h3 class="footer-nav-title">Empresa</h3>
+          <ul>
+            <li><a href="#" class="footer-link">Sobre nosotros</a></li>
+            <li><a href="#" class="footer-link">Blog</a></li>
+            <li><a href="#" class="footer-link">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="footer-copy">© 2025 Craft Studio. Construido con HTML5 + CSS3.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 03 — Breakpoints</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Ir al inicio">AppLayout</a>
+      <nav aria-label="Navegación principal">
+        <ul class="main-nav">
+          <li><a href="#" class="nav-link nav-link--active" aria-current="page">Inicio</a></li>
+          <li><a href="#" class="nav-link">Productos</a></li>
+          <li><a href="#" class="nav-link">Blog</a></li>
+          <li><a href="#" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== APP LAYOUT (sidebar + content en desktop) ========== -->
+  <div class="app-layout">
+
+    <!-- Sidebar (solo visible como columna lateral en desktop) -->
+    <aside class="app-sidebar" aria-label="Filtros">
+      <h2 class="sidebar-title">Filtros</h2>
+      <ul class="filter-list">
+        <li><label class="filter-item"><input type="checkbox" checked> Activos</label></li>
+        <li><label class="filter-item"><input type="checkbox"> Archivados</label></li>
+        <li><label class="filter-item"><input type="checkbox" checked> CSS</label></li>
+        <li><label class="filter-item"><input type="checkbox"> JavaScript</label></li>
+        <li><label class="filter-item"><input type="checkbox" checked> HTML</label></li>
+      </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="app-content" id="main-content">
+      <div class="content-header">
+        <h1 class="page-title">Recursos destacados</h1>
+        <span class="results-count">6 resultados</span>
+      </div>
+
+      <div class="page-grid">
+        <article class="resource-card">
+          <div class="card-badge badge--css">CSS</div>
+          <h3 class="card-title">CSS Grid completo</h3>
+          <p class="card-desc">Guía visual con 40 ejemplos interactivos de grid-template-areas, auto-fit y minmax.</p>
+          <a href="#" class="card-cta">Ver recurso</a>
+        </article>
+        <article class="resource-card">
+          <div class="card-badge badge--html">HTML</div>
+          <h3 class="card-title">Formularios accesibles</h3>
+          <p class="card-desc">Buenas prácticas para forms semánticos: label, fieldset, legend, aria-describedby.</p>
+          <a href="#" class="card-cta">Ver recurso</a>
+        </article>
+        <article class="resource-card">
+          <div class="card-badge badge--css">CSS</div>
+          <h3 class="card-title">Flexbox en 30 minutos</h3>
+          <p class="card-desc">Los conceptos esenciales: ejes, justify-content, align-items y flex shorthand.</p>
+          <a href="#" class="card-cta">Ver recurso</a>
+        </article>
+        <article class="resource-card">
+          <div class="card-badge badge--html">HTML</div>
+          <h3 class="card-title">Semántica HTML5</h3>
+          <p class="card-desc">Las etiquetas que diferencian a un desarrollador frontend profesional del resto.</p>
+          <a href="#" class="card-cta">Ver recurso</a>
+        </article>
+        <article class="resource-card">
+          <div class="card-badge badge--css">CSS</div>
+          <h3 class="card-title">Variables CSS</h3>
+          <p class="card-desc">Crea un sistema de design tokens escalable con Custom Properties sin ningún preprocesador.</p>
+          <a href="#" class="card-cta">Ver recurso</a>
+        </article>
+        <article class="resource-card">
+          <div class="card-badge badge--html">HTML</div>
+          <h3 class="card-title">Accesibilidad WCAG 2.1</h3>
+          <p class="card-desc">Implementa roles ARIA, contraste de color y navegación por teclado en tu próximo proyecto.</p>
+          <a href="#" class="card-cta">Ver recurso</a>
+        </article>
+      </div>
+    </main>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Ejercicio 03 · Semana 09 — Bootcamp HTML + CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
