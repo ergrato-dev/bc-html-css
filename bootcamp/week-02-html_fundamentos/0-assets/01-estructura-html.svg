@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="820" height="480" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="820" height="480" fill="#0d1117"/>
+
+  <!-- Título -->
+  <text x="410" y="28" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">Estructura de un documento HTML5</text>
+
+  <!-- DOCTYPE -->
+  <rect x="290" y="44" width="240" height="26" rx="4" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="410" y="61" text-anchor="middle" fill="#8b949e" font-size="12" font-family="'Fira Code', monospace">&lt;!DOCTYPE html&gt;</text>
+
+  <!-- html -->
+  <rect x="230" y="84" width="360" height="370" rx="6" fill="#161b22" stroke="#e34f26" stroke-width="1.5"/>
+  <text x="265" y="101" fill="#e34f26" font-size="12" font-family="'Fira Code', monospace">&lt;html lang="es"&gt;</text>
+  <text x="265" y="445" fill="#e34f26" font-size="12" font-family="'Fira Code', monospace">&lt;/html&gt;</text>
+
+  <!-- head -->
+  <rect x="255" y="112" width="310" height="130" rx="4" fill="#0d1117" stroke="#264de4" stroke-width="1.5"/>
+  <text x="275" y="129" fill="#264de4" font-size="12" font-family="'Fira Code', monospace">&lt;head&gt;</text>
+  <text x="295" y="149" fill="#79c0ff" font-size="11" font-family="'Fira Code', monospace">&lt;meta charset="UTF-8"/&gt;</text>
+  <text x="295" y="166" fill="#79c0ff" font-size="11" font-family="'Fira Code', monospace">&lt;meta name="viewport" .../&gt;</text>
+  <text x="295" y="183" fill="#a5d6ff" font-size="11" font-family="'Fira Code', monospace">&lt;title&gt;Mi Página&lt;/title&gt;</text>
+  <text x="295" y="200" fill="#7ee787" font-size="11" font-family="'Fira Code', monospace">&lt;link rel="stylesheet" .../&gt;</text>
+  <text x="275" y="232" fill="#264de4" font-size="12" font-family="'Fira Code', monospace">&lt;/head&gt;</text>
+
+  <!-- Etiquetas del head -->
+  <text x="590" y="150" fill="#79c0ff" font-size="10">codificación</text>
+  <text x="590" y="166" fill="#79c0ff" font-size="10">responsive</text>
+  <text x="590" y="183" fill="#a5d6ff" font-size="10">título pestaña</text>
+  <text x="590" y="200" fill="#7ee787" font-size="10">vincular CSS</text>
+  <line x1="565" y1="149" x2="588" y2="149" stroke="#30363d" stroke-width="1"/>
+  <line x1="565" y1="165" x2="588" y2="165" stroke="#30363d" stroke-width="1"/>
+  <line x1="565" y1="182" x2="588" y2="182" stroke="#30363d" stroke-width="1"/>
+  <line x1="565" y1="199" x2="588" y2="199" stroke="#30363d" stroke-width="1"/>
+
+  <!-- body -->
+  <rect x="255" y="248" width="310" height="178" rx="4" fill="#0d1117" stroke="#7ee787" stroke-width="1.5"/>
+  <text x="275" y="265" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">&lt;body&gt;</text>
+  <text x="295" y="286" fill="#e34f26" font-size="11" font-family="'Fira Code', monospace">&lt;header&gt; ... &lt;/header&gt;</text>
+  <text x="310" y="302" fill="#8b949e" font-size="11" font-family="'Fira Code', monospace">&lt;nav&gt; ... &lt;/nav&gt;</text>
+  <text x="295" y="318" fill="#e34f26" font-size="11" font-family="'Fira Code', monospace">&lt;main&gt;</text>
+  <text x="314" y="334" fill="#8b949e" font-size="11" font-family="'Fira Code', monospace">&lt;section&gt; ... &lt;/section&gt;</text>
+  <text x="314" y="350" fill="#8b949e" font-size="11" font-family="'Fira Code', monospace">&lt;article&gt; ... &lt;/article&gt;</text>
+  <text x="295" y="366" fill="#e34f26" font-size="11" font-family="'Fira Code', monospace">&lt;/main&gt;</text>
+  <text x="295" y="382" fill="#e34f26" font-size="11" font-family="'Fira Code', monospace">&lt;footer&gt; ... &lt;/footer&gt;</text>
+  <text x="275" y="415" fill="#7ee787" font-size="12" font-family="'Fira Code', monospace">&lt;/body&gt;</text>
+
+  <!-- Etiquetas semánticas -->
+  <text x="20" y="287" fill="#e34f26" font-size="10">cabecera</text>
+  <text x="20" y="303" fill="#8b949e" font-size="10">navegación</text>
+  <text x="20" y="319" fill="#e34f26" font-size="10">contenido</text>
+  <text x="20" y="337" fill="#8b949e" font-size="10">sección</text>
+  <text x="20" y="353" fill="#8b949e" font-size="10">artículo</text>
+  <text x="20" y="383" fill="#e34f26" font-size="10">pie de página</text>
+  <line x1="60" y1="285" x2="80" y2="285" stroke="#30363d" stroke-width="1"/>
+  <line x1="60" y1="301" x2="80" y2="301" stroke="#30363d" stroke-width="1"/>
+  <line x1="60" y1="317" x2="80" y2="317" stroke="#30363d" stroke-width="1"/>
+  <line x1="60" y1="335" x2="80" y2="335" stroke="#30363d" stroke-width="1"/>
+  <line x1="60" y1="351" x2="80" y2="351" stroke="#30363d" stroke-width="1"/>
+  <line x1="60" y1="381" x2="80" y2="381" stroke="#30363d" stroke-width="1"/>
+  <!-- flechas hacia código -->
+  <text x="84" y="247" fill="#264de4" font-size="10" font-weight="600">NO visible</text>
+  <text x="84" y="258" fill="#264de4" font-size="10">metadatos</text>
+  <text x="84" y="417" fill="#7ee787" font-size="10" font-weight="600">SÍ visible</text>
+  <text x="84" y="428" fill="#7ee787" font-size="10">contenido</text>
+
+  <text x="410" y="468" text-anchor="middle" fill="#4d5566" font-size="10">Anatomía de un documento HTML5 — head (invisible) vs body (visible)</text>
+</svg>

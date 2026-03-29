@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" font-family="Inter, Roboto, system-ui, sans-serif">
+  <rect width="820" height="500" fill="#0d1117"/>
+  <text x="410" y="24" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">Etiquetas semánticas HTML5 — Layout de página</text>
+
+  <!-- Layout visual de la página -->
+  <!-- header -->
+  <rect x="60" y="40" width="540" height="58" rx="4" fill="#1c2128" stroke="#e34f26" stroke-width="2"/>
+  <text x="330" y="65" text-anchor="middle" fill="#e34f26" font-size="13" font-weight="600">&lt;header&gt;</text>
+  <text x="330" y="82" text-anchor="middle" fill="#8b949e" font-size="11">logo · nombre del sitio · slogan</text>
+
+  <!-- nav (dentro de header o independiente) -->
+  <rect x="60" y="108" width="540" height="38" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1.5"/>
+  <text x="330" y="130" text-anchor="middle" fill="#264de4" font-size="12" font-weight="600">&lt;nav&gt; Inicio | Proyectos | Contacto &lt;/nav&gt;</text>
+
+  <!-- main -->
+  <rect x="60" y="156" width="540" height="234" rx="4" fill="#1c2128" stroke="#7ee787" stroke-width="2"/>
+  <text x="100" y="176" fill="#7ee787" font-size="12" font-weight="600">&lt;main&gt;</text>
+
+  <!-- section + article -->
+  <rect x="75" y="184" width="350" height="192" rx="4" fill="#161b22" stroke="#79c0ff" stroke-width="1.5"/>
+  <text x="100" y="202" fill="#79c0ff" font-size="12">&lt;section&gt;</text>
+  <rect x="90" y="210" width="320" height="70" rx="3" fill="#0d1117" stroke="#8b949e" stroke-width="1"/>
+  <text x="110" y="228" fill="#8b949e" font-size="11">&lt;article&gt;</text>
+  <text x="110" y="244" fill="#c9d1d9" font-size="11">contenido autocontenido,</text>
+  <text x="110" y="259" fill="#c9d1d9" font-size="11">puede leerse de forma independiente</text>
+  <text x="110" y="274" fill="#8b949e" font-size="11">&lt;/article&gt;</text>
+  <rect x="90" y="288" width="320" height="28" rx="3" fill="#0d1117" stroke="#8b949e" stroke-width="1"/>
+  <text x="250" y="307" text-anchor="middle" fill="#8b949e" font-size="11">&lt;article&gt; … &lt;/article&gt;</text>
+  <text x="100" y="367" fill="#79c0ff" font-size="12">&lt;/section&gt;</text>
+
+  <!-- aside -->
+  <rect x="435" y="184" width="150" height="192" rx="4" fill="#161b22" stroke="#ff7b6b" stroke-width="1.5"/>
+  <text x="510" y="202" text-anchor="middle" fill="#ff7b6b" font-size="12">&lt;aside&gt;</text>
+  <text x="510" y="226" text-anchor="middle" fill="#8b949e" font-size="10">contenido</text>
+  <text x="510" y="242" text-anchor="middle" fill="#8b949e" font-size="10">secundario</text>
+  <text x="510" y="258" text-anchor="middle" fill="#8b949e" font-size="10">relacionado</text>
+  <text x="510" y="300" text-anchor="middle" fill="#8b949e" font-size="10">widget,</text>
+  <text x="510" y="316" text-anchor="middle" fill="#8b949e" font-size="10">publicidad,</text>
+  <text x="510" y="332" text-anchor="middle" fill="#8b949e" font-size="10">bio del autor</text>
+  <text x="510" y="367" text-anchor="middle" fill="#ff7b6b" font-size="12">&lt;/aside&gt;</text>
+
+  <text x="100" y="382" fill="#7ee787" font-size="12">&lt;/main&gt;</text>
+
+  <!-- footer -->
+  <rect x="60" y="400" width="540" height="48" rx="4" fill="#1c2128" stroke="#e34f26" stroke-width="2"/>
+  <text x="330" y="421" text-anchor="middle" fill="#e34f26" font-size="12" font-weight="600">&lt;footer&gt;</text>
+  <text x="330" y="438" text-anchor="middle" fill="#8b949e" font-size="11">© 2026 · Links secundarios · Políticas de privacidad</text>
+
+  <!-- Leyenda derecha -->
+  <text x="640" y="68" fill="#e34f26" font-size="11" font-weight="600">header</text>
+  <text x="640" y="83" fill="#8b949e" font-size="10">cabecera del sitio</text>
+  <text x="640" y="128" fill="#264de4" font-size="11" font-weight="600">nav</text>
+  <text x="640" y="143" fill="#8b949e" font-size="10">navegación principal</text>
+  <text x="640" y="185" fill="#7ee787" font-size="11" font-weight="600">main</text>
+  <text x="640" y="200" fill="#8b949e" font-size="10">contenido único</text>
+  <text x="640" y="245" fill="#79c0ff" font-size="11" font-weight="600">section</text>
+  <text x="640" y="260" fill="#8b949e" font-size="10">grupo temático</text>
+  <text x="640" y="305" fill="#8b949e" font-size="11" font-weight="600">article</text>
+  <text x="640" y="320" fill="#8b949e" font-size="10">autocontenido</text>
+  <text x="640" y="360" fill="#ff7b6b" font-size="11" font-weight="600">aside</text>
+  <text x="640" y="375" fill="#8b949e" font-size="10">complementario</text>
+  <text x="640" y="420" fill="#e34f26" font-size="11" font-weight="600">footer</text>
+  <text x="640" y="435" fill="#8b949e" font-size="10">pie de página</text>
+
+  <text x="410" y="488" text-anchor="middle" fill="#4d5566" font-size="10">Etiquetas semánticas HTML5 — cada zona tiene un rol específico en el documento</text>
+</svg>

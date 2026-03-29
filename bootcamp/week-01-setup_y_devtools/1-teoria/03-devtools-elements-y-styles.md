@@ -57,7 +57,7 @@ Método 2 — Clic derecho:
 → El cambio se refleja al instante en la página
 ```
 
-![Diagrama del panel Elements y la relación DOM ↔ página](../0-assets/devtools-panels.svg)
+![Diagrama del panel Elements y la relación DOM ↔ página](../0-assets/02-devtools-panels.svg)
 
 ---
 

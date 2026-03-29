@@ -13,7 +13,7 @@
 
 **Visual Studio Code** es un editor de código fuente gratuito y de código abierto creado por Microsoft. Es el estándar de la industria para desarrollo web: tiene IntelliSense (autocompletado inteligente), integración nativa con Git y un ecosistema de extensiones enorme.
 
-![Interfaz de VS Code con sus zonas principales anotadas](../0-assets/vscode-interfaz.svg)
+![Interfaz de VS Code con sus zonas principales anotadas](../0-assets/01-vscode-interfaz.svg)
 
 > 🔗 Descarga: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 

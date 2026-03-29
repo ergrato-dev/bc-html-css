@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 02 — Semántica HTML5</title>
+    <style>
+      body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; padding: 2rem; line-height: 1.6; }
+      .comparacion { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
+      .bloque { background: #161b22; border: 1px solid #30363d; padding: 1.5rem; border-radius: 6px; }
+      .mal { border-color: #da3633; }
+      .bien { border-color: #3fb950; }
+      code { background: #21262d; padding: 2px 6px; border-radius: 3px; font-size: 0.9rem; }
+      h2 { color: #e34f26; }
+    </style>
+  </head>
+  <body>
+    <h1>Semántica HTML5 — Divitis vs Etiquetas semánticas</h1>
+
+    <!-- ============================================================ -->
+    <!-- PASO 1: Divitis — el problema                               -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>PASO 1 — El problema: Divitis ❌</h2>
+      <p>Este código funciona visualmente pero no tiene semántica:</p>
+      <div class="bloque mal">
+        <div>Header del sitio</div>
+        <div>
+          <div>Inicio</div>
+          <div>Blog</div>
+          <div>Contacto</div>
+        </div>
+        <div>
+          <div>Mi Blog Personal</div>
+          <div>
+            <div>Primer Post — Aprendiendo HTML</div>
+            <div>Contenido del post sobre HTML semántico.</div>
+          </div>
+        </div>
+        <div>© 2026</div>
+      </div>
+      <p>Un lector de pantalla no puede distinguir qué zona es qué. Google tampoco.</p>
+    </section> -->
+
+
+    <!-- ============================================================ -->
+    <!-- PASO 2: Semántica — la solución                             -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>PASO 2 — La solución: Etiquetas semánticas ✅</h2>
+      <p>El mismo contenido con etiquetas que describen su rol:</p>
+      <div class="bloque bien">
+        <header>
+          <h1>Mi Blog Personal</h1>
+          <nav>
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <section id="blog">
+            <h2>Últimas entradas</h2>
+            <article>
+              <h3>Aprendiendo HTML Semántico</h3>
+              <p>Las etiquetas semánticas describen el rol del contenido.</p>
+            </article>
+          </section>
+        </main>
+        <footer>
+          <p><small>© 2026 Mi Blog Personal</small></p>
+        </footer>
+      </div>
+    </section> -->
+
+
+    <!-- ============================================================ -->
+    <!-- PASO 3: Cuándo sí usar <div>                               -->
+    <!-- ============================================================ -->
+
+    <!-- <section>
+      <h2>PASO 3 — Cuándo sí debe usarse <code>&lt;div&gt;</code></h2>
+      <ul>
+        <li>Como contenedor de layout cuando no existe etiqueta semántica</li>
+        <li>Para agrupar elementos que se posicionan o animan juntos con CSS/JS</li>
+        <li>Cuando el contenido es verdaderamente genérico y no tiene rol específico</li>
+      </ul>
+      <div class="bloque">
+        <p>Ejemplo correcto de <code>&lt;div&gt;</code>:</p>
+        <div class="card-grid">
+          <!-- div como wrapper de grid de tarjetas, sin etiqueta semántica equivalente -->
+          <article>Tarjeta 1</article>
+          <article>Tarjeta 2</article>
+        </div>
+      </div>
+    </section> -->
+
+  </body>
+</html>
