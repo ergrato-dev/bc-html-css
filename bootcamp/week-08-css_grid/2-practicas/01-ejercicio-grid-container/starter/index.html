@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 01 — Grid Container</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Grid Container</h1>
+    <p>Columnas, filas y la unidad fr</p>
+  </header>
+
+  <main class="page-content">
+
+    <!-- PASO 1: display grid -->
+    <section class="demo-section">
+      <h2>Paso 1 — <code>display: grid</code></h2>
+      <p>Activa el contexto de cuadrícula. Por defecto: una columna.</p>
+      <div class="grid-basic">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+        <div class="box">Item 3</div>
+      </div>
+    </section>
+
+    <!-- PASO 2: columnas fr -->
+    <section class="demo-section">
+      <h2>Paso 2 — <code>grid-template-columns: repeat(3, 1fr)</code></h2>
+      <p>Tres columnas de igual ancho usando la unidad fr.</p>
+      <div class="grid-cols">
+        <div class="box">1fr</div>
+        <div class="box">1fr</div>
+        <div class="box">1fr</div>
+        <div class="box">1fr</div>
+        <div class="box">1fr</div>
+        <div class="box">1fr</div>
+      </div>
+    </section>
+
+    <!-- PASO 3: columnas mixtas -->
+    <section class="demo-section">
+      <h2>Paso 3 — <code>200px 1fr 2fr</code></h2>
+      <p>Primera columna fija, segunda y tercera proporcionales.</p>
+      <div class="grid-mixed">
+        <div class="box">200px</div>
+        <div class="box">1fr</div>
+        <div class="box">2fr</div>
+      </div>
+    </section>
+
+    <!-- PASO 4: grid-auto-rows -->
+    <section class="demo-section">
+      <h2>Paso 4 — <code>grid-auto-rows</code></h2>
+      <p>Todas las filas implícitas tienen la misma altura.</p>
+      <div class="grid-rows">
+        <div class="box">A</div>
+        <div class="box">B</div>
+        <div class="box">C</div>
+        <div class="box">D</div>
+        <div class="box">E</div>
+        <div class="box">F</div>
+        <div class="box">G</div>
+        <div class="box">H</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 02 — Grid Areas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- DEMO 1: Layout con grid-template-areas      -->
+  <!-- Pasos 1, 2 y 4 actúan sobre esta estructura -->
+  <!-- ============================================ -->
+  <div class="page-grid">
+
+    <header class="pg-header">
+      <span class="label">header</span>
+      <small>grid-area: header — ocupa las 2 columnas</small>
+    </header>
+
+    <aside class="pg-sidebar">
+      <span class="label">sidebar</span>
+      <small>grid-area: sidebar — columna fija 220px</small>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Usuarios</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="pg-main">
+      <span class="label">main</span>
+      <small>grid-area: main — columna flexible 1fr</small>
+
+      <!-- ============================================ -->
+      <!-- DEMO 2 (Paso 3): item con span              -->
+      <!-- ============================================ -->
+      <section class="inner-grid">
+        <article class="featured">
+          <span class="tag">featured</span>
+          <p>grid-column: 1 / -1 — ocupa todas las columnas del inner-grid</p>
+        </article>
+        <article class="card">Tarjeta 1</article>
+        <article class="card">Tarjeta 2</article>
+        <article class="card tall-card">
+          <span class="tag">span 2 filas</span>
+          grid-row: span 2
+        </article>
+        <article class="card">Tarjeta 4</article>
+        <article class="card">Tarjeta 5</article>
+      </section>
+
+    </main>
+
+    <footer class="pg-footer">
+      <span class="label">footer</span>
+      <small>grid-area: footer — ocupa las 2 columnas</small>
+    </footer>
+
+  </div>
+
+</body>
+</html>

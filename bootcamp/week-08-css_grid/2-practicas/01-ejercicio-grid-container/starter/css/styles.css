@@ -1,0 +1,120 @@
+/* ================================================
+   Ejercicio 01 — Grid Container
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header h1 { font-size: 1.5rem; color: var(--color-blue); margin-bottom: 0.25rem; }
+.site-header p  { color: var(--color-text-muted); font-size: 0.9rem; }
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.demo-section {
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.demo-section h2 { font-size: 1rem; margin-bottom: 0.3rem; }
+.demo-section > p { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+
+code {
+  background: #21262d;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--color-orange);
+}
+
+.box {
+  background: var(--color-blue);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ============================================ */
+/* PASO 1: display grid (una columna)           */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-basic {                                */
+/*   display: grid;                             */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 2: repeat(3, 1fr)                       */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-cols {                                 */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(3, 1fr);    */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 3: columnas mixtas                      */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-mixed {                                */
+/*   display: grid;                             */
+/*   grid-template-columns: 200px 1fr 2fr;     */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+/*                                              */
+/* .grid-mixed .box:nth-child(1) { background: var(--color-green); color: #0d1117; } */
+/* .grid-mixed .box:nth-child(2) { background: var(--color-blue); } */
+/* .grid-mixed .box:nth-child(3) { background: var(--color-orange); } */
+
+
+/* ============================================ */
+/* PASO 4: grid-auto-rows                       */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-rows {                                 */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(3, 1fr);    */
+/*   grid-auto-rows: 80px;  /* altura fija para filas implícitas */ */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */

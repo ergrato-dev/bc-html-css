@@ -1,0 +1,120 @@
+/* ================================================
+   Ejercicio 03 — Grid Responsive
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header h1 { font-size: 1.4rem; color: var(--color-blue); margin-bottom: 0.25rem; }
+.site-header p  { color: var(--color-text-muted); font-size: 0.9rem; }
+
+.page-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.demo-section {
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.demo-section h2 { font-size: 1rem; margin-bottom: 0.3rem; }
+.demo-section > p { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+
+code {
+  background: #21262d;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  color: var(--color-orange);
+}
+
+.card {
+  background: var(--color-blue);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.card--orange { background: var(--color-orange); }
+.card--green  { background: #196127; color: var(--color-green); }
+
+
+/* ============================================ */
+/* PASO 1: columnas fijas                       */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-fixed {                                */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(3, 1fr);    */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 2: auto-fill                            */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-fill {                                 */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 3: auto-fit                             */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-fit {                                  */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 4: grid-auto-rows con minmax            */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .grid-rows-control {                         */
+/*   display: grid;                             */
+/*   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+/*   grid-auto-rows: minmax(160px, auto);       */
+/*   gap: var(--spacing-md);                   */
+/* }                                            */

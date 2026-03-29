@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" font-family="Inter, system-ui, sans-serif">
+  <rect width="820" height="400" fill="#0d1117"/>
+  <text x="410" y="28" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="700">CSS Grid — Conceptos Fundamentales</text>
+
+  <!-- ============================
+       LEFT PANEL: Grid anatomy
+  ============================== -->
+  <text x="20" y="52" fill="#8b949e" font-size="11" font-weight="600">Anatomía del Grid</text>
+
+  <!-- Grid container -->
+  <rect x="20" y="60" width="380" height="250" rx="6" fill="#161b22" stroke="#264de4" stroke-width="2"/>
+
+  <!-- Grid cells (3 cols × 3 rows) -->
+  <!-- Row 1 -->
+  <rect x="30" y="70" width="110" height="70" rx="4" fill="#264de4" opacity="0.8"/>
+  <rect x="148" y="70" width="110" height="70" rx="4" fill="#264de4" opacity="0.6"/>
+  <rect x="266" y="70" width="124" height="70" rx="4" fill="#264de4" opacity="0.4"/>
+
+  <!-- Row 2 -->
+  <rect x="30" y="150" width="110" height="70" rx="4" fill="#264de4" opacity="0.5"/>
+  <rect x="148" y="150" width="110" height="70" rx="4" fill="#264de4" opacity="0.7"/>
+  <rect x="266" y="150" width="124" height="70" rx="4" fill="#264de4" opacity="0.3"/>
+
+  <!-- Row 3 -->
+  <rect x="30" y="230" width="110" height="70" rx="4" fill="#264de4" opacity="0.3"/>
+  <rect x="148" y="230" width="110" height="70" rx="4" fill="#264de4" opacity="0.45"/>
+  <rect x="266" y="230" width="124" height="70" rx="4" fill="#264de4" opacity="0.6"/>
+
+  <!-- Text in cells -->
+  <text x="85" y="109" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 1</text>
+  <text x="203" y="109" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 2</text>
+  <text x="328" y="109" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 3</text>
+  <text x="85" y="189" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 4</text>
+  <text x="203" y="189" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 5</text>
+  <text x="328" y="189" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 6</text>
+  <text x="85" y="269" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 7</text>
+  <text x="203" y="269" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 8</text>
+  <text x="328" y="269" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">Item 9</text>
+
+  <!-- Gap arrows -->
+  <line x1="140" y1="105" x2="148" y2="105" stroke="#f0e68c" stroke-width="2"/>
+  <line x1="258" y1="105" x2="266" y2="105" stroke="#f0e68c" stroke-width="2"/>
+  <text x="397" y="109" fill="#f0e68c" font-size="9">gap</text>
+
+  <line x1="85" y1="140" x2="85" y2="150" stroke="#f0e68c" stroke-width="2"/>
+  <text x="397" y="150" fill="#f0e68c" font-size="9">gap</text>
+
+  <!-- Column labels -->
+  <text x="85" y="330" text-anchor="middle" fill="#264de4" font-size="9" font-weight="600">1fr</text>
+  <text x="203" y="330" text-anchor="middle" fill="#264de4" font-size="9" font-weight="600">1fr</text>
+  <text x="328" y="330" text-anchor="middle" fill="#264de4" font-size="9" font-weight="600">1fr</text>
+  <line x1="30" y1="320" x2="390" y2="320" stroke="#264de4" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="205" y="345" text-anchor="middle" fill="#8b949e" font-size="9">grid-template-columns: repeat(3, 1fr)</text>
+
+  <!-- Row labels -->
+  <text x="10" y="109" fill="#3fb950" font-size="9" text-anchor="middle">auto</text>
+  <text x="10" y="189" fill="#3fb950" font-size="9" text-anchor="middle">auto</text>
+  <text x="10" y="269" fill="#3fb950" font-size="9" text-anchor="middle">auto</text>
+  <line x1="20" y1="65" x2="20" y2="305" stroke="#3fb950" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+
+  <!-- Container label -->
+  <text x="390" y="70" fill="#264de4" font-size="9" font-weight="700" text-anchor="end">grid</text>
+  <text x="390" y="82" fill="#264de4" font-size="9" text-anchor="end">container</text>
+
+  <!-- Grid line numbers -->
+  <text x="30" y="62" fill="#8b949e" font-size="9">1</text>
+  <text x="140" y="62" fill="#8b949e" font-size="9">2</text>
+  <text x="258" y="62" fill="#8b949e" font-size="9">3</text>
+  <text x="390" y="62" fill="#8b949e" font-size="9">4 (-1)</text>
+
+  <!-- ============================
+       RIGHT PANEL: fr unit + code
+  ============================== -->
+  <text x="430" y="52" fill="#8b949e" font-size="11" font-weight="600">Unidad fr — Distribución proporcional</text>
+
+  <!-- fr demo: 1fr 2fr 1fr -->
+  <text x="430" y="78" fill="#8b949e" font-size="9">1fr  2fr  1fr → total 4 partes</text>
+  <rect x="430" y="85" width="370" height="50" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <rect x="434" y="89" width="85"  height="42" rx="3" fill="#264de4" opacity="0.85"/>
+  <rect x="521" y="89" width="174" height="42" rx="3" fill="#e34f26" opacity="0.85"/>
+  <rect x="697" y="89" width="99"  height="42" rx="3" fill="#264de4" opacity="0.6"/>
+  <text x="476" y="115" text-anchor="middle" fill="#fff" font-size="9" font-weight="600">1fr = 25%</text>
+  <text x="608" y="115" text-anchor="middle" fill="#fff" font-size="9" font-weight="600">2fr = 50%</text>
+  <text x="746" y="115" text-anchor="middle" fill="#fff" font-size="9" font-weight="600">1fr = 25%</text>
+
+  <!-- fr demo: 240px 1fr -->
+  <text x="430" y="160" fill="#8b949e" font-size="9">240px  1fr → sidebar fija + contenido flexible</text>
+  <rect x="430" y="168" width="370" height="50" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <rect x="434" y="172" width="100" height="42" rx="3" fill="#3fb950" opacity="0.85"/>
+  <rect x="536" y="172" width="260" height="42" rx="3" fill="#e34f26" opacity="0.7"/>
+  <text x="484" y="198" text-anchor="middle" fill="#0d1117" font-size="9" font-weight="600">240px</text>
+  <text x="666" y="198" text-anchor="middle" fill="#fff" font-size="9" font-weight="600">1fr (el resto)</text>
+
+  <!-- Code block -->
+  <rect x="430" y="240" width="370" height="100" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="444" y="260" fill="#8b949e" font-size="10">CSS</text>
+  <text x="444" y="278" fill="#3fb950" font-size="10" font-family="monospace">.grid {</text>
+  <text x="454" y="293" fill="#c9d1d9" font-size="10" font-family="monospace">  display: <tspan fill="#79b8ff">grid</tspan>;</text>
+  <text x="454" y="308" fill="#c9d1d9" font-size="10" font-family="monospace">  grid-template-columns: <tspan fill="#f0e68c">repeat(3, 1fr)</tspan>;</text>
+  <text x="454" y="323" fill="#c9d1d9" font-size="10" font-family="monospace">  gap: <tspan fill="#f0e68c">1rem</tspan>;</text>
+  <text x="444" y="332" fill="#3fb950" font-size="10" font-family="monospace">}</text>
+
+  <!-- Grid vs Flexbox comparison -->
+  <rect x="430" y="355" width="175" height="35" rx="4" fill="#161b22" stroke="#264de4" stroke-width="1"/>
+  <text x="440" y="368" fill="#264de4" font-size="9" font-weight="700">Flexbox →</text>
+  <text x="440" y="381" fill="#8b949e" font-size="9">1 dimensión (fila o columna)</text>
+
+  <rect x="615" y="355" width="185" height="35" rx="4" fill="#161b22" stroke="#e34f26" stroke-width="1"/>
+  <text x="625" y="368" fill="#e34f26" font-size="9" font-weight="700">Grid ⊞</text>
+  <text x="625" y="381" fill="#8b949e" font-size="9">2 dimensiones (filas + columnas)</text>
+</svg>

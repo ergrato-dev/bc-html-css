@@ -1,0 +1,165 @@
+/* ================================================
+   Ejercicio 02 — Grid Areas
+   Descomenta cada sección siguiendo el README
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Estilos base de los elementos del layout */
+.pg-header {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-blue);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pg-sidebar {
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+}
+
+.pg-sidebar ul { list-style: none; margin-top: var(--spacing-md); }
+.pg-sidebar li { padding: 0.4rem 0; border-bottom: 1px solid var(--color-border); }
+.pg-sidebar a  { color: var(--color-text-muted); text-decoration: none; font-size: 0.9rem; }
+.pg-sidebar a:hover { color: var(--color-text); }
+
+.pg-main {
+  padding: var(--spacing-lg);
+  background: var(--color-bg);
+}
+
+.pg-footer {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Estilos decorativos */
+.label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.6);
+}
+
+.tag {
+  display: inline-block;
+  background: var(--color-orange);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+/* Inner grid para demo de span (siempre activo) */
+.inner-grid {
+  margin-top: var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  min-height: 80px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.featured {
+  background: #1c2a4a;
+  border: 2px solid var(--color-blue);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  font-size: 0.85rem;
+}
+
+.featured p { color: var(--color-text-muted); margin-top: 0.3rem; }
+
+
+/* ============================================ */
+/* PASO 1: activar grid-template-areas          */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .page-grid {                                 */
+/*   display: grid;                             */
+/*   grid-template-columns: 220px 1fr;         */
+/*   grid-template-rows: auto 1fr auto;        */
+/*   grid-template-areas:                      */
+/*     "header  header"                         */
+/*     "sidebar main"                           */
+/*     "footer  footer";                        */
+/*   min-height: 100vh;                         */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 2: asignar grid-area a cada hijo        */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .pg-header  { grid-area: header; }           */
+/* .pg-sidebar { grid-area: sidebar; }          */
+/* .pg-main    { grid-area: main; }             */
+/* .pg-footer  { grid-area: footer; }           */
+
+
+/* ============================================ */
+/* PASO 3: item destacado con span              */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* .featured {                                  */
+/*   grid-column: 1 / -1; /* ocupa todo el ancho del inner-grid */ */
+/* }                                            */
+/*                                              */
+/* .tall-card {                                 */
+/*   grid-row: span 2; /* ocupa 2 filas verticales */ */
+/* }                                            */
+
+
+/* ============================================ */
+/* PASO 4: responsive — 1 columna en móvil     */
+/* Descomenta las siguientes líneas:            */
+/* ============================================ */
+/* @media (max-width: 767px) {                  */
+/*   .page-grid {                               */
+/*     grid-template-columns: 1fr;             */
+/*     grid-template-areas:                    */
+/*       "header"                               */
+/*       "main"                                 */
+/*       "sidebar"                              */
+/*       "footer";                              */
+/*   }                                          */
+/* }                                            */

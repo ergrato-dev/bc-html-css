@@ -1,0 +1,286 @@
+/* ================================================
+   AdminGrid — Proyecto CSS Grid
+   Implementa cada TODO para completar el dashboard
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-2: #21262d;
+  --color-border: #30363d;
+  --color-text: #f0f6fc;
+  --color-text-muted: #8b949e;
+  --color-blue: #264de4;
+  --color-orange: #e34f26;
+  --color-green: #3fb950;
+  --color-yellow: #d29922;
+  --sidebar-width: 240px;
+  --header-height: 60px;
+  --footer-height: 48px;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --z-header: 100;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   TODO 1: Layout global con grid-template-areas
+   Implementa el contenedor principal .page-grid:
+   - display: grid
+   - grid-template-columns: var(--sidebar-width) 1fr
+   - grid-template-rows: auto 1fr auto
+   - grid-template-areas: "header header" / "sidebar main" / "footer footer"
+   - min-height: 100vh
+   ============================================ */
+
+
+/* ============================================
+   TODO 2: Header en grid-area: header
+   - grid-area: header
+   - position: sticky; top: 0; z-index: var(--z-header)
+   - display: flex; justify-content: space-between; align-items: center
+   - padding: 0 var(--spacing-lg)
+   - height: var(--header-height)
+   - background + border-bottom
+   ============================================ */
+
+
+/* ============================================
+   TODO 3: Sidebar en grid-area: sidebar
+   - grid-area: sidebar
+   - display: flex; flex-direction: column; justify-content: space-between
+   - padding: var(--spacing-lg) 0
+   - background: var(--color-surface)
+   - border-right: 1px solid var(--color-border)
+   ============================================ */
+
+
+/* ============================================
+   TODO 4: Main content en grid-area: main
+   - grid-area: main
+   - overflow-y: auto
+   - padding: var(--spacing-lg)
+   ============================================ */
+
+
+/* ============================================
+   TODO 5: Footer en grid-area: footer
+   - grid-area: footer
+   - text-align: center; font-size: 0.8rem
+   - color: var(--color-text-muted)
+   - padding: 0 var(--spacing-lg)
+   - height: var(--footer-height); display: flex; align-items: center; justify-content: center
+   - background: var(--color-surface); border-top: 1px solid var(--color-border)
+   ============================================ */
+
+
+/* ============================================
+   TODO 6: Stats grid con auto-fit + minmax
+   - display: grid
+   - grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))
+   - gap: var(--spacing-md)
+   - margin-bottom: var(--spacing-lg)
+   ============================================ */
+
+
+/* ============================================
+   TODO 7: Stat card con flex interno
+   - background: var(--color-surface-2); border + border-radius: 8px
+   - padding: var(--spacing-md)
+   - display: flex; align-items: center; gap: var(--spacing-md)
+   ============================================ */
+
+
+/* ============================================
+   TODO 8: Projects grid con auto-fit + minmax
+   - display: grid
+   - grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+   - gap: var(--spacing-md)
+   ============================================ */
+
+
+/* ============================================
+   TODO 9: Project card con flex column
+   - background: var(--color-surface-2); border + border-radius: 8px
+   - padding: var(--spacing-md)
+   - display: flex; flex-direction: column; gap: var(--spacing-sm)
+   ============================================ */
+
+
+/* ============================================
+   TODO 10: Featured card spanning todo el ancho
+   - grid-column: 1 / -1
+   ============================================ */
+
+
+/* ============================================
+   TODO 11: Responsive mobile — 1 columna
+   @media (max-width: 767px)
+   - .page-grid: grid-template-columns: 1fr
+   - grid-template-areas: "header" / "main" / "sidebar" / "footer"
+   ============================================ */
+
+
+/* ============================================
+   TODO 12: Sidebar compacto en mobile
+   @media (max-width: 767px)
+   - .sidebar: flex-direction: row; overflow-x: auto; padding: var(--spacing-sm)
+   - .sidebar-nav ul: flex-direction: row
+   - .sidebar-user: display: none (o compact)
+   ============================================ */
+
+
+/* ================================================
+   Estilos base (ya implementados — no modificar)
+   ================================================ */
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.brand-icon { font-size: 1.3rem; }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0 var(--spacing-sm);
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem var(--spacing-md);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-link:hover,
+.nav-link--active {
+  background: var(--color-blue);
+  color: var(--color-text);
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+}
+
+.user-info { display: flex; flex-direction: column; }
+.user-name  { font-size: 0.85rem; font-weight: 600; }
+.user-role  { font-size: 0.75rem; color: var(--color-text-muted); }
+
+.avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700;
+  flex-shrink: 0;
+}
+
+.avatar--sm { width: 28px; height: 28px; font-size: 0.65rem; }
+
+.btn {
+  padding: 0.4rem var(--spacing-md);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn--primary { background: var(--color-blue); color: #fff; border-color: var(--color-blue); }
+.btn--ghost   { background: transparent; color: var(--color-text-muted); border-color: var(--color-border); }
+.btn--ghost:hover { color: var(--color-text); border-color: var(--color-text-muted); }
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.page-title  { font-size: 1.4rem; }
+.section-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+
+.stat-icon  { font-size: 1.8rem; flex-shrink: 0; }
+.stat-data  { display: flex; flex-direction: column; }
+.stat-value { font-size: 1.5rem; font-weight: 700; line-height: 1; }
+.stat-label { font-size: 0.8rem; color: var(--color-text-muted); }
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+}
+
+.project-name { font-size: 0.95rem; font-weight: 600; }
+
+.project-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  flex-grow: 1;
+}
+
+.project-footer { margin-top: auto; display: flex; flex-direction: column; gap: 0.3rem; }
+
+.progress-bar {
+  height: 6px;
+  background: var(--color-border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--color-blue);
+  border-radius: 3px;
+}
+
+.progress-fill--done { background: var(--color-green); }
+
+.progress-label { font-size: 0.75rem; color: var(--color-text-muted); }
+
+.badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15em 0.55em;
+  border-radius: 4px;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.badge--active { background: rgba(63,185,80,0.15); color: var(--color-green); }
+.badge--review { background: rgba(210,153,34,0.15); color: var(--color-yellow); }
+.badge--done   { background: rgba(38,77,228,0.15);  color: #6e9dff; }

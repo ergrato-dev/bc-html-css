@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 03 — Grid Responsive</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Grid Responsive</h1>
+    <p>Compara <code>repeat(3,1fr)</code>, <code>auto-fill</code> y <code>auto-fit</code> redimensionando la ventana</p>
+  </header>
+
+  <main class="page-content">
+
+    <!-- ============================================ -->
+    <!-- PASO 1: columnas fijas repeat(3, 1fr)       -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 1 — <code>repeat(3, 1fr)</code> — columnas fijas</h2>
+      <p>Siempre 3 columnas. Los ítems se comprimen en pantallas pequeñas.</p>
+      <div class="grid-fixed">
+        <article class="card">Ítem 1</article>
+        <article class="card">Ítem 2</article>
+        <article class="card">Ítem 3</article>
+        <article class="card">Ítem 4</article>
+        <article class="card">Ítem 5</article>
+        <article class="card">Ítem 6</article>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 2: auto-fill — reserva columnas vacías -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 2 — <code>auto-fill</code> — reserva espacio</h2>
+      <p>Solo 3 ítems en una grilla ancha: las columnas vacías mantienen su espacio.</p>
+      <div class="grid-fill">
+        <article class="card card--orange">Ítem A</article>
+        <article class="card card--orange">Ítem B</article>
+        <article class="card card--orange">Ítem C</article>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 3: auto-fit — colapsa columnas vacías  -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 3 — <code>auto-fit</code> — colapsa vacíos</h2>
+      <p>Los mismos 3 ítems: ahora se expanden para llenar todo el ancho.</p>
+      <div class="grid-fit">
+        <article class="card card--green">Ítem A</article>
+        <article class="card card--green">Ítem B</article>
+        <article class="card card--green">Ítem C</article>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- PASO 4: grid-auto-rows con minmax           -->
+    <!-- ============================================ -->
+    <section class="demo-section">
+      <h2>Paso 4 — <code>grid-auto-rows: minmax(160px, auto)</code></h2>
+      <p>Filas de altura mínima uniforme. El contenido largo empuja la altura.</p>
+      <div class="grid-rows-control">
+        <article class="card">Contenido breve</article>
+        <article class="card">Contenido mediano que ocupa un poco más de espacio vertical en la tarjeta.</article>
+        <article class="card">Breve</article>
+        <article class="card">Texto largo que demuestra cómo <code>minmax(160px, auto)</code> permite que la fila crezca cuando el contenido lo requiere, sin romper el layout.</article>
+        <article class="card">Normal</article>
+        <article class="card">Breve</article>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

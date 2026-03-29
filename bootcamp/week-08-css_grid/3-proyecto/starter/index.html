@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdminGrid — Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div class="page-grid">
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header">
+      <div class="header-brand">
+        <span class="brand-icon" aria-hidden="true">⬛</span>
+        <span class="brand-name">AdminGrid</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn btn--ghost" type="button">Notificaciones</button>
+        <div class="avatar" aria-label="Perfil de usuario">AG</div>
+      </div>
+    </header>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" aria-label="Navegación lateral">
+      <nav class="sidebar-nav" aria-label="Menú principal">
+        <ul>
+          <li><a href="#" class="nav-link nav-link--active" aria-current="page">Dashboard</a></li>
+          <li><a href="#" class="nav-link">Proyectos</a></li>
+          <li><a href="#" class="nav-link">Equipo</a></li>
+          <li><a href="#" class="nav-link">Reportes</a></li>
+          <li><a href="#" class="nav-link">Configuración</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-user">
+        <div class="avatar avatar--sm" aria-hidden="true">AL</div>
+        <div class="user-info">
+          <span class="user-name">Ana López</span>
+          <span class="user-role">Admin</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========== MAIN ========== -->
+    <main class="main-content" id="main-content">
+
+      <div class="content-header">
+        <h1 class="page-title">Dashboard</h1>
+        <button class="btn btn--primary" type="button">+ Nuevo proyecto</button>
+      </div>
+
+      <!-- Stats -->
+      <section aria-labelledby="stats-heading">
+        <h2 id="stats-heading" class="section-title">Resumen</h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">📁</div>
+            <div class="stat-data">
+              <span class="stat-value">24</span>
+              <span class="stat-label">Proyectos activos</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">👥</div>
+            <div class="stat-data">
+              <span class="stat-value">8</span>
+              <span class="stat-label">Miembros del equipo</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">✅</div>
+            <div class="stat-data">
+              <span class="stat-value">142</span>
+              <span class="stat-label">Tareas completadas</span>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon" aria-hidden="true">⏱</div>
+            <div class="stat-data">
+              <span class="stat-value">96%</span>
+              <span class="stat-label">Disponibilidad</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section aria-labelledby="projects-heading">
+        <h2 id="projects-heading" class="section-title">Proyectos recientes</h2>
+        <div class="projects-grid">
+
+          <!-- Featured card: ocupa todo el ancho -->
+          <article class="project-card featured-card">
+            <div class="project-header">
+              <h3 class="project-name">Portal del Cliente — v2.0</h3>
+              <span class="badge badge--active">Activo</span>
+            </div>
+            <p class="project-desc">Rediseño completo del portal: nuevo design system, accesibilidad WCAG AA y rendimiento mejorado. Este proyecto es el más prioritario del trimestre.</p>
+            <div class="project-footer">
+              <div class="progress-bar" role="progressbar" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 72%"></div>
+              </div>
+              <span class="progress-label">72% completado</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-name">API de Autenticación</h3>
+              <span class="badge badge--review">Revisión</span>
+            </div>
+            <p class="project-desc">Implementación OAuth 2.0 con refresh tokens y MFA.</p>
+            <div class="project-footer">
+              <div class="progress-bar" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 58%"></div>
+              </div>
+              <span class="progress-label">58%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-name">Dashboard Analytics</h3>
+              <span class="badge badge--active">Activo</span>
+            </div>
+            <p class="project-desc">Visualización de métricas en tiempo real con CSS Grid y Canvas.</p>
+            <div class="project-footer">
+              <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 33%"></div>
+              </div>
+              <span class="progress-label">33%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-name">App Móvil iOS</h3>
+              <span class="badge badge--done">Finalizado</span>
+            </div>
+            <p class="project-desc">Versión 1.4 publicada en App Store con nuevas notificaciones push.</p>
+            <div class="project-footer">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill progress-fill--done" style="width: 100%"></div>
+              </div>
+              <span class="progress-label">100%</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-header">
+              <h3 class="project-name">Sistema de Pagos</h3>
+              <span class="badge badge--review">Revisión</span>
+            </div>
+            <p class="project-desc">Integración con Stripe y PayPal, gestión de suscripciones.</p>
+            <div class="project-footer">
+              <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-fill" style="width: 45%"></div>
+              </div>
+              <span class="progress-label">45%</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <p>AdminGrid &copy; 2026 — Proyecto CSS Grid · Bootcamp HTML+CSS</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
