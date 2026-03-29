@@ -1,38 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 01 — Formulario de Contacto</title>
-    <style>
-      :root { --primary: #e34f26; --surface: #161b22; --border: #30363d; --text: #e6edf3; --muted: #8b949e; }
-      * { box-sizing: border-box; }
-      body { font-family: system-ui, sans-serif; background: #0d1117; color: var(--text); padding: 2rem; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-      fieldset { border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; background: var(--surface); }
-      legend { color: var(--primary); font-weight: bold; padding: 0 0.5rem; }
-      label { display: block; font-size: 0.9rem; margin-top: 1rem; margin-bottom: 0.3rem; color: var(--muted); }
-      input, select, textarea { width: 100%; padding: 0.6rem 0.8rem; background: #0d1117; border: 1px solid var(--border); border-radius: 4px; color: var(--text); font-size: 1rem; font-family: inherit; }
-      input:focus, select:focus, textarea:focus { outline: 2px solid var(--primary); border-color: var(--primary); }
-      button[type="submit"] { margin-top: 1.5rem; width: 100%; padding: 0.75rem; background: var(--primary); color: #fff; border: none; border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer; }
-      button[type="submit"]:hover { opacity: 0.9; }
-    </style>
-  </head>
-  <body>
-    <h1>Formulario de Contacto</h1>
-    <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
 
-    <!-- ============================================================ -->
-    <!-- PASO 1: Estructura base del formulario                      -->
-    <!-- ============================================================ -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Formulario de Contacto</title>
+  <style>
+    :root {
+      --primary: #e34f26;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+    }
 
-    <!-- <form action="/enviar-mensaje" method="post"> -->
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0d1117;
+      color: var(--text);
+      padding: 2rem;
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    fieldset {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      background: var(--surface);
+    }
+
+    legend {
+      color: var(--primary);
+      font-weight: bold;
+      padding: 0 0.5rem;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      color: var(--muted);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      background: #0d1117;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: 2px solid var(--primary);
+      border-color: var(--primary);
+    }
+
+    button[type="submit"] {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Formulario de Contacto</h1>
+  <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
+
+  <!-- ============================================================ -->
+  <!-- PASO 1: Estructura base del formulario                      -->
+  <!-- ============================================================ -->
+
+  <!-- <form action="/enviar-mensaje" method="post"> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 2: Fieldset — Información personal                     -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 2: Fieldset — Información personal                     -->
+  <!-- ============================================================ -->
 
-      <!-- <fieldset>
+  <!-- <fieldset>
         <legend>Información personal</legend>
 
         <label for="nombre">Nombre completo *</label>
@@ -49,11 +121,11 @@
       </fieldset> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 3: Fieldset — Datos de contacto                        -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 3: Fieldset — Datos de contacto                        -->
+  <!-- ============================================================ -->
 
-      <!-- <fieldset>
+  <!-- <fieldset>
         <legend>Datos de contacto</legend>
 
         <label for="email">Correo electrónico *</label>
@@ -77,11 +149,11 @@
       </fieldset> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 4: Fieldset — Mensaje y envío                          -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 4: Fieldset — Mensaje y envío                          -->
+  <!-- ============================================================ -->
 
-      <!-- <fieldset>
+  <!-- <fieldset>
         <legend>Tu mensaje</legend>
 
         <label for="asunto">Asunto *</label>
@@ -108,8 +180,9 @@
       <button type="submit">Enviar mensaje</button>
     </form> -->
 
-    <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
-      ↑ Descomenta cada PASO para construir el formulario progresivamente
-    </p>
-  </body>
+  <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
+    ↑ Descomenta cada PASO para construir el formulario progresivamente
+  </p>
+</body>
+
 </html>

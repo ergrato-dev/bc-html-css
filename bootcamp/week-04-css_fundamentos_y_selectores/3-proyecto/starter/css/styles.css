@@ -1,0 +1,109 @@
+/* ================================================
+   PROYECTO SEMANA 04 — Página Estilizada con Selectores CSS
+   
+   Instrucciones: escribe tus estilos en este archivo.
+   El HTML ya está listo en index.html.
+   
+   Debes usar al menos 7 tipos de selectores distintos.
+   ================================================ */
+
+/* ============================
+   TODO 1: Reset mínimo
+   Añade box-sizing, margin y padding en * 
+   ============================ */
+
+
+/* ============================
+   TODO 2: Variables en :root
+   Define: --bg-primary, --bg-card, --color-text,
+   --color-primary (#e34f26), --color-accent (#264de4),
+   --color-muted (#8b949e), --border-color (#30363d)
+   ============================ */
+
+
+/* ============================
+   TODO 3: Estilo base del body
+   bg-primary, color-text, font-family, line-height
+   ============================ */
+
+
+/* ============================
+   TODO 4: Header (#site-header)
+   background oscuro, padding, position sticky, top: 0
+   z-index alto para que flote sobre el contenido
+   ============================ */
+
+
+/* ============================
+   TODO 5: Logo (.logo)
+   Color primary (#e34f26), font-weight bold, font-size grande
+   Selector de clase
+   ============================ */
+
+
+/* ============================
+   TODO 6: Navegación — lista sin estilo
+   nav ul > li en línea (inline)
+   nav a sin subrayado
+   Usar combinadores: nav ul > li y nav a
+   ============================ */
+
+
+/* ============================
+   TODO 7: Links externos en nav
+   a[href^="https"] dentro de nav con color diferente
+   Usar selector de atributo
+   ============================ */
+
+
+/* ============================
+   TODO 8: Sección #hero
+   Padding generoso, text-align center,
+   h1 grande con .highlight subrayado o coloreado
+   ============================ */
+
+
+/* ============================
+   TODO 9: Cards (.card)
+   background bg-card, border border-color, border-radius,
+   padding, hover con translateY y sombra
+   Usar pseudo-clase :hover
+   ============================ */
+
+
+/* ============================
+   TODO 10: Grid de cards (.cards-grid)
+   display grid, 3 columnas, gap
+   ============================ */
+
+
+/* ============================
+   TODO 11: Tabla — thead diferenciado
+   fondo de thead coloreado con color-accent
+   tbody tr:nth-child(even) fondo ligeramente distinto
+   Usar :nth-child
+   ============================ */
+
+
+/* ============================
+   TODO 12: Formulario (#contact-form)
+   .form-group con display flex y flex-direction column
+   inputs con :focus-visible outline visible
+   Usar pseudo-clase :focus-visible
+   ============================ */
+
+
+/* ============================
+   TODO 13: Botones (.btn)
+   .btn-primary: background color-accent, color white
+   .btn-secondary: outline/ghost style
+   .btn:hover con opacity o transform
+   Usar pseudo-clase :hover
+   ============================ */
+
+
+/* ============================
+   TODO 14: Footer (#site-footer)
+   Separador superior, links hover y visited 
+   diferenciados con :hover y :visited
+   ============================ */

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Herencia y Reset CSS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Herencia y Reset CSS</h1>
+    <p>Descubre qué propiedades fluyen de padres a hijos.</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Paso 1 — Herencia automática</h2>
+      <p>Este párrafo hereda <code>font-family</code> y <code>color</code> del <code>&lt;body&gt;</code>.</p>
+      <ul>
+        <li>Los items de lista también heredan tipografía</li>
+        <li>No necesitas declarar <code>font-family</code> en cada elemento</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Paso 2 — Reset con box-sizing</h2>
+      <p>Sin reset el navegador aplica márgenes y padding por defecto. Observa la diferencia en el layout.</p>
+      <div class="demo-box">
+        Esta caja tiene padding y border. Con <code>box-sizing: border-box</code>
+        el padding no agrega tamaño extra.
+      </div>
+    </section>
+
+    <section>
+      <h2>Paso 3 — inherit en formularios</h2>
+      <p>Los inputs y botones no heredan <code>font-family</code> por defecto en algunos navegadores.</p>
+      <form>
+        <label for="demo-input">Nombre:</label>
+        <input type="text" id="demo-input" placeholder="¿Qué fuente ves aquí?" />
+        <button type="button">Botón</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Paso 4 — initial y unset</h2>
+      <p class="reset-color">Este párrafo usa <code>color: initial</code> — su color es el inicial del navegador.</p>
+      <p class="unset-margin">Este párrafo usa <code>margin: unset</code>.</p>
+    </section>
+
+  </main>
+
+</body>
+</html>

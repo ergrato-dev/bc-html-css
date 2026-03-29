@@ -1,0 +1,165 @@
+/* ================================================
+   EJERCICIO 01 — Selectores CSS
+   Descomenta cada bloque siguiendo el README.
+   ================================================ */
+
+/* --- Reset mínimo (ya activo) --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base (ya activo) --- */
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+main {
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  background-color: #161b22;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 300px;
+  margin-top: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-size: 1rem;
+}
+
+.btn {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background-color: #264de4;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+/* ================================================
+   PASO 1: Selectores de tipo, clase e ID
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* p {
+  color: #c9d1d9;
+  line-height: 1.6;
+} */
+
+/* .highlight {
+  background-color: #264de4;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+} */
+
+/* #main-title {
+  font-size: 2rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+} */
+
+
+/* ================================================
+   PASO 2: Selectores de atributo
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* a[href^="https"] {
+  color: #3fb950;
+  font-weight: 600;
+} */
+
+/* input[type="email"] {
+  border-color: #264de4;
+  outline-color: #264de4;
+} */
+
+/* img[alt*="logo"] {
+  display: block;
+  margin-top: 1rem;
+  border-radius: 4px;
+} */
+
+
+/* ================================================
+   PASO 3: Combinadores
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* nav a {
+  text-decoration: none;
+  color: #58a6ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+} */
+
+/* nav a:hover {
+  background-color: #21262d;
+} */
+
+/* ul.menu > li {
+  display: inline-block;
+  list-style: none;
+} */
+
+/* h2 + p {
+  margin-top: 0.25rem;
+  font-style: italic;
+  color: #8b949e;
+} */
+
+
+/* ================================================
+   PASO 4: Pseudo-clases de estado
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .btn:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+} */
+
+/* .btn:focus-visible {
+  outline: 3px solid #58a6ff;
+  outline-offset: 2px;
+} */
+
+/* a:visited {
+  color: #8b949e;
+} */

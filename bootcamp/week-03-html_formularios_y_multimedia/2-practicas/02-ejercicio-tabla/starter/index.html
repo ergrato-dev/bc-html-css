@@ -1,30 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 02 — Tabla de Horarios</title>
-    <style>
-      body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; padding: 2rem; }
-      table { border-collapse: collapse; width: 100%; margin-top: 1.5rem; }
-      caption { text-align: left; font-weight: bold; color: #e34f26; font-size: 1.1rem; padding-bottom: 0.5rem; }
-      th, td { border: 1px solid #30363d; padding: 0.7rem 1rem; text-align: left; }
-      thead th { background: #161b22; color: #58a6ff; }
-      tbody th { background: #1c2128; color: #ff7b6b; white-space: nowrap; }
-      tbody td { background: #0d1117; }
-      tfoot th, tfoot td { background: #1f2937; font-weight: bold; color: #3fb950; }
-      td[colspan] { text-align: center; background: #21262d; color: #8b949e; font-style: italic; }
-    </style>
-  </head>
-  <body>
-    <h1>Horario de Clases</h1>
-    <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
 
-    <!-- ============================================================ -->
-    <!-- PASO 1: Estructura thead de la tabla                        -->
-    <!-- ============================================================ -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Tabla de Horarios</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      padding: 2rem;
+    }
 
-    <!-- <table>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 1.5rem;
+    }
+
+    caption {
+      text-align: left;
+      font-weight: bold;
+      color: #e34f26;
+      font-size: 1.1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    th,
+    td {
+      border: 1px solid #30363d;
+      padding: 0.7rem 1rem;
+      text-align: left;
+    }
+
+    thead th {
+      background: #161b22;
+      color: #58a6ff;
+    }
+
+    tbody th {
+      background: #1c2128;
+      color: #ff7b6b;
+      white-space: nowrap;
+    }
+
+    tbody td {
+      background: #0d1117;
+    }
+
+    tfoot th,
+    tfoot td {
+      background: #1f2937;
+      font-weight: bold;
+      color: #3fb950;
+    }
+
+    td[colspan] {
+      text-align: center;
+      background: #21262d;
+      color: #8b949e;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Horario de Clases</h1>
+  <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
+
+  <!-- ============================================================ -->
+  <!-- PASO 1: Estructura thead de la tabla                        -->
+  <!-- ============================================================ -->
+
+  <!-- <table>
       <caption>Horario semanal del Bootcamp HTML + CSS</caption>
       <thead>
         <tr>
@@ -38,11 +87,11 @@
       </thead> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 2: Cuerpo (tbody) con th scope="row"                   -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 2: Cuerpo (tbody) con th scope="row"                   -->
+  <!-- ============================================================ -->
 
-      <!-- <tbody>
+  <!-- <tbody>
         <tr>
           <th scope="row">09:00 – 11:00</th>
           <td>HTML Fundamentos</td>
@@ -62,12 +111,12 @@
       </tbody> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 3: colspan — celdas que abarcan varias columnas        -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 3: colspan — celdas que abarcan varias columnas        -->
+  <!-- ============================================================ -->
 
-      <!-- Agregar dentro del <tbody>, después de las filas del PASO 2: -->
-      <!-- <tr>
+  <!-- Agregar dentro del <tbody>, después de las filas del PASO 2: -->
+  <!-- <tr>
         <th scope="row">14:00 – 18:00</th>
         <td colspan="5">Proyecto integrador (trabajo autónomo)</td>
       </tr>
@@ -78,11 +127,11 @@
       </tr> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 4: tfoot con totales                                   -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 4: tfoot con totales                                   -->
+  <!-- ============================================================ -->
 
-      <!-- <tfoot>
+  <!-- <tfoot>
         <tr>
           <th scope="row">Total horas</th>
           <td>6h</td>
@@ -94,8 +143,9 @@
       </tfoot>
     </table> -->
 
-    <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
-      ↑ Descomenta cada PASO para construir la tabla progresivamente
-    </p>
-  </body>
+  <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
+    ↑ Descomenta cada PASO para construir la tabla progresivamente
+  </p>
+</body>
+
 </html>

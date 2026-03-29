@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Skills — Página Estilizada</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- HTML LISTO — No modificar el HTML           -->
+  <!-- Solo trabaja en css/styles.css              -->
+  <!-- ============================================ -->
+
+  <header id="site-header">
+    <div class="header-inner">
+      <span class="logo">DevSkills</span>
+      <nav>
+        <ul>
+          <li><a href="#profiles" class="nav-link">Perfiles</a></li>
+          <li><a href="#skills" class="nav-link">Habilidades</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+          <li><a href="https://developer.mozilla.org" class="nav-link nav-link-external">MDN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero">
+      <h1>Desarrolladores <span class="highlight">Frontend</span></h1>
+      <p>Un directorio de talento técnico curado para equipos modernos.</p>
+      <a href="#contact" class="btn btn-primary">Únete ahora</a>
+    </section>
+
+    <section id="profiles">
+      <h2>Perfiles destacados</h2>
+      <p>Conoce a los desarrolladores disponibles esta semana.</p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3 class="card-name">Ana García</h3>
+          <p class="card-role">Frontend Developer</p>
+          <p>Especialista en HTML semántico, CSS Grid y accesibilidad web.</p>
+          <a href="https://github.com" class="btn btn-secondary">Ver perfil</a>
+        </article>
+
+        <article class="card">
+          <h3 class="card-name">Luis Martínez</h3>
+          <p class="card-role">UI Engineer</p>
+          <p>Crea interfaces rápidas con Flexbox y CSS Custom Properties.</p>
+          <a href="https://github.com" class="btn btn-secondary">Ver perfil</a>
+        </article>
+
+        <article class="card">
+          <h3 class="card-name">Sara López</h3>
+          <p class="card-role">Accessibility Lead</p>
+          <p>Experta en ARIA, WCAG 2.2 y auditorías de accesibilidad.</p>
+          <a href="https://github.com" class="btn btn-secondary">Ver perfil</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades técnicas</h2>
+      <p>Distribución de tecnologías en el equipo.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tecnología</th>
+            <th>Nivel promedio</th>
+            <th>Desarrolladores</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML5</td>
+            <td>Avanzado</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>CSS3</td>
+            <td>Avanzado</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Intermedio</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Accesibilidad</td>
+            <td>Intermedio</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Git</td>
+            <td>Avanzado</td>
+            <td>12</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>¿Quieres unirte al directorio? Envíanos tu información.</p>
+
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="full-name">Nombre completo</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Tu nombre" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="role">Especialidad</label>
+          <input type="text" id="role" name="role" placeholder="Frontend Developer" />
+        </div>
+
+        <div class="form-group">
+          <label for="portfolio">Portfolio</label>
+          <input type="url" id="portfolio" name="portfolio" placeholder="https://tuportfolio.dev" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">Enviar solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <p>DevSkills &copy; 2026 · Todos los derechos reservados</p>
+    <nav>
+      <a href="https://developer.mozilla.org">MDN Web Docs</a>
+      <a href="https://caniuse.com">Can I Use</a>
+      <a href="https://css-tricks.com">CSS-Tricks</a>
+    </nav>
+  </footer>
+
+</body>
+</html>

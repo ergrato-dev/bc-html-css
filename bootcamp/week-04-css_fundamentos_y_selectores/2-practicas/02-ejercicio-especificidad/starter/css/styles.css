@@ -1,0 +1,121 @@
+/* ================================================
+   EJERCICIO 02 — Especificidad CSS
+   ================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #58a6ff;
+  font-size: 1.8rem;
+}
+
+main {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-demo,
+.section-form {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.section-demo h2,
+.section-form h2 {
+  font-size: 1.1rem;
+  color: #e6edf3;
+  margin-bottom: 0.75rem;
+}
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #8b949e;
+  font-family: monospace;
+}
+
+/* ================================================
+   PASO 1 (ya activo): Conflicto tipo vs clase vs ID
+   Observa el resultado en el navegador.
+   ================================================ */
+
+/* (0,0,1) — selector de tipo */
+button {
+  padding: 0.5rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: gray;
+  color: white;
+}
+
+/* (0,1,0) — selector de clase */
+.btn {
+  background-color: #264de4;
+  color: white;
+}
+
+/* (1,0,0) — selector de ID — GANA */
+#save-btn {
+  background-color: #e34f26;
+  color: white;
+}
+
+
+/* ================================================
+   PASO 2: Especificidad combinada
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .section-form .btn {
+  background-color: #3fb950;
+  color: #0d1117;
+  font-weight: bold;
+} */
+
+
+/* ================================================
+   PASO 3: Orden de aparición como desempate
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .btn-primary {
+  color: white;
+} */
+
+/* .btn-winner {
+  color: #f0e68c;
+} */
+
+
+/* ================================================
+   PASO 4: !important sobreescribe todo
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .btn-danger {
+  background-color: #da3633 !important;
+  color: white !important;
+} */

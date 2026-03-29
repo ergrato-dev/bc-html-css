@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ejercicio 03 — Galería Multimedia</title>
-    <style>
-      body { font-family: system-ui, sans-serif; background: #0d1117; color: #e6edf3; padding: 2rem; max-width: 800px; margin: 0 auto; }
-      h2 { color: #e34f26; border-bottom: 1px solid #30363d; padding-bottom: 0.5rem; margin-top: 2.5rem; }
-      figure { margin: 1.5rem 0; background: #161b22; padding: 1rem; border-radius: 8px; border: 1px solid #30363d; }
-      figure img, figure video, figure iframe { display: block; border-radius: 4px; max-width: 100%; height: auto; }
-      figcaption { font-size: 0.88rem; color: #8b949e; margin-top: 0.5rem; font-style: italic; }
-      .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
-    </style>
-  </head>
-  <body>
-    <h1>Galería Multimedia</h1>
-    <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
 
-    <!-- ============================================================ -->
-    <!-- PASO 1: Galería de imágenes con figure + figcaption          -->
-    <!-- ============================================================ -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Galería Multimedia</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      padding: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-    <!-- <section>
+    h2 {
+      color: #e34f26;
+      border-bottom: 1px solid #30363d;
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+    }
+
+    figure {
+      margin: 1.5rem 0;
+      background: #161b22;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+    }
+
+    figure img,
+    figure video,
+    figure iframe {
+      display: block;
+      border-radius: 4px;
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      font-size: 0.88rem;
+      color: #8b949e;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Galería Multimedia</h1>
+  <p style="color:#8b949e">Descomenta cada sección PASO por PASO</p>
+
+  <!-- ============================================================ -->
+  <!-- PASO 1: Galería de imágenes con figure + figcaption          -->
+  <!-- ============================================================ -->
+
+  <!-- <section>
       <h2>Galería de Fotografías</h2>
       <div class="gallery-grid">
         <figure>
@@ -60,11 +101,11 @@
     </section> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 2: Video nativo                                        -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 2: Video nativo                                        -->
+  <!-- ============================================================ -->
 
-    <!-- <section>
+  <!-- <section>
       <h2>Video</h2>
       <figure>
         <video
@@ -91,11 +132,11 @@
     </section> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 3: Audio nativo                                        -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 3: Audio nativo                                        -->
+  <!-- ============================================================ -->
 
-    <!-- <section>
+  <!-- <section>
       <h2>Audio</h2>
       <figure>
         <audio controls preload="metadata" aria-describedby="desc-audio">
@@ -112,11 +153,11 @@
     </section> -->
 
 
-    <!-- ============================================================ -->
-    <!-- PASO 4: iframe de YouTube                                   -->
-    <!-- ============================================================ -->
+  <!-- ============================================================ -->
+  <!-- PASO 4: iframe de YouTube                                   -->
+  <!-- ============================================================ -->
 
-    <!-- <section>
+  <!-- <section>
       <h2>Video Embebido (iframe)</h2>
       <figure>
         <iframe
@@ -135,8 +176,9 @@
       </figure>
     </section> -->
 
-    <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
-      ↑ Descomenta cada PASO para ver los elementos multimedia
-    </p>
-  </body>
+  <p style="color:#8b949e; font-size:0.85rem; margin-top:3rem">
+    ↑ Descomenta cada PASO para ver los elementos multimedia
+  </p>
+</body>
+
 </html>

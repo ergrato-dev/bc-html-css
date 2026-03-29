@@ -1,0 +1,128 @@
+/* ================================================
+   EJERCICIO 03 — Herencia y Reset CSS
+   ================================================ */
+
+
+/* ================================================
+   PASO 2: Reset mínimo con box-sizing
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+
+/* ================================================
+   PASO 1: Herencia desde body
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 2rem;
+} */
+
+/* header {
+  margin-bottom: 2rem;
+} */
+
+/* header h1 {
+  font-size: 1.8rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+} */
+
+/* main {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+} */
+
+/* section {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 1.5rem;
+} */
+
+/* section h2 {
+  font-size: 1.1rem;
+  color: #e6edf3;
+  margin-bottom: 0.75rem;
+} */
+
+/* .demo-box {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border: 2px solid #264de4;
+  background-color: #1c2128;
+  border-radius: 4px;
+} */
+
+
+/* ================================================
+   PASO 3: inherit en elementos de formulario
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+} */
+
+/* form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 280px;
+  margin-top: 0.75rem;
+} */
+
+/* label {
+  font-size: 0.9rem;
+  color: #8b949e;
+} */
+
+/* input {
+  padding: 0.5rem 0.75rem;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #c9d1d9;
+} */
+
+/* button {
+  padding: 0.5rem 1rem;
+  background-color: #264de4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+} */
+
+
+/* ================================================
+   PASO 4: Palabras clave initial y unset
+   Descomenta las siguientes líneas:
+   ================================================ */
+
+/* .reset-color {
+  color: initial;
+} */
+
+/* .unset-margin {
+  margin: unset;
+} */

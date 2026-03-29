@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Selectores CSS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- ESTRUCTURA HTML — No modificar              -->
+  <!-- Solo trabaja en css/styles.css              -->
+  <!-- ============================================ -->
+
+  <header>
+    <h1 id="main-title">Selectores CSS</h1>
+    <p>Aprende a apuntar a cualquier elemento del DOM.</p>
+  </header>
+
+  <nav>
+    <ul class="menu">
+      <li><a href="#section1">Básicos</a></li>
+      <li><a href="#section2">Atributos</a></li>
+      <li><a href="#section3">Combinadores</a></li>
+      <li><a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN CSS</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="section1">
+      <h2>Selectores Básicos</h2>
+      <p>Los selectores de <strong>tipo</strong> apuntan a todas las etiquetas de ese nombre.</p>
+      <p class="highlight">Este párrafo tiene la clase <code>highlight</code>.</p>
+      <p>Selector de <strong>clase</strong>: se reutiliza en múltiples elementos.</p>
+
+      <div class="card">
+        <p>Elemento dentro de una tarjeta.</p>
+      </div>
+    </section>
+
+    <section id="section2">
+      <h2>Selectores de Atributo</h2>
+      <p>Apuntan a elementos según el valor de un atributo HTML.</p>
+      <form>
+        <label for="email">Correo:</label>
+        <input type="email" id="email" placeholder="tu@correo.com" />
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Tu nombre" />
+      </form>
+      <img src="" alt="logo del sitio" width="60" height="60" style="background:#30363d;" />
+    </section>
+
+    <section id="section3">
+      <h2>Combinadores</h2>
+      <p>Las relaciones entre elementos determinan qué selector usar.</p>
+
+      <ul class="menu-vertical">
+        <li>Item de lista 1</li>
+        <li>Item de lista 2</li>
+        <li>
+          <span>Sub-item</span>
+        </li>
+      </ul>
+
+      <h2>Otro h2 para el combinador +</h2>
+      <p>Este párrafo es hermano adyacente del h2 de arriba.</p>
+      <p>Este párrafo NO es el hermano inmediato del h2.</p>
+    </section>
+
+    <section id="section4">
+      <h2>Pseudo-clases de Estado</h2>
+      <p>Reacciona a las interacciones del usuario con pseudo-clases.</p>
+      <a href="https://css-tricks.com">Enlace externo (hover me)</a>
+      <br />
+      <a href="#section1">Enlace interno (ya visitado)</a>
+      <br /><br />
+      <button class="btn">Hover sobre mí</button>
+      <button class="btn">Y sobre mí también</button>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Especificidad CSS</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Especificidad CSS</h1>
+    <p>Descubre cuál regla CSS "gana" cuando hay conflictos.</p>
+  </header>
+
+  <main>
+    <!-- PASO 1: conflicto base tipo vs clase vs ID -->
+    <section class="section-demo">
+      <h2>Paso 1 — Tipo vs Clase vs ID</h2>
+      <p>¿De qué color es el botón? Revisa el CSS y calcula la especificidad.</p>
+      <button id="save-btn" class="btn btn-primary">Guardar</button>
+      <p class="hint">button (0,0,1) vs .btn (0,1,0) vs #save-btn (1,0,0)</p>
+    </section>
+
+    <!-- PASO 2: especificidad combinada -->
+    <section class="section-form">
+      <h2>Paso 2 — Especificidad combinada</h2>
+      <p>El botón dentro de esta sección tiene mayor especificidad que los demás.</p>
+      <button class="btn btn-primary">Botón en .section-form</button>
+    </section>
+
+    <!-- PASO 3: orden de aparición -->
+    <section class="section-demo">
+      <h2>Paso 3 — Mismo peso, distinto orden</h2>
+      <p>Ambas clases tienen especificidad (0,1,0). La última en el CSS gana.</p>
+      <button class="btn btn-primary btn-winner">¿Qué color tiene mi texto?</button>
+    </section>
+
+    <!-- PASO 4: !important -->
+    <section class="section-demo">
+      <h2>Paso 4 — El peligro de !important</h2>
+      <p>Este botón tiene ID <em>y</em> !important. ¿Quién gana?</p>
+      <button id="save-btn-danger" class="btn btn-danger">Botón peligroso</button>
+    </section>
+  </main>
+
+</body>
+</html>

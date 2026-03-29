@@ -1,0 +1,70 @@
+<svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif">
+  <rect width="820" height="400" fill="#0d1117"/>
+  <text x="410" y="34" font-size="16" fill="#e6edf3" text-anchor="middle" font-weight="bold">Especificidad CSS — Cálculo y Comparación</text>
+
+  <!-- Three columns: A (IDs), B (Classes), C (Elements) -->
+  <!-- Column headers -->
+  <rect x="40" y="55" width="220" height="50" rx="6" fill="#1c2128" stroke="#e34f26"/>
+  <text x="150" y="77" font-size="13" fill="#e34f26" text-anchor="middle" font-weight="bold">A — IDs</text>
+  <text x="150" y="97" font-size="11" fill="#8b949e" text-anchor="middle">#nav, #header, #hero</text>
+
+  <rect x="280" y="55" width="220" height="50" rx="6" fill="#1c2128" stroke="#264de4"/>
+  <text x="390" y="77" font-size="13" fill="#58a6ff" text-anchor="middle" font-weight="bold">B — Clases / Pseudo-clases</text>
+  <text x="390" y="97" font-size="11" fill="#8b949e" text-anchor="middle">.card, :hover, [type="email"]</text>
+
+  <rect x="520" y="55" width="260" height="50" rx="6" fill="#1c2128" stroke="#3fb950"/>
+  <text x="650" y="77" font-size="13" fill="#3fb950" text-anchor="middle" font-weight="bold">C — Elementos</text>
+  <text x="650" y="97" font-size="11" fill="#8b949e" text-anchor="middle">p, div, h1, ::before</text>
+
+  <!-- Specificity examples table -->
+  <rect x="40" y="125" width="740" height="34" rx="4" fill="#161b22"/>
+  <text x="55" y="147" font-size="12" fill="#8b949e">Selector</text>
+  <text x="550" y="147" font-size="12" fill="#8b949e">Especificidad (A, B, C)</text>
+  <text x="720" y="147" font-size="12" fill="#8b949e">Peso</text>
+
+  <!-- Row 1 -->
+  <rect x="40" y="159" width="740" height="32" rx="2" fill="#0d1117" stroke="#30363d" stroke-width="0.5"/>
+  <text x="55" y="179" font-size="12" fill="#e6edf3" font-family="monospace">p</text>
+  <text x="550" y="179" font-size="12" fill="#3fb950" font-family="monospace">(0, 0, 1)</text>
+  <rect x="712" y="164" width="60" height="22" rx="3" fill="#3fb950" fill-opacity="0.2"/>
+  <text x="742" y="179" font-size="11" fill="#3fb950" text-anchor="middle">Bajo</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="191" width="740" height="32" rx="2" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+  <text x="55" y="211" font-size="12" fill="#e6edf3" font-family="monospace">.card</text>
+  <text x="550" y="211" font-size="12" fill="#58a6ff" font-family="monospace">(0, 1, 0)</text>
+  <rect x="712" y="196" width="60" height="22" rx="3" fill="#58a6ff" fill-opacity="0.2"/>
+  <text x="742" y="211" font-size="11" fill="#58a6ff" text-anchor="middle">Medio</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="223" width="740" height="32" rx="2" fill="#0d1117" stroke="#30363d" stroke-width="0.5"/>
+  <text x="55" y="243" font-size="12" fill="#e6edf3" font-family="monospace">p.text</text>
+  <text x="550" y="243" font-size="12" fill="#58a6ff" font-family="monospace">(0, 1, 1)</text>
+  <rect x="712" y="228" width="60" height="22" rx="3" fill="#58a6ff" fill-opacity="0.3"/>
+  <text x="742" y="243" font-size="11" fill="#58a6ff" text-anchor="middle">Medio+</text>
+
+  <!-- Row 4 -->
+  <rect x="40" y="255" width="740" height="32" rx="2" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+  <text x="55" y="275" font-size="12" fill="#e6edf3" font-family="monospace">.nav .link:hover</text>
+  <text x="550" y="275" font-size="12" fill="#ff7b6b" font-family="monospace">(0, 3, 0)</text>
+  <rect x="712" y="260" width="60" height="22" rx="3" fill="#ff7b6b" fill-opacity="0.2"/>
+  <text x="742" y="275" font-size="11" fill="#ff7b6b" text-anchor="middle">Alto</text>
+
+  <!-- Row 5 -->
+  <rect x="40" y="287" width="740" height="32" rx="2" fill="#0d1117" stroke="#30363d" stroke-width="0.5"/>
+  <text x="55" y="307" font-size="12" fill="#e6edf3" font-family="monospace">#header</text>
+  <text x="550" y="307" font-size="12" fill="#e34f26" font-family="monospace">(1, 0, 0)</text>
+  <rect x="712" y="292" width="60" height="22" rx="3" fill="#e34f26" fill-opacity="0.3"/>
+  <text x="742" y="307" font-size="11" fill="#e34f26" text-anchor="middle">Muy alto</text>
+
+  <!-- Row 6 -->
+  <rect x="40" y="319" width="740" height="32" rx="2" fill="#161b22" stroke="#30363d" stroke-width="0.5"/>
+  <text x="55" y="339" font-size="12" fill="#e6edf3" font-family="monospace">#header .nav a:hover</text>
+  <text x="550" y="339" font-size="12" fill="#e34f26" font-family="monospace">(1, 2, 1)</text>
+  <rect x="712" y="324" width="60" height="22" rx="3" fill="#e34f26" fill-opacity="0.5"/>
+  <text x="742" y="339" font-size="11" fill="#e34f26" text-anchor="middle">Máximo</text>
+
+  <!-- !important note -->
+  <rect x="40" y="362" width="740" height="30" rx="6" fill="#da3633" fill-opacity="0.15" stroke="#da3633" stroke-width="1"/>
+  <text x="410" y="381" font-size="12" fill="#da3633" text-anchor="middle">⚠ !important sobreescribe CUALQUIER especificidad — úsalo solo en casos extremos</text>
+</svg>
