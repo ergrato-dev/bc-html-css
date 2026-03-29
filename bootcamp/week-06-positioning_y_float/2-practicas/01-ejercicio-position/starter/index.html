@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 01 — Position</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================ -->
+  <!-- HEADER STICKY (Paso 2)                       -->
+  <!-- ============================================ -->
+  <header class="site-header">
+    <span class="logo">NavLayout</span>
+    <nav>
+      <a href="#cards">Tarjetas</a>
+      <a href="#modal">Modal</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 1: Cards con badge (Pasos 1)        -->
+    <!-- ============================================ -->
+    <section id="cards" class="section">
+      <h2>Tarjetas con badge absolutas</h2>
+      <p>El badge usa <code>position: absolute</code> dentro de un padre <code>position: relative</code>.</p>
+
+      <div class="cards-row">
+
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="https://placehold.co/320x200/161b22/58a6ff?text=Producto+A" alt="Producto A" />
+            <span class="badge badge-new">Nuevo</span>
+          </div>
+          <div class="card-body">
+            <h3>Producto A</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="https://placehold.co/320x200/161b22/e34f26?text=Producto+B" alt="Producto B" />
+            <span class="badge badge-sale">Oferta</span>
+          </div>
+          <div class="card-body">
+            <h3>Producto B</h3>
+            <p>Descripción breve del producto.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image-wrapper">
+            <img src="https://placehold.co/320x200/161b22/3fb950?text=Producto+C" alt="Producto C" />
+          </div>
+          <div class="card-body">
+            <h3>Producto C</h3>
+            <p>Sin badge — solo para comparación.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Espacio para practicar el scroll con el sticky header -->
+    <section class="section spacer">
+      <h2>Desplázate hacia abajo</h2>
+      <p>Observa cómo el header permanece visible al hacer scroll (position: sticky).</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et
+        netus.</p>
+      <p>Suspendisse potenti. Nulla facilisi. Donec non lorem sit amet turpis molestie faucibus.</p>
+      <p>Curabitur sit amet nibh quis leo rhoncus fringilla. Vestibulum ante ipsum primis.</p>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 2: Modal overlay (Pasos 3 y 4)      -->
+    <!-- ============================================ -->
+    <section id="modal-section" class="section">
+      <h2>Modal overlay con <code>position: fixed</code></h2>
+      <p>El overlay cubre todo el viewport. El dialog se centra con <code>transform: translate(-50%, -50%)</code>.</p>
+      <button class="btn" onclick="document.querySelector('.modal-overlay').style.display='flex'">
+        Abrir modal
+      </button>
+    </section>
+
+  </main>
+
+  <!-- ============================================ -->
+  <!-- MODAL OVERLAY (Pasos 3 y 4)                 -->
+  <!-- ============================================ -->
+  <div class="modal-overlay" style="display:none">
+    <div class="modal-dialog">
+      <h3>Modal de ejemplo</h3>
+      <p>Este modal usa <code>position: fixed</code> para el overlay y el dialog.</p>
+      <button class="btn btn-close" onclick="document.querySelector('.modal-overlay').style.display='none'">
+        Cerrar
+      </button>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+/* ============================================================
+   Ejercicio 02 — Z-index y Stacking Context
+   Semana 06: Positioning y Float
+   ============================================================ */
+
+/* ---- Estilos base ---------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --color-text: #c9d1d9;
+  --color-heading: #f0f6fc;
+  --border: #30363d;
+  --blue: #264de4;
+  --orange: #e34f26;
+  --green: #3fb950;
+  --yellow: #f0e68c;
+}
+
+body { background-color: var(--bg); color: var(--color-text); font-family: system-ui, sans-serif; padding: 2rem; }
+h1 { color: var(--color-heading); margin-bottom: 1.5rem; font-size: 1.4rem; }
+.container { max-width: 800px; margin: 0 auto; }
+
+.section { margin-bottom: 3rem; }
+.section h2 { color: var(--color-heading); margin-bottom: 0.5rem; font-size: 1.1rem; }
+.section p { color: #8b949e; margin-bottom: 1rem; font-size: 0.9rem; }
+
+code { background-color: #21262d; color: #79c0ff; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85em; }
+
+/* ---- Layers demo ----------------------------------------- */
+.layers-demo {
+  position: relative;
+  height: 160px;
+  margin-top: 1rem;
+}
+
+.layer {
+  width: 200px;
+  height: 80px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  /* Sin position activo — z-index ignorado */
+}
+
+.layer span { font-size: 1rem; font-weight: 700; }
+.layer code { font-size: 0.75rem; }
+
+.layer-back   { background-color: #264de4; color: #fff; top: 40px; left: 0; }
+.layer-middle { background-color: #e34f26; color: #fff; top: 20px; left: 80px; }
+.layer-front  { background-color: #3fb950; color: #0d1117; top: 0;  left: 160px; }
+
+
+/* ============================================================
+   PASO 1 — Activar position en las capas para que z-index funcione
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .layer { */
+/*   position: absolute; */
+/* } */
+
+
+/* ============================================================
+   PASO 2 — Asignar z-index para ordenar correctamente
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .layer-back   { z-index: 1; } */
+/* .layer-middle { z-index: 2; } */
+/* .layer-front  { z-index: 3; } */
+
+
+/* ---- Stacking context demo ------------------------------- */
+.stacking-demo {
+  position: relative;
+  height: 180px;
+  margin-top: 1rem;
+}
+
+.parent-box {
+  width: 260px;
+  height: 100px;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.parent-a {
+  background-color: #21262d;
+  border: 2px solid var(--orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--orange);
+}
+
+.parent-b {
+  background-color: var(--blue);
+  position: absolute;
+  top: 30px;
+  left: 140px;
+  color: #fff;
+}
+
+.tooltip-above {
+  background-color: var(--yellow);
+  color: #0d1117;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   PASO 3 — Aplica z-index a los padres y al tooltip
+   Observa que el tooltip (999) sigue detrás del parent-b (z:2)
+   porque pertenece al contexto del parent-a (z:1).
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .parent-a    { z-index: 1; } */
+/* .parent-b    { z-index: 2; } */
+/* .tooltip-above { z-index: 999; } */
+
+
+/* ---- Isolation demo -------------------------------------- */
+.isolation-demo {
+  position: relative;
+  height: 120px;
+  margin-top: 1rem;
+}
+
+.isolated-component {
+  background-color: #21262d;
+  border: 2px solid var(--green);
+  border-radius: 6px;
+  padding: 0.75rem;
+  width: 220px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.inner-layer {
+  background-color: var(--green);
+  color: #0d1117;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.external-element {
+  background-color: var(--blue);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  position: absolute;
+  top: 20px;
+  left: 160px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   PASO 4 — isolation: isolate en el componente
+   Añade un stacking context sin valores z-index explícitos.
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .isolated-component { */
+/*   isolation: isolate; */
+/* } */
+
+/* .external-element { */
+/*   position: absolute; */
+/*   z-index: 5; */
+/* } */

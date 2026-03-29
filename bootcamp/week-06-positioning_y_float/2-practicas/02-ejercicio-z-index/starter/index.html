@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 02 — Z-index y Stacking Context</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Z-index y Stacking Context</h1>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 1: capas superpuestas               -->
+    <!-- ============================================ -->
+    <section class="section">
+      <h2>Pasos 1 y 2 — Capas con z-index</h2>
+      <p>Sin <code>position</code> activo, <code>z-index</code> es ignorado. Descomenta para activarlo.</p>
+
+      <div class="layers-demo">
+        <div class="layer layer-back">
+          <span>Capa A</span>
+          <code>z-index: 1</code>
+        </div>
+        <div class="layer layer-middle">
+          <span>Capa B</span>
+          <code>z-index: 2</code>
+        </div>
+        <div class="layer layer-front">
+          <span>Capa C</span>
+          <code>z-index: 3</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 2: stacking context problema        -->
+    <!-- ============================================ -->
+    <section class="section">
+      <h2>Paso 3 — El problema del stacking context</h2>
+      <p>El tooltip tiene <code>z-index: 999</code> pero el bloque azul lo tapa. ¿Por qué?</p>
+
+      <div class="stacking-demo">
+        <!-- Parent A: stacking context con z-index:1 -->
+        <div class="parent-box parent-a">
+          <p>Parent A — z-index: 1</p>
+          <!-- Tooltip con z-index:999 — pero dentro del contexto de Parent A -->
+          <div class="tooltip-above">
+            Tooltip z-index: 999
+          </div>
+        </div>
+
+        <!-- Parent B: z-index:2 — gana sobre parent-a completo -->
+        <div class="parent-box parent-b">
+          <p>Parent B — z-index: 2</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 3: isolation: isolate               -->
+    <!-- ============================================ -->
+    <section class="section">
+      <h2>Paso 4 — <code>isolation: isolate</code></h2>
+      <p>Forma moderna de crear un stacking context sin z-index explícito.</p>
+
+      <div class="isolation-demo">
+        <div class="isolated-component">
+          <p>Componente aislado</p>
+          <div class="inner-layer">Capa interna</div>
+        </div>
+        <div class="external-element">Elemento externo</div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

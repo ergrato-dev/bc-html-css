@@ -1,0 +1,101 @@
+/* ============================================================
+   NavLayout — Posicionamiento CSS
+   Proyecto semana 06: Positioning y Float
+   ============================================================ */
+
+/* ---- TODO 1: Reset + box-sizing ----------------------- */
+/* Añade el reset universal con box-sizing: border-box     */
+
+
+/* ---- TODO 2: Variables (:root) ------------------------ */
+/* Declara las siguientes variables:                       */
+/* --bg-primary, --bg-card, --color-heading, --color-text  */
+/* --color-border, --color-accent, --color-primary        */
+/* --badge-new, --badge-sale, --badge-featured            */
+/* --z-header, --z-overlay, --z-modal                     */
+/* --spacing-md, --spacing-lg, --spacing-xl               */
+/* --radius                                               */
+
+
+/* ---- TODO 3: Body ------------------------------------- */
+/* background-color, color, font-family, line-height      */
+
+
+/* ---- TODO 4: Header sticky ---------------------------- */
+/* #site-header: position sticky, top 0, z-index header   */
+/* .header-inner: max-width, margin auto, padding, flex   */
+/* .logo: font-weight, color                              */
+/* nav: flex, gap                                         */
+/* nav a: color, text-decoration, font-size               */
+
+
+/* ---- TODO 5: Hero -------------------------------------- */
+/* #hero: text-align center, padding generoso, border-bottom */
+/* #hero h1: font-size grande, color heading              */
+/* #hero p: color text-muted                              */
+
+
+/* ---- TODO 6: Products grid ---------------------------- */
+/* #catalog: max-width, margin auto, padding              */
+/* .products-grid: display flex, flex-wrap wrap, gap      */
+
+
+/* ---- TODO 7: Product card ----------------------------- */
+/* .product-card: flex 1 1 260px, background-color,       */
+/* border, border-radius, overflow hidden, transition     */
+/* .product-card:hover: border-color accent, box-shadow   */
+
+
+/* ---- TODO 8: Card image + containing block ------------ */
+/* .card-image-wrapper: position relative                 */
+/* .card-image: display block, width 100%, height 180px   */
+/*   object-fit cover                                     */
+
+
+/* ---- TODO 9: Badge (position absolute) ---------------- */
+/* .badge: position absolute, top y left definidos        */
+/*   padding, font-size, font-weight, border-radius, color */
+/* .badge-new: background badge-new                       */
+/* .badge-sale: background badge-sale, color #fff         */
+/* .badge-featured: background badge-featured, color dark */
+
+
+/* ---- TODO 10: Card body ------------------------------- */
+/* .card-body: padding, display flex, flex-direction      */
+/*   column, gap                                          */
+/* .card-category: font-size pequeño, text-transform,     */
+/*   color muted                                          */
+/* .card-body h3: color heading, font-size base           */
+/* .card-body p: color text, font-size small              */
+
+
+/* ---- TODO 11: Card footer con precio y botón ---------- */
+/* .card-footer: display flex, align-items center,        */
+/*   justify-content space-between, border-top, padding-top */
+/* .price: font-weight bold, color primary                */
+
+
+/* ---- TODO 12: Botón ----------------------------------- */
+/* .btn: display inline-block, padding, background accent */
+/*   color #fff, border none, border-radius, cursor,      */
+/*   transition                                           */
+/* .btn:hover: opacity, translateY                        */
+
+
+/* ---- TODO 13: Modal overlay (position fixed) ---------- */
+/* .modal-overlay: position fixed, inset 0,               */
+/*   background rgba oscuro, z-index overlay,             */
+/*   display flex, align-items center, justify-content center */
+
+
+/* ---- TODO 14: Modal dialog (position fixed centrado)-- */
+/* .modal-dialog: background card, border, border-radius  */
+/*   padding 2rem, width 90%, max-width 480px             */
+/*   z-index modal                                        */
+/* .modal-dialog h3: color heading, margin-bottom         */
+/* .modal-dialog p: color text, margin-bottom             */
+
+
+/* ---- TODO 15: Footer ---------------------------------- */
+/* #site-footer: border-top, padding, text-align center   */
+/*   color text-muted, font-size small                    */

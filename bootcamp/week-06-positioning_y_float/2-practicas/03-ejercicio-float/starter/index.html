@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 03 — Float y Clearfix</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Float y Clearfix</h1>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 1: Imagen flotando (Pasos 1 y 2)    -->
+    <!-- ============================================ -->
+    <section class="section">
+      <h2>Pasos 1 y 2 — Float sin clearfix</h2>
+      <p>Antes de descomentar, el texto NO rodea la imagen. Luego compara con y sin clearfix.</p>
+
+      <div class="article-box">
+        <img src="https://placehold.co/200x150/161b22/58a6ff?text=Imagen" alt="Imagen de artículo"
+          class="float-image" />
+        <p>Este párrafo debe fluir alrededor de la imagen cuando se activa <code>float: left</code>.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <p>Segundo párrafo. El contenedor debe abrazar la imagen. Si colapsa, verás que el borde
+          del <code>.article-box</code> quedaría al nivel del texto, ignorando la altura de la imagen.</p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 2: Float + clearfix (Paso 3)        -->
+    <!-- ============================================ -->
+    <section class="section">
+      <h2>Paso 3 — Clearfix clásico con <code>::after</code></h2>
+      <p>La clase <code>clearfix</code> se añade al contenedor para que abraze los floats.</p>
+
+      <div class="article-box clearfix">
+        <img src="https://placehold.co/200x150/161b22/e34f26?text=Clearfix" alt="Imagen artículo 2"
+          class="float-image" />
+        <p>Con clearfix aplicado, el <code>.article-box</code> abraza la imagen flotante.
+          Este contenedor tiene la clase <code>clearfix</code> que usa <code>::after</code>
+          con <code>clear: both</code> para limpiar el float.</p>
+        <p>Observa la diferencia en DevTools: la altura del contenedor ahora incluye la imagen.</p>
+      </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN 3: display: flow-root (Paso 4)      -->
+    <!-- ============================================ -->
+    <section class="section">
+      <h2>Paso 4 — <code>display: flow-root</code> (solución moderna)</h2>
+      <p>Una sola propiedad crea el BFC y contiene los floats sin pseudoelementos.</p>
+
+      <div class="article-flow-root">
+        <img src="https://placehold.co/200x150/161b22/3fb950?text=flow-root" alt="Imagen artículo 3"
+          class="float-image" />
+        <p>Este contenedor usa <code>display: flow-root</code> en lugar de clearfix.
+          Crea automáticamente un Block Formatting Context (BFC) que contiene los floats.
+          Es la solución recomendada en CSS moderno.</p>
+        <p>Mismo resultado, código más limpio. Sin <code>::after</code>, sin hacks.</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>

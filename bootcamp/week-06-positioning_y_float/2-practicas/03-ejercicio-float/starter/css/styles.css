@@ -1,0 +1,103 @@
+/* ============================================================
+   Ejercicio 03 — Float y Clearfix
+   Semana 06: Positioning y Float
+   ============================================================ */
+
+/* ---- Estilos base ---------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0d1117;
+  --bg-card: #161b22;
+  --color-text: #c9d1d9;
+  --color-heading: #f0f6fc;
+  --border: #30363d;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+h1 { color: var(--color-heading); margin-bottom: 1.5rem; font-size: 1.4rem; }
+.container { max-width: 760px; margin: 0 auto; }
+
+.section { margin-bottom: 3rem; }
+.section h2 { color: var(--color-heading); margin-bottom: 0.5rem; font-size: 1.1rem; }
+.section p { color: #8b949e; margin-bottom: 0.75rem; font-size: 0.9rem; }
+
+code {
+  background-color: #21262d;
+  color: #79c0ff;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* Contenedor de artículos con borde visible para observar el colapso */
+.article-box,
+.article-flow-root {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.article-box p,
+.article-flow-root p {
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.float-image {
+  display: block;
+  border-radius: 4px;
+}
+
+
+/* ============================================================
+   PASO 1 — float: left en la imagen
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .float-image { */
+/*   float: left; */
+/*   margin-right: 1.5rem; */
+/*   margin-bottom: 1rem; */
+/*   width: 200px; */
+/* } */
+
+
+/* ============================================================
+   PASO 2 — Sin clearfix: observa en DevTools que .article-box
+   tiene height reducida o colapsa. No hay código que descomentar
+   en este paso — solo observación visual con DevTools.
+   ============================================================ */
+
+
+/* ============================================================
+   PASO 3 — Clearfix clásico con ::after
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .clearfix::after { */
+/*   content: ""; */
+/*   display: block; */
+/*   clear: both; */
+/* } */
+
+
+/* ============================================================
+   PASO 4 — display: flow-root (solución moderna)
+   Descomenta las siguientes líneas:
+   ============================================================ */
+
+/* .article-flow-root { */
+/*   display: flow-root; */
+/* } */

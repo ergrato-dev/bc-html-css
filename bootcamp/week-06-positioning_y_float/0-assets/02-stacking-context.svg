@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" font-family="Inter, system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="820" height="400" fill="#0d1117"/>
+
+  <!-- Title -->
+  <text x="410" y="34" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="700">Stacking Context — Orden de apilamiento (z-index)</text>
+
+  <!-- ============================================================
+       Left: "why z-index fails" scenario
+  ============================================================ -->
+  <text x="200" y="62" text-anchor="middle" fill="#e34f26" font-size="12" font-weight="700">❌ Problema: z-index no funciona</text>
+
+  <!-- Layer representation (isometric-like stacked boxes) -->
+  <!-- Ground -->
+  <rect x="40" y="320" width="310" height="12" rx="3" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="195" y="349" text-anchor="middle" fill="#8b949e" font-size="10">Flujo del documento</text>
+
+  <!-- Card A stacking context z-index:1 -->
+  <rect x="50" y="220" width="130" height="96" rx="6" fill="#161b22" stroke="#e34f26" stroke-width="2"/>
+  <text x="115" y="242" text-anchor="middle" fill="#e34f26" font-size="10" font-weight="700">Card A</text>
+  <text x="115" y="257" text-anchor="middle" fill="#8b949e" font-size="9">position: relative</text>
+  <text x="115" y="270" text-anchor="middle" fill="#e34f26" font-size="10">z-index: 1</text>
+  <text x="115" y="284" text-anchor="middle" fill="#8b949e" font-size="9">Stacking context</text>
+  <!-- Tooltip child z-index:9999 — stays below modal because parent is z:1 -->
+  <rect x="60" y="168" width="120" height="48" rx="4" fill="#264de4" opacity="0.85"/>
+  <text x="120" y="187" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">Tooltip</text>
+  <text x="120" y="201" text-anchor="middle" fill="#c9d1d9" font-size="9">z-index: 9999</text>
+  <text x="120" y="214" text-anchor="middle" fill="#ff7b72" font-size="8">⚠ hijo de Card A (z:1)</text>
+
+  <!-- Modal z-index:100 — wins over Card A (z:1) entirely -->
+  <rect x="190" y="130" width="150" height="80" rx="6" fill="#388bfd" opacity="0.9"/>
+  <text x="265" y="155" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">Modal</text>
+  <text x="265" y="170" text-anchor="middle" fill="#c9d1d9" font-size="9">position: fixed</text>
+  <text x="265" y="183" text-anchor="middle" fill="#fff" font-size="10">z-index: 100</text>
+  <text x="265" y="198" text-anchor="middle" fill="#c9d1d9" font-size="9">Stacking context #2</text>
+
+  <!-- Arrow: tooltip CANNOT exceed modal because its parent is lower -->
+  <line x1="120" y1="168" x2="190" y2="170" stroke="#ff7b72" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="155" y="162" text-anchor="middle" fill="#ff7b72" font-size="9">queda detrás</text>
+
+  <!-- ============================================================
+       Right: correct approach
+  ============================================================ -->
+  <text x="600" y="62" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="700">✅ Solución: sistema de z-index</text>
+
+  <!-- z-index scale diagram -->
+  <!-- Base line -->
+  <line x1="450" y1="320" x2="790" y2="320" stroke="#30363d" stroke-width="2"/>
+  <text x="790" y="338" fill="#8b949e" font-size="10">eje Z →</text>
+
+  <!-- Layers: toast 400 -->
+  <rect x="680" y="110" width="100" height="36" rx="4" fill="#3fb950" opacity="0.9"/>
+  <text x="730" y="128" text-anchor="middle" fill="#0d1117" font-size="9" font-weight="700">Toast</text>
+  <text x="730" y="141" text-anchor="middle" fill="#0d1117" font-size="9">z-index: 400</text>
+  <line x1="730" y1="146" x2="730" y2="320" stroke="#3fb950" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- modal 300 -->
+  <rect x="630" y="148" width="100" height="36" rx="4" fill="#264de4" opacity="0.9"/>
+  <text x="680" y="167" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">Modal</text>
+  <text x="680" y="180" text-anchor="middle" fill="#c9d1d9" font-size="9">z-index: 300</text>
+  <line x1="680" y1="184" x2="680" y2="320" stroke="#264de4" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- overlay 200 -->
+  <rect x="570" y="186" width="100" height="36" rx="4" fill="#58a6ff" opacity="0.9"/>
+  <text x="620" y="205" text-anchor="middle" fill="#0d1117" font-size="9" font-weight="700">Overlay</text>
+  <text x="620" y="218" text-anchor="middle" fill="#0d1117" font-size="9">z-index: 200</text>
+  <line x1="620" y1="222" x2="620" y2="320" stroke="#58a6ff" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- sticky 100 -->
+  <rect x="510" y="224" width="100" height="36" rx="4" fill="#f0e68c" opacity="0.9"/>
+  <text x="560" y="243" text-anchor="middle" fill="#0d1117" font-size="9" font-weight="700">Header sticky</text>
+  <text x="560" y="256" text-anchor="middle" fill="#0d1117" font-size="9">z-index: 100</text>
+  <line x1="560" y1="260" x2="560" y2="320" stroke="#f0e68c" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- base 0 -->
+  <rect x="455" y="274" width="80" height="36" rx="4" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+  <text x="495" y="292" text-anchor="middle" fill="#c9d1d9" font-size="9" font-weight="700">Contenido</text>
+  <text x="495" y="305" text-anchor="middle" fill="#8b949e" font-size="9">z-index: 0</text>
+
+  <!-- CSS variables code reference box -->
+  <rect x="450" y="338" width="330" height="52" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="466" y="356" fill="#8b949e" font-size="10">:root {</text>
+  <text x="476" y="370" fill="#79c0ff" font-size="10">--z-sticky: 100;  --z-overlay: 200;</text>
+  <text x="476" y="384" fill="#79c0ff" font-size="10">--z-modal: 300;   --z-toast: 400;</text>
+  <text x="466" y="386" fill="#8b949e" font-size="10">}</text>
+
+  <!-- ============================================================
+       isolation: isolate note
+  ============================================================ -->
+  <rect x="30" y="338" width="400" height="52" rx="6" fill="#161b22" stroke="#3fb950" stroke-width="1"/>
+  <text x="220" y="356" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">isolation: isolate — Forma moderna de crear stacking context</text>
+  <text x="46" y="372" fill="#8b949e" font-size="10">.component { isolation: isolate; }</text>
+  <text x="46" y="386" fill="#8b949e" font-size="10">Los hijos no compiten con z-index externo al componente</text>
+</svg>
