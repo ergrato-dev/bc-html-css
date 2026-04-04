@@ -3,12 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License MIT"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey.svg" alt="License CC BY-NC-SA 4.0"></a>
   <a href="#"><img src="https://img.shields.io/badge/semanas-13-yellow.svg" alt="13 Semanas"></a>
   <a href="#"><img src="https://img.shields.io/badge/horas-104-orange.svg" alt="104 Horas"></a>
   <a href="#"><img src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white" alt="HTML5"></a>
   <a href="#"><img src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white" alt="CSS3"></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square" alt="PRs Welcome"></a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Forks%20Educativos-Permitidos-brightgreen?style=flat-square" alt="Forks educativos permitidos"></a>
 </p>
 
 <p align="center">
@@ -188,28 +188,15 @@ Cada semana incluye tres tipos de evidencias:
 
 ---
 
-## 🤝 Contribuir
+## 🍴 Forks Educativos
 
-¡Las contribuciones son bienvenidas! Este es un proyecto educativo de código abierto.
+Este proyecto está licenciado bajo **CC BY-NC-SA 4.0**. Puedes hacer fork y adaptar el material libremente para fines educativos, siempre que:
 
-### Cómo Contribuir
+- Atribuyas la autoría original (ergrato-dev)
+- No lo uses con fines comerciales
+- Compartas tu versión bajo la misma licencia
 
-1. Lee la [Guía de Contribución](CONTRIBUTING.md)
-2. Revisa el [Código de Conducta](CODE_OF_CONDUCT.md)
-3. Fork del repositorio
-4. Crea tu rama (`git checkout -b feature/nueva-funcionalidad`)
-5. Commit con [Conventional Commits](https://www.conventionalcommits.org/) (`git commit -m 'feat: add new exercise'`)
-6. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-7. Abre un Pull Request
-
-### 📋 Áreas de Contribución
-
-- ✨ Ejercicios adicionales
-- 📚 Mejoras en documentación
-- 🐛 Corrección de errores
-- 🎨 Recursos visuales (diagramas SVG)
-- 🌐 Traducciones
-- 📹 Videos tutoriales
+Para consultas o reportar errores en el contenido, abre un [Issue](https://github.com/ergrato-dev/bc-html-css/issues).
 
 ---
 
@@ -235,7 +222,11 @@ Este repositorio es un recurso **educativo** creado con fines de aprendizaje. Al
 
 ## 📄 Licencia
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la licencia **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
+
+Puedes compartir y adaptar el material siempre que: atribuyas la autoría, no lo uses comercialmente y distribuyas bajo la misma licencia.
+
+Ver el archivo [LICENSE](LICENSE) o la [licencia completa](https://creativecommons.org/licenses/by-nc-sa/4.0/) para más detalles.
 
 ---
 
@@ -254,8 +245,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 ## 📚 Documentación Adicional
 
 - [🤖 Instrucciones de Copilot](.github/copilot-instructions.md)
-- [🤝 Guía de Contribución](CONTRIBUTING.md)
-- [📜 Código de Conducta](CODE_OF_CONDUCT.md)
 - [🔒 Política de Seguridad](SECURITY.md)
 
 ---
@@ -268,8 +257,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 <p align="center">
   <a href="bootcamp/week-01-setup_y_devtools">Comenzar Semana 1</a> •
   <a href="_docs">Ver Documentación</a> •
-  <a href="https://github.com/ergrato-dev/bc-html-css/issues">Reportar Issue</a> •
-  <a href="CONTRIBUTING.md">Contribuir</a>
+  <a href="https://github.com/ergrato-dev/bc-html-css/issues">Reportar Issue</a>
 </p>
 
 <p align="center">

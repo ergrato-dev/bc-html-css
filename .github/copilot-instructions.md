@@ -483,6 +483,63 @@ Como se observa en el diagrama, el Box Model define...
 - CSS crítico (above the fold) inline o en `<head>`, resto diferido
 - No incluir CSS no utilizado
 
+### 🔒 Dependencias Externas — Reglas de Oro
+
+> ⚠️ Este bootcamp es **100% HTML + CSS estático sin build tools**. No existe ni existirá `package.json`, `requirements.txt`, `Gemfile` ni ningún manifiesto de dependencias. Estas reglas aplican a cualquier herramienta de soporte (linters, scripts de automatización) que se agregue en el futuro.
+
+#### Política de versiones (OBLIGATORIO)
+
+| ❌ PROHIBIDO | ✅ CORRECTO |
+|---|---|
+| `"eslint": "^8.0.0"` | `"eslint": "8.57.1"` |
+| `"prettier": ">=3.0.0"` | `"prettier": "3.3.3"` |
+| `"stylelint": "~15.0"` | `"stylelint": "16.9.0"` |
+| `"node": ">=18"` | `"node": "22.11.0"` |
+
+**Regla de oro**: SIEMPRE versión exacta. NUNCA `^`, `~`, `>=`, `>`, `*` ni rangos de ningún tipo.
+
+Razón: Los rangos permiten actualizaciones automáticas silenciosas que pueden introducir CVEs, breaking changes o comportamiento no reproducible. Una versión exacta garantiza builds deterministas y auditorías trazables.
+
+#### Gestión de paquetes
+
+- Package manager: **pnpm exclusivamente** (NUNCA npm, yarn, bun)
+- Lockfile: siempre commitear `pnpm-lock.yaml` — NUNCA ignorarlo en `.gitignore`
+- Actualización: manual y deliberada, con revisión del changelog y CVEs antes de cada bump
+
+#### Dependencias externas en HTML/CSS (estado auditado: abril 2026)
+
+| Recurso | Tipo | Estado | Notas |
+|---|---|---|---|
+| `fonts.googleapis.com` | Fuentes web | ✅ Aceptado | Servicio gestionado por Google; sin CVEs trazables. `crossorigin` aplicado. |
+| `fonts.gstatic.com` | Fuentes web | ✅ Aceptado | Preconnect con `crossorigin`. |
+| `placehold.co` | Imágenes demo | ✅ Solo educativo | Contenido de ejemplo, no producción. |
+| `i.pravatar.cc` / `picsum.photos` | Imágenes demo | ✅ Solo educativo | Ídem. |
+| `ui-avatars.com` | Avatares demo | ✅ Solo educativo | Ídem. |
+| Librerías JS (jQuery, Bootstrap…) | — | 🚫 Prohibido | Este bootcamp NO carga librerías JS externas. |
+
+#### SRI (Subresource Integrity)
+
+- Para cualquier recurso CSS o JS externo que NO sea Google Fonts API: **OBLIGATORIO** añadir atributo `integrity` con hash SHA-384.
+- Google Fonts API queda exento porque genera CSS dinámico por user-agent (SRI incompatible por diseño).
+
+```html
+<!-- ✅ CORRECTO — recurso externo con SRI -->
+<link
+  rel="stylesheet"
+  href="https://example.com/lib.css"
+  integrity="sha384-HASH_AQUI"
+  crossorigin="anonymous"
+/>
+
+<!-- ❌ INCORRECTO — recurso externo sin SRI -->
+<link rel="stylesheet" href="https://example.com/lib.css" />
+```
+
+#### Auditoría de CVEs
+
+- Antes de agregar cualquier dependencia nueva: consultar [osv.dev](https://osv.dev) y [nvd.nist.gov](https://nvd.nist.gov/)
+- Para paquetes npm/pnpm: ejecutar `pnpm audit --audit-level=moderate` antes de cada commit que toque dependencias
+
 ---
 
 ## 📖 Documentación
