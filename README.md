@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="_assets/bootcamp-header.svg" alt="Bootcamp HTML + CSS Zero to Hero" width="800">
+  <img src="assets/bootcamp-header.svg" alt="Bootcamp HTML + CSS Zero to Hero" width="800">
 </p>
 
 <p align="center">
@@ -256,7 +256,7 @@ Ver el archivo [LICENSE](LICENSE) o la [licencia completa](https://creativecommo
 
 <p align="center">
   <a href="bootcamp/week-01-setup_y_devtools">Comenzar Semana 1</a> •
-  <a href="_docs">Ver Documentación</a> •
+  <a href="docs">Ver Documentación</a> •
   <a href="https://github.com/ergrato-dev/bc-html-css/issues">Reportar Issue</a>
 </p>
 
